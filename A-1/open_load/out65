@@ -1,0 +1,9 @@
+====== RESULTS ======
+rate:65
+Duration           : 30.09 s
+Completed requests : 1824
+Failed requests    : 0
+Throughput         : 60.62 req/s
+Avg latency        : 0.426 s
+P95 latency        : 1.383 s
+Max latency        : 5.814 s

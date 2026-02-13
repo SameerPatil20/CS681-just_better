@@ -1,0 +1,15 @@
+N=10 Throughput=2.401140 AvgLatency=0.027177 ResponseTime=0.034085 Failures=0 Successes=432 CPU=8.684
+N=30 Throughput=7.497721 AvgLatency=0.031421 ResponseTime=0.041124 Failures=0 Successes=1350 CPU=20.993
+N=50 Throughput=12.242301 AvgLatency=0.040272 ResponseTime=0.050670 Failures=0 Successes=2204 CPU=35.175
+N=70 Throughput=16.887254 AvgLatency=0.058586 ResponseTime=0.070763 Failures=0 Successes=3040 CPU=60.039
+N=90 Throughput=22.123014 AvgLatency=0.080458 ResponseTime=0.102851 Failures=0 Successes=3982 CPU=67.794
+N=110 Throughput=24.396042 AvgLatency=0.153501 ResponseTime=0.184615 Failures=0 Successes=4391 CPU=75.067
+N=130 Throughput=28.877670 AvgLatency=0.330594 ResponseTime=0.406753 Failures=0 Successes=5198 CPU=89.409
+N=150 Throughput=27.926176 AvgLatency=0.692782 ResponseTime=0.853423 Failures=0 Successes=5027 CPU=97.364
+N=170 Throughput=31.249969 AvgLatency=1.154159 ResponseTime=1.426581 Failures=0 Successes=5625 CPU=98.865
+N=190 Throughput=31.149977 AvgLatency=1.730276 ResponseTime=2.237572 Failures=8 Successes=5607 CPU=99.680
+N=210 Throughput=31.249969 AvgLatency=1.689168 ResponseTime=2.291573 Failures=34 Successes=5625 CPU=97.896
+N=230 Throughput=30.010666 AvgLatency=2.484659 ResponseTime=3.026292 Failures=67 Successes=5402 CPU=95.034
+N=250 Throughput=31.249969 AvgLatency=2.856178 ResponseTime=3.481715 Failures=79 Successes=5625 CPU=96.870
+N=270 Throughput=29.477584 AvgLatency=3.616503 ResponseTime=4.560842 Failures=124 Successes=5306 CPU=96.328
+N=290 Throughput=31.236742 AvgLatency=4.619432 ResponseTime=5.665776 Failures=195 Successes=5623 CPU=93.958

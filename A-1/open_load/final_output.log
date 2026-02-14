@@ -1,0 +1,198 @@
+====== RESULTS ======
+rate:10
+Duration           : 180 s
+Completed requests : 1694
+Failed requests    : 0
+Throughput         : 9.41111 req/s
+Avg latency        : 0.179002 s
+P95 latency        : 0.481798 s
+Max latency        : 2.0967 s
+====== RESULTS ======
+rate:20
+Duration           : 180 s
+Completed requests : 3313
+Failed requests    : 0
+Throughput         : 18.4056 req/s
+Avg latency        : 0.174922 s
+P95 latency        : 0.447529 s
+Max latency        : 2.42812 s
+====== RESULTS ======
+rate:30
+Duration           : 180 s
+Completed requests : 4656
+Failed requests    : 0
+Throughput         : 25.8667 req/s
+Avg latency        : 0.0981861 s
+P95 latency        : 0.211764 s
+Max latency        : 1.33023 s
+====== RESULTS ======
+rate:40
+Duration           : 180 s
+Completed requests : 5981
+Failed requests    : 0
+Throughput         : 33.2278 req/s
+Avg latency        : 0.166669 s
+P95 latency        : 0.461519 s
+Max latency        : 3.59232 s
+====== RESULTS ======
+rate:50
+Duration           : 180 s
+Completed requests : 8025
+Failed requests    : 0
+Throughput         : 44.5833 req/s
+Avg latency        : 0.227264 s
+P95 latency        : 0.509327 s
+Max latency        : 2.35177 s
+====== RESULTS ======
+rate:60
+Duration           : 180 s
+Completed requests : 8989
+Failed requests    : 0
+Throughput         : 49.9389 req/s
+Avg latency        : 0.243529 s
+P95 latency        : 0.570745 s
+Max latency        : 2.22467 s
+====== RESULTS ======
+rate:70
+Duration           : 180 s
+Completed requests : 10156
+Failed requests    : 0
+Throughput         : 56.4222 req/s
+Avg latency        : 0.243416 s
+P95 latency        : 0.500819 s
+Max latency        : 1.66754 s
+====== RESULTS ======
+rate:80
+Duration           : 180 s
+Completed requests : 11438
+Failed requests    : 0
+Throughput         : 63.5444 req/s
+Avg latency        : 0.302765 s
+P95 latency        : 0.703907 s
+Max latency        : 2.59802 s
+====== RESULTS ======
+rate:90
+Duration           : 180 s
+Completed requests : 12608
+Failed requests    : 0
+Throughput         : 70.0444 req/s
+Avg latency        : 0.384687 s
+P95 latency        : 0.862231 s
+Max latency        : 2.5983 s
+====== RESULTS ======
+rate:94
+Duration           : 180 s
+Completed requests : 14477
+Failed requests    : 0
+Throughput         : 80.4278 req/s
+Avg latency        : 1.45097 s
+P95 latency        : 2.70618 s
+Max latency        : 3.50504 s
+====== RESULTS ======
+rate:100
+Duration           : 180 s
+Completed requests : 14004
+Failed requests    : 193
+Throughput         : 77.8 req/s
+Avg latency        : 2.62864 s
+P95 latency        : 4.42259 s
+Max latency        : 6.43105 s
+====== RESULTS ======
+rate:102
+Duration           : 180 s
+Completed requests : 14364
+Failed requests    : 1228
+Throughput         : 79.8 req/s
+Avg latency        : 3.63009 s
+P95 latency        : 4.50403 s
+Max latency        : 5.60638 s
+====== RESULTS ======
+rate:110
+Duration           : 180 s
+Completed requests : 14062
+Failed requests    : 1045
+Throughput         : 78.1222 req/s
+Avg latency        : 3.8486 s
+P95 latency        : 4.60119 s
+Max latency        : 5.69367 s
+====== RESULTS ======
+rate:120
+Duration           : 180 s
+Completed requests : 14185
+Failed requests    : 2152
+Throughput         : 78.8056 req/s
+Avg latency        : 4.02237 s
+P95 latency        : 4.60968 s
+Max latency        : 6.58199 s
+====== RESULTS ======
+rate:130
+Duration           : 180 s
+Completed requests : 14145
+Failed requests    : 3981
+Throughput         : 78.5833 req/s
+Avg latency        : 4.17747 s
+P95 latency        : 4.66639 s
+Max latency        : 6.12441 s
+====== RESULTS ======
+rate:140
+Duration           : 180 s
+Completed requests : 14130
+Failed requests    : 6531
+Throughput         : 78.5 req/s
+Avg latency        : 4.24661 s
+P95 latency        : 4.69077 s
+Max latency        : 7.35993 s
+====== RESULTS ======
+rate:150
+Duration           : 180 s
+Completed requests : 14126
+Failed requests    : 7135
+Throughput         : 78.4778 req/s
+Avg latency        : 4.25646 s
+P95 latency        : 4.68146 s
+Max latency        : 7.06632 s
+====== RESULTS ======
+rate:160
+Duration           : 180 s
+Completed requests : 14136
+Failed requests    : 6955
+Throughput         : 78.5333 req/s
+Avg latency        : 4.22938 s
+P95 latency        : 4.70004 s
+Max latency        : 5.72919 s
+====== RESULTS ======
+rate:170
+Duration           : 180 s
+Completed requests : 14171
+Failed requests    : 7981
+Throughput         : 78.7278 req/s
+Avg latency        : 4.2582 s
+P95 latency        : 4.70796 s
+Max latency        : 5.9226 s
+====== RESULTS ======
+rate:180
+Duration           : 180 s
+Completed requests : 14205
+Failed requests    : 11742
+Throughput         : 78.9167 req/s
+Avg latency        : 4.25857 s
+P95 latency        : 4.73227 s
+Max latency        : 7.0602 s
+====== RESULTS ======
+rate:190
+Duration           : 180 s
+Completed requests : 14247
+Failed requests    : 13404
+Throughput         : 79.15 req/s
+Avg latency        : 4.27071 s
+P95 latency        : 4.79124 s
+Max latency        : 6.43659 s
+====== RESULTS ======
+rate:200
+Duration           : 180 s
+Completed requests : 14275
+Failed requests    : 12036
+Throughput         : 79.3056 req/s
+Avg latency        : 4.26971 s
+P95 latency        : 4.66182 s
+Max latency        : 6.21703 s

@@ -3,6 +3,7 @@
 # assignment 1 setup
 # ./websim --users $users --simtime 180000 --warmup 20000 --trace_on 0 --num_cores 1 --max_threads 345 --quantum 10 --think_base 4000 --think_mean_exp 10 --retry_limit 0 --service_time_avg 30 --timeout_lower 30000 --timeout_upper 30010 >> out.log 2>&1
 
+#constant karna mt bhulna service time ko
 
 
 # "Usage: websim [OPTIONS]\n"
@@ -28,11 +29,11 @@
 > out.log
 
 make
-for users in $(seq 2 10 300)
+for users in $(seq 5 10 4000)
 do
     echo "Running simulation with users=$users" >> out.log
     
-    ./websim --users $users --simtime 180000 --warmup 20000 --trace_on 0 --num_cores 1 --max_threads 345 --quantum 10 --think_base 4000 --think_mean_exp 10 --retry_limit 0 --service_time_avg 30 --timeout_lower 30000 --timeout_upper 30010 >> out.log 2>&1
+    ./websim --users $users --simtime 180000 --warmup 20000 --trace_on 0 --num_cores 4 --max_threads 256 --thread_queue_limit 10000 --quantum 10 --think_base 3000 --context_switch_overhead 0.2 --think_mean_exp 200 --retry_limit 0 --service_time_avg 50 --timeout_lower 5000 --timeout_upper 30000 >> out.log 2>&1
     
     echo "--------------------------------------" >> out.log
 done

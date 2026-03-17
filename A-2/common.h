@@ -130,7 +130,7 @@ namespace common{
         return d.p1;
     }
 
-    inline sampler SERVICE_DIST=sampler(distribution_type::CONSTANT, SERVICE_TIME_AVG);
+    inline sampler SERVICE_DIST=sampler(distribution_type::EXPONENTIAL, SERVICE_TIME_AVG);
     inline sampler TIMEOUT_DIST=sampler(distribution_type::UNIFORM, TIMEOUT_LOWER, TIMEOUT_UPPER);
 }
 

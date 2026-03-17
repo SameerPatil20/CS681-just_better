@@ -18,7 +18,7 @@ void Core::add_thread(ThreadWorker* th){
     runpriorityqueue.push(th);
 }
 bool Core::is_empty(){
-    if(sched_policy == common::scheduling_policy::FCFS){
+    if(sched_policy == common::scheduling_policy::RR){
         return runqueue.empty();
     }
     else if(sched_policy == common::scheduling_policy::SJF){
@@ -34,7 +34,7 @@ ThreadWorker* Core::pop_one(){
     }
     else{
         ThreadWorker* ret;
-        if(sched_policy == common::scheduling_policy::FCFS){
+        if(sched_policy == common::scheduling_policy::RR){
             ret = runqueue.front();
             runqueue.pop_front();
             return ret;

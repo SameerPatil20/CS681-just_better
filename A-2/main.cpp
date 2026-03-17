@@ -35,8 +35,8 @@ void usage() {
 }
 
 inline common::scheduling_policy sched_policy_type(string s){
-    if(s == "FCFS"){
-        return common::scheduling_policy::FCFS;
+    if(s == "RR"){
+        return common::scheduling_policy::RR;
     }
     else if(s == "SJF"){
         return common::scheduling_policy::SJF;

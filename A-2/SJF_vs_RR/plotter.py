@@ -26,7 +26,7 @@ def parse_log(file_path):
             i += 1
     return data
 
-fcfs_data = parse_log('FCFS_out.log')
+fcfs_data = parse_log('RR_out.log')
 sjf_data = parse_log('SJF_out.log')
 
 users = sorted(fcfs_data.keys())
@@ -38,19 +38,19 @@ for param in parameters:
     fcfs_values = [fcfs_data[u].get(param, 0) for u in users]
     sjf_values = [sjf_data[u].get(param, 0) for u in users]
     
-    plt.plot(users, fcfs_values, label='FCFS', linestyle='-')
+    plt.plot(users, fcfs_values, label='RR', linestyle='-')
     plt.plot(users, sjf_values, label='SJF', linestyle='--')
     
     plt.xlabel('Number of Users')
     plt.ylabel(param)
-    plt.title(param + ' vs Number of Users (FCFS vs SJF)')
+    plt.title(param + ' vs Number of Users (RR vs SJF)')
     plt.legend()
     plt.grid(True)
     
     plt.savefig(param + '_vs_users.png', dpi=300, bbox_inches='tight')
     plt.close()
 
-    # Combined plot for goodput, badput, and Throughput for both FCFS and SJF
+    # Combined plot for goodput, badput, and Throughput for both RR and SJF
     metrics = ['goodput', 'badput', 'Throughput']
     colors = ['tab:blue', 'tab:orange', 'tab:red']
     markers = ['o', 's', '^']
@@ -62,12 +62,12 @@ for param in parameters:
         fcfs_vals = [fcfs_data[u].get(metric, 0) for u in users]
         sjf_vals = [sjf_data[u].get(metric, 0) for u in users]
 
-        plt.plot(users, fcfs_vals, label=f'FCFS {metric}', linestyle='-', color=color)
+        plt.plot(users, fcfs_vals, label=f'RR {metric}', linestyle='-', color=color)
         plt.plot(users, sjf_vals, label=f'SJF {metric}', linestyle='--', color=color)
 
     plt.xlabel('Number of Users')
     plt.ylabel('Value')
-    plt.title('Throughput, Goodput, Badput vs Number of Users (FCFS vs SJF)')
+    plt.title('Throughput, Goodput, Badput vs Number of Users (RR vs SJF)')
     plt.legend()
     plt.grid(True)
     plt.savefig('combined_throughput_goodput_badput_vs_users.png', dpi=300, bbox_inches='tight')

@@ -75,7 +75,7 @@ using namespace std;
 
 namespace common{
     enum class scheduling_policy{
-        FCFS,
+        RR,
         SJF
     };
     inline int NUM_CORES=1;
@@ -96,7 +96,7 @@ namespace common{
     inline double TIMEOUT_LOWER = 3000;
     inline double TIMEOUT_UPPER = 3001;
     inline string SERVICE_TIME_DIST = "exponential";
-    inline scheduling_policy SCHED_POLICY = scheduling_policy::FCFS;
+    inline scheduling_policy SCHED_POLICY = scheduling_policy::RR;
 
 
     enum class distribution_type{

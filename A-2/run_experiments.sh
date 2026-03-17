@@ -16,12 +16,12 @@ SERVICE_TIME_DIST="exponential"
 TIMEOUT_LOWER=20000
 TIMEOUT_UPPER=30000
 
-NUM_RUNS=15
+NUM_RUNS=40
 OUTDIR="confidence_interval"
 mkdir -p "${OUTDIR}"
 
-START=10
-STEP=10
+START=40
+STEP=40
 END=3000
 
 echo "Building project..."

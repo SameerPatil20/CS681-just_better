@@ -1,0 +1,1201 @@
+=== RUN FILE confidence_interval/run_23.log (run index = 23) ===
+### ENTRY users=10 run=23 seed=23 ###
+ResponseTime=0.06029 Throughput=3.08750 goodput=3.08750 badput=0.00000 completed=541 timedout=0 dropped=0 Util=0.04570
+### END_ENTRY users=10 run=23 ###
+
+### ENTRY users=20 run=23 seed=23 ###
+ResponseTime=0.06299 Throughput=6.14375 goodput=6.14375 badput=0.00000 completed=1079 timedout=0 dropped=0 Util=0.09383
+### END_ENTRY users=20 run=23 ###
+
+### ENTRY users=30 run=23 seed=23 ###
+ResponseTime=0.06490 Throughput=9.20000 goodput=9.20000 badput=0.00000 completed=1617 timedout=0 dropped=0 Util=0.14045
+### END_ENTRY users=30 run=23 ###
+
+### ENTRY users=40 run=23 seed=23 ###
+ResponseTime=0.06698 Throughput=12.23750 goodput=12.23750 badput=0.00000 completed=2154 timedout=0 dropped=0 Util=0.18016
+### END_ENTRY users=40 run=23 ###
+
+### ENTRY users=50 run=23 seed=23 ###
+ResponseTime=0.07614 Throughput=15.27500 goodput=15.27500 badput=0.00000 completed=2688 timedout=0 dropped=0 Util=0.23444
+### END_ENTRY users=50 run=23 ###
+
+### ENTRY users=60 run=23 seed=23 ###
+ResponseTime=0.07791 Throughput=18.33750 goodput=18.33750 badput=0.00000 completed=3224 timedout=0 dropped=0 Util=0.27453
+### END_ENTRY users=60 run=23 ###
+
+### ENTRY users=70 run=23 seed=23 ###
+ResponseTime=0.08631 Throughput=21.32500 goodput=21.32500 badput=0.00000 completed=3755 timedout=0 dropped=0 Util=0.31935
+### END_ENTRY users=70 run=23 ###
+
+### ENTRY users=80 run=23 seed=23 ###
+ResponseTime=0.08638 Throughput=24.36250 goodput=24.36250 badput=0.00000 completed=4285 timedout=0 dropped=0 Util=0.36573
+### END_ENTRY users=80 run=23 ###
+
+### ENTRY users=90 run=23 seed=23 ###
+ResponseTime=0.09426 Throughput=27.28750 goodput=27.28750 badput=0.00000 completed=4801 timedout=0 dropped=0 Util=0.40538
+### END_ENTRY users=90 run=23 ###
+
+### ENTRY users=100 run=23 seed=23 ###
+ResponseTime=0.10785 Throughput=30.28125 goodput=30.28125 badput=0.00000 completed=5328 timedout=0 dropped=0 Util=0.46113
+### END_ENTRY users=100 run=23 ###
+
+### ENTRY users=110 run=23 seed=23 ###
+ResponseTime=0.11992 Throughput=33.15625 goodput=33.15625 badput=0.00000 completed=5833 timedout=0 dropped=0 Util=0.49334
+### END_ENTRY users=110 run=23 ###
+
+### ENTRY users=120 run=23 seed=23 ###
+ResponseTime=0.12324 Throughput=36.07500 goodput=36.07500 badput=0.00000 completed=6348 timedout=0 dropped=0 Util=0.53716
+### END_ENTRY users=120 run=23 ###
+
+### ENTRY users=130 run=23 seed=23 ###
+ResponseTime=0.14991 Throughput=38.85625 goodput=38.85625 badput=0.00000 completed=6837 timedout=0 dropped=0 Util=0.58495
+### END_ENTRY users=130 run=23 ###
+
+### ENTRY users=140 run=23 seed=23 ###
+ResponseTime=0.15344 Throughput=41.76250 goodput=41.76250 badput=0.00000 completed=7348 timedout=0 dropped=0 Util=0.63284
+### END_ENTRY users=140 run=23 ###
+
+### ENTRY users=150 run=23 seed=23 ###
+ResponseTime=0.17191 Throughput=44.47500 goodput=44.47500 badput=0.00000 completed=7828 timedout=0 dropped=0 Util=0.65876
+### END_ENTRY users=150 run=23 ###
+
+### ENTRY users=160 run=23 seed=23 ###
+ResponseTime=0.19401 Throughput=47.20625 goodput=47.20625 badput=0.00000 completed=8302 timedout=0 dropped=0 Util=0.71121
+### END_ENTRY users=160 run=23 ###
+
+### ENTRY users=170 run=23 seed=23 ###
+ResponseTime=0.21781 Throughput=49.80000 goodput=49.80000 badput=0.00000 completed=8756 timedout=0 dropped=0 Util=0.73437
+### END_ENTRY users=170 run=23 ###
+
+### ENTRY users=180 run=23 seed=23 ###
+ResponseTime=0.23788 Throughput=52.38125 goodput=52.38125 badput=0.00000 completed=9221 timedout=0 dropped=0 Util=0.78112
+### END_ENTRY users=180 run=23 ###
+
+### ENTRY users=190 run=23 seed=23 ###
+ResponseTime=0.28456 Throughput=54.61875 goodput=54.61875 badput=0.00000 completed=9605 timedout=0 dropped=0 Util=0.81754
+### END_ENTRY users=190 run=23 ###
+
+### ENTRY users=200 run=23 seed=23 ###
+ResponseTime=0.36180 Throughput=56.18750 goodput=56.18750 badput=0.00000 completed=9897 timedout=0 dropped=0 Util=0.84837
+### END_ENTRY users=200 run=23 ###
+
+### ENTRY users=210 run=23 seed=23 ###
+ResponseTime=0.36652 Throughput=58.84375 goodput=58.84375 badput=0.00000 completed=10358 timedout=0 dropped=0 Util=0.87649
+### END_ENTRY users=210 run=23 ###
+
+### ENTRY users=220 run=23 seed=23 ###
+ResponseTime=0.43158 Throughput=60.64375 goodput=60.64375 badput=0.00000 completed=10649 timedout=0 dropped=0 Util=0.90177
+### END_ENTRY users=220 run=23 ###
+
+### ENTRY users=230 run=23 seed=23 ###
+ResponseTime=0.48146 Throughput=62.43750 goodput=62.43750 badput=0.00000 completed=10965 timedout=0 dropped=0 Util=0.92862
+### END_ENTRY users=230 run=23 ###
+
+### ENTRY users=240 run=23 seed=23 ###
+ResponseTime=0.57814 Throughput=63.55000 goodput=63.55000 badput=0.00000 completed=11156 timedout=0 dropped=0 Util=0.94581
+### END_ENTRY users=240 run=23 ###
+
+### ENTRY users=250 run=23 seed=23 ###
+ResponseTime=0.67900 Throughput=64.47500 goodput=64.47500 badput=0.00000 completed=11303 timedout=0 dropped=0 Util=0.95154
+### END_ENTRY users=250 run=23 ###
+
+### ENTRY users=260 run=23 seed=23 ###
+ResponseTime=0.81524 Throughput=64.80000 goodput=64.80000 badput=0.00000 completed=11381 timedout=0 dropped=0 Util=0.97047
+### END_ENTRY users=260 run=23 ###
+
+### ENTRY users=270 run=23 seed=23 ###
+ResponseTime=0.94939 Throughput=65.07500 goodput=65.07500 badput=0.00000 completed=11443 timedout=0 dropped=0 Util=0.97494
+### END_ENTRY users=270 run=23 ###
+
+### ENTRY users=280 run=23 seed=23 ###
+ResponseTime=1.07907 Throughput=65.55625 goodput=65.55625 badput=0.00000 completed=11541 timedout=0 dropped=0 Util=0.98101
+### END_ENTRY users=280 run=23 ###
+
+### ENTRY users=290 run=23 seed=23 ###
+ResponseTime=1.23335 Throughput=65.43750 goodput=65.43750 badput=0.00000 completed=11523 timedout=0 dropped=0 Util=0.98170
+### END_ENTRY users=290 run=23 ###
+
+### ENTRY users=300 run=23 seed=23 ###
+ResponseTime=1.37207 Throughput=65.68750 goodput=65.68750 badput=0.00000 completed=11547 timedout=0 dropped=0 Util=0.98177
+### END_ENTRY users=300 run=23 ###
+
+### ENTRY users=310 run=23 seed=23 ###
+ResponseTime=1.54949 Throughput=65.33750 goodput=65.33750 badput=0.00000 completed=11477 timedout=0 dropped=0 Util=0.98199
+### END_ENTRY users=310 run=23 ###
+
+### ENTRY users=320 run=23 seed=23 ###
+ResponseTime=1.64553 Throughput=66.34375 goodput=66.34375 badput=0.00000 completed=11668 timedout=0 dropped=0 Util=0.98203
+### END_ENTRY users=320 run=23 ###
+
+### ENTRY users=330 run=23 seed=23 ###
+ResponseTime=1.85840 Throughput=65.43125 goodput=65.43125 badput=0.00000 completed=11551 timedout=0 dropped=0 Util=0.98200
+### END_ENTRY users=330 run=23 ###
+
+### ENTRY users=340 run=23 seed=23 ###
+ResponseTime=2.00972 Throughput=65.48125 goodput=65.48125 badput=0.00000 completed=11557 timedout=0 dropped=0 Util=0.98199
+### END_ENTRY users=340 run=23 ###
+
+### ENTRY users=350 run=23 seed=23 ###
+ResponseTime=2.13567 Throughput=65.61875 goodput=65.61875 badput=0.00000 completed=11566 timedout=0 dropped=0 Util=0.98200
+### END_ENTRY users=350 run=23 ###
+
+### ENTRY users=360 run=23 seed=23 ###
+ResponseTime=2.29838 Throughput=65.40625 goodput=65.40625 badput=0.00000 completed=11516 timedout=0 dropped=0 Util=0.98195
+### END_ENTRY users=360 run=23 ###
+
+### ENTRY users=370 run=23 seed=23 ###
+ResponseTime=2.43365 Throughput=65.63750 goodput=65.63750 badput=0.00000 completed=11585 timedout=0 dropped=0 Util=0.98197
+### END_ENTRY users=370 run=23 ###
+
+### ENTRY users=380 run=23 seed=23 ###
+ResponseTime=2.58082 Throughput=65.98125 goodput=65.97500 badput=0.00625 completed=11615 timedout=1 dropped=0 Util=0.98200
+### END_ENTRY users=380 run=23 ###
+
+### ENTRY users=390 run=23 seed=23 ###
+ResponseTime=2.75491 Throughput=65.59375 goodput=65.59375 badput=0.00000 completed=11610 timedout=0 dropped=0 Util=0.98198
+### END_ENTRY users=390 run=23 ###
+
+### ENTRY users=400 run=23 seed=23 ###
+ResponseTime=2.85975 Throughput=66.40000 goodput=66.38750 badput=0.01250 completed=11705 timedout=2 dropped=0 Util=0.98201
+### END_ENTRY users=400 run=23 ###
+
+### ENTRY users=410 run=23 seed=23 ###
+ResponseTime=3.10702 Throughput=65.11875 goodput=65.10000 badput=0.01875 completed=11496 timedout=3 dropped=0 Util=0.98196
+### END_ENTRY users=410 run=23 ###
+
+### ENTRY users=420 run=23 seed=23 ###
+ResponseTime=3.14817 Throughput=66.13750 goodput=66.11250 badput=0.02500 completed=11683 timedout=4 dropped=0 Util=0.98199
+### END_ENTRY users=420 run=23 ###
+
+### ENTRY users=430 run=23 seed=23 ###
+ResponseTime=3.44268 Throughput=64.83125 goodput=64.76875 badput=0.06250 completed=11435 timedout=10 dropped=0 Util=0.98197
+### END_ENTRY users=430 run=23 ###
+
+### ENTRY users=440 run=23 seed=23 ###
+ResponseTime=3.41213 Throughput=66.65625 goodput=66.61250 badput=0.04375 completed=11756 timedout=7 dropped=0 Util=0.98203
+### END_ENTRY users=440 run=23 ###
+
+### ENTRY users=450 run=23 seed=23 ###
+ResponseTime=3.65736 Throughput=65.91875 goodput=65.83125 badput=0.08750 completed=11586 timedout=14 dropped=0 Util=0.98198
+### END_ENTRY users=450 run=23 ###
+
+### ENTRY users=460 run=23 seed=23 ###
+ResponseTime=3.75013 Throughput=66.22500 goodput=66.14375 badput=0.08125 completed=11702 timedout=13 dropped=0 Util=0.98199
+### END_ENTRY users=460 run=23 ###
+
+### ENTRY users=470 run=23 seed=23 ###
+ResponseTime=3.96897 Throughput=65.61250 goodput=65.53125 badput=0.08125 completed=11541 timedout=13 dropped=0 Util=0.98195
+### END_ENTRY users=470 run=23 ###
+
+### ENTRY users=480 run=23 seed=23 ###
+ResponseTime=4.04871 Throughput=66.23750 goodput=66.11875 badput=0.11875 completed=11685 timedout=19 dropped=0 Util=0.98196
+### END_ENTRY users=480 run=23 ###
+
+### ENTRY users=490 run=23 seed=23 ###
+ResponseTime=4.19141 Throughput=66.38750 goodput=66.26875 badput=0.11875 completed=11695 timedout=19 dropped=0 Util=0.98197
+### END_ENTRY users=490 run=23 ###
+
+### ENTRY users=500 run=23 seed=23 ###
+ResponseTime=4.30740 Throughput=66.66875 goodput=66.58750 badput=0.08125 completed=11700 timedout=13 dropped=0 Util=0.98200
+### END_ENTRY users=500 run=23 ###
+
+### ENTRY users=510 run=23 seed=23 ###
+ResponseTime=4.49433 Throughput=66.45625 goodput=66.34375 badput=0.11250 completed=11674 timedout=18 dropped=0 Util=0.98195
+### END_ENTRY users=510 run=23 ###
+
+### ENTRY users=520 run=23 seed=23 ###
+ResponseTime=4.86958 Throughput=64.60625 goodput=64.46250 badput=0.14375 completed=11370 timedout=23 dropped=0 Util=0.98191
+### END_ENTRY users=520 run=23 ###
+
+### ENTRY users=530 run=23 seed=23 ###
+ResponseTime=4.88379 Throughput=65.70625 goodput=65.59375 badput=0.11250 completed=11589 timedout=18 dropped=0 Util=0.98198
+### END_ENTRY users=530 run=23 ###
+
+### ENTRY users=540 run=23 seed=23 ###
+ResponseTime=4.92672 Throughput=66.60000 goodput=66.45625 badput=0.14375 completed=11701 timedout=23 dropped=0 Util=0.98197
+### END_ENTRY users=540 run=23 ###
+
+### ENTRY users=550 run=23 seed=23 ###
+ResponseTime=5.21893 Throughput=65.33750 goodput=65.22500 badput=0.11250 completed=11504 timedout=18 dropped=0 Util=0.98196
+### END_ENTRY users=550 run=23 ###
+
+### ENTRY users=560 run=23 seed=23 ###
+ResponseTime=5.35569 Throughput=65.50625 goodput=65.35000 badput=0.15625 completed=11537 timedout=25 dropped=0 Util=0.98198
+### END_ENTRY users=560 run=23 ###
+
+### ENTRY users=570 run=23 seed=23 ###
+ResponseTime=5.30450 Throughput=66.98750 goodput=66.85625 badput=0.13125 completed=11825 timedout=21 dropped=0 Util=0.98201
+### END_ENTRY users=570 run=23 ###
+
+### ENTRY users=580 run=23 seed=23 ###
+ResponseTime=5.43990 Throughput=67.26250 goodput=67.11875 badput=0.14375 completed=11788 timedout=23 dropped=0 Util=0.98199
+### END_ENTRY users=580 run=23 ###
+
+### ENTRY users=590 run=23 seed=23 ###
+ResponseTime=5.76403 Throughput=65.96250 goodput=65.80625 badput=0.15625 completed=11594 timedout=25 dropped=0 Util=0.98196
+### END_ENTRY users=590 run=23 ###
+
+### ENTRY users=600 run=23 seed=23 ###
+ResponseTime=6.00420 Throughput=65.25625 goodput=65.13125 badput=0.12500 completed=11521 timedout=20 dropped=0 Util=0.98195
+### END_ENTRY users=600 run=23 ###
+
+### ENTRY users=610 run=23 seed=23 ###
+ResponseTime=6.10758 Throughput=65.61250 goodput=65.47500 badput=0.13750 completed=11514 timedout=22 dropped=0 Util=0.98196
+### END_ENTRY users=610 run=23 ###
+
+### ENTRY users=620 run=23 seed=23 ###
+ResponseTime=6.24273 Throughput=65.66250 goodput=65.47500 badput=0.18750 completed=11581 timedout=30 dropped=0 Util=0.98194
+### END_ENTRY users=620 run=23 ###
+
+### ENTRY users=630 run=23 seed=23 ###
+ResponseTime=6.38303 Throughput=65.73750 goodput=65.51875 badput=0.21875 completed=11594 timedout=35 dropped=0 Util=0.98198
+### END_ENTRY users=630 run=23 ###
+
+### ENTRY users=640 run=23 seed=23 ###
+ResponseTime=6.71875 Throughput=64.62500 goodput=64.44375 badput=0.18125 completed=11393 timedout=29 dropped=0 Util=0.98194
+### END_ENTRY users=640 run=23 ###
+
+### ENTRY users=650 run=23 seed=23 ###
+ResponseTime=6.75230 Throughput=65.35625 goodput=65.18125 badput=0.17500 completed=11485 timedout=28 dropped=0 Util=0.98194
+### END_ENTRY users=650 run=23 ###
+
+### ENTRY users=660 run=23 seed=23 ###
+ResponseTime=6.85671 Throughput=65.75625 goodput=65.57500 badput=0.18125 completed=11538 timedout=29 dropped=0 Util=0.98195
+### END_ENTRY users=660 run=23 ###
+
+### ENTRY users=670 run=23 seed=23 ###
+ResponseTime=6.98934 Throughput=65.60625 goodput=65.36875 badput=0.23750 completed=11570 timedout=38 dropped=0 Util=0.98195
+### END_ENTRY users=670 run=23 ###
+
+### ENTRY users=680 run=23 seed=23 ###
+ResponseTime=7.10357 Throughput=66.05000 goodput=65.85625 badput=0.19375 completed=11615 timedout=31 dropped=0 Util=0.98197
+### END_ENTRY users=680 run=23 ###
+
+### ENTRY users=690 run=23 seed=23 ###
+ResponseTime=7.22779 Throughput=66.21875 goodput=65.98125 badput=0.23750 completed=11680 timedout=38 dropped=0 Util=0.98196
+### END_ENTRY users=690 run=23 ###
+
+### ENTRY users=700 run=23 seed=23 ###
+ResponseTime=7.46240 Throughput=65.58750 goodput=65.37500 badput=0.21250 completed=11595 timedout=34 dropped=0 Util=0.98197
+### END_ENTRY users=700 run=23 ###
+
+### ENTRY users=710 run=23 seed=23 ###
+ResponseTime=7.52181 Throughput=66.36875 goodput=66.09375 badput=0.27500 completed=11646 timedout=44 dropped=0 Util=0.98195
+### END_ENTRY users=710 run=23 ###
+
+### ENTRY users=720 run=23 seed=23 ###
+ResponseTime=7.87103 Throughput=65.16875 goodput=64.92500 badput=0.24375 completed=11438 timedout=39 dropped=0 Util=0.98195
+### END_ENTRY users=720 run=23 ###
+
+### ENTRY users=730 run=23 seed=23 ###
+ResponseTime=7.93143 Throughput=65.78750 goodput=65.52500 badput=0.26250 completed=11553 timedout=42 dropped=0 Util=0.98197
+### END_ENTRY users=730 run=23 ###
+
+### ENTRY users=740 run=23 seed=23 ###
+ResponseTime=8.08877 Throughput=65.71875 goodput=65.46250 badput=0.25625 completed=11568 timedout=41 dropped=0 Util=0.98195
+### END_ENTRY users=740 run=23 ###
+
+### ENTRY users=750 run=23 seed=23 ###
+ResponseTime=8.03530 Throughput=66.67500 goodput=66.39375 badput=0.28125 completed=11740 timedout=45 dropped=0 Util=0.98199
+### END_ENTRY users=750 run=23 ###
+
+### ENTRY users=760 run=23 seed=23 ###
+ResponseTime=8.30891 Throughput=66.11250 goodput=65.85625 badput=0.25625 completed=11623 timedout=41 dropped=0 Util=0.98196
+### END_ENTRY users=760 run=23 ###
+
+### ENTRY users=770 run=23 seed=23 ###
+ResponseTime=8.48432 Throughput=65.80625 goodput=65.52500 badput=0.28125 completed=11561 timedout=45 dropped=0 Util=0.98198
+### END_ENTRY users=770 run=23 ###
+
+### ENTRY users=780 run=23 seed=23 ###
+ResponseTime=8.74756 Throughput=65.26250 goodput=64.88125 badput=0.38125 completed=11466 timedout=61 dropped=0 Util=0.98197
+### END_ENTRY users=780 run=23 ###
+
+### ENTRY users=790 run=23 seed=23 ###
+ResponseTime=8.73695 Throughput=66.21875 goodput=65.90000 badput=0.31875 completed=11627 timedout=51 dropped=0 Util=0.98195
+### END_ENTRY users=790 run=23 ###
+
+### ENTRY users=800 run=23 seed=23 ###
+ResponseTime=8.98776 Throughput=65.48125 goodput=65.16875 badput=0.31250 completed=11526 timedout=50 dropped=0 Util=0.98194
+### END_ENTRY users=800 run=23 ###
+
+### ENTRY users=810 run=23 seed=23 ###
+ResponseTime=9.11432 Throughput=65.56875 goodput=65.16250 badput=0.40625 completed=11532 timedout=65 dropped=0 Util=0.98194
+### END_ENTRY users=810 run=23 ###
+
+### ENTRY users=820 run=23 seed=23 ###
+ResponseTime=9.21678 Throughput=66.16250 goodput=65.71875 badput=0.44375 completed=11612 timedout=71 dropped=0 Util=0.98195
+### END_ENTRY users=820 run=23 ###
+
+### ENTRY users=830 run=23 seed=23 ###
+ResponseTime=9.28822 Throughput=66.58125 goodput=66.24375 badput=0.33750 completed=11754 timedout=54 dropped=0 Util=0.98199
+### END_ENTRY users=830 run=23 ###
+
+### ENTRY users=840 run=23 seed=23 ###
+ResponseTime=9.42154 Throughput=66.61875 goodput=66.16250 badput=0.45625 completed=11676 timedout=73 dropped=0 Util=0.98199
+### END_ENTRY users=840 run=23 ###
+
+### ENTRY users=850 run=23 seed=23 ###
+ResponseTime=9.55408 Throughput=66.68125 goodput=66.31875 badput=0.36250 completed=11680 timedout=58 dropped=0 Util=0.98199
+### END_ENTRY users=850 run=23 ###
+
+### ENTRY users=860 run=23 seed=23 ###
+ResponseTime=9.89029 Throughput=65.48750 goodput=65.02500 badput=0.46250 completed=11508 timedout=74 dropped=0 Util=0.98195
+### END_ENTRY users=860 run=23 ###
+
+### ENTRY users=870 run=23 seed=23 ###
+ResponseTime=9.82824 Throughput=66.75000 goodput=66.30625 badput=0.44375 completed=11698 timedout=71 dropped=0 Util=0.98199
+### END_ENTRY users=870 run=23 ###
+
+### ENTRY users=880 run=23 seed=23 ###
+ResponseTime=10.15344 Throughput=65.83125 goodput=65.38125 badput=0.45000 completed=11528 timedout=72 dropped=0 Util=0.98197
+### END_ENTRY users=880 run=23 ###
+
+### ENTRY users=890 run=23 seed=23 ###
+ResponseTime=10.35013 Throughput=65.68125 goodput=65.10625 badput=0.57500 completed=11524 timedout=92 dropped=0 Util=0.98196
+### END_ENTRY users=890 run=23 ###
+
+### ENTRY users=900 run=23 seed=23 ###
+ResponseTime=10.49221 Throughput=65.58125 goodput=65.06875 badput=0.51250 completed=11519 timedout=82 dropped=0 Util=0.98196
+### END_ENTRY users=900 run=23 ###
+
+### ENTRY users=910 run=23 seed=23 ###
+ResponseTime=10.66194 Throughput=65.60625 goodput=65.01250 badput=0.59375 completed=11444 timedout=95 dropped=0 Util=0.98195
+### END_ENTRY users=910 run=23 ###
+
+### ENTRY users=920 run=23 seed=23 ###
+ResponseTime=10.90847 Throughput=65.11875 goodput=64.52500 badput=0.59375 completed=11424 timedout=95 dropped=0 Util=0.98196
+### END_ENTRY users=920 run=23 ###
+
+### ENTRY users=930 run=23 seed=23 ###
+ResponseTime=10.99456 Throughput=65.56250 goodput=64.93750 badput=0.62500 completed=11485 timedout=100 dropped=0 Util=0.98195
+### END_ENTRY users=930 run=23 ###
+
+### ENTRY users=940 run=23 seed=23 ###
+ResponseTime=11.03455 Throughput=66.21875 goodput=65.63750 badput=0.58125 completed=11559 timedout=93 dropped=0 Util=0.98200
+### END_ENTRY users=940 run=23 ###
+
+### ENTRY users=950 run=23 seed=23 ###
+ResponseTime=11.06949 Throughput=66.58750 goodput=66.00000 badput=0.58750 completed=11659 timedout=94 dropped=0 Util=0.98197
+### END_ENTRY users=950 run=23 ###
+
+### ENTRY users=960 run=23 seed=23 ###
+ResponseTime=11.22833 Throughput=66.53125 goodput=65.82500 badput=0.70625 completed=11641 timedout=113 dropped=0 Util=0.98200
+### END_ENTRY users=960 run=23 ###
+
+### ENTRY users=970 run=23 seed=23 ###
+ResponseTime=11.62950 Throughput=65.62500 goodput=64.86250 badput=0.76250 completed=11442 timedout=122 dropped=0 Util=0.98197
+### END_ENTRY users=970 run=23 ###
+
+### ENTRY users=980 run=23 seed=23 ###
+ResponseTime=11.65482 Throughput=65.76250 goodput=65.03750 badput=0.72500 completed=11545 timedout=116 dropped=0 Util=0.98196
+### END_ENTRY users=980 run=23 ###
+
+### ENTRY users=990 run=23 seed=23 ###
+ResponseTime=11.54974 Throughput=67.00625 goodput=66.29375 badput=0.71250 completed=11694 timedout=114 dropped=0 Util=0.98202
+### END_ENTRY users=990 run=23 ###
+
+### ENTRY users=1000 run=23 seed=23 ###
+ResponseTime=11.89051 Throughput=66.29375 goodput=65.51250 badput=0.78125 completed=11594 timedout=125 dropped=0 Util=0.98195
+### END_ENTRY users=1000 run=23 ###
+
+### ENTRY users=1010 run=23 seed=23 ###
+ResponseTime=12.00222 Throughput=66.53750 goodput=65.68750 badput=0.85000 completed=11578 timedout=136 dropped=0 Util=0.98200
+### END_ENTRY users=1010 run=23 ###
+
+### ENTRY users=1020 run=23 seed=23 ###
+ResponseTime=12.40533 Throughput=65.23125 goodput=64.26875 badput=0.96250 completed=11385 timedout=154 dropped=0 Util=0.98196
+### END_ENTRY users=1020 run=23 ###
+
+### ENTRY users=1030 run=23 seed=23 ###
+ResponseTime=12.13653 Throughput=67.07500 goodput=66.18750 badput=0.88750 completed=11710 timedout=142 dropped=0 Util=0.98200
+### END_ENTRY users=1030 run=23 ###
+
+### ENTRY users=1040 run=23 seed=23 ###
+ResponseTime=12.65890 Throughput=65.51250 goodput=64.48750 badput=1.02500 completed=11415 timedout=164 dropped=0 Util=0.98194
+### END_ENTRY users=1040 run=23 ###
+
+### ENTRY users=1050 run=23 seed=23 ###
+ResponseTime=12.81953 Throughput=65.25000 goodput=64.26875 badput=0.98125 completed=11384 timedout=157 dropped=0 Util=0.98195
+### END_ENTRY users=1050 run=23 ###
+
+### ENTRY users=1060 run=23 seed=23 ###
+ResponseTime=12.85538 Throughput=65.94375 goodput=64.95000 badput=0.99375 completed=11488 timedout=159 dropped=0 Util=0.98197
+### END_ENTRY users=1060 run=23 ###
+
+### ENTRY users=1070 run=23 seed=23 ###
+ResponseTime=13.11515 Throughput=65.57500 goodput=64.49375 badput=1.08125 completed=11398 timedout=173 dropped=0 Util=0.98194
+### END_ENTRY users=1070 run=23 ###
+
+### ENTRY users=1080 run=23 seed=23 ###
+ResponseTime=13.19693 Throughput=65.50625 goodput=64.42500 badput=1.08125 completed=11434 timedout=173 dropped=0 Util=0.98196
+### END_ENTRY users=1080 run=23 ###
+
+### ENTRY users=1090 run=23 seed=23 ###
+ResponseTime=13.44174 Throughput=65.56250 goodput=64.28750 badput=1.27500 completed=11362 timedout=204 dropped=0 Util=0.98197
+### END_ENTRY users=1090 run=23 ###
+
+### ENTRY users=1100 run=23 seed=23 ###
+ResponseTime=13.55781 Throughput=65.55000 goodput=64.22500 badput=1.32500 completed=11424 timedout=212 dropped=0 Util=0.98195
+### END_ENTRY users=1100 run=23 ###
+
+### ENTRY users=1110 run=23 seed=23 ###
+ResponseTime=13.60167 Throughput=66.11250 goodput=64.91250 badput=1.20000 completed=11458 timedout=192 dropped=0 Util=0.98193
+### END_ENTRY users=1110 run=23 ###
+
+### ENTRY users=1120 run=23 seed=23 ###
+ResponseTime=13.81653 Throughput=65.65000 goodput=64.35625 badput=1.29375 completed=11387 timedout=207 dropped=0 Util=0.98198
+### END_ENTRY users=1120 run=23 ###
+
+### ENTRY users=1130 run=23 seed=23 ###
+ResponseTime=14.03852 Throughput=65.26250 goodput=63.76875 badput=1.49375 completed=11321 timedout=239 dropped=0 Util=0.98191
+### END_ENTRY users=1130 run=23 ###
+
+### ENTRY users=1140 run=23 seed=23 ###
+ResponseTime=14.11846 Throughput=65.88125 goodput=64.34375 badput=1.53750 completed=11387 timedout=246 dropped=0 Util=0.98198
+### END_ENTRY users=1140 run=23 ###
+
+### ENTRY users=1150 run=23 seed=23 ###
+ResponseTime=14.26347 Throughput=65.70625 goodput=64.16875 badput=1.53750 completed=11377 timedout=246 dropped=0 Util=0.98196
+### END_ENTRY users=1150 run=23 ###
+
+### ENTRY users=1160 run=23 seed=23 ###
+ResponseTime=14.35293 Throughput=66.11250 goodput=64.60000 badput=1.51250 completed=11399 timedout=242 dropped=0 Util=0.98199
+### END_ENTRY users=1160 run=23 ###
+
+### ENTRY users=1170 run=23 seed=23 ###
+ResponseTime=14.39029 Throughput=66.30625 goodput=64.66875 badput=1.63750 completed=11427 timedout=262 dropped=0 Util=0.98196
+### END_ENTRY users=1170 run=23 ###
+
+### ENTRY users=1180 run=23 seed=23 ###
+ResponseTime=14.79327 Throughput=65.46250 goodput=63.71875 badput=1.74375 completed=11306 timedout=279 dropped=0 Util=0.98198
+### END_ENTRY users=1180 run=23 ###
+
+### ENTRY users=1190 run=23 seed=23 ###
+ResponseTime=14.89754 Throughput=65.76250 goodput=63.88750 badput=1.87500 completed=11288 timedout=300 dropped=0 Util=0.98198
+### END_ENTRY users=1190 run=23 ###
+
+### ENTRY users=1200 run=23 seed=23 ###
+ResponseTime=15.14413 Throughput=65.20625 goodput=63.11875 badput=2.08750 completed=11202 timedout=334 dropped=0 Util=0.98197
+### END_ENTRY users=1200 run=23 ###
+
+### ENTRY users=1210 run=23 seed=23 ###
+ResponseTime=14.97168 Throughput=66.40000 goodput=64.60000 badput=1.80000 completed=11413 timedout=288 dropped=0 Util=0.98196
+### END_ENTRY users=1210 run=23 ###
+
+### ENTRY users=1220 run=23 seed=23 ###
+ResponseTime=15.18879 Throughput=66.18750 goodput=64.13125 badput=2.05625 completed=11369 timedout=329 dropped=0 Util=0.98196
+### END_ENTRY users=1220 run=23 ###
+
+### ENTRY users=1230 run=23 seed=23 ###
+ResponseTime=15.59863 Throughput=65.42500 goodput=63.10000 badput=2.32500 completed=11194 timedout=372 dropped=0 Util=0.98196
+### END_ENTRY users=1230 run=23 ###
+
+### ENTRY users=1240 run=23 seed=23 ###
+ResponseTime=15.59777 Throughput=65.88750 goodput=63.63125 badput=2.25625 completed=11254 timedout=361 dropped=0 Util=0.98199
+### END_ENTRY users=1240 run=23 ###
+
+### ENTRY users=1250 run=23 seed=23 ###
+ResponseTime=15.37528 Throughput=67.00000 goodput=65.06250 badput=1.93750 completed=11531 timedout=310 dropped=0 Util=0.98195
+### END_ENTRY users=1250 run=23 ###
+
+### ENTRY users=1260 run=23 seed=23 ###
+ResponseTime=15.85415 Throughput=65.75000 goodput=63.46875 badput=2.28125 completed=11241 timedout=365 dropped=0 Util=0.98196
+### END_ENTRY users=1260 run=23 ###
+
+### ENTRY users=1270 run=23 seed=23 ###
+ResponseTime=16.20093 Throughput=65.34375 goodput=62.68750 badput=2.65625 completed=11117 timedout=425 dropped=0 Util=0.98198
+### END_ENTRY users=1270 run=23 ###
+
+### ENTRY users=1280 run=23 seed=23 ###
+ResponseTime=16.03189 Throughput=66.29375 goodput=63.67500 badput=2.61875 completed=11282 timedout=419 dropped=0 Util=0.98195
+### END_ENTRY users=1280 run=23 ###
+
+### ENTRY users=1290 run=23 seed=23 ###
+ResponseTime=16.47957 Throughput=65.41250 goodput=62.53125 badput=2.88125 completed=11140 timedout=461 dropped=0 Util=0.98194
+### END_ENTRY users=1290 run=23 ###
+
+### ENTRY users=1300 run=23 seed=23 ###
+ResponseTime=16.57841 Throughput=65.41250 goodput=62.43750 badput=2.97500 completed=11091 timedout=476 dropped=0 Util=0.98196
+### END_ENTRY users=1300 run=23 ###
+
+### ENTRY users=1310 run=23 seed=23 ###
+ResponseTime=16.51542 Throughput=66.34375 goodput=63.44375 badput=2.90000 completed=11264 timedout=464 dropped=0 Util=0.98200
+### END_ENTRY users=1310 run=23 ###
+
+### ENTRY users=1320 run=23 seed=23 ###
+ResponseTime=16.65773 Throughput=66.15000 goodput=63.14375 badput=3.00625 completed=11219 timedout=481 dropped=0 Util=0.98195
+### END_ENTRY users=1320 run=23 ###
+
+### ENTRY users=1330 run=23 seed=23 ###
+ResponseTime=16.82562 Throughput=66.19375 goodput=63.06250 badput=3.13125 completed=11184 timedout=501 dropped=0 Util=0.98197
+### END_ENTRY users=1330 run=23 ###
+
+### ENTRY users=1340 run=23 seed=23 ###
+ResponseTime=17.11430 Throughput=65.74375 goodput=62.18125 badput=3.56250 completed=11041 timedout=570 dropped=0 Util=0.98196
+### END_ENTRY users=1340 run=23 ###
+
+### ENTRY users=1350 run=23 seed=23 ###
+ResponseTime=17.25730 Throughput=65.76250 goodput=62.22500 badput=3.53750 completed=11081 timedout=566 dropped=0 Util=0.98197
+### END_ENTRY users=1350 run=23 ###
+
+### ENTRY users=1360 run=23 seed=23 ###
+ResponseTime=17.38341 Throughput=65.77500 goodput=62.02500 badput=3.75000 completed=10996 timedout=600 dropped=0 Util=0.98196
+### END_ENTRY users=1360 run=23 ###
+
+### ENTRY users=1370 run=23 seed=23 ###
+ResponseTime=17.39475 Throughput=66.43750 goodput=62.66250 badput=3.77500 completed=11082 timedout=604 dropped=0 Util=0.98197
+### END_ENTRY users=1370 run=23 ###
+
+### ENTRY users=1380 run=23 seed=23 ###
+ResponseTime=17.58487 Throughput=66.07500 goodput=62.40625 badput=3.66875 completed=11076 timedout=587 dropped=0 Util=0.98197
+### END_ENTRY users=1380 run=23 ###
+
+### ENTRY users=1390 run=23 seed=23 ###
+ResponseTime=17.90191 Throughput=65.29375 goodput=60.98750 badput=4.30625 completed=10870 timedout=689 dropped=0 Util=0.98194
+### END_ENTRY users=1390 run=23 ###
+
+### ENTRY users=1400 run=23 seed=23 ###
+ResponseTime=17.97555 Throughput=65.85000 goodput=61.24375 badput=4.60625 completed=10901 timedout=737 dropped=0 Util=0.98196
+### END_ENTRY users=1400 run=23 ###
+
+### ENTRY users=1410 run=23 seed=23 ###
+ResponseTime=17.80506 Throughput=66.91250 goodput=62.66250 badput=4.25000 completed=11094 timedout=680 dropped=0 Util=0.98196
+### END_ENTRY users=1410 run=23 ###
+
+### ENTRY users=1420 run=23 seed=23 ###
+ResponseTime=18.26813 Throughput=65.63750 goodput=60.76875 badput=4.86875 completed=10838 timedout=779 dropped=0 Util=0.98193
+### END_ENTRY users=1420 run=23 ###
+
+### ENTRY users=1430 run=23 seed=23 ###
+ResponseTime=18.04544 Throughput=66.55625 goodput=62.16250 badput=4.39375 completed=11099 timedout=703 dropped=0 Util=0.98198
+### END_ENTRY users=1430 run=23 ###
+
+### ENTRY users=1440 run=23 seed=23 ###
+ResponseTime=18.43071 Throughput=66.41250 goodput=61.16875 badput=5.24375 completed=10880 timedout=839 dropped=0 Util=0.98196
+### END_ENTRY users=1440 run=23 ###
+
+### ENTRY users=1450 run=23 seed=23 ###
+ResponseTime=18.57898 Throughput=66.01875 goodput=60.79375 badput=5.22500 completed=10841 timedout=836 dropped=0 Util=0.98196
+### END_ENTRY users=1450 run=23 ###
+
+### ENTRY users=1460 run=23 seed=23 ###
+ResponseTime=18.74099 Throughput=65.96250 goodput=60.30625 badput=5.65625 completed=10745 timedout=905 dropped=0 Util=0.98193
+### END_ENTRY users=1460 run=23 ###
+
+### ENTRY users=1470 run=23 seed=23 ###
+ResponseTime=19.12729 Throughput=65.15000 goodput=59.02500 badput=6.12500 completed=10599 timedout=980 dropped=0 Util=0.98198
+### END_ENTRY users=1470 run=23 ###
+
+### ENTRY users=1480 run=23 seed=23 ###
+ResponseTime=19.10178 Throughput=65.71250 goodput=59.35000 badput=6.36250 completed=10647 timedout=1018 dropped=0 Util=0.98196
+### END_ENTRY users=1480 run=23 ###
+
+### ENTRY users=1490 run=23 seed=23 ###
+ResponseTime=19.52603 Throughput=64.91875 goodput=57.84375 badput=7.07500 completed=10342 timedout=1132 dropped=0 Util=0.98194
+### END_ENTRY users=1490 run=23 ###
+
+### ENTRY users=1500 run=23 seed=23 ###
+ResponseTime=19.46604 Throughput=65.68750 goodput=58.93125 badput=6.75625 completed=10550 timedout=1081 dropped=0 Util=0.98196
+### END_ENTRY users=1500 run=23 ###
+
+### ENTRY users=1510 run=23 seed=23 ###
+ResponseTime=19.66948 Throughput=65.56250 goodput=58.00625 badput=7.55625 completed=10357 timedout=1209 dropped=0 Util=0.98193
+### END_ENTRY users=1510 run=23 ###
+
+### ENTRY users=1520 run=23 seed=23 ###
+ResponseTime=19.64533 Throughput=65.96875 goodput=58.78750 badput=7.18125 completed=10523 timedout=1149 dropped=0 Util=0.98195
+### END_ENTRY users=1520 run=23 ###
+
+### ENTRY users=1530 run=23 seed=23 ###
+ResponseTime=19.76679 Throughput=66.13125 goodput=58.58750 badput=7.54375 completed=10499 timedout=1207 dropped=0 Util=0.98198
+### END_ENTRY users=1530 run=23 ###
+
+### ENTRY users=1540 run=23 seed=23 ###
+ResponseTime=20.03416 Throughput=65.83750 goodput=57.78750 badput=8.05000 completed=10348 timedout=1288 dropped=0 Util=0.98195
+### END_ENTRY users=1540 run=23 ###
+
+### ENTRY users=1550 run=23 seed=23 ###
+ResponseTime=19.95671 Throughput=66.33125 goodput=58.31875 badput=8.01250 completed=10481 timedout=1282 dropped=0 Util=0.98197
+### END_ENTRY users=1550 run=23 ###
+
+### ENTRY users=1560 run=23 seed=23 ###
+ResponseTime=20.41641 Throughput=65.38750 goodput=56.37500 badput=9.01250 completed=10158 timedout=1442 dropped=0 Util=0.98196
+### END_ENTRY users=1560 run=23 ###
+
+### ENTRY users=1570 run=23 seed=23 ###
+ResponseTime=20.27796 Throughput=66.11250 goodput=57.56875 badput=8.54375 completed=10390 timedout=1367 dropped=0 Util=0.98197
+### END_ENTRY users=1570 run=23 ###
+
+### ENTRY users=1580 run=23 seed=23 ###
+ResponseTime=20.61683 Throughput=65.55000 goodput=55.96875 badput=9.58125 completed=10059 timedout=1533 dropped=0 Util=0.98196
+### END_ENTRY users=1580 run=23 ###
+
+### ENTRY users=1590 run=23 seed=23 ###
+ResponseTime=20.61627 Throughput=66.25625 goodput=56.48125 badput=9.77500 completed=10156 timedout=1564 dropped=0 Util=0.98196
+### END_ENTRY users=1590 run=23 ###
+
+### ENTRY users=1600 run=23 seed=23 ###
+ResponseTime=20.62383 Throughput=66.33125 goodput=56.81250 badput=9.51875 completed=10254 timedout=1523 dropped=0 Util=0.98198
+### END_ENTRY users=1600 run=23 ###
+
+### ENTRY users=1610 run=23 seed=23 ###
+ResponseTime=21.03340 Throughput=65.56250 goodput=54.71250 badput=10.85000 completed=9894 timedout=1736 dropped=0 Util=0.98196
+### END_ENTRY users=1610 run=23 ###
+
+### ENTRY users=1620 run=23 seed=23 ###
+ResponseTime=21.32839 Throughput=64.96250 goodput=53.00625 badput=11.95625 completed=9576 timedout=1913 dropped=0 Util=0.98196
+### END_ENTRY users=1620 run=23 ###
+
+### ENTRY users=1630 run=23 seed=23 ###
+ResponseTime=21.22567 Throughput=66.19375 goodput=54.60000 badput=11.59375 completed=9865 timedout=1855 dropped=0 Util=0.98197
+### END_ENTRY users=1630 run=23 ###
+
+### ENTRY users=1640 run=23 seed=23 ###
+ResponseTime=21.46917 Throughput=65.88750 goodput=53.36875 badput=12.51875 completed=9636 timedout=2003 dropped=0 Util=0.98196
+### END_ENTRY users=1640 run=23 ###
+
+### ENTRY users=1650 run=23 seed=23 ###
+ResponseTime=21.37711 Throughput=66.13750 goodput=53.86875 badput=12.26875 completed=9720 timedout=1963 dropped=0 Util=0.98194
+### END_ENTRY users=1650 run=23 ###
+
+### ENTRY users=1660 run=23 seed=23 ###
+ResponseTime=21.56924 Throughput=66.28750 goodput=53.20625 badput=13.08125 completed=9664 timedout=2093 dropped=0 Util=0.98197
+### END_ENTRY users=1660 run=23 ###
+
+### ENTRY users=1670 run=23 seed=23 ###
+ResponseTime=21.56650 Throughput=66.65625 goodput=53.86875 badput=12.78750 completed=9790 timedout=2046 dropped=0 Util=0.98197
+### END_ENTRY users=1670 run=23 ###
+
+### ENTRY users=1680 run=23 seed=23 ###
+ResponseTime=21.84521 Throughput=66.51875 goodput=52.25625 badput=14.26250 completed=9475 timedout=2282 dropped=0 Util=0.98197
+### END_ENTRY users=1680 run=23 ###
+
+### ENTRY users=1690 run=23 seed=23 ###
+ResponseTime=22.42278 Throughput=65.35000 goodput=48.91875 badput=16.43125 completed=8983 timedout=2629 dropped=0 Util=0.98194
+### END_ENTRY users=1690 run=23 ###
+
+### ENTRY users=1700 run=23 seed=23 ###
+ResponseTime=22.12040 Throughput=66.11250 goodput=50.66875 badput=15.44375 completed=9261 timedout=2471 dropped=0 Util=0.98195
+### END_ENTRY users=1700 run=23 ###
+
+### ENTRY users=1710 run=23 seed=23 ###
+ResponseTime=22.12009 Throughput=66.26875 goodput=51.23125 badput=15.03750 completed=9376 timedout=2406 dropped=0 Util=0.98198
+### END_ENTRY users=1710 run=23 ###
+
+### ENTRY users=1720 run=23 seed=23 ###
+ResponseTime=22.46155 Throughput=66.06250 goodput=48.98125 badput=17.08125 completed=8999 timedout=2733 dropped=0 Util=0.98197
+### END_ENTRY users=1720 run=23 ###
+
+### ENTRY users=1730 run=23 seed=23 ###
+ResponseTime=22.68918 Throughput=65.84375 goodput=47.70000 badput=18.14375 completed=8801 timedout=2903 dropped=0 Util=0.98196
+### END_ENTRY users=1730 run=23 ###
+
+### ENTRY users=1740 run=23 seed=23 ###
+ResponseTime=22.70214 Throughput=66.26875 goodput=48.20000 badput=18.06875 completed=8796 timedout=2891 dropped=0 Util=0.98196
+### END_ENTRY users=1740 run=23 ###
+
+### ENTRY users=1750 run=23 seed=23 ###
+ResponseTime=23.10879 Throughput=65.45625 goodput=45.12500 badput=20.33125 completed=8315 timedout=3253 dropped=0 Util=0.98193
+### END_ENTRY users=1750 run=23 ###
+
+### ENTRY users=1760 run=23 seed=23 ###
+ResponseTime=22.81048 Throughput=66.91250 goodput=47.71875 badput=19.19375 completed=8714 timedout=3071 dropped=0 Util=0.98199
+### END_ENTRY users=1760 run=23 ###
+
+### ENTRY users=1770 run=23 seed=23 ###
+ResponseTime=23.21143 Throughput=66.10625 goodput=44.98125 badput=21.12500 completed=8324 timedout=3380 dropped=0 Util=0.98197
+### END_ENTRY users=1770 run=23 ###
+
+### ENTRY users=1780 run=23 seed=23 ###
+ResponseTime=23.74423 Throughput=65.08750 goodput=41.03750 badput=24.05000 completed=7685 timedout=3848 dropped=0 Util=0.98195
+### END_ENTRY users=1780 run=23 ###
+
+### ENTRY users=1790 run=23 seed=23 ###
+ResponseTime=23.73673 Throughput=65.52500 goodput=41.30625 badput=24.21875 completed=7730 timedout=3875 dropped=0 Util=0.98195
+### END_ENTRY users=1790 run=23 ###
+
+### ENTRY users=1800 run=23 seed=23 ###
+ResponseTime=23.37996 Throughput=66.66875 goodput=44.52500 badput=22.14375 completed=8229 timedout=3543 dropped=0 Util=0.98198
+### END_ENTRY users=1800 run=23 ###
+
+### ENTRY users=1810 run=23 seed=23 ###
+ResponseTime=24.11238 Throughput=65.36875 goodput=39.26250 badput=26.10625 completed=7400 timedout=4177 dropped=0 Util=0.98195
+### END_ENTRY users=1810 run=23 ###
+
+### ENTRY users=1820 run=23 seed=23 ###
+ResponseTime=23.91967 Throughput=66.04375 goodput=40.88750 badput=25.15625 completed=7646 timedout=4025 dropped=0 Util=0.98196
+### END_ENTRY users=1820 run=23 ###
+
+### ENTRY users=1830 run=23 seed=23 ###
+ResponseTime=24.07753 Throughput=66.13125 goodput=39.89375 badput=26.23750 completed=7477 timedout=4198 dropped=0 Util=0.98198
+### END_ENTRY users=1830 run=23 ###
+
+### ENTRY users=1840 run=23 seed=23 ###
+ResponseTime=24.46511 Throughput=65.64375 goodput=37.30000 badput=28.34375 completed=7093 timedout=4535 dropped=0 Util=0.98193
+### END_ENTRY users=1840 run=23 ###
+
+### ENTRY users=1850 run=23 seed=23 ###
+ResponseTime=24.35714 Throughput=66.46875 goodput=38.45625 badput=28.01250 completed=7222 timedout=4482 dropped=0 Util=0.98199
+### END_ENTRY users=1850 run=23 ###
+
+### ENTRY users=1860 run=23 seed=23 ###
+ResponseTime=24.67026 Throughput=65.70625 goodput=36.37500 badput=29.33125 completed=6913 timedout=4693 dropped=0 Util=0.98196
+### END_ENTRY users=1860 run=23 ###
+
+### ENTRY users=1870 run=23 seed=23 ###
+ResponseTime=24.72303 Throughput=65.83125 goodput=35.59375 badput=30.23750 completed=6828 timedout=4838 dropped=0 Util=0.98200
+### END_ENTRY users=1870 run=23 ###
+
+### ENTRY users=1880 run=23 seed=23 ###
+ResponseTime=24.92892 Throughput=65.83125 goodput=34.81875 badput=31.01250 completed=6666 timedout=4962 dropped=0 Util=0.98195
+### END_ENTRY users=1880 run=23 ###
+
+### ENTRY users=1890 run=23 seed=23 ###
+ResponseTime=24.94929 Throughput=66.22500 goodput=34.33750 badput=31.88750 completed=6577 timedout=5102 dropped=0 Util=0.98195
+### END_ENTRY users=1890 run=23 ###
+
+### ENTRY users=1900 run=23 seed=23 ###
+ResponseTime=25.12276 Throughput=65.98750 goodput=33.78750 badput=32.20000 completed=6531 timedout=5152 dropped=0 Util=0.98198
+### END_ENTRY users=1900 run=23 ###
+
+### ENTRY users=1910 run=23 seed=23 ###
+ResponseTime=25.23206 Throughput=65.85000 goodput=33.14375 badput=32.70625 completed=6413 timedout=5233 dropped=0 Util=0.98198
+### END_ENTRY users=1910 run=23 ###
+
+### ENTRY users=1920 run=23 seed=23 ###
+ResponseTime=25.26575 Throughput=66.08750 goodput=32.36875 badput=33.71875 completed=6259 timedout=5395 dropped=0 Util=0.98198
+### END_ENTRY users=1920 run=23 ###
+
+### ENTRY users=1930 run=23 seed=23 ###
+ResponseTime=25.63949 Throughput=65.65625 goodput=29.87500 badput=35.78125 completed=5892 timedout=5725 dropped=0 Util=0.98192
+### END_ENTRY users=1930 run=23 ###
+
+### ENTRY users=1940 run=23 seed=23 ###
+ResponseTime=25.67950 Throughput=66.00000 goodput=29.68750 badput=36.31250 completed=5838 timedout=5810 dropped=0 Util=0.98197
+### END_ENTRY users=1940 run=23 ###
+
+### ENTRY users=1950 run=23 seed=23 ###
+ResponseTime=25.81540 Throughput=65.74375 goodput=29.43125 badput=36.31250 completed=5808 timedout=5810 dropped=0 Util=0.98194
+### END_ENTRY users=1950 run=23 ###
+
+### ENTRY users=1960 run=23 seed=23 ###
+ResponseTime=26.19822 Throughput=65.28750 goodput=27.03125 badput=38.25625 completed=5431 timedout=6121 dropped=0 Util=0.98194
+### END_ENTRY users=1960 run=23 ###
+
+### ENTRY users=1970 run=23 seed=23 ###
+ResponseTime=26.34240 Throughput=65.41875 goodput=25.91875 badput=39.50000 completed=5229 timedout=6320 dropped=0 Util=0.98194
+### END_ENTRY users=1970 run=23 ###
+
+### ENTRY users=1980 run=23 seed=23 ###
+ResponseTime=26.02419 Throughput=66.31875 goodput=27.60625 badput=38.71250 completed=5534 timedout=6194 dropped=0 Util=0.98197
+### END_ENTRY users=1980 run=23 ###
+
+### ENTRY users=1990 run=23 seed=23 ###
+ResponseTime=26.65569 Throughput=65.25625 goodput=24.66250 badput=40.59375 completed=5054 timedout=6495 dropped=0 Util=0.98197
+### END_ENTRY users=1990 run=23 ###
+
+### ENTRY users=2000 run=23 seed=23 ###
+ResponseTime=26.28986 Throughput=66.37500 goodput=27.10000 badput=39.27500 completed=5409 timedout=6284 dropped=0 Util=0.98196
+### END_ENTRY users=2000 run=23 ###
+
+### ENTRY users=2010 run=23 seed=23 ###
+ResponseTime=26.34466 Throughput=66.82500 goodput=26.97500 badput=39.85000 completed=5373 timedout=6376 dropped=0 Util=0.98196
+### END_ENTRY users=2010 run=23 ###
+
+### ENTRY users=2020 run=23 seed=23 ###
+ResponseTime=26.84248 Throughput=65.75000 goodput=23.90000 badput=41.85000 completed=4917 timedout=6696 dropped=0 Util=0.98194
+### END_ENTRY users=2020 run=23 ###
+
+### ENTRY users=2030 run=23 seed=23 ###
+ResponseTime=27.14235 Throughput=65.33750 goodput=21.57500 badput=43.76250 completed=4570 timedout=7002 dropped=0 Util=0.98191
+### END_ENTRY users=2030 run=23 ###
+
+### ENTRY users=2040 run=23 seed=23 ###
+ResponseTime=27.09093 Throughput=65.78125 goodput=22.37500 badput=43.40625 completed=4680 timedout=6945 dropped=0 Util=0.98194
+### END_ENTRY users=2040 run=23 ###
+
+### ENTRY users=2050 run=23 seed=23 ###
+ResponseTime=27.12655 Throughput=66.26875 goodput=22.38125 badput=43.88750 completed=4669 timedout=7022 dropped=0 Util=0.98197
+### END_ENTRY users=2050 run=23 ###
+
+### ENTRY users=2060 run=23 seed=23 ###
+ResponseTime=27.55745 Throughput=65.15000 goodput=19.52500 badput=45.62500 completed=4241 timedout=7300 dropped=0 Util=0.98192
+### END_ENTRY users=2060 run=23 ###
+
+### ENTRY users=2070 run=23 seed=23 ###
+ResponseTime=27.71165 Throughput=65.47500 goodput=19.11875 badput=46.35625 completed=4192 timedout=7417 dropped=0 Util=0.98194
+### END_ENTRY users=2070 run=23 ###
+
+### ENTRY users=2080 run=23 seed=23 ###
+ResponseTime=27.16850 Throughput=67.05625 goodput=22.86250 badput=44.19375 completed=4785 timedout=7071 dropped=0 Util=0.98198
+### END_ENTRY users=2080 run=23 ###
+
+### ENTRY users=2090 run=23 seed=23 ###
+ResponseTime=27.82268 Throughput=65.91250 goodput=19.02500 badput=46.88750 completed=4117 timedout=7502 dropped=0 Util=0.98194
+### END_ENTRY users=2090 run=23 ###
+
+### ENTRY users=2100 run=23 seed=23 ###
+ResponseTime=27.93889 Throughput=65.93125 goodput=17.66875 badput=48.26250 completed=3907 timedout=7722 dropped=0 Util=0.98193
+### END_ENTRY users=2100 run=23 ###
+
+### ENTRY users=2110 run=23 seed=23 ###
+ResponseTime=28.30282 Throughput=65.32500 goodput=16.09375 badput=49.23125 completed=3722 timedout=7877 dropped=0 Util=0.98195
+### END_ENTRY users=2110 run=23 ###
+
+### ENTRY users=2120 run=23 seed=23 ###
+ResponseTime=28.44951 Throughput=65.33125 goodput=15.37500 badput=49.95625 completed=3562 timedout=7993 dropped=0 Util=0.98194
+### END_ENTRY users=2120 run=23 ###
+
+### ENTRY users=2130 run=23 seed=23 ###
+ResponseTime=28.20905 Throughput=66.03125 goodput=16.72500 badput=49.30625 completed=3811 timedout=7889 dropped=0 Util=0.98198
+### END_ENTRY users=2130 run=23 ###
+
+### ENTRY users=2140 run=23 seed=23 ###
+ResponseTime=28.41800 Throughput=65.85000 goodput=15.51250 badput=50.33750 completed=3604 timedout=8054 dropped=0 Util=0.98194
+### END_ENTRY users=2140 run=23 ###
+
+### ENTRY users=2150 run=23 seed=23 ###
+ResponseTime=28.35477 Throughput=66.55000 goodput=16.44375 badput=50.10625 completed=3706 timedout=8017 dropped=0 Util=0.98200
+### END_ENTRY users=2150 run=23 ###
+
+### ENTRY users=2160 run=23 seed=23 ###
+ResponseTime=28.67081 Throughput=66.15000 goodput=14.44375 badput=51.70625 completed=3408 timedout=8273 dropped=0 Util=0.98195
+### END_ENTRY users=2160 run=23 ###
+
+### ENTRY users=2170 run=23 seed=23 ###
+ResponseTime=28.92578 Throughput=65.75625 goodput=13.40000 badput=52.35625 completed=3219 timedout=8377 dropped=0 Util=0.98197
+### END_ENTRY users=2170 run=23 ###
+
+### ENTRY users=2180 run=23 seed=23 ###
+ResponseTime=28.91277 Throughput=65.76875 goodput=13.43125 badput=52.33750 completed=3259 timedout=8374 dropped=0 Util=0.98196
+### END_ENTRY users=2180 run=23 ###
+
+### ENTRY users=2190 run=23 seed=23 ###
+ResponseTime=29.52047 Throughput=65.18125 goodput=10.85000 badput=54.33125 completed=2816 timedout=8693 dropped=0 Util=0.98194
+### END_ENTRY users=2190 run=23 ###
+
+### ENTRY users=2200 run=23 seed=23 ###
+ResponseTime=29.06345 Throughput=66.16250 goodput=12.75000 badput=53.41250 completed=3176 timedout=8546 dropped=0 Util=0.98197
+### END_ENTRY users=2200 run=23 ###
+
+### ENTRY users=2210 run=23 seed=23 ###
+ResponseTime=29.36480 Throughput=65.81250 goodput=11.43125 badput=54.38125 completed=2971 timedout=8701 dropped=0 Util=0.98195
+### END_ENTRY users=2210 run=23 ###
+
+### ENTRY users=2220 run=23 seed=23 ###
+ResponseTime=29.27859 Throughput=66.60000 goodput=12.08750 badput=54.51250 completed=3038 timedout=8722 dropped=0 Util=0.98197
+### END_ENTRY users=2220 run=23 ###
+
+### ENTRY users=2230 run=23 seed=23 ###
+ResponseTime=29.22865 Throughput=66.86250 goodput=12.04375 badput=54.81875 completed=3031 timedout=8771 dropped=0 Util=0.98196
+### END_ENTRY users=2230 run=23 ###
+
+### ENTRY users=2240 run=23 seed=23 ###
+ResponseTime=29.55691 Throughput=66.11875 goodput=10.78125 badput=55.33750 completed=2865 timedout=8854 dropped=0 Util=0.98197
+### END_ENTRY users=2240 run=23 ###
+
+### ENTRY users=2250 run=23 seed=23 ###
+ResponseTime=29.91097 Throughput=65.88125 goodput=9.39375 badput=56.48750 completed=2615 timedout=9038 dropped=0 Util=0.98194
+### END_ENTRY users=2250 run=23 ###
+
+### ENTRY users=2260 run=23 seed=23 ###
+ResponseTime=30.43240 Throughput=65.38750 goodput=7.83750 badput=57.55000 completed=2329 timedout=9208 dropped=0 Util=0.98195
+### END_ENTRY users=2260 run=23 ###
+
+### ENTRY users=2270 run=23 seed=23 ###
+ResponseTime=29.87535 Throughput=66.52500 goodput=9.88125 badput=56.64375 completed=2686 timedout=9063 dropped=0 Util=0.98200
+### END_ENTRY users=2270 run=23 ###
+
+### ENTRY users=2280 run=23 seed=23 ###
+ResponseTime=30.53458 Throughput=65.66250 goodput=7.72500 badput=57.93750 completed=2328 timedout=9270 dropped=0 Util=0.98195
+### END_ENTRY users=2280 run=23 ###
+
+### ENTRY users=2290 run=23 seed=23 ###
+ResponseTime=30.08515 Throughput=66.78750 goodput=9.36875 badput=57.41875 completed=2584 timedout=9187 dropped=0 Util=0.98197
+### END_ENTRY users=2290 run=23 ###
+
+### ENTRY users=2300 run=23 seed=23 ###
+ResponseTime=30.81340 Throughput=65.63750 goodput=7.02500 badput=58.61250 completed=2247 timedout=9378 dropped=0 Util=0.98197
+### END_ENTRY users=2300 run=23 ###
+
+### ENTRY users=2310 run=23 seed=23 ###
+ResponseTime=30.40607 Throughput=66.86250 goodput=8.22500 badput=58.63750 completed=2368 timedout=9382 dropped=0 Util=0.98196
+### END_ENTRY users=2310 run=23 ###
+
+### ENTRY users=2320 run=23 seed=23 ###
+ResponseTime=30.89918 Throughput=66.07500 goodput=6.78750 badput=59.28750 completed=2162 timedout=9486 dropped=0 Util=0.98196
+### END_ENTRY users=2320 run=23 ###
+
+### ENTRY users=2330 run=23 seed=23 ###
+ResponseTime=30.99432 Throughput=65.93750 goodput=6.81250 badput=59.12500 completed=2199 timedout=9460 dropped=0 Util=0.98197
+### END_ENTRY users=2330 run=23 ###
+
+### ENTRY users=2340 run=23 seed=23 ###
+ResponseTime=30.79220 Throughput=66.86875 goodput=7.26875 badput=59.60000 completed=2265 timedout=9536 dropped=0 Util=0.98200
+### END_ENTRY users=2340 run=23 ###
+
+### ENTRY users=2350 run=23 seed=23 ###
+ResponseTime=31.19719 Throughput=66.04375 goodput=6.26250 badput=59.78125 completed=2088 timedout=9565 dropped=0 Util=0.98196
+### END_ENTRY users=2350 run=23 ###
+
+### ENTRY users=2360 run=23 seed=23 ###
+ResponseTime=31.79851 Throughput=64.99375 goodput=5.41250 badput=59.58125 completed=1941 timedout=9533 dropped=0 Util=0.98192
+### END_ENTRY users=2360 run=23 ###
+
+### ENTRY users=2370 run=23 seed=23 ###
+ResponseTime=31.30589 Throughput=66.24375 goodput=6.11875 badput=60.12500 completed=2092 timedout=9620 dropped=0 Util=0.98197
+### END_ENTRY users=2370 run=23 ###
+
+### ENTRY users=2380 run=23 seed=23 ###
+ResponseTime=31.68661 Throughput=66.18750 goodput=5.40625 badput=60.78125 completed=1908 timedout=9725 dropped=0 Util=0.98195
+### END_ENTRY users=2380 run=23 ###
+
+### ENTRY users=2390 run=23 seed=23 ###
+ResponseTime=31.79516 Throughput=65.80625 goodput=5.58750 badput=60.21875 completed=2011 timedout=9635 dropped=0 Util=0.98197
+### END_ENTRY users=2390 run=23 ###
+
+### ENTRY users=2400 run=23 seed=23 ###
+ResponseTime=31.75397 Throughput=66.51250 goodput=5.38750 badput=61.12500 completed=1972 timedout=9780 dropped=0 Util=0.98198
+### END_ENTRY users=2400 run=23 ###
+
+### ENTRY users=2410 run=23 seed=23 ###
+ResponseTime=31.94820 Throughput=66.31250 goodput=5.11875 badput=61.19375 completed=1924 timedout=9791 dropped=0 Util=0.98200
+### END_ENTRY users=2410 run=23 ###
+
+### ENTRY users=2420 run=23 seed=23 ###
+ResponseTime=32.25196 Throughput=65.88125 goodput=5.08125 badput=60.80000 completed=1906 timedout=9728 dropped=0 Util=0.98195
+### END_ENTRY users=2420 run=23 ###
+
+### ENTRY users=2430 run=23 seed=23 ###
+ResponseTime=32.48055 Throughput=65.73125 goodput=4.87500 badput=60.85625 completed=1866 timedout=9737 dropped=0 Util=0.98196
+### END_ENTRY users=2430 run=23 ###
+
+### ENTRY users=2440 run=23 seed=23 ###
+ResponseTime=32.87791 Throughput=65.25625 goodput=5.00000 badput=60.25625 completed=1908 timedout=9641 dropped=0 Util=0.98195
+### END_ENTRY users=2440 run=23 ###
+
+### ENTRY users=2450 run=23 seed=23 ###
+ResponseTime=32.19743 Throughput=66.70000 goodput=5.05625 badput=61.64375 completed=1899 timedout=9863 dropped=0 Util=0.98198
+### END_ENTRY users=2450 run=23 ###
+
+### ENTRY users=2460 run=23 seed=23 ###
+ResponseTime=33.08191 Throughput=65.36875 goodput=4.90000 badput=60.46875 completed=1850 timedout=9675 dropped=0 Util=0.98193
+### END_ENTRY users=2460 run=23 ###
+
+### ENTRY users=2470 run=23 seed=23 ###
+ResponseTime=33.18960 Throughput=65.51875 goodput=4.91250 badput=60.60625 completed=1857 timedout=9697 dropped=0 Util=0.98195
+### END_ENTRY users=2470 run=23 ###
+
+### ENTRY users=2480 run=23 seed=23 ###
+ResponseTime=33.55402 Throughput=65.04375 goodput=4.90000 badput=60.14375 completed=1876 timedout=9623 dropped=0 Util=0.98196
+### END_ENTRY users=2480 run=23 ###
+
+### ENTRY users=2490 run=23 seed=23 ###
+ResponseTime=33.16783 Throughput=65.94375 goodput=5.29375 badput=60.65000 completed=1941 timedout=9704 dropped=0 Util=0.98199
+### END_ENTRY users=2490 run=23 ###
+
+### ENTRY users=2500 run=23 seed=23 ###
+ResponseTime=32.88734 Throughput=66.61250 goodput=5.01875 badput=61.59375 completed=1872 timedout=9855 dropped=0 Util=0.98200
+### END_ENTRY users=2500 run=23 ###
+
+### ENTRY users=2510 run=23 seed=23 ###
+ResponseTime=33.29861 Throughput=65.88125 goodput=5.04375 badput=60.83750 completed=1908 timedout=9734 dropped=0 Util=0.98196
+### END_ENTRY users=2510 run=23 ###
+
+### ENTRY users=2520 run=23 seed=23 ###
+ResponseTime=33.10822 Throughput=66.51250 goodput=4.90000 badput=61.61250 completed=1904 timedout=9858 dropped=0 Util=0.98197
+### END_ENTRY users=2520 run=23 ###
+
+### ENTRY users=2530 run=23 seed=23 ###
+ResponseTime=33.72783 Throughput=66.04375 goodput=4.83750 badput=61.20625 completed=1882 timedout=9793 dropped=0 Util=0.98196
+### END_ENTRY users=2530 run=23 ###
+
+### ENTRY users=2540 run=23 seed=23 ###
+ResponseTime=34.09663 Throughput=65.34375 goodput=4.93750 badput=60.40625 completed=1922 timedout=9665 dropped=0 Util=0.98194
+### END_ENTRY users=2540 run=23 ###
+
+### ENTRY users=2550 run=23 seed=23 ###
+ResponseTime=33.85081 Throughput=66.27500 goodput=4.81250 badput=61.46250 completed=1898 timedout=9834 dropped=0 Util=0.98195
+### END_ENTRY users=2550 run=23 ###
+
+### ENTRY users=2560 run=23 seed=23 ###
+ResponseTime=34.27322 Throughput=65.48750 goodput=4.99375 badput=60.49375 completed=1889 timedout=9679 dropped=0 Util=0.98194
+### END_ENTRY users=2560 run=23 ###
+
+### ENTRY users=2570 run=23 seed=23 ###
+ResponseTime=33.86813 Throughput=66.58125 goodput=4.96875 badput=61.61250 completed=1899 timedout=9858 dropped=0 Util=0.98202
+### END_ENTRY users=2570 run=23 ###
+
+### ENTRY users=2580 run=23 seed=23 ###
+ResponseTime=34.11122 Throughput=66.14375 goodput=4.96250 badput=61.18125 completed=1906 timedout=9789 dropped=0 Util=0.98196
+### END_ENTRY users=2580 run=23 ###
+
+### ENTRY users=2590 run=23 seed=23 ###
+ResponseTime=33.88140 Throughput=67.06250 goodput=4.85000 badput=62.21250 completed=1858 timedout=9954 dropped=0 Util=0.98200
+### END_ENTRY users=2590 run=23 ###
+
+### ENTRY users=2600 run=23 seed=23 ###
+ResponseTime=33.89926 Throughput=66.98125 goodput=5.00625 badput=61.97500 completed=1962 timedout=9916 dropped=0 Util=0.98200
+### END_ENTRY users=2600 run=23 ###
+
+### ENTRY users=2610 run=23 seed=23 ###
+ResponseTime=34.20270 Throughput=66.70625 goodput=5.05625 badput=61.65000 completed=1882 timedout=9864 dropped=0 Util=0.98201
+### END_ENTRY users=2610 run=23 ###
+
+### ENTRY users=2620 run=23 seed=23 ###
+ResponseTime=35.00492 Throughput=65.81875 goodput=5.05625 badput=60.76250 completed=1945 timedout=9722 dropped=0 Util=0.98196
+### END_ENTRY users=2620 run=23 ###
+
+### ENTRY users=2630 run=23 seed=23 ###
+ResponseTime=34.68371 Throughput=66.77500 goodput=4.92500 badput=61.85000 completed=1911 timedout=9896 dropped=0 Util=0.98195
+### END_ENTRY users=2630 run=23 ###
+
+### ENTRY users=2640 run=23 seed=23 ###
+ResponseTime=34.92678 Throughput=65.96250 goodput=5.05625 badput=60.90625 completed=1894 timedout=9745 dropped=0 Util=0.98198
+### END_ENTRY users=2640 run=23 ###
+
+### ENTRY users=2650 run=23 seed=23 ###
+ResponseTime=35.20603 Throughput=65.70625 goodput=4.92500 badput=60.78125 completed=1863 timedout=9725 dropped=0 Util=0.98193
+### END_ENTRY users=2650 run=23 ###
+
+### ENTRY users=2660 run=23 seed=23 ###
+ResponseTime=35.40008 Throughput=65.69375 goodput=4.94375 badput=60.75000 completed=1865 timedout=9720 dropped=0 Util=0.98193
+### END_ENTRY users=2660 run=23 ###
+
+### ENTRY users=2670 run=23 seed=23 ###
+ResponseTime=35.59516 Throughput=65.92500 goodput=5.09375 badput=60.83125 completed=1884 timedout=9733 dropped=0 Util=0.98198
+### END_ENTRY users=2670 run=23 ###
+
+### ENTRY users=2680 run=23 seed=23 ###
+ResponseTime=35.52833 Throughput=66.24375 goodput=4.93125 badput=61.31250 completed=1888 timedout=9810 dropped=0 Util=0.98196
+### END_ENTRY users=2680 run=23 ###
+
+### ENTRY users=2690 run=23 seed=23 ###
+ResponseTime=35.75995 Throughput=65.84375 goodput=5.02500 badput=60.81875 completed=1905 timedout=9731 dropped=0 Util=0.98195
+### END_ENTRY users=2690 run=23 ###
+
+### ENTRY users=2700 run=23 seed=23 ###
+ResponseTime=35.89769 Throughput=65.91250 goodput=4.75000 badput=61.16250 completed=1848 timedout=9786 dropped=0 Util=0.98198
+### END_ENTRY users=2700 run=23 ###
+
+### ENTRY users=2710 run=23 seed=23 ###
+ResponseTime=35.97361 Throughput=66.10625 goodput=4.86250 badput=61.24375 completed=1886 timedout=9799 dropped=0 Util=0.98197
+### END_ENTRY users=2710 run=23 ###
+
+### ENTRY users=2720 run=23 seed=23 ###
+ResponseTime=36.00387 Throughput=66.10625 goodput=4.75000 badput=61.35625 completed=1857 timedout=9817 dropped=0 Util=0.98196
+### END_ENTRY users=2720 run=23 ###
+
+### ENTRY users=2730 run=23 seed=23 ###
+ResponseTime=36.02870 Throughput=66.31250 goodput=5.02500 badput=61.28750 completed=1923 timedout=9806 dropped=0 Util=0.98196
+### END_ENTRY users=2730 run=23 ###
+
+### ENTRY users=2740 run=23 seed=23 ###
+ResponseTime=36.73829 Throughput=65.39375 goodput=4.91250 badput=60.48125 completed=1921 timedout=9677 dropped=0 Util=0.98195
+### END_ENTRY users=2740 run=23 ###
+
+### ENTRY users=2750 run=23 seed=23 ###
+ResponseTime=36.92238 Throughput=65.09375 goodput=4.50625 badput=60.58750 completed=1873 timedout=9694 dropped=0 Util=0.98194
+### END_ENTRY users=2750 run=23 ###
+
+### ENTRY users=2760 run=23 seed=23 ###
+ResponseTime=36.75823 Throughput=65.66875 goodput=4.81250 badput=60.85625 completed=1895 timedout=9737 dropped=0 Util=0.98194
+### END_ENTRY users=2760 run=23 ###
+
+### ENTRY users=2770 run=23 seed=23 ###
+ResponseTime=36.99036 Throughput=65.48750 goodput=4.76250 badput=60.72500 completed=1865 timedout=9716 dropped=0 Util=0.98195
+### END_ENTRY users=2770 run=23 ###
+
+### ENTRY users=2780 run=23 seed=23 ###
+ResponseTime=36.97416 Throughput=65.98125 goodput=4.61250 badput=61.36875 completed=1831 timedout=9819 dropped=0 Util=0.98195
+### END_ENTRY users=2780 run=23 ###
+
+### ENTRY users=2790 run=23 seed=23 ###
+ResponseTime=36.74352 Throughput=66.50000 goodput=4.70625 badput=61.79375 completed=1826 timedout=9887 dropped=0 Util=0.98196
+### END_ENTRY users=2790 run=23 ###
+
+### ENTRY users=2800 run=23 seed=23 ###
+ResponseTime=37.70368 Throughput=64.88125 goodput=4.71250 badput=60.16875 completed=1884 timedout=9627 dropped=0 Util=0.98197
+### END_ENTRY users=2800 run=23 ###
+
+### ENTRY users=2810 run=23 seed=23 ###
+ResponseTime=37.29727 Throughput=66.08125 goodput=4.59375 badput=61.48750 completed=1857 timedout=9838 dropped=0 Util=0.98200
+### END_ENTRY users=2810 run=23 ###
+
+### ENTRY users=2820 run=23 seed=23 ###
+ResponseTime=38.07794 Throughput=64.88125 goodput=4.47500 badput=60.40625 completed=1812 timedout=9665 dropped=0 Util=0.98193
+### END_ENTRY users=2820 run=23 ###
+
+### ENTRY users=2830 run=23 seed=23 ###
+ResponseTime=37.52238 Throughput=66.09375 goodput=4.79375 badput=61.30000 completed=1901 timedout=9808 dropped=0 Util=0.98195
+### END_ENTRY users=2830 run=23 ###
+
+### ENTRY users=2840 run=23 seed=23 ###
+ResponseTime=37.93363 Throughput=65.57500 goodput=4.70000 badput=60.87500 completed=1842 timedout=9740 dropped=0 Util=0.98195
+### END_ENTRY users=2840 run=23 ###
+
+### ENTRY users=2850 run=23 seed=23 ###
+ResponseTime=37.44613 Throughput=66.40000 goodput=4.88125 badput=61.51875 completed=1895 timedout=9843 dropped=0 Util=0.98196
+### END_ENTRY users=2850 run=23 ###
+
+### ENTRY users=2860 run=23 seed=23 ###
+ResponseTime=37.84597 Throughput=66.14375 goodput=4.65625 badput=61.48750 completed=1869 timedout=9838 dropped=0 Util=0.98198
+### END_ENTRY users=2860 run=23 ###
+
+### ENTRY users=2870 run=23 seed=23 ###
+ResponseTime=37.74664 Throughput=66.43125 goodput=4.68125 badput=61.75000 completed=1859 timedout=9880 dropped=0 Util=0.98196
+### END_ENTRY users=2870 run=23 ###
+
+### ENTRY users=2880 run=23 seed=23 ###
+ResponseTime=38.43006 Throughput=65.86875 goodput=4.62500 badput=61.24375 completed=1831 timedout=9799 dropped=0 Util=0.98194
+### END_ENTRY users=2880 run=23 ###
+
+### ENTRY users=2890 run=23 seed=23 ###
+ResponseTime=38.11932 Throughput=65.96250 goodput=4.75625 badput=61.20625 completed=1863 timedout=9793 dropped=0 Util=0.98199
+### END_ENTRY users=2890 run=23 ###
+
+### ENTRY users=2900 run=23 seed=23 ###
+ResponseTime=38.24951 Throughput=66.26250 goodput=4.96250 badput=61.30000 completed=1886 timedout=9808 dropped=0 Util=0.98196
+### END_ENTRY users=2900 run=23 ###
+
+### ENTRY users=2910 run=23 seed=23 ###
+ResponseTime=38.16045 Throughput=66.52500 goodput=4.75625 badput=61.76875 completed=1910 timedout=9883 dropped=0 Util=0.98195
+### END_ENTRY users=2910 run=23 ###
+
+### ENTRY users=2920 run=23 seed=23 ###
+ResponseTime=39.05393 Throughput=65.26250 goodput=4.77500 badput=60.48750 completed=1847 timedout=9678 dropped=0 Util=0.98194
+### END_ENTRY users=2920 run=23 ###
+
+### ENTRY users=2930 run=23 seed=23 ###
+ResponseTime=39.19879 Throughput=65.38125 goodput=4.64375 badput=60.73750 completed=1819 timedout=9718 dropped=0 Util=0.98197
+### END_ENTRY users=2930 run=23 ###
+
+### ENTRY users=2940 run=23 seed=23 ###
+ResponseTime=39.13235 Throughput=65.54375 goodput=4.70000 badput=60.84375 completed=1875 timedout=9735 dropped=0 Util=0.98199
+### END_ENTRY users=2940 run=23 ###
+
+### ENTRY users=2950 run=23 seed=23 ###
+ResponseTime=39.03554 Throughput=65.92500 goodput=4.58125 badput=61.34375 completed=1865 timedout=9815 dropped=0 Util=0.98197
+### END_ENTRY users=2950 run=23 ###
+
+### ENTRY users=2960 run=23 seed=23 ###
+ResponseTime=38.71193 Throughput=66.51250 goodput=4.71250 badput=61.80000 completed=1844 timedout=9888 dropped=0 Util=0.98196
+### END_ENTRY users=2960 run=23 ###
+
+### ENTRY users=2970 run=23 seed=23 ###
+ResponseTime=38.70786 Throughput=66.75625 goodput=4.63125 badput=62.12500 completed=1830 timedout=9940 dropped=0 Util=0.98199
+### END_ENTRY users=2970 run=23 ###
+
+### ENTRY users=2980 run=23 seed=23 ###
+ResponseTime=39.68942 Throughput=65.34375 goodput=4.87500 badput=60.46875 completed=1927 timedout=9675 dropped=0 Util=0.98192
+### END_ENTRY users=2980 run=23 ###
+
+### ENTRY users=2990 run=23 seed=23 ###
+ResponseTime=39.49407 Throughput=66.01875 goodput=4.70625 badput=61.31250 completed=1878 timedout=9810 dropped=0 Util=0.98197
+### END_ENTRY users=2990 run=23 ###
+
+### ENTRY users=3000 run=23 seed=23 ###
+ResponseTime=39.41723 Throughput=66.48125 goodput=4.71875 badput=61.76250 completed=1843 timedout=9882 dropped=0 Util=0.98199
+### END_ENTRY users=3000 run=23 ###
+

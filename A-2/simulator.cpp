@@ -101,7 +101,7 @@ void Simulator::handle_thread_slice_end(ThreadWorker* th,Core* core,double slice
 
 void Simulator::handle_thread_available(ThreadWorker* th,Core* core,double time) {
     // cout<<"thread id: "<<th->tid<<" is now available,at time "<<time<<",being push back into cor id: "<< core->core_id<<endl;
-    core->runqueue.push_back(th);
+    core->add_runnable(th);
     if (core->idle) core->schedule_next_slice(time);
 }
 

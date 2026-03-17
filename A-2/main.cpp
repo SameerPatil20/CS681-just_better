@@ -30,7 +30,21 @@ void usage() {
     "  --rng_seed N\n"
     "  --trace_prefix STR\n"
     " --service_time_dist STR\n"
+    " --sched_policy STR\n"
     << std::endl;
+}
+
+inline common::scheduling_policy sched_policy_type(string s){
+    if(s == "FCFS"){
+        return common::scheduling_policy::FCFS;
+    }
+    else if(s == "SJF"){
+        return common::scheduling_policy::SJF;
+    }
+    else{
+        cout << "UNRESOLVABLE SCHEDULING POLICY MAN\n";
+        exit(1);
+    }
 }
 
 int main(int argc, char** argv) {
@@ -61,7 +75,7 @@ int main(int argc, char** argv) {
         {"timeout_lower", required_argument, 0, 1016},
         {"timeout_upper", required_argument, 0, 1017},
         {"service_time_dist", required_argument, 0, 1018},
-
+        {"sched_policy", required_argument, 0, 1019},
         {0, 0, 0, 0}
     };
 
@@ -88,6 +102,7 @@ int main(int argc, char** argv) {
             case 1016: common::TIMEOUT_LOWER = std::atof(optarg); break;
             case 1017: common::TIMEOUT_UPPER = std::atof(optarg); break;
             case 1018: common::SERVICE_TIME_DIST = std::string(optarg);break;
+            case 1019: common::SCHED_POLICY = sched_policy_type(std::string(optarg));break;
 
             default:
                 usage();
@@ -100,7 +115,7 @@ int main(int argc, char** argv) {
         common::SERVICE_DIST=common::sampler(common::distribution_type::EXPONENTIAL, common::SERVICE_TIME_AVG);
     }
     else if(common::SERVICE_TIME_DIST=="uniform"){
-        common::SERVICE_DIST=common::sampler(common::distribution_type::UNIFORM, common::SERVICE_TIME_AVG-10, common::SERVICE_TIME_AVG+10);
+        common::SERVICE_DIST=common::sampler(common::distribution_type::UNIFORM, 20, common::SERVICE_TIME_AVG);
     }
     else if(common::SERVICE_TIME_DIST=="constant"){
         common::SERVICE_DIST=common::sampler(common::distribution_type::CONSTANT, common::SERVICE_TIME_AVG-10, common::SERVICE_TIME_AVG+10);

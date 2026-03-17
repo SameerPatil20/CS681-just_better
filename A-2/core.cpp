@@ -9,12 +9,51 @@
 
 void Core::add_runnable(ThreadWorker* th) {
     runqueue.push_back(th);
+    runpriorityqueue.push(th);
     if (idle) schedule_next_slice(sim->now);
 }
 
+void Core::add_thread(ThreadWorker* th){
+    runqueue.push_back(th);
+    runpriorityqueue.push(th);
+}
+bool Core::is_empty(){
+    if(sched_policy == common::scheduling_policy::FCFS){
+        return runqueue.empty();
+    }
+    else if(sched_policy == common::scheduling_policy::SJF){
+        return runpriorityqueue.empty();
+    }
+    else return true;
+}
+
+ThreadWorker* Core::pop_one(){
+    if(is_empty()){
+        cout<<"POP ON EMPTY CORE ID: "<< core_id<<endl;
+        exit(1);
+    }
+    else{
+        ThreadWorker* ret;
+        if(sched_policy == common::scheduling_policy::FCFS){
+            ret = runqueue.front();
+            runqueue.pop_front();
+            return ret;
+        }
+        else if(sched_policy == common::scheduling_policy::SJF){
+            ret = runpriorityqueue.top();
+            runpriorityqueue.pop();
+            return ret;
+        }
+        else{
+            cout << "YE KONSI POLICY HAI BHAI?\n";
+            exit(1);
+        }
+    }
+}
+
 void Core::schedule_next_slice(double now) {
-    if (runqueue.empty()) { idle = true; current_thread = nullptr; return; }
-    ThreadWorker* th = runqueue.front(); runqueue.pop_front();
+    if (is_empty()) { idle = true; current_thread = nullptr; return; }
+    ThreadWorker* th = pop_one();
     current_thread = th;
     idle = false;
     auto ev = std::make_unique<Event>(now, event_type::THREAD_SLICE_START, th, this);

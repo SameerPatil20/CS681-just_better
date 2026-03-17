@@ -47,8 +47,6 @@ struct EventCompare {
     bool operator()(const std::unique_ptr<Event>& a, const std::unique_ptr<Event>& b) const {
         if (a->time != b->time) return a->time > b->time;
         return a->seq > b->seq;
-
-
     }
 };
 

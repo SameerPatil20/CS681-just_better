@@ -25,6 +25,8 @@
 #     "  --timeout_upper X\n"
 #     "  --rng_seed N\n"
 #     "  --trace_prefix STR\n"
+#     " --service_time_dist STR\n"
+#     " --sched_policy STR\n"
 #clear  log
 > out.log
 
@@ -32,8 +34,10 @@ make
 for users in $(seq 5 10 3000)
 do
     echo "Running simulation with users=$users" >> out.log
+
+    # ./websim --users $users --simtime 180000 --warmup 20000 --trace_on 0 --num_cores 4 --max_threads 256 --thread_queue_limit 15000 --quantum 10 --think_base 3000 --context_switch_overhead 0.2 --think_mean_exp 200 --retry_limit 0 --service_time_avg 60 --timeout_lower 20000 --timeout_upper 30000 --rng_seed $users >> out.log 2>&1
     
-    ./websim --users $users --simtime 180000 --warmup 20000 --trace_on 0 --num_cores 4 --max_threads 256 --thread_queue_limit 15000 --quantum 10 --think_base 3000 --context_switch_overhead 0.2 --think_mean_exp 200 --retry_limit 0 --service_time_avg 60 --timeout_lower 20000 --timeout_upper 30000 --rng_seed $users >> out.log 2>&1
+    ./websim --users $users --simtime 180000 --warmup 20000 --trace_on 0 --num_cores 4 --max_threads 256 --thread_queue_limit 15000 --quantum 10 --think_base 3000 --context_switch_overhead 0.2 --think_mean_exp 200 --retry_limit 0 --service_time_avg 60 --timeout_lower 20000 --timeout_upper 30000 --rng_seed $users --sched_policy SJF >> out.log 2>&1
     
     echo "--------------------------------------" >> out.log
 done

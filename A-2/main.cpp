@@ -29,6 +29,7 @@ void usage() {
     "  --timeout_upper X\n"
     "  --rng_seed N\n"
     "  --trace_prefix STR\n"
+    " --service_time_dist STR\n"
     << std::endl;
 }
 
@@ -59,6 +60,7 @@ int main(int argc, char** argv) {
         {"service_time_avg", required_argument, 0, 1015},
         {"timeout_lower", required_argument, 0, 1016},
         {"timeout_upper", required_argument, 0, 1017},
+        {"service_time_dist", required_argument, 0, 1018},
 
         {0, 0, 0, 0}
     };
@@ -85,6 +87,7 @@ int main(int argc, char** argv) {
             case 1015: common::SERVICE_TIME_AVG = std::atof(optarg); break;
             case 1016: common::TIMEOUT_LOWER = std::atof(optarg); break;
             case 1017: common::TIMEOUT_UPPER = std::atof(optarg); break;
+            case 1018: common::SERVICE_TIME_DIST = std::string(optarg);break;
 
             default:
                 usage();
@@ -92,7 +95,20 @@ int main(int argc, char** argv) {
         }
     }
     common::TIMEOUT_DIST=common::sampler(common::distribution_type::UNIFORM, common::TIMEOUT_LOWER, common::TIMEOUT_UPPER);
-    common::SERVICE_DIST=common::sampler(common::distribution_type::EXPONENTIAL, common::SERVICE_TIME_AVG);
+
+    if(common::SERVICE_TIME_DIST=="exponential"){
+        common::SERVICE_DIST=common::sampler(common::distribution_type::EXPONENTIAL, common::SERVICE_TIME_AVG);
+    }
+    else if(common::SERVICE_TIME_DIST=="uniform"){
+        common::SERVICE_DIST=common::sampler(common::distribution_type::UNIFORM, common::SERVICE_TIME_AVG-10, common::SERVICE_TIME_AVG+10);
+    }
+    else if(common::SERVICE_TIME_DIST=="constant"){
+        common::SERVICE_DIST=common::sampler(common::distribution_type::CONSTANT, common::SERVICE_TIME_AVG-10, common::SERVICE_TIME_AVG+10);
+    }
+    else{
+        cout << "service time dist me bt"<<endl;
+        exit(1);
+    }
 
     // common::NUM_USERS = users;
     // common::WARMUP_TIME = warmup;

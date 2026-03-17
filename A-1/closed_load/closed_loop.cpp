@@ -35,7 +35,7 @@ void client_worker(time_point<steady_clock> end_time) {
 
     curl_easy_setopt(curl, CURLOPT_URL, SERVER_URL.c_str());
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, discard);
-    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 15L);
+    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 30L);
 
     while (steady_clock::now() < end_time) {
         auto start = steady_clock::now();

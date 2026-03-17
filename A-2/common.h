@@ -76,7 +76,7 @@ using namespace std;
 namespace common{
     inline int NUM_CORES=1;
     inline int MAX_THREADS=346;
-    inline int THREAD_QUEUE_LIMIT=10;
+    inline int THREAD_QUEUE_LIMIT=10000;
     inline double QUANTUM=10.0;
     inline double CONTEXT_SWITCH_OVERHEAD=0.2;
     inline int NUM_USERS=50;//baadme set hoga
@@ -91,6 +91,7 @@ namespace common{
     inline double SERVICE_TIME_AVG=30.0;
     inline double TIMEOUT_LOWER = 3000;
     inline double TIMEOUT_UPPER = 3001;
+    inline string SERVICE_TIME_DIST = "exponential";
 
 
     enum class distribution_type{

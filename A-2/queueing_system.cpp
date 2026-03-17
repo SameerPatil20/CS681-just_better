@@ -5,7 +5,6 @@
 
 void QueueingSystem::set_cores(const std::vector<Core*>& cs) {
     cores = cs;
-    // create threads and assign affinity round-robin
     threads.clear();
     free_threads.clear();
     int nc = (int)cores.size();
@@ -22,15 +21,15 @@ bool QueueingSystem::admit_request(Request* req, double now) {
         ThreadWorker* th = free_threads.front();
         free_threads.pop_front();
         th->assign_request(req);
-        // push runnable to its core
         th->core->add_runnable(th);
         return true;
-    } else {
+    } 
+    else {
         if ((int)waiting_requests.size() < common::THREAD_QUEUE_LIMIT) {
             waiting_requests.push_back(req);
             return true;
-        } else {
-            // drop
+        } 
+        else {
             return false;
         }
     }

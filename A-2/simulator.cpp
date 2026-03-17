@@ -44,7 +44,6 @@ void Simulator::reset_for_run(unsigned seed) {
     next_req_id = 1;
     trace_lines.clear();
     rng.seed(seed);
-    // cores and qsys re-created by caller or preserved
 }
 
 void Simulator::schedule_initial_users(int num_users) {
@@ -63,11 +62,6 @@ void Simulator::handle_user_arrival(int user_id) {
     int rid = next_req_id++;
     Request* req = new Request(rid, user_id, nowt, service, timeout, common::RETRY_LIMIT);
     all_requests.push_back(req);
-
-    // schedule timeout event
-    // auto tev = std::make_unique<Event>(req->timeout_deadline, event_type::REQUEST_TIMEOUT, req);
-    // push_event(std::move(tev));
-
     bool admitted = qsys.admit_request(req, nowt);
     if (!admitted) {
         ++dropped_requests;
@@ -94,7 +88,6 @@ void Simulator::handle_thread_slice_end(ThreadWorker* th, Core* core, double sli
 }
 
 void Simulator::handle_thread_available(ThreadWorker* th, Core* core, double time) {
-    // put thread to tail of core runqueue and schedule if idle
     // cout<<"thread id: "<<th->tid<<" is now available, at time "<<time<<", being push back into cor id: "<< core->core_id<<endl;
     core->runqueue.push_back(th);
     if (core->idle) core->schedule_next_slice(time);
@@ -212,14 +205,11 @@ Result Simulator::run(double simtime, double warmup_time, unsigned seed, int run
         }
     }
 
-    // compute results after warmup_time: only consider completions with completion_time >= warmup
     std::vector<double> resp_times;
     int good = 0, bad = 0;
     for (auto r : completed_requests) {
         if (r->completion_time >= warmup_time) {
             double rt = r->response_time();
-            // if (rt >= 0) resp_times.push_back(rt);
-            // if (r->timed_out) bad++; else good++;
             resp_times.push_back(rt);
             good++;
         }
@@ -243,7 +233,6 @@ Result Simulator::run(double simtime, double warmup_time, unsigned seed, int run
     double badput = (double) bad / interval;
     cerr<< bad<<" "<<interval<<endl;
 
-    // write trace
     if (trace_on) write_trace(runid);
 
     Result res;

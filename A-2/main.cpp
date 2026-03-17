@@ -56,7 +56,6 @@ int main(int argc, char** argv) {
                 << " timedout=" << res.timedout << " dropped=" << res.dropped << "\n";
     // }
 
-    // simple aggregate: avg of avg_response_time samples (ignoring nulls)
     std::vector<double> avgs;
     for (auto &x: results) if (x.avg_response_time > -0.5) avgs.push_back(x.avg_response_time);
     double mean = 0.0;

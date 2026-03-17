@@ -17,7 +17,6 @@ void Core::schedule_next_slice(double now) {
     ThreadWorker* th = runqueue.front(); runqueue.pop_front();
     current_thread = th;
     idle = false;
-    // schedule slice start now
     auto ev = std::make_unique<Event>(now, event_type::THREAD_SLICE_START, th, this);
     sim->push_event(std::move(ev));
 }
@@ -43,15 +42,13 @@ void Core::handle_slice_end(double now, ThreadWorker* th, double slice_len) {
     if (r->service_remaining <= 1e-12) {
         // cout <<"thread: "<<th->tid<<" complete"<<endl;
         r->mark_completed(now);
-        // schedule completion event immediately
         auto ev = std::make_unique<Event>(now, event_type::REQUEST_COMPLETE, r);
         sim->push_event(std::move(ev));
-        // free thread
         th->release();
         sim->release_thread_to_pool(th, now);
         schedule_next_slice(now);
-    } else {
-        // preempt: schedule THREAD_AVAILABLE at now + overhead to reinsert thread
+    } 
+    else {
         double t_avail = now+ctx_overhead;
         // std::cout<<"thread id: "<<th->tid<<" is now being removed from run, time = "<<now<<", being push back into cor id: "<< core_id<<" with time left = "<<r->service_remaining<<std::endl;
 

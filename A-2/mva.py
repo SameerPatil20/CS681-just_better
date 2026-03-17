@@ -14,7 +14,7 @@ def run_mva(N_max, S_ms, Z_ms):
         X_sec=X*1000.0
         util=X*S_ms
         Q_curr=X*R_server
-        print(f"Users={n} ResponseTime={(R_total-THINK):.6f} Throughput={X_sec:.6f}  Util={util:.6f}")
+        print(f"N={n} AvgLatency={((R_total-THINK)/1000.0):.6f} Throughput={X_sec:.6f}  Util={util:.6f}")
         Q_prev=Q_curr
 
 

@@ -92,7 +92,7 @@ int main(int argc, char** argv) {
         }
     }
     common::TIMEOUT_DIST=common::sampler(common::distribution_type::UNIFORM, common::TIMEOUT_LOWER, common::TIMEOUT_UPPER);
-    common::SERVICE_DIST=common::sampler(common::distribution_type::EXPONENTIAL, common::SERVICE_TIME_AVG);
+    common::SERVICE_DIST=common::sampler(common::distribution_type::CONSTANT, common::SERVICE_TIME_AVG);
 
     // common::NUM_USERS = users;
     // common::WARMUP_TIME = warmup;
@@ -106,7 +106,7 @@ int main(int argc, char** argv) {
     unsigned seed = common::RNG_SEED + 907 + 100;
     auto res = sim.run(simtime, common::WARMUP_TIME, seed, 0, common::TRACE_ON);
     results.push_back(res);
-    std::cout <<fixed<<setprecision(5)<< "ResponseTime=" << res.avg_response_time
+    std::cout <<fixed<<setprecision(5)<< "ResponseTime=" << res.avg_response_time/1000.0
                 << " Throughput=" << res.throughput*1000 << " goodput=" << res.goodput*1000
                 << " badput=" << res.badput*1000 << " completed=" << res.completed
                 << " timedout=" << res.timedout << " dropped=" << res.dropped << " Util="<<res.util<< "\n";

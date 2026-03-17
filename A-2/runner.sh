@@ -29,7 +29,7 @@
 > out.log
 
 make
-for users in $(seq 5 10 4000)
+for users in $(seq 10 20 295)
 do
     echo "Running simulation with users=$users" >> out.log
     

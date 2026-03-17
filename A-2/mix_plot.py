@@ -13,16 +13,10 @@ def parse_file(filename):
     i = 0
     while i < len(lines):
         line = lines[i].strip()
-
-        # -------- FORMAT 1 --------
         if "Running simulation with users=" in line:
-            # Extract M
             m = int(re.search(r'users=(\d+)', line).group(1))
-
-            # Next line contains metrics
             if i + 1 < len(lines):
                 next_line = lines[i + 1]
-
                 rt_match = re.search(r'ResponseTime=([\d\.]+)', next_line)
                 th_match = re.search(r'Throughput=([\d\.]+)', next_line)
 
@@ -34,13 +28,10 @@ def parse_file(filename):
             i += 2
             continue
 
-        # -------- FORMAT 2 --------
         elif "Throughput=" in line and ("AvgLatency=" in line or "AvgLatency" in line):
             m_match = re.search(r'N=(\d+)', line)
             th_match = re.search(r'Throughput=([\d\.]+)', line)
             rt_match = re.search(r'AvgLatency=([\d\.]+)', line)
-            # if "Successes" in line :
-                # rt_match = float(rt_match) * 1000.0    
             if m_match and th_match and rt_match:
                 M.append(int(m_match.group(1)))
                 throughput.append(float(th_match.group(1)))
@@ -59,8 +50,6 @@ def main():
     files = sys.argv[1:]
 
     plt.figure(figsize=(12, 5))
-
-    # -------- Throughput Plot --------
     plt.subplot(1, 2, 1)
     linestyles = ['-', '--', '-.', ':']
     markers = ['o', 's', '^', 'd', 'x', '*']
@@ -79,7 +68,6 @@ def main():
     plt.legend()
     plt.grid()
 
-    # -------- Response Time Plot --------
     plt.subplot(1, 2, 2)
     for i, file in enumerate(files):
         M, _, rt = parse_file(file)

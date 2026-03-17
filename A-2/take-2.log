@@ -1,0 +1,16 @@
+Harshs-MacBook-Air-3:CS681-Assignment1-closed-load vipharshsuthar$ time ./closed_loop 
+N=10 Throughput=2.41111 AvgLatency=0.15081 P95=0.296057 Failures=0 Successes=434
+N=30 Throughput=6.26667 AvgLatency=0.806831 P95=1.01565 Failures=0 Successes=1128
+N=50 Throughput=10.0667 AvgLatency=0.959248 P95=1.40825 Failures=0 Successes=1812
+N=70 Throughput=13.6667 AvgLatency=1.16315 P95=1.78987 Failures=0 Successes=2460
+N=90 Throughput=16.9611 AvgLatency=1.39956 P95=2.24722 Failures=0 Successes=3053
+N=110 Throughput=21.8556 AvgLatency=1.01936 P95=2.16776 Failures=0 Successes=3934
+N=130 Throughput=24.5111 AvgLatency=1.31982 P95=2.8182 Failures=0 Successes=4412
+N=150 Throughput=30.15 AvgLatency=0.982139 P95=1.98994 Failures=0 Successes=5427
+N=170 Throughput=35.2167 AvgLatency=0.841468 P95=1.57244 Failures=0 Successes=6339
+N=190 Throughput=37.1167 AvgLatency=1.17837 P95=2.25274 Failures=0 Successes=6681
+N=210 Throughput=37.7889 AvgLatency=1.3328 P95=2.30116 Failures=90 Successes=6802
+N=230 Throughput=37.1389 AvgLatency=1.47704 P95=2.52982 Failures=270 Successes=6685
+N=250 Throughput=36.8111 AvgLatency=1.44055 P95=2.47 Failures=500 Successes=6626
+N=270 Throughput=37.5056 AvgLatency=1.3585 P95=2.4217 Failures=700 Successes=6751
+N=290 Throughput=36.0778 AvgLatency=1.58058 P95=2.7002 Failures=900 Successes=6494

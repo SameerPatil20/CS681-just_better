@@ -4,6 +4,7 @@
 #include <random>
 #include <string>
 #include <tuple>
+using namespace std;
 
 namespace common{
     inline int NUM_CORES=16;
@@ -21,8 +22,12 @@ namespace common{
     inline bool TRACE_ON=true;//baadme set hoga
     inline std::string TRACE_PREFIX="runs/run";
 
-    enum class distribution_type { CONSTANT, UNIFORM, EXPONENTIAL, NORMAL };
-
+    enum class distribution_type{
+        CONSTANT, 
+        UNIFORM, 
+        EXPONENTIAL,
+        NORMAL 
+    };
     struct sampler {
         distribution_type type;
         double p1;
@@ -33,22 +38,20 @@ namespace common{
             type=t;
         }
     };
-
-
     inline double sample_dist(std::mt19937 &rng, const sampler &d) {
         switch (d.type) {
             case distribution_type::CONSTANT: return d.p1;
             case distribution_type::UNIFORM: {
-                std::uniform_real_distribution<double> dist(d.p1, d.p2);
+                uniform_real_distribution<double> dist(d.p1, d.p2);
                 return dist(rng);
             }
             case distribution_type::EXPONENTIAL: {
                 // p1 is mean
-                std::exponential_distribution<double> dist(1.0 / d.p1);
+                exponential_distribution<double> dist(1.0 / d.p1);
                 return dist(rng);
             }
             case distribution_type::NORMAL: {
-                std::normal_distribution<double> dist(d.p1, d.p2);
+                normal_distribution<double> dist(d.p1, d.p2);
                 double x=dist(rng);
                 return std::abs(x);
             }

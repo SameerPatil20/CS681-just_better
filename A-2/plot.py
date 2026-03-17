@@ -33,7 +33,7 @@ with open("out.log") as f:
 
 # Avg Response Time
 plt.figure()
-plt.plot(users, avg_rt, marker='o')
+plt.plot(users, avg_rt)
 plt.xlabel("Number of Users")
 plt.ylabel("Average Response Time")
 plt.title("Average Response Time vs Users")
@@ -42,7 +42,7 @@ plt.savefig("plots/avg_response_time.png")
 
 # Throughput
 plt.figure()
-plt.plot(users, throughput, marker='o')
+plt.plot(users, throughput)
 plt.xlabel("Number of Users")
 plt.ylabel("Throughput")
 plt.title("Throughput vs Users")
@@ -51,7 +51,7 @@ plt.savefig("plots/throughput.png")
 
 # Goodput
 plt.figure()
-plt.plot(users, goodput, marker='o')
+plt.plot(users, goodput)
 plt.xlabel("Number of Users")
 plt.ylabel("Goodput")
 plt.title("Goodput vs Users")
@@ -60,7 +60,7 @@ plt.savefig("plots/goodput.png")
 
 # Badput
 plt.figure()
-plt.plot(users, badput, marker='o')
+plt.plot(users, badput)
 plt.xlabel("Number of Users")
 plt.ylabel("Badput")
 plt.title("Badput vs Users")
@@ -69,7 +69,7 @@ plt.savefig("plots/badput.png")
 
 # Timeouts
 plt.figure()
-plt.plot(users, timeouts, marker='o')
+plt.plot(users, timeouts)
 plt.xlabel("Number of Users")
 plt.ylabel("Timeouts")
 plt.title("Timeouts vs Users")

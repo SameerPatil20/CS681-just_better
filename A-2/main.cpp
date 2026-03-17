@@ -91,6 +91,8 @@ int main(int argc, char** argv) {
                 return 1;
         }
     }
+    common::TIMEOUT_DIST=common::sampler(common::distribution_type::UNIFORM, common::TIMEOUT_LOWER, common::TIMEOUT_UPPER);
+    common::SERVICE_DIST=common::sampler(common::distribution_type::EXPONENTIAL, common::SERVICE_TIME_AVG);
 
     // common::NUM_USERS = users;
     // common::WARMUP_TIME = warmup;

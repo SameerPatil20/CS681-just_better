@@ -89,8 +89,8 @@ namespace common{
     inline bool TRACE_ON=true;//baadme set hoga
     inline std::string TRACE_PREFIX="runs/run";
     inline double SERVICE_TIME_AVG=30.0;
-    inline double TIMEOUT_LOWER = 30000;
-    inline double TIMEOUT_UPPER = 30010;
+    inline double TIMEOUT_LOWER = 3000;
+    inline double TIMEOUT_UPPER = 3001;
 
 
     enum class distribution_type{

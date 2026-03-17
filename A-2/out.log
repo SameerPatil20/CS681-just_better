@@ -146,1355 +146,1055 @@ Running simulation with users=485
 ResponseTime=499.84857 Throughput=128.49721 goodput=128.49721 badput=0.00000 completed=23001 timedout=0 dropped=0 Util=0.98180
 --------------------------------------
 Running simulation with users=495
-ResponseTime=590.41963 Throughput=127.96648 goodput=127.96648 badput=0.00000 completed=22906 timedout=0 dropped=0 Util=0.98690
+ResponseTime=572.03199 Throughput=128.63128 goodput=128.62570 badput=0.00559 completed=23024 timedout=1 dropped=0 Util=0.98624
 --------------------------------------
 Running simulation with users=505
 ResponseTime=618.80471 Throughput=129.62570 goodput=129.62570 badput=0.00000 completed=23203 timedout=0 dropped=0 Util=0.98825
 --------------------------------------
 Running simulation with users=515
-ResponseTime=708.95565 Throughput=129.20670 goodput=129.20670 badput=0.00000 completed=23128 timedout=0 dropped=0 Util=0.99076
+ResponseTime=720.54918 Throughput=128.76536 goodput=128.75419 badput=0.01117 completed=23047 timedout=2 dropped=0 Util=0.99083
 --------------------------------------
 Running simulation with users=525
-ResponseTime=827.48056 Throughput=127.74302 goodput=127.74302 badput=0.00000 completed=22866 timedout=0 dropped=0 Util=0.99084
+ResponseTime=826.49627 Throughput=127.50279 goodput=127.49721 badput=0.00559 completed=22822 timedout=1 dropped=0 Util=0.99058
 --------------------------------------
 Running simulation with users=535
-ResponseTime=845.81685 Throughput=129.48045 goodput=129.48045 badput=0.00000 completed=23177 timedout=0 dropped=0 Util=0.99018
+ResponseTime=840.51193 Throughput=129.34637 goodput=129.33520 badput=0.01117 completed=23151 timedout=2 dropped=0 Util=0.99025
 --------------------------------------
 Running simulation with users=545
-ResponseTime=920.63756 Throughput=129.60335 goodput=129.60335 badput=0.00000 completed=23199 timedout=0 dropped=0 Util=0.99071
+ResponseTime=889.67648 Throughput=130.12849 goodput=130.11732 badput=0.01117 completed=23291 timedout=2 dropped=0 Util=0.99071
 --------------------------------------
 Running simulation with users=555
-ResponseTime=994.68442 Throughput=129.58101 goodput=129.58101 badput=0.00000 completed=23195 timedout=0 dropped=0 Util=0.99041
+ResponseTime=970.29188 Throughput=129.86592 goodput=129.84916 badput=0.01676 completed=23243 timedout=3 dropped=0 Util=0.99041
 --------------------------------------
 Running simulation with users=565
-ResponseTime=1104.58843 Throughput=128.41341 goodput=128.41341 badput=0.00000 completed=22986 timedout=0 dropped=0 Util=0.99159
+ResponseTime=1029.39790 Throughput=130.01676 goodput=129.98883 badput=0.02793 completed=23268 timedout=5 dropped=0 Util=0.99168
 --------------------------------------
 Running simulation with users=575
-ResponseTime=1176.19422 Throughput=128.63128 goodput=128.63128 badput=0.00000 completed=23025 timedout=0 dropped=0 Util=0.99005
+ResponseTime=1147.74175 Throughput=129.29050 goodput=129.27374 badput=0.01676 completed=23140 timedout=3 dropped=0 Util=0.99011
 --------------------------------------
 Running simulation with users=585
-ResponseTime=1258.55189 Throughput=128.37989 goodput=128.37989 badput=0.00000 completed=22980 timedout=0 dropped=0 Util=0.99094
+ResponseTime=1162.54768 Throughput=130.30168 goodput=130.25698 badput=0.04469 completed=23316 timedout=8 dropped=0 Util=0.99105
 --------------------------------------
 Running simulation with users=595
-ResponseTime=1308.53654 Throughput=129.08380 goodput=129.08380 badput=0.00000 completed=23106 timedout=0 dropped=0 Util=0.99104
+ResponseTime=1217.88142 Throughput=130.66480 goodput=130.60335 badput=0.06145 completed=23378 timedout=11 dropped=0 Util=0.99111
 --------------------------------------
 Running simulation with users=605
-ResponseTime=1356.50641 Throughput=129.75978 goodput=129.75978 badput=0.00000 completed=23227 timedout=0 dropped=0 Util=0.99219
+ResponseTime=1303.68922 Throughput=129.53631 goodput=129.44693 badput=0.08939 completed=23171 timedout=16 dropped=0 Util=0.99219
 --------------------------------------
 Running simulation with users=615
-ResponseTime=1456.30383 Throughput=129.29609 goodput=129.29609 badput=0.00000 completed=23144 timedout=0 dropped=0 Util=0.99155
+ResponseTime=1324.02226 Throughput=130.63128 goodput=130.51397 badput=0.11732 completed=23362 timedout=21 dropped=0 Util=0.99162
 --------------------------------------
 Running simulation with users=625
-ResponseTime=1505.16638 Throughput=129.75978 goodput=129.75978 badput=0.00000 completed=23227 timedout=0 dropped=0 Util=0.99122
+ResponseTime=1394.92275 Throughput=129.62011 goodput=129.43575 badput=0.18436 completed=23169 timedout=33 dropped=0 Util=0.99121
 --------------------------------------
 Running simulation with users=635
-ResponseTime=1581.94593 Throughput=129.72067 goodput=129.72067 badput=0.00000 completed=23220 timedout=0 dropped=0 Util=0.99146
+ResponseTime=1452.82123 Throughput=129.72626 goodput=129.54749 badput=0.17877 completed=23189 timedout=32 dropped=0 Util=0.99146
 --------------------------------------
 Running simulation with users=645
-ResponseTime=1631.32939 Throughput=130.22905 goodput=130.22905 badput=0.00000 completed=23311 timedout=0 dropped=0 Util=0.99157
+ResponseTime=1567.99911 Throughput=128.93296 goodput=128.74302 badput=0.18994 completed=23045 timedout=34 dropped=0 Util=0.99150
 --------------------------------------
 Running simulation with users=655
-ResponseTime=1733.68917 Throughput=129.74302 goodput=129.74302 badput=0.00000 completed=23224 timedout=0 dropped=0 Util=0.99194
+ResponseTime=1580.90888 Throughput=129.35196 goodput=129.11732 badput=0.23464 completed=23112 timedout=42 dropped=0 Util=0.99194
 --------------------------------------
 Running simulation with users=665
-ResponseTime=1779.06248 Throughput=130.21229 goodput=130.21229 badput=0.00000 completed=23308 timedout=0 dropped=0 Util=0.99136
+ResponseTime=1610.97059 Throughput=129.18994 goodput=128.91061 badput=0.27933 completed=23075 timedout=50 dropped=0 Util=0.99133
 --------------------------------------
 Running simulation with users=675
-ResponseTime=1886.98299 Throughput=129.50279 goodput=129.50279 badput=0.00000 completed=23181 timedout=0 dropped=0 Util=0.99276
+ResponseTime=1656.55865 Throughput=129.53631 goodput=129.22346 badput=0.31285 completed=23131 timedout=56 dropped=0 Util=0.99280
 --------------------------------------
 Running simulation with users=685
-ResponseTime=2021.38619 Throughput=127.98324 goodput=127.98324 badput=0.00000 completed=22909 timedout=0 dropped=0 Util=0.99236
+ResponseTime=1743.46781 Throughput=129.08380 goodput=128.76536 badput=0.31844 completed=23049 timedout=57 dropped=0 Util=0.99243
 --------------------------------------
 Running simulation with users=695
-ResponseTime=2034.48100 Throughput=129.48603 goodput=129.48603 badput=0.00000 completed=23178 timedout=0 dropped=0 Util=0.99259
+ResponseTime=1791.14750 Throughput=129.44693 goodput=129.07821 badput=0.36872 completed=23105 timedout=66 dropped=0 Util=0.99261
 --------------------------------------
 Running simulation with users=705
-ResponseTime=2116.37786 Throughput=129.18994 goodput=129.18994 badput=0.00000 completed=23125 timedout=0 dropped=0 Util=0.99223
+ResponseTime=1827.58042 Throughput=129.94972 goodput=129.56983 badput=0.37989 completed=23193 timedout=68 dropped=0 Util=0.99229
 --------------------------------------
 Running simulation with users=715
-ResponseTime=2197.87268 Throughput=128.97765 goodput=128.97765 badput=0.00000 completed=23087 timedout=0 dropped=0 Util=0.99260
+ResponseTime=1856.49155 Throughput=129.69832 goodput=129.25698 badput=0.44134 completed=23137 timedout=79 dropped=0 Util=0.99266
 --------------------------------------
 Running simulation with users=725
-ResponseTime=2252.95952 Throughput=129.57542 goodput=129.57542 badput=0.00000 completed=23194 timedout=0 dropped=0 Util=0.99348
+ResponseTime=1953.00225 Throughput=129.10056 goodput=128.65922 badput=0.44134 completed=23030 timedout=79 dropped=0 Util=0.99350
 --------------------------------------
 Running simulation with users=735
-ResponseTime=2267.86286 Throughput=130.69832 goodput=130.69832 badput=0.00000 completed=23395 timedout=0 dropped=0 Util=0.99253
+ResponseTime=2013.07383 Throughput=129.38547 goodput=128.91620 badput=0.46927 completed=23076 timedout=84 dropped=0 Util=0.99248
 --------------------------------------
 Running simulation with users=745
-ResponseTime=2386.09270 Throughput=129.66480 goodput=129.66480 badput=0.00000 completed=23210 timedout=0 dropped=0 Util=0.99359
+ResponseTime=2056.39536 Throughput=129.37989 goodput=128.82682 badput=0.55307 completed=23060 timedout=99 dropped=0 Util=0.99358
 --------------------------------------
 Running simulation with users=755
-ResponseTime=2452.48600 Throughput=130.12849 goodput=130.12849 badput=0.00000 completed=23293 timedout=0 dropped=0 Util=0.99309
+ResponseTime=2080.02421 Throughput=130.20112 goodput=129.67598 badput=0.52514 completed=23212 timedout=94 dropped=0 Util=0.99308
 --------------------------------------
 Running simulation with users=765
-ResponseTime=2543.23500 Throughput=129.67039 goodput=129.67039 badput=0.00000 completed=23211 timedout=0 dropped=0 Util=0.99316
+ResponseTime=2163.98724 Throughput=127.89944 goodput=127.25698 badput=0.64246 completed=22779 timedout=115 dropped=0 Util=0.99307
 --------------------------------------
 Running simulation with users=775
-ResponseTime=2618.51885 Throughput=129.59218 goodput=129.59218 badput=0.00000 completed=23197 timedout=0 dropped=0 Util=0.99302
+ResponseTime=2156.12119 Throughput=129.17318 goodput=128.48603 badput=0.68715 completed=22999 timedout=123 dropped=0 Util=0.99301
 --------------------------------------
 Running simulation with users=785
-ResponseTime=2679.69497 Throughput=129.83799 goodput=129.83799 badput=0.00000 completed=23241 timedout=0 dropped=0 Util=0.99336
+ResponseTime=2228.84137 Throughput=130.06704 goodput=129.41341 badput=0.65363 completed=23165 timedout=117 dropped=0 Util=0.99338
 --------------------------------------
 Running simulation with users=795
-ResponseTime=2774.78237 Throughput=129.31285 goodput=129.31285 badput=0.00000 completed=23147 timedout=0 dropped=0 Util=0.99386
+ResponseTime=2405.80722 Throughput=127.96648 goodput=127.24022 badput=0.72626 completed=22776 timedout=130 dropped=0 Util=0.99380
 --------------------------------------
 Running simulation with users=805
-ResponseTime=2845.87045 Throughput=129.41341 goodput=129.41341 badput=0.00000 completed=23165 timedout=0 dropped=0 Util=0.99331
+ResponseTime=2450.37089 Throughput=128.56425 goodput=127.88827 badput=0.67598 completed=22892 timedout=121 dropped=0 Util=0.99327
 --------------------------------------
 Running simulation with users=815
-ResponseTime=2893.29232 Throughput=130.10615 goodput=130.10615 badput=0.00000 completed=23289 timedout=0 dropped=0 Util=0.99302
+ResponseTime=2406.80028 Throughput=130.50838 goodput=129.80447 badput=0.70391 completed=23235 timedout=126 dropped=0 Util=0.99304
 --------------------------------------
 Running simulation with users=825
-ResponseTime=3059.17693 Throughput=128.30168 goodput=128.30168 badput=0.00000 completed=22966 timedout=0 dropped=0 Util=0.99340
+ResponseTime=2459.11209 Throughput=129.00000 goodput=128.19553 badput=0.80447 completed=22947 timedout=144 dropped=0 Util=0.99345
 --------------------------------------
 Running simulation with users=835
-ResponseTime=3090.84474 Throughput=129.02793 goodput=129.02793 badput=0.00000 completed=23096 timedout=0 dropped=0 Util=0.99351
+ResponseTime=2494.11192 Throughput=130.88268 goodput=130.09497 badput=0.78771 completed=23287 timedout=141 dropped=0 Util=0.99358
 --------------------------------------
 Running simulation with users=845
-ResponseTime=3124.63485 Throughput=129.86034 goodput=129.86034 badput=0.00000 completed=23245 timedout=0 dropped=0 Util=0.99413
+ResponseTime=2581.72635 Throughput=129.51955 goodput=128.72626 badput=0.79330 completed=23042 timedout=142 dropped=0 Util=0.99411
 --------------------------------------
 Running simulation with users=855
-ResponseTime=3201.72793 Throughput=129.72067 goodput=129.72067 badput=0.00000 completed=23220 timedout=0 dropped=0 Util=0.99394
+ResponseTime=2725.40804 Throughput=128.45251 goodput=127.62570 badput=0.82682 completed=22845 timedout=148 dropped=0 Util=0.99388
 --------------------------------------
 Running simulation with users=865
-ResponseTime=3262.79211 Throughput=130.08380 goodput=130.08380 badput=0.00000 completed=23285 timedout=0 dropped=0 Util=0.99413
+ResponseTime=2689.09708 Throughput=129.36872 goodput=128.48045 badput=0.88827 completed=22998 timedout=159 dropped=0 Util=0.99409
 --------------------------------------
 Running simulation with users=875
-ResponseTime=3401.73508 Throughput=128.75419 goodput=128.75419 badput=0.00000 completed=23047 timedout=0 dropped=0 Util=0.99404
+ResponseTime=2729.41912 Throughput=130.42458 goodput=129.56983 badput=0.85475 completed=23193 timedout=153 dropped=0 Util=0.99411
 --------------------------------------
 Running simulation with users=885
-ResponseTime=3475.77657 Throughput=128.77095 goodput=128.77095 badput=0.00000 completed=23050 timedout=0 dropped=0 Util=0.99424
+ResponseTime=2836.69786 Throughput=129.12849 goodput=128.19553 badput=0.93296 completed=22947 timedout=167 dropped=0 Util=0.99426
 --------------------------------------
 Running simulation with users=895
-ResponseTime=3490.41876 Throughput=129.92179 goodput=129.92179 badput=0.00000 completed=23256 timedout=0 dropped=0 Util=0.99409
+ResponseTime=2873.70638 Throughput=129.80447 goodput=128.87709 badput=0.92737 completed=23069 timedout=166 dropped=0 Util=0.99408
 --------------------------------------
 Running simulation with users=905
-ResponseTime=3593.86846 Throughput=129.33520 goodput=129.33520 badput=0.00000 completed=23151 timedout=0 dropped=0 Util=0.99429
+ResponseTime=2856.28455 Throughput=130.28492 goodput=129.32402 badput=0.96089 completed=23149 timedout=172 dropped=0 Util=0.99433
 --------------------------------------
 Running simulation with users=915
-ResponseTime=3710.92184 Throughput=128.40223 goodput=128.40223 badput=0.00000 completed=22984 timedout=0 dropped=0 Util=0.99454
+ResponseTime=3002.94175 Throughput=129.35196 goodput=128.34637 badput=1.00559 completed=22974 timedout=180 dropped=0 Util=0.99459
 --------------------------------------
 Running simulation with users=925
-ResponseTime=3708.80985 Throughput=129.98883 goodput=129.98883 badput=0.00000 completed=23268 timedout=0 dropped=0 Util=0.99444
+ResponseTime=2999.44727 Throughput=129.46369 goodput=128.41899 badput=1.04469 completed=22987 timedout=187 dropped=0 Util=0.99441
 --------------------------------------
 Running simulation with users=935
-ResponseTime=3734.62222 Throughput=130.74302 goodput=130.74302 badput=0.00000 completed=23403 timedout=0 dropped=0 Util=0.99437
+ResponseTime=3047.12161 Throughput=130.62011 goodput=129.59218 badput=1.02793 completed=23197 timedout=184 dropped=0 Util=0.99437
 --------------------------------------
 Running simulation with users=945
-ResponseTime=3897.50975 Throughput=129.15642 goodput=129.15642 badput=0.00000 completed=23119 timedout=0 dropped=0 Util=0.99420
+ResponseTime=3181.04953 Throughput=128.61453 goodput=127.52514 badput=1.08939 completed=22827 timedout=195 dropped=0 Util=0.99417
 --------------------------------------
 Running simulation with users=955
-ResponseTime=3968.86358 Throughput=129.18994 goodput=129.18994 badput=0.00000 completed=23125 timedout=0 dropped=0 Util=0.99391
+ResponseTime=3125.57977 Throughput=130.36313 goodput=129.26257 badput=1.10056 completed=23138 timedout=197 dropped=0 Util=0.99397
 --------------------------------------
 Running simulation with users=965
-ResponseTime=4036.36853 Throughput=129.26257 goodput=129.26257 badput=0.00000 completed=23138 timedout=0 dropped=0 Util=0.99435
+ResponseTime=3197.76576 Throughput=129.18994 goodput=127.97207 badput=1.21788 completed=22907 timedout=218 dropped=0 Util=0.99434
 --------------------------------------
 Running simulation with users=975
-ResponseTime=4077.01277 Throughput=129.84358 goodput=129.84358 badput=0.00000 completed=23242 timedout=0 dropped=0 Util=0.99455
+ResponseTime=3238.95001 Throughput=130.13408 goodput=128.95531 badput=1.17877 completed=23083 timedout=211 dropped=0 Util=0.99457
 --------------------------------------
 Running simulation with users=985
-ResponseTime=4166.80186 Throughput=129.53073 goodput=129.53073 badput=0.00000 completed=23186 timedout=0 dropped=0 Util=0.99440
+ResponseTime=3222.04371 Throughput=129.94972 goodput=128.70950 badput=1.24022 completed=23039 timedout=222 dropped=0 Util=0.99442
 --------------------------------------
 Running simulation with users=995
-ResponseTime=4286.69720 Throughput=128.77654 goodput=128.77654 badput=0.00000 completed=23051 timedout=0 dropped=0 Util=0.99426
+ResponseTime=3268.37709 Throughput=129.95531 goodput=128.70950 badput=1.24581 completed=23039 timedout=223 dropped=0 Util=0.99431
 --------------------------------------
 Running simulation with users=1005
-ResponseTime=4361.67636 Throughput=128.85475 goodput=128.85475 badput=0.00000 completed=23065 timedout=0 dropped=0 Util=0.99439
+ResponseTime=3402.02039 Throughput=130.81006 goodput=129.57542 badput=1.23464 completed=23194 timedout=221 dropped=0 Util=0.99447
 --------------------------------------
 Running simulation with users=1015
-ResponseTime=4403.89727 Throughput=129.23464 goodput=129.23464 badput=0.00000 completed=23133 timedout=0 dropped=0 Util=0.99431
+ResponseTime=3417.47448 Throughput=130.77654 goodput=129.43575 badput=1.34078 completed=23169 timedout=240 dropped=0 Util=0.99439
 --------------------------------------
 Running simulation with users=1025
-ResponseTime=4408.71433 Throughput=130.46369 goodput=130.46369 badput=0.00000 completed=23353 timedout=0 dropped=0 Util=0.99438
+ResponseTime=3505.15601 Throughput=128.24581 goodput=126.79888 badput=1.44693 completed=22697 timedout=259 dropped=0 Util=0.99427
 --------------------------------------
 Running simulation with users=1035
-ResponseTime=4542.39868 Throughput=129.34078 goodput=129.34078 badput=0.00000 completed=23152 timedout=0 dropped=0 Util=0.99445
+ResponseTime=3506.21987 Throughput=130.10615 goodput=128.68156 badput=1.42458 completed=23034 timedout=255 dropped=0 Util=0.99448
 --------------------------------------
 Running simulation with users=1045
-ResponseTime=4599.98842 Throughput=129.62570 goodput=129.62570 badput=0.00000 completed=23203 timedout=0 dropped=0 Util=0.99435
+ResponseTime=3598.53337 Throughput=130.55866 goodput=129.25698 badput=1.30168 completed=23137 timedout=233 dropped=0 Util=0.99440
 --------------------------------------
 Running simulation with users=1055
-ResponseTime=4637.59962 Throughput=130.22905 goodput=130.22905 badput=0.00000 completed=23311 timedout=0 dropped=0 Util=0.99459
+ResponseTime=3577.36432 Throughput=130.39106 goodput=128.93855 badput=1.45251 completed=23080 timedout=260 dropped=0 Util=0.99460
 --------------------------------------
 Running simulation with users=1065
-ResponseTime=4749.60845 Throughput=129.56983 goodput=129.56983 badput=0.00000 completed=23193 timedout=0 dropped=0 Util=0.99482
+ResponseTime=3607.16251 Throughput=129.87709 goodput=128.34637 badput=1.53073 completed=22974 timedout=274 dropped=0 Util=0.99481
 --------------------------------------
 Running simulation with users=1075
-ResponseTime=4719.57272 Throughput=131.31844 goodput=131.31844 badput=0.00000 completed=23506 timedout=0 dropped=0 Util=0.99453
+ResponseTime=3571.82434 Throughput=129.89385 goodput=128.17877 badput=1.71508 completed=22944 timedout=307 dropped=0 Util=0.99447
 --------------------------------------
 Running simulation with users=1085
-ResponseTime=4886.35804 Throughput=129.59777 goodput=129.59777 badput=0.00000 completed=23198 timedout=0 dropped=0 Util=0.99485
+ResponseTime=3682.52388 Throughput=129.86592 goodput=128.20670 badput=1.65922 completed=22949 timedout=297 dropped=0 Util=0.99486
 --------------------------------------
 Running simulation with users=1095
-ResponseTime=4938.36036 Throughput=130.02793 goodput=130.02793 badput=0.00000 completed=23275 timedout=0 dropped=0 Util=0.99458
+ResponseTime=3748.41799 Throughput=129.76536 goodput=128.09497 badput=1.67039 completed=22929 timedout=299 dropped=0 Util=0.99458
 --------------------------------------
 Running simulation with users=1105
-ResponseTime=4995.54037 Throughput=130.21229 goodput=130.21229 badput=0.00000 completed=23308 timedout=0 dropped=0 Util=0.99462
+ResponseTime=3727.30462 Throughput=128.58659 goodput=126.74860 badput=1.83799 completed=22688 timedout=329 dropped=0 Util=0.99455
 --------------------------------------
 Running simulation with users=1115
-ResponseTime=5062.80908 Throughput=130.23464 goodput=130.23464 badput=0.00000 completed=23312 timedout=0 dropped=0 Util=0.99476
+ResponseTime=3719.77281 Throughput=130.93296 goodput=129.16201 badput=1.77095 completed=23120 timedout=317 dropped=0 Util=0.99480
 --------------------------------------
 Running simulation with users=1125
-ResponseTime=5239.62227 Throughput=128.64804 goodput=128.64804 badput=0.00000 completed=23028 timedout=0 dropped=0 Util=0.99473
+ResponseTime=3814.16269 Throughput=129.15084 goodput=127.31844 badput=1.83240 completed=22790 timedout=328 dropped=0 Util=0.99476
 --------------------------------------
 Running simulation with users=1135
-ResponseTime=5222.76911 Throughput=129.98324 goodput=129.98324 badput=0.00000 completed=23267 timedout=0 dropped=0 Util=0.99452
+ResponseTime=3731.81094 Throughput=130.39665 goodput=128.52514 badput=1.87151 completed=23006 timedout=335 dropped=0 Util=0.99453
 --------------------------------------
 Running simulation with users=1145
-ResponseTime=5340.94666 Throughput=129.50279 goodput=129.50279 badput=0.00000 completed=23181 timedout=0 dropped=0 Util=0.99462
+ResponseTime=3788.48656 Throughput=128.77095 goodput=126.75978 badput=2.01117 completed=22690 timedout=360 dropped=0 Util=0.99459
 --------------------------------------
 Running simulation with users=1155
-ResponseTime=5343.54456 Throughput=130.64246 goodput=130.64246 badput=0.00000 completed=23385 timedout=0 dropped=0 Util=0.99460
+ResponseTime=3892.68764 Throughput=129.62570 goodput=127.68715 badput=1.93855 completed=22856 timedout=347 dropped=0 Util=0.99453
 --------------------------------------
 Running simulation with users=1165
-ResponseTime=5469.58616 Throughput=129.69832 goodput=129.69832 badput=0.00000 completed=23216 timedout=0 dropped=0 Util=0.99461
+ResponseTime=3841.54394 Throughput=130.79888 goodput=128.81564 badput=1.98324 completed=23058 timedout=355 dropped=0 Util=0.99467
 --------------------------------------
 Running simulation with users=1175
-ResponseTime=5567.59769 Throughput=129.62011 goodput=129.62011 badput=0.00000 completed=23202 timedout=0 dropped=0 Util=0.99459
+ResponseTime=4010.68891 Throughput=129.07821 goodput=127.03352 badput=2.04469 completed=22739 timedout=366 dropped=0 Util=0.99457
 --------------------------------------
 Running simulation with users=1185
-ResponseTime=5575.90502 Throughput=130.46369 goodput=130.46369 badput=0.00000 completed=23353 timedout=0 dropped=0 Util=0.99476
+ResponseTime=3957.42076 Throughput=129.30726 goodput=127.15642 badput=2.15084 completed=22761 timedout=385 dropped=0 Util=0.99471
 --------------------------------------
 Running simulation with users=1195
-ResponseTime=5700.92613 Throughput=129.59777 goodput=129.59777 badput=0.00000 completed=23198 timedout=0 dropped=0 Util=0.99478
+ResponseTime=3987.97972 Throughput=129.07263 goodput=126.87709 badput=2.19553 completed=22711 timedout=393 dropped=0 Util=0.99476
 --------------------------------------
 Running simulation with users=1205
-ResponseTime=5717.68926 Throughput=130.53073 goodput=130.53073 badput=0.00000 completed=23365 timedout=0 dropped=0 Util=0.99487
+ResponseTime=3881.91931 Throughput=129.48045 goodput=127.15084 badput=2.32961 completed=22760 timedout=417 dropped=0 Util=0.99482
 --------------------------------------
 Running simulation with users=1215
-ResponseTime=5816.19697 Throughput=130.10615 goodput=130.10615 badput=0.00000 completed=23289 timedout=0 dropped=0 Util=0.99499
+ResponseTime=4066.59566 Throughput=130.51955 goodput=128.34637 badput=2.17318 completed=22974 timedout=389 dropped=0 Util=0.99500
 --------------------------------------
 Running simulation with users=1225
-ResponseTime=5926.72430 Throughput=129.43575 goodput=129.43575 badput=0.00000 completed=23169 timedout=0 dropped=0 Util=0.99469
+ResponseTime=4011.67235 Throughput=130.08939 goodput=127.75978 badput=2.32961 completed=22869 timedout=417 dropped=0 Util=0.99474
 --------------------------------------
 Running simulation with users=1235
-ResponseTime=5877.28324 Throughput=131.10615 goodput=131.10615 badput=0.00000 completed=23468 timedout=0 dropped=0 Util=0.99488
+ResponseTime=3955.57925 Throughput=130.13408 goodput=127.72067 badput=2.41341 completed=22862 timedout=432 dropped=0 Util=0.99486
 --------------------------------------
 Running simulation with users=1245
-ResponseTime=5983.45156 Throughput=130.67039 goodput=130.67039 badput=0.00000 completed=23390 timedout=0 dropped=0 Util=0.99485
+ResponseTime=4037.54828 Throughput=129.67598 goodput=127.23464 badput=2.44134 completed=22775 timedout=437 dropped=0 Util=0.99479
 --------------------------------------
 Running simulation with users=1255
-ResponseTime=6165.55784 Throughput=129.16201 goodput=129.16201 badput=0.00000 completed=23120 timedout=0 dropped=0 Util=0.99476
+ResponseTime=4204.92995 Throughput=131.12291 goodput=128.80447 badput=2.31844 completed=23056 timedout=415 dropped=0 Util=0.99487
 --------------------------------------
 Running simulation with users=1265
-ResponseTime=6188.60751 Throughput=129.99441 goodput=129.99441 badput=0.00000 completed=23269 timedout=0 dropped=0 Util=0.99498
+ResponseTime=4179.74451 Throughput=129.81564 goodput=127.32402 badput=2.49162 completed=22791 timedout=446 dropped=0 Util=0.99496
 --------------------------------------
 Running simulation with users=1275
-ResponseTime=6253.94585 Throughput=129.73743 goodput=129.73743 badput=0.00000 completed=23223 timedout=0 dropped=0 Util=0.99480
+ResponseTime=4165.72577 Throughput=129.27933 goodput=126.75419 badput=2.52514 completed=22689 timedout=452 dropped=0 Util=0.99477
 --------------------------------------
 Running simulation with users=1285
-ResponseTime=6317.26154 Throughput=130.05587 goodput=130.05587 badput=0.00000 completed=23280 timedout=0 dropped=0 Util=0.99487
+ResponseTime=4244.79393 Throughput=129.52514 goodput=126.97765 badput=2.54749 completed=22729 timedout=456 dropped=0 Util=0.99483
 --------------------------------------
 Running simulation with users=1295
-ResponseTime=6400.22690 Throughput=129.72626 goodput=129.72626 badput=0.00000 completed=23221 timedout=0 dropped=0 Util=0.99475
+ResponseTime=4212.80214 Throughput=130.35196 goodput=127.72626 badput=2.62570 completed=22863 timedout=470 dropped=0 Util=0.99477
 --------------------------------------
 Running simulation with users=1305
-ResponseTime=6410.62300 Throughput=130.75978 goodput=130.75978 badput=0.00000 completed=23406 timedout=0 dropped=0 Util=0.99485
+ResponseTime=4132.43362 Throughput=129.55307 goodput=126.78212 badput=2.77095 completed=22694 timedout=496 dropped=0 Util=0.99479
 --------------------------------------
 Running simulation with users=1315
-ResponseTime=6616.76551 Throughput=128.98324 goodput=128.98324 badput=0.00000 completed=23088 timedout=0 dropped=0 Util=0.99473
+ResponseTime=4149.39551 Throughput=129.72626 goodput=126.93296 badput=2.79330 completed=22721 timedout=500 dropped=0 Util=0.99476
 --------------------------------------
 Running simulation with users=1325
-ResponseTime=6635.57981 Throughput=129.65363 goodput=129.65363 badput=0.00000 completed=23208 timedout=0 dropped=0 Util=0.99469
+ResponseTime=4271.25192 Throughput=129.09497 goodput=126.24022 badput=2.85475 completed=22597 timedout=511 dropped=0 Util=0.99467
 --------------------------------------
 Running simulation with users=1335
-ResponseTime=6594.57229 Throughput=131.21229 goodput=131.21229 badput=0.00000 completed=23487 timedout=0 dropped=0 Util=0.99478
+ResponseTime=4344.37636 Throughput=129.55307 goodput=126.67039 badput=2.88268 completed=22674 timedout=516 dropped=0 Util=0.99466
 --------------------------------------
 Running simulation with users=1345
-ResponseTime=6759.71358 Throughput=130.02235 goodput=130.02235 badput=0.00000 completed=23274 timedout=0 dropped=0 Util=0.99493
+ResponseTime=4403.97395 Throughput=130.98883 goodput=128.18436 badput=2.80447 completed=22945 timedout=502 dropped=0 Util=0.99497
 --------------------------------------
 Running simulation with users=1355
-ResponseTime=6885.12275 Throughput=129.27374 goodput=129.27374 badput=0.00000 completed=23140 timedout=0 dropped=0 Util=0.99484
+ResponseTime=4280.84138 Throughput=130.54190 goodput=127.60894 badput=2.93296 completed=22842 timedout=525 dropped=0 Util=0.99489
 --------------------------------------
 Running simulation with users=1365
-ResponseTime=6952.00285 Throughput=129.61453 goodput=129.61453 badput=0.00000 completed=23201 timedout=0 dropped=0 Util=0.99498
+ResponseTime=4283.82500 Throughput=129.28492 goodput=126.21788 badput=3.06704 completed=22593 timedout=549 dropped=0 Util=0.99494
 --------------------------------------
 Running simulation with users=1375
-ResponseTime=7014.40138 Throughput=129.45810 goodput=129.45810 badput=0.00000 completed=23173 timedout=0 dropped=0 Util=0.99490
+ResponseTime=4374.55427 Throughput=130.68715 goodput=127.65922 badput=3.02793 completed=22851 timedout=542 dropped=0 Util=0.99494
 --------------------------------------
 Running simulation with users=1385
-ResponseTime=7001.19241 Throughput=130.49721 goodput=130.49721 badput=0.00000 completed=23359 timedout=0 dropped=0 Util=0.99492
+ResponseTime=4379.05725 Throughput=130.73743 goodput=127.69832 badput=3.03911 completed=22858 timedout=544 dropped=0 Util=0.99493
 --------------------------------------
 Running simulation with users=1395
-ResponseTime=7204.48915 Throughput=128.81006 goodput=128.81006 badput=0.00000 completed=23057 timedout=0 dropped=0 Util=0.99482
+ResponseTime=4340.88438 Throughput=131.50838 goodput=128.49721 badput=3.01117 completed=23001 timedout=539 dropped=0 Util=0.99495
 --------------------------------------
 Running simulation with users=1405
-ResponseTime=7238.50770 Throughput=129.27933 goodput=129.27933 badput=0.00000 completed=23141 timedout=0 dropped=0 Util=0.99481
+ResponseTime=4393.11870 Throughput=129.49162 goodput=126.21788 badput=3.27374 completed=22593 timedout=586 dropped=0 Util=0.99481
 --------------------------------------
 Running simulation with users=1415
-ResponseTime=7321.01521 Throughput=129.31285 goodput=129.31285 badput=0.00000 completed=23147 timedout=0 dropped=0 Util=0.99491
+ResponseTime=4234.45068 Throughput=129.83799 goodput=126.46369 badput=3.37430 completed=22637 timedout=604 dropped=0 Util=0.99495
 --------------------------------------
 Running simulation with users=1425
-ResponseTime=7271.83614 Throughput=130.66480 goodput=130.66480 badput=0.00000 completed=23389 timedout=0 dropped=0 Util=0.99475
+ResponseTime=4397.17828 Throughput=129.87151 goodput=126.52514 badput=3.34637 completed=22648 timedout=599 dropped=0 Util=0.99472
 --------------------------------------
 Running simulation with users=1435
-ResponseTime=7409.33289 Throughput=130.02793 goodput=130.02793 badput=0.00000 completed=23275 timedout=0 dropped=0 Util=0.99494
+ResponseTime=4381.48977 Throughput=130.29609 goodput=126.85475 badput=3.44134 completed=22707 timedout=616 dropped=0 Util=0.99494
 --------------------------------------
 Running simulation with users=1445
-ResponseTime=7421.25102 Throughput=130.72067 goodput=130.72067 badput=0.00000 completed=23399 timedout=0 dropped=0 Util=0.99500
+ResponseTime=4400.28894 Throughput=130.13966 goodput=126.65363 badput=3.48603 completed=22671 timedout=624 dropped=0 Util=0.99498
 --------------------------------------
 Running simulation with users=1455
-ResponseTime=7652.58828 Throughput=128.65922 goodput=128.65922 badput=0.00000 completed=23030 timedout=0 dropped=0 Util=0.99490
+ResponseTime=4416.98439 Throughput=129.07263 goodput=125.48603 badput=3.58659 completed=22462 timedout=642 dropped=0 Util=0.99491
 --------------------------------------
 Running simulation with users=1465
-ResponseTime=7642.42880 Throughput=129.78771 goodput=129.78771 badput=0.00000 completed=23232 timedout=0 dropped=0 Util=0.99481
+ResponseTime=4509.89645 Throughput=129.74302 goodput=126.19553 badput=3.54749 completed=22589 timedout=635 dropped=0 Util=0.99482
 --------------------------------------
 Running simulation with users=1475
-ResponseTime=7650.59758 Throughput=130.43017 goodput=130.43017 badput=0.00000 completed=23347 timedout=0 dropped=0 Util=0.99480
+ResponseTime=4394.25219 Throughput=129.31285 goodput=125.59218 badput=3.72067 completed=22481 timedout=666 dropped=0 Util=0.99473
 --------------------------------------
 Running simulation with users=1485
-ResponseTime=7769.39388 Throughput=129.84358 goodput=129.84358 badput=0.00000 completed=23242 timedout=0 dropped=0 Util=0.99482
+ResponseTime=4502.30433 Throughput=128.58101 goodput=124.83799 badput=3.74302 completed=22346 timedout=670 dropped=0 Util=0.99474
 --------------------------------------
 Running simulation with users=1495
-ResponseTime=7815.42924 Throughput=130.15084 goodput=130.15084 badput=0.00000 completed=23297 timedout=0 dropped=0 Util=0.99479
+ResponseTime=4518.90024 Throughput=129.31844 goodput=125.53631 badput=3.78212 completed=22471 timedout=677 dropped=0 Util=0.99474
 --------------------------------------
 Running simulation with users=1505
-ResponseTime=7911.54378 Throughput=129.85475 goodput=129.85475 badput=0.00000 completed=23244 timedout=0 dropped=0 Util=0.99485
+ResponseTime=4512.05855 Throughput=130.00000 goodput=126.25698 badput=3.74302 completed=22600 timedout=670 dropped=0 Util=0.99485
 --------------------------------------
 Running simulation with users=1515
-ResponseTime=7989.06308 Throughput=129.73184 goodput=129.73184 badput=0.00000 completed=23222 timedout=0 dropped=0 Util=0.99475
+ResponseTime=4504.91162 Throughput=129.77095 goodput=125.88268 badput=3.88827 completed=22533 timedout=696 dropped=0 Util=0.99477
 --------------------------------------
 Running simulation with users=1525
-ResponseTime=8000.16683 Throughput=130.65922 goodput=130.65922 badput=0.00000 completed=23388 timedout=0 dropped=0 Util=0.99497
+ResponseTime=4420.31380 Throughput=130.45251 goodput=126.51955 badput=3.93296 completed=22647 timedout=704 dropped=0 Util=0.99493
 --------------------------------------
 Running simulation with users=1535
-ResponseTime=8194.67830 Throughput=129.13966 goodput=129.13966 badput=0.00000 completed=23116 timedout=0 dropped=0 Util=0.99491
+ResponseTime=4713.17723 Throughput=130.70391 goodput=126.86034 badput=3.84358 completed=22708 timedout=688 dropped=0 Util=0.99499
 --------------------------------------
 Running simulation with users=1545
-ResponseTime=8168.85227 Throughput=130.17877 goodput=130.17877 badput=0.00000 completed=23302 timedout=0 dropped=0 Util=0.99490
+ResponseTime=4507.70780 Throughput=129.22905 goodput=125.18436 badput=4.04469 completed=22408 timedout=724 dropped=0 Util=0.99484
 --------------------------------------
 Running simulation with users=1555
-ResponseTime=8356.69920 Throughput=128.84916 goodput=128.84916 badput=0.00000 completed=23064 timedout=0 dropped=0 Util=0.99495
+ResponseTime=4592.67759 Throughput=128.77654 goodput=124.67598 badput=4.10056 completed=22317 timedout=734 dropped=0 Util=0.99494
 --------------------------------------
 Running simulation with users=1565
-ResponseTime=8374.60980 Throughput=129.25698 goodput=129.25698 badput=0.00000 completed=23137 timedout=0 dropped=0 Util=0.99483
+ResponseTime=4547.88354 Throughput=129.88827 goodput=125.82123 badput=4.06704 completed=22522 timedout=728 dropped=0 Util=0.99486
 --------------------------------------
 Running simulation with users=1575
-ResponseTime=8385.69679 Throughput=130.16201 goodput=130.16201 badput=0.00000 completed=23299 timedout=0 dropped=0 Util=0.99485
+ResponseTime=4642.57073 Throughput=129.17318 goodput=124.95531 badput=4.21788 completed=22367 timedout=755 dropped=0 Util=0.99480
 --------------------------------------
 Running simulation with users=1585
-ResponseTime=8460.12391 Throughput=129.99441 goodput=129.99441 badput=0.00000 completed=23269 timedout=0 dropped=0 Util=0.99486
+ResponseTime=4495.08719 Throughput=130.63128 goodput=126.39106 badput=4.24022 completed=22624 timedout=759 dropped=0 Util=0.99488
 --------------------------------------
 Running simulation with users=1595
-ResponseTime=8563.83290 Throughput=129.51397 goodput=129.51397 badput=0.00000 completed=23183 timedout=0 dropped=0 Util=0.99486
+ResponseTime=4658.56752 Throughput=128.94972 goodput=124.66480 badput=4.28492 completed=22315 timedout=767 dropped=0 Util=0.99484
 --------------------------------------
 Running simulation with users=1605
-ResponseTime=8598.14217 Throughput=130.00000 goodput=130.00000 badput=0.00000 completed=23270 timedout=0 dropped=0 Util=0.99488
+ResponseTime=4518.96223 Throughput=129.55866 goodput=125.16201 badput=4.39665 completed=22404 timedout=787 dropped=0 Util=0.99487
 --------------------------------------
 Running simulation with users=1615
-ResponseTime=8710.75042 Throughput=129.89385 goodput=129.89385 badput=0.00000 completed=23251 timedout=0 dropped=0 Util=0.99496
+ResponseTime=4611.10440 Throughput=128.73743 goodput=124.24022 badput=4.49721 completed=22239 timedout=805 dropped=0 Util=0.99491
 --------------------------------------
 Running simulation with users=1625
-ResponseTime=8791.50294 Throughput=129.60335 goodput=129.60335 badput=0.00000 completed=23199 timedout=0 dropped=0 Util=0.99485
+ResponseTime=4748.26219 Throughput=128.55866 goodput=124.06145 badput=4.49721 completed=22207 timedout=805 dropped=0 Util=0.99482
 --------------------------------------
 Running simulation with users=1635
-ResponseTime=8841.38663 Throughput=129.70391 goodput=129.70391 badput=0.00000 completed=23217 timedout=0 dropped=0 Util=0.99497
+ResponseTime=4549.81145 Throughput=131.06145 goodput=126.60335 badput=4.45810 completed=22662 timedout=798 dropped=0 Util=0.99503
 --------------------------------------
 Running simulation with users=1645
-ResponseTime=8910.85057 Throughput=129.72626 goodput=129.72626 badput=0.00000 completed=23221 timedout=0 dropped=0 Util=0.99510
+ResponseTime=4786.88754 Throughput=129.89385 goodput=125.37430 badput=4.51955 completed=22442 timedout=809 dropped=0 Util=0.99510
 --------------------------------------
 Running simulation with users=1655
-ResponseTime=8931.17981 Throughput=130.40223 goodput=130.40223 badput=0.00000 completed=23342 timedout=0 dropped=0 Util=0.99497
+ResponseTime=4791.40341 Throughput=129.65363 goodput=125.04469 badput=4.60894 completed=22383 timedout=825 dropped=0 Util=0.99494
 --------------------------------------
 Running simulation with users=1665
-ResponseTime=8909.45138 Throughput=131.37430 goodput=131.37430 badput=0.00000 completed=23516 timedout=0 dropped=0 Util=0.99506
+ResponseTime=4774.13742 Throughput=129.61453 goodput=124.96648 badput=4.64804 completed=22369 timedout=832 dropped=0 Util=0.99497
 --------------------------------------
 Running simulation with users=1675
-ResponseTime=9135.15705 Throughput=129.60335 goodput=129.60335 badput=0.00000 completed=23199 timedout=0 dropped=0 Util=0.99507
+ResponseTime=4768.28517 Throughput=128.89385 goodput=124.12291 badput=4.77095 completed=22218 timedout=854 dropped=0 Util=0.99502
 --------------------------------------
 Running simulation with users=1685
-ResponseTime=9165.79462 Throughput=130.21229 goodput=130.21229 badput=0.00000 completed=23308 timedout=0 dropped=0 Util=0.99494
+ResponseTime=4733.14876 Throughput=129.63687 goodput=124.79330 badput=4.84358 completed=22338 timedout=867 dropped=0 Util=0.99492
 --------------------------------------
 Running simulation with users=1695
-ResponseTime=9242.36432 Throughput=130.01117 goodput=130.01117 badput=0.00000 completed=23272 timedout=0 dropped=0 Util=0.99499
+ResponseTime=4735.64307 Throughput=130.29609 goodput=125.50838 badput=4.78771 completed=22466 timedout=857 dropped=0 Util=0.99501
 --------------------------------------
 Running simulation with users=1705
-ResponseTime=9342.81514 Throughput=129.74860 goodput=129.74860 badput=0.00000 completed=23225 timedout=0 dropped=0 Util=0.99490
+ResponseTime=4649.24456 Throughput=128.72067 goodput=123.67598 badput=5.04469 completed=22138 timedout=903 dropped=0 Util=0.99486
 --------------------------------------
 Running simulation with users=1715
-ResponseTime=9400.63700 Throughput=130.07263 goodput=130.07263 badput=0.00000 completed=23283 timedout=0 dropped=0 Util=0.99497
+ResponseTime=4755.94385 Throughput=129.59218 goodput=124.58101 badput=5.01117 completed=22300 timedout=897 dropped=0 Util=0.99498
 --------------------------------------
 Running simulation with users=1725
-ResponseTime=9447.88382 Throughput=129.82123 goodput=129.82123 badput=0.00000 completed=23238 timedout=0 dropped=0 Util=0.99493
+ResponseTime=4729.72656 Throughput=130.19553 goodput=125.11173 badput=5.08380 completed=22395 timedout=910 dropped=0 Util=0.99496
 --------------------------------------
 Running simulation with users=1735
-ResponseTime=9584.87654 Throughput=129.65922 goodput=129.65922 badput=0.00000 completed=23209 timedout=0 dropped=0 Util=0.99498
+ResponseTime=4875.63967 Throughput=130.32961 goodput=125.25140 badput=5.07821 completed=22420 timedout=909 dropped=0 Util=0.99504
 --------------------------------------
 Running simulation with users=1745
-ResponseTime=9767.28044 Throughput=128.53631 goodput=128.53631 badput=0.00000 completed=23008 timedout=0 dropped=0 Util=0.99486
+ResponseTime=4802.69144 Throughput=130.22346 goodput=125.13966 badput=5.08380 completed=22400 timedout=910 dropped=0 Util=0.99496
 --------------------------------------
 Running simulation with users=1755
-ResponseTime=9674.92519 Throughput=130.00000 goodput=130.00000 badput=0.00000 completed=23270 timedout=0 dropped=0 Util=0.99495
+ResponseTime=4830.88399 Throughput=129.89944 goodput=124.74860 badput=5.15084 completed=22330 timedout=922 dropped=0 Util=0.99494
 --------------------------------------
 Running simulation with users=1765
-ResponseTime=9959.05176 Throughput=127.99441 goodput=127.99441 badput=0.00000 completed=22911 timedout=0 dropped=0 Util=0.99491
+ResponseTime=4929.78182 Throughput=130.11173 goodput=124.94972 badput=5.16201 completed=22366 timedout=924 dropped=0 Util=0.99501
 --------------------------------------
 Running simulation with users=1775
-ResponseTime=9768.09646 Throughput=130.41899 goodput=130.41899 badput=0.00000 completed=23345 timedout=0 dropped=0 Util=0.99511
+ResponseTime=4891.85971 Throughput=130.44134 goodput=125.18994 badput=5.25140 completed=22409 timedout=940 dropped=0 Util=0.99512
 --------------------------------------
 Running simulation with users=1785
-ResponseTime=9900.02321 Throughput=129.89385 goodput=129.89385 badput=0.00000 completed=23251 timedout=0 dropped=0 Util=0.99501
+ResponseTime=4882.50728 Throughput=129.40782 goodput=124.06704 badput=5.34078 completed=22208 timedout=956 dropped=0 Util=0.99500
 --------------------------------------
 Running simulation with users=1795
-ResponseTime=9859.09130 Throughput=130.89944 goodput=130.89944 badput=0.00000 completed=23431 timedout=0 dropped=0 Util=0.99499
+ResponseTime=4883.32795 Throughput=129.98883 goodput=124.53073 badput=5.45810 completed=22291 timedout=977 dropped=0 Util=0.99495
 --------------------------------------
 Running simulation with users=1805
-ResponseTime=10101.52747 Throughput=129.10615 goodput=129.10615 badput=0.00000 completed=23110 timedout=0 dropped=0 Util=0.99491
+ResponseTime=4905.41779 Throughput=129.52514 goodput=124.05587 badput=5.46927 completed=22206 timedout=979 dropped=0 Util=0.99492
 --------------------------------------
 Running simulation with users=1815
-ResponseTime=10186.32770 Throughput=129.24022 goodput=129.24022 badput=0.00000 completed=23134 timedout=0 dropped=0 Util=0.99494
+ResponseTime=4925.07095 Throughput=129.09497 goodput=123.55307 badput=5.54190 completed=22116 timedout=992 dropped=0 Util=0.99493
 --------------------------------------
 Running simulation with users=1825
-ResponseTime=10248.23155 Throughput=129.16760 goodput=129.16760 badput=0.00000 completed=23121 timedout=0 dropped=0 Util=0.99488
+ResponseTime=4716.28107 Throughput=130.45810 goodput=124.81564 badput=5.64246 completed=22342 timedout=1010 dropped=0 Util=0.99495
 --------------------------------------
 Running simulation with users=1835
-ResponseTime=10201.01245 Throughput=130.34078 goodput=130.34078 badput=0.00000 completed=23331 timedout=0 dropped=0 Util=0.99506
+ResponseTime=5025.04658 Throughput=131.00000 goodput=125.54749 badput=5.45251 completed=22473 timedout=976 dropped=0 Util=0.99508
 --------------------------------------
 Running simulation with users=1845
-ResponseTime=10254.30426 Throughput=130.23464 goodput=130.23464 badput=0.00000 completed=23312 timedout=0 dropped=0 Util=0.99507
+ResponseTime=5072.51271 Throughput=129.70391 goodput=124.12291 badput=5.58101 completed=22218 timedout=999 dropped=0 Util=0.99504
 --------------------------------------
 Running simulation with users=1855
-ResponseTime=10329.65512 Throughput=130.45810 goodput=130.45810 badput=0.00000 completed=23352 timedout=0 dropped=0 Util=0.99497
+ResponseTime=4867.58860 Throughput=130.36872 goodput=124.61453 badput=5.75419 completed=22306 timedout=1030 dropped=0 Util=0.99496
 --------------------------------------
 Running simulation with users=1865
-ResponseTime=10468.33961 Throughput=129.49721 goodput=129.49721 badput=0.00000 completed=23180 timedout=0 dropped=0 Util=0.99490
+ResponseTime=4860.45164 Throughput=130.39106 goodput=124.65363 badput=5.73743 completed=22313 timedout=1027 dropped=0 Util=0.99494
 --------------------------------------
 Running simulation with users=1875
-ResponseTime=10518.95189 Throughput=130.18436 goodput=130.18436 badput=0.00000 completed=23303 timedout=0 dropped=0 Util=0.99509
+ResponseTime=4976.47723 Throughput=129.36872 goodput=123.55307 badput=5.81564 completed=22116 timedout=1041 dropped=0 Util=0.99506
 --------------------------------------
 Running simulation with users=1885
-ResponseTime=10556.01896 Throughput=130.36872 goodput=130.36872 badput=0.00000 completed=23336 timedout=0 dropped=0 Util=0.99489
+ResponseTime=4895.29206 Throughput=129.41899 goodput=123.42458 badput=5.99441 completed=22093 timedout=1073 dropped=0 Util=0.99485
 --------------------------------------
 Running simulation with users=1895
-ResponseTime=10745.88669 Throughput=129.25698 goodput=129.25698 badput=0.00000 completed=23137 timedout=0 dropped=0 Util=0.99498
+ResponseTime=4836.57511 Throughput=129.34637 goodput=123.27933 badput=6.06704 completed=22067 timedout=1086 dropped=0 Util=0.99498
 --------------------------------------
 Running simulation with users=1905
-ResponseTime=10583.64862 Throughput=131.46369 goodput=131.46369 badput=0.00000 completed=23532 timedout=0 dropped=0 Util=0.99506
+ResponseTime=5103.93788 Throughput=130.38547 goodput=124.46927 badput=5.91620 completed=22280 timedout=1059 dropped=0 Util=0.99501
 --------------------------------------
 Running simulation with users=1915
-ResponseTime=10746.73779 Throughput=130.65363 goodput=130.65363 badput=0.00000 completed=23387 timedout=0 dropped=0 Util=0.99508
+ResponseTime=4904.51210 Throughput=129.54190 goodput=123.40782 badput=6.13408 completed=22090 timedout=1098 dropped=0 Util=0.99502
 --------------------------------------
 Running simulation with users=1925
-ResponseTime=11021.91087 Throughput=128.59777 goodput=128.59777 badput=0.00000 completed=23019 timedout=0 dropped=0 Util=0.99497
+ResponseTime=4996.86400 Throughput=129.76536 goodput=123.67598 badput=6.08939 completed=22138 timedout=1090 dropped=0 Util=0.99500
 --------------------------------------
 Running simulation with users=1935
-ResponseTime=10973.39132 Throughput=129.58101 goodput=129.58101 badput=0.00000 completed=23195 timedout=0 dropped=0 Util=0.99498
+ResponseTime=4910.27039 Throughput=129.82682 goodput=123.59218 badput=6.23464 completed=22123 timedout=1116 dropped=0 Util=0.99499
 --------------------------------------
 Running simulation with users=1945
-ResponseTime=11058.16867 Throughput=129.70950 goodput=129.70950 badput=0.00000 completed=23218 timedout=0 dropped=0 Util=0.99492
+ResponseTime=4951.56095 Throughput=129.88827 goodput=123.58659 badput=6.30168 completed=22122 timedout=1128 dropped=0 Util=0.99492
 --------------------------------------
 Running simulation with users=1955
-ResponseTime=10963.57524 Throughput=131.10056 goodput=131.10056 badput=0.00000 completed=23467 timedout=0 dropped=0 Util=0.99506
+ResponseTime=5144.02820 Throughput=130.84916 goodput=124.68156 badput=6.16760 completed=22318 timedout=1104 dropped=0 Util=0.99505
 --------------------------------------
 Running simulation with users=1965
-ResponseTime=11088.48738 Throughput=130.48603 goodput=130.48603 badput=0.00000 completed=23357 timedout=0 dropped=0 Util=0.99496
+ResponseTime=4814.15211 Throughput=129.79330 goodput=123.37430 badput=6.41899 completed=22084 timedout=1149 dropped=0 Util=0.99494
 --------------------------------------
 Running simulation with users=1975
-ResponseTime=11310.15495 Throughput=129.20670 goodput=129.20670 badput=0.00000 completed=23128 timedout=0 dropped=0 Util=0.99498
+ResponseTime=4961.76777 Throughput=130.19553 goodput=123.76536 badput=6.43017 completed=22154 timedout=1151 dropped=0 Util=0.99504
 --------------------------------------
 Running simulation with users=1985
-ResponseTime=11343.14661 Throughput=129.39665 goodput=129.39665 badput=0.00000 completed=23162 timedout=0 dropped=0 Util=0.99501
+ResponseTime=4985.02847 Throughput=129.91620 goodput=123.51955 badput=6.39665 completed=22110 timedout=1145 dropped=0 Util=0.99505
 --------------------------------------
 Running simulation with users=1995
-ResponseTime=11327.50144 Throughput=130.27374 goodput=130.27374 badput=0.00000 completed=23319 timedout=0 dropped=0 Util=0.99500
+ResponseTime=4901.80232 Throughput=129.29609 goodput=122.61453 badput=6.68156 completed=21948 timedout=1196 dropped=0 Util=0.99493
 --------------------------------------
 Running simulation with users=2005
-ResponseTime=11375.75925 Throughput=130.62570 goodput=130.62570 badput=0.00000 completed=23382 timedout=0 dropped=0 Util=0.99507
+ResponseTime=5063.78141 Throughput=131.76536 goodput=125.16760 badput=6.59777 completed=22405 timedout=1181 dropped=0 Util=0.99513
 --------------------------------------
 Running simulation with users=2015
-ResponseTime=11528.67665 Throughput=129.97207 goodput=129.97207 badput=0.00000 completed=23265 timedout=0 dropped=0 Util=0.99504
+ResponseTime=5117.94234 Throughput=129.83799 goodput=123.20670 badput=6.63128 completed=22054 timedout=1187 dropped=0 Util=0.99502
 --------------------------------------
 Running simulation with users=2025
-ResponseTime=11468.57504 Throughput=131.13966 goodput=131.13966 badput=0.00000 completed=23474 timedout=0 dropped=0 Util=0.99501
+ResponseTime=5116.31325 Throughput=130.22905 goodput=123.55307 badput=6.67598 completed=22116 timedout=1195 dropped=0 Util=0.99496
 --------------------------------------
 Running simulation with users=2035
-ResponseTime=11776.11003 Throughput=128.88268 goodput=128.88268 badput=0.00000 completed=23070 timedout=0 dropped=0 Util=0.99486
+ResponseTime=5110.40452 Throughput=128.92179 goodput=122.12849 badput=6.79330 completed=21861 timedout=1216 dropped=0 Util=0.99486
 --------------------------------------
 Running simulation with users=2045
-ResponseTime=11776.73332 Throughput=129.34078 goodput=129.34078 badput=0.00000 completed=23152 timedout=0 dropped=0 Util=0.99489
+ResponseTime=5077.45681 Throughput=130.34078 goodput=123.51955 badput=6.82123 completed=22110 timedout=1221 dropped=0 Util=0.99495
 --------------------------------------
 Running simulation with users=2055
-ResponseTime=11753.54398 Throughput=130.02235 goodput=130.02235 badput=0.00000 completed=23274 timedout=0 dropped=0 Util=0.99498
+ResponseTime=5088.11656 Throughput=129.15084 goodput=122.25698 badput=6.89385 completed=21884 timedout=1234 dropped=0 Util=0.99494
 --------------------------------------
 Running simulation with users=2065
-ResponseTime=11912.19678 Throughput=129.25140 goodput=129.25140 badput=0.00000 completed=23136 timedout=0 dropped=0 Util=0.99504
+ResponseTime=5137.32963 Throughput=130.35196 goodput=123.45810 badput=6.89385 completed=22099 timedout=1234 dropped=0 Util=0.99508
 --------------------------------------
 Running simulation with users=2075
-ResponseTime=11900.54913 Throughput=129.91061 goodput=129.91061 badput=0.00000 completed=23254 timedout=0 dropped=0 Util=0.99499
+ResponseTime=5213.98818 Throughput=130.89944 goodput=124.02235 badput=6.87709 completed=22200 timedout=1231 dropped=0 Util=0.99504
 --------------------------------------
 Running simulation with users=2085
-ResponseTime=11962.28978 Throughput=130.18994 goodput=130.18994 badput=0.00000 completed=23304 timedout=0 dropped=0 Util=0.99507
+ResponseTime=5179.32932 Throughput=130.36872 goodput=123.39665 badput=6.97207 completed=22088 timedout=1248 dropped=0 Util=0.99508
 --------------------------------------
 Running simulation with users=2095
-ResponseTime=12155.41397 Throughput=129.10615 goodput=129.10615 badput=0.00000 completed=23110 timedout=0 dropped=0 Util=0.99500
+ResponseTime=5083.88122 Throughput=129.21788 goodput=122.00000 badput=7.21788 completed=21838 timedout=1292 dropped=0 Util=0.99501
 --------------------------------------
 Running simulation with users=2105
-ResponseTime=12102.55727 Throughput=130.17877 goodput=130.17877 badput=0.00000 completed=23302 timedout=0 dropped=0 Util=0.99497
+ResponseTime=5226.84430 Throughput=129.68156 goodput=122.52514 badput=7.15642 completed=21932 timedout=1281 dropped=0 Util=0.99495
 --------------------------------------
 Running simulation with users=2115
-ResponseTime=12155.19424 Throughput=130.35196 goodput=130.35196 badput=0.00000 completed=23333 timedout=0 dropped=0 Util=0.99499
+ResponseTime=5047.25062 Throughput=130.62011 goodput=123.36313 badput=7.25698 completed=22082 timedout=1299 dropped=0 Util=0.99500
 --------------------------------------
 Running simulation with users=2125
-ResponseTime=12450.68996 Throughput=128.27933 goodput=128.27933 badput=0.00000 completed=22962 timedout=0 dropped=0 Util=0.99497
+ResponseTime=5336.75935 Throughput=129.65363 goodput=122.43575 badput=7.21788 completed=21916 timedout=1292 dropped=0 Util=0.99503
 --------------------------------------
 Running simulation with users=2135
-ResponseTime=12183.10250 Throughput=131.36313 goodput=131.36313 badput=0.00000 completed=23514 timedout=0 dropped=0 Util=0.99516
+ResponseTime=5302.78592 Throughput=130.69274 goodput=123.49162 badput=7.20112 completed=22105 timedout=1289 dropped=0 Util=0.99513
 --------------------------------------
 Running simulation with users=2145
-ResponseTime=12521.43016 Throughput=129.10615 goodput=129.10615 badput=0.00000 completed=23110 timedout=0 dropped=0 Util=0.99503
+ResponseTime=5064.14316 Throughput=130.18994 goodput=122.70950 badput=7.48045 completed=21965 timedout=1339 dropped=0 Util=0.99509
 --------------------------------------
 Running simulation with users=2155
-ResponseTime=12478.97476 Throughput=129.79888 goodput=129.79888 badput=0.00000 completed=23234 timedout=0 dropped=0 Util=0.99503
+ResponseTime=5231.64523 Throughput=130.43575 goodput=123.01117 badput=7.42458 completed=22019 timedout=1329 dropped=0 Util=0.99506
 --------------------------------------
 Running simulation with users=2165
-ResponseTime=12572.78652 Throughput=129.48045 goodput=129.48045 badput=0.00000 completed=23177 timedout=0 dropped=0 Util=0.99505
+ResponseTime=5246.42337 Throughput=128.66480 goodput=121.02235 badput=7.64246 completed=21663 timedout=1368 dropped=0 Util=0.99500
 --------------------------------------
 Running simulation with users=2175
-ResponseTime=12645.36546 Throughput=129.78212 goodput=129.78212 badput=0.00000 completed=23231 timedout=0 dropped=0 Util=0.99504
+ResponseTime=5113.25399 Throughput=129.43017 goodput=121.78771 badput=7.64246 completed=21800 timedout=1368 dropped=0 Util=0.99504
 --------------------------------------
 Running simulation with users=2185
-ResponseTime=12647.36954 Throughput=130.26816 goodput=130.26816 badput=0.00000 completed=23318 timedout=0 dropped=0 Util=0.99509
+ResponseTime=5113.22299 Throughput=129.74860 goodput=122.06145 badput=7.68715 completed=21849 timedout=1376 dropped=0 Util=0.99507
 --------------------------------------
 Running simulation with users=2195
-ResponseTime=12667.98748 Throughput=130.72626 goodput=130.72626 badput=0.00000 completed=23400 timedout=0 dropped=0 Util=0.99508
+ResponseTime=5221.14792 Throughput=129.37989 goodput=121.60894 badput=7.77095 completed=21768 timedout=1391 dropped=0 Util=0.99500
 --------------------------------------
 Running simulation with users=2205
-ResponseTime=12982.32165 Throughput=128.52514 goodput=128.52514 badput=0.00000 completed=23006 timedout=0 dropped=0 Util=0.99495
+ResponseTime=5126.35921 Throughput=130.02235 goodput=122.17318 badput=7.84916 completed=21869 timedout=1405 dropped=0 Util=0.99502
 --------------------------------------
 Running simulation with users=2215
-ResponseTime=12930.65653 Throughput=129.78212 goodput=129.78212 badput=0.00000 completed=23231 timedout=0 dropped=0 Util=0.99505
+ResponseTime=5302.87371 Throughput=130.46927 goodput=122.75978 badput=7.70950 completed=21974 timedout=1380 dropped=0 Util=0.99509
 --------------------------------------
 Running simulation with users=2225
-ResponseTime=12877.34893 Throughput=130.74860 goodput=130.74860 badput=0.00000 completed=23404 timedout=0 dropped=0 Util=0.99508
+ResponseTime=5168.66813 Throughput=131.11732 goodput=123.30726 badput=7.81006 completed=22072 timedout=1398 dropped=0 Util=0.99510
 --------------------------------------
 Running simulation with users=2235
-ResponseTime=13170.69818 Throughput=128.82123 goodput=128.82123 badput=0.00000 completed=23059 timedout=0 dropped=0 Util=0.99495
+ResponseTime=5264.76772 Throughput=130.19553 goodput=122.27374 badput=7.92179 completed=21887 timedout=1418 dropped=0 Util=0.99500
 --------------------------------------
 Running simulation with users=2245
-ResponseTime=13094.98773 Throughput=130.12849 goodput=130.12849 badput=0.00000 completed=23293 timedout=0 dropped=0 Util=0.99501
+ResponseTime=5335.45196 Throughput=127.46927 goodput=119.31285 badput=8.15642 completed=21357 timedout=1460 dropped=0 Util=0.99486
 --------------------------------------
 Running simulation with users=2255
-ResponseTime=13287.39512 Throughput=128.87151 goodput=128.87151 badput=0.00000 completed=23068 timedout=0 dropped=0 Util=0.99480
+ResponseTime=5284.15350 Throughput=129.51397 goodput=121.44134 badput=8.07263 completed=21738 timedout=1445 dropped=0 Util=0.99484
 --------------------------------------
 Running simulation with users=2265
-ResponseTime=13247.47250 Throughput=129.90503 goodput=129.90503 badput=0.00000 completed=23253 timedout=0 dropped=0 Util=0.99492
+ResponseTime=5397.31575 Throughput=131.20670 goodput=123.20112 badput=8.00559 completed=22053 timedout=1433 dropped=0 Util=0.99499
 --------------------------------------
 Running simulation with users=2275
-ResponseTime=13317.91058 Throughput=129.91061 goodput=129.91061 badput=0.00000 completed=23254 timedout=0 dropped=0 Util=0.99503
+ResponseTime=5150.71832 Throughput=129.49162 goodput=121.18436 badput=8.30726 completed=21692 timedout=1487 dropped=0 Util=0.99503
 --------------------------------------
 Running simulation with users=2285
-ResponseTime=13321.26614 Throughput=130.30726 goodput=130.30726 badput=0.00000 completed=23325 timedout=0 dropped=0 Util=0.99503
+ResponseTime=5360.44602 Throughput=129.12849 goodput=120.90503 badput=8.22346 completed=21642 timedout=1472 dropped=0 Util=0.99498
 --------------------------------------
 Running simulation with users=2295
-ResponseTime=13475.14260 Throughput=129.78212 goodput=129.78212 badput=0.00000 completed=23231 timedout=0 dropped=0 Util=0.99499
+ResponseTime=5432.35722 Throughput=128.87151 goodput=120.51397 badput=8.35754 completed=21572 timedout=1496 dropped=0 Util=0.99494
 --------------------------------------
 Running simulation with users=2305
-ResponseTime=13534.01403 Throughput=129.68156 goodput=129.68156 badput=0.00000 completed=23213 timedout=0 dropped=0 Util=0.99498
+ResponseTime=5520.08763 Throughput=129.37430 goodput=121.11732 badput=8.25698 completed=21680 timedout=1478 dropped=0 Util=0.99497
 --------------------------------------
 Running simulation with users=2315
-ResponseTime=13454.36240 Throughput=130.87151 goodput=130.87151 badput=0.00000 completed=23426 timedout=0 dropped=0 Util=0.99517
+ResponseTime=5355.52361 Throughput=131.20670 goodput=122.89385 badput=8.31285 completed=21998 timedout=1488 dropped=0 Util=0.99519
 --------------------------------------
 Running simulation with users=2325
-ResponseTime=13724.77661 Throughput=129.45251 goodput=129.45251 badput=0.00000 completed=23172 timedout=0 dropped=0 Util=0.99496
+ResponseTime=5269.27325 Throughput=129.48045 goodput=120.98324 badput=8.49721 completed=21656 timedout=1521 dropped=0 Util=0.99498
 --------------------------------------
 Running simulation with users=2335
-ResponseTime=13891.14499 Throughput=128.48045 goodput=128.48045 badput=0.00000 completed=22998 timedout=0 dropped=0 Util=0.99496
+ResponseTime=5282.03044 Throughput=129.89385 goodput=121.39106 badput=8.50279 completed=21729 timedout=1522 dropped=0 Util=0.99501
 --------------------------------------
 Running simulation with users=2345
-ResponseTime=13979.04848 Throughput=128.58101 goodput=128.58101 badput=0.00000 completed=23016 timedout=0 dropped=0 Util=0.99491
+ResponseTime=5147.90572 Throughput=129.16760 goodput=120.45810 badput=8.70950 completed=21562 timedout=1559 dropped=0 Util=0.99493
 --------------------------------------
 Running simulation with users=2355
-ResponseTime=13867.48232 Throughput=130.02793 goodput=130.02793 badput=0.00000 completed=23275 timedout=0 dropped=0 Util=0.99502
+ResponseTime=5296.59970 Throughput=129.60335 goodput=120.87151 badput=8.73184 completed=21636 timedout=1563 dropped=0 Util=0.99499
 --------------------------------------
 Running simulation with users=2365
-ResponseTime=13954.48677 Throughput=129.79888 goodput=129.79888 badput=0.00000 completed=23234 timedout=0 dropped=0 Util=0.99503
+ResponseTime=5108.71563 Throughput=130.72626 goodput=121.90503 badput=8.82123 completed=21821 timedout=1579 dropped=0 Util=0.99507
 --------------------------------------
 Running simulation with users=2375
-ResponseTime=13961.92631 Throughput=130.02793 goodput=130.02793 badput=0.00000 completed=23275 timedout=0 dropped=0 Util=0.99507
+ResponseTime=5314.39687 Throughput=130.85475 goodput=122.09497 badput=8.75978 completed=21855 timedout=1568 dropped=0 Util=0.99512
 --------------------------------------
 Running simulation with users=2385
-ResponseTime=14221.83760 Throughput=128.77095 goodput=128.77095 badput=0.00000 completed=23050 timedout=0 dropped=0 Util=0.99488
+ResponseTime=5418.03823 Throughput=129.56425 goodput=120.69832 badput=8.86592 completed=21605 timedout=1587 dropped=0 Util=0.99492
 --------------------------------------
 Running simulation with users=2395
-ResponseTime=14341.51602 Throughput=128.22905 goodput=128.22905 badput=0.00000 completed=22953 timedout=0 dropped=0 Util=0.99491
+ResponseTime=5417.71061 Throughput=129.45251 goodput=120.55866 badput=8.89385 completed=21580 timedout=1592 dropped=0 Util=0.99498
 --------------------------------------
 Running simulation with users=2405
-ResponseTime=14333.90124 Throughput=128.68156 goodput=128.68156 badput=0.00000 completed=23034 timedout=0 dropped=0 Util=0.99502
+ResponseTime=5074.42681 Throughput=128.65922 goodput=119.51397 badput=9.14525 completed=21393 timedout=1637 dropped=0 Util=0.99502
 --------------------------------------
 Running simulation with users=2415
-ResponseTime=14381.65234 Throughput=129.00000 goodput=129.00000 badput=0.00000 completed=23091 timedout=0 dropped=0 Util=0.99501
+ResponseTime=5372.29506 Throughput=129.36872 goodput=120.36313 badput=9.00559 completed=21545 timedout=1612 dropped=0 Util=0.99502
 --------------------------------------
 Running simulation with users=2425
-ResponseTime=14393.42184 Throughput=129.32402 goodput=129.32402 badput=0.00000 completed=23149 timedout=0 dropped=0 Util=0.99500
+ResponseTime=5248.85999 Throughput=128.62570 goodput=119.40223 badput=9.22346 completed=21373 timedout=1651 dropped=0 Util=0.99496
 --------------------------------------
 Running simulation with users=2435
-ResponseTime=14637.06059 Throughput=128.25698 goodput=128.25140 badput=0.00559 completed=22957 timedout=1 dropped=0 Util=0.99493
+ResponseTime=5312.96773 Throughput=129.32402 goodput=120.15642 badput=9.16760 completed=21508 timedout=1641 dropped=0 Util=0.99498
 --------------------------------------
 Running simulation with users=2445
-ResponseTime=14616.58913 Throughput=129.07263 goodput=129.06704 badput=0.00559 completed=23103 timedout=1 dropped=0 Util=0.99497
+ResponseTime=5435.59281 Throughput=128.47486 goodput=119.25698 badput=9.21788 completed=21347 timedout=1650 dropped=0 Util=0.99494
 --------------------------------------
 Running simulation with users=2455
-ResponseTime=14512.81737 Throughput=130.16201 goodput=130.16201 badput=0.00000 completed=23299 timedout=0 dropped=0 Util=0.99500
+ResponseTime=5532.53005 Throughput=129.46927 goodput=120.32961 badput=9.13966 completed=21539 timedout=1636 dropped=0 Util=0.99498
 --------------------------------------
 Running simulation with users=2465
-ResponseTime=14595.20389 Throughput=129.96089 goodput=129.95531 badput=0.00559 completed=23262 timedout=1 dropped=0 Util=0.99496
+ResponseTime=5348.62411 Throughput=129.11173 goodput=119.73184 badput=9.37989 completed=21432 timedout=1679 dropped=0 Util=0.99491
 --------------------------------------
 Running simulation with users=2475
-ResponseTime=14751.68421 Throughput=129.29609 goodput=129.29609 badput=0.00000 completed=23144 timedout=0 dropped=0 Util=0.99505
+ResponseTime=5535.32073 Throughput=129.86034 goodput=120.59777 badput=9.26257 completed=21587 timedout=1658 dropped=0 Util=0.99507
 --------------------------------------
 Running simulation with users=2485
-ResponseTime=14768.21192 Throughput=129.92179 goodput=129.91620 badput=0.00559 completed=23255 timedout=1 dropped=0 Util=0.99506
+ResponseTime=5412.60150 Throughput=129.49162 goodput=119.98883 badput=9.50279 completed=21478 timedout=1701 dropped=0 Util=0.99502
 --------------------------------------
 Running simulation with users=2495
-ResponseTime=14914.29140 Throughput=129.22346 goodput=129.22346 badput=0.00000 completed=23131 timedout=0 dropped=0 Util=0.99492
+ResponseTime=5357.24833 Throughput=129.95531 goodput=120.42458 badput=9.53073 completed=21556 timedout=1706 dropped=0 Util=0.99494
 --------------------------------------
 Running simulation with users=2505
-ResponseTime=14953.99043 Throughput=129.33520 goodput=129.32961 badput=0.00559 completed=23150 timedout=1 dropped=0 Util=0.99494
+ResponseTime=5666.80243 Throughput=129.08939 goodput=119.63128 badput=9.45810 completed=21414 timedout=1693 dropped=0 Util=0.99493
 --------------------------------------
 Running simulation with users=2515
-ResponseTime=15078.29944 Throughput=129.16201 goodput=129.15642 badput=0.00559 completed=23119 timedout=1 dropped=0 Util=0.99504
+ResponseTime=5519.04429 Throughput=130.39106 goodput=120.86592 badput=9.52514 completed=21635 timedout=1705 dropped=0 Util=0.99509
 --------------------------------------
 Running simulation with users=2525
-ResponseTime=15085.53204 Throughput=129.46369 goodput=129.45810 badput=0.00559 completed=23173 timedout=1 dropped=0 Util=0.99494
+ResponseTime=5552.47433 Throughput=129.33520 goodput=119.73743 badput=9.59777 completed=21433 timedout=1718 dropped=0 Util=0.99491
 --------------------------------------
 Running simulation with users=2535
-ResponseTime=15026.43686 Throughput=130.33520 goodput=130.32961 badput=0.00559 completed=23329 timedout=1 dropped=0 Util=0.99502
+ResponseTime=5522.87755 Throughput=129.39665 goodput=119.61453 badput=9.78212 completed=21411 timedout=1751 dropped=0 Util=0.99498
 --------------------------------------
 Running simulation with users=2545
-ResponseTime=15238.31728 Throughput=129.30168 goodput=129.29609 badput=0.00559 completed=23144 timedout=1 dropped=0 Util=0.99507
+ResponseTime=5488.25589 Throughput=128.91620 goodput=119.11173 badput=9.80447 completed=21321 timedout=1755 dropped=0 Util=0.99504
 --------------------------------------
 Running simulation with users=2555
-ResponseTime=15296.29772 Throughput=129.26257 goodput=129.25698 badput=0.00559 completed=23137 timedout=1 dropped=0 Util=0.99502
+ResponseTime=5523.55720 Throughput=129.91061 goodput=120.06145 badput=9.84916 completed=21491 timedout=1763 dropped=0 Util=0.99506
 --------------------------------------
 Running simulation with users=2565
-ResponseTime=15423.56508 Throughput=128.92179 goodput=128.92179 badput=0.00000 completed=23077 timedout=0 dropped=0 Util=0.99494
+ResponseTime=5470.93329 Throughput=128.39665 goodput=118.40782 badput=9.98883 completed=21195 timedout=1788 dropped=0 Util=0.99492
 --------------------------------------
 Running simulation with users=2575
-ResponseTime=15408.61786 Throughput=129.46369 goodput=129.45810 badput=0.00559 completed=23173 timedout=1 dropped=0 Util=0.99496
+ResponseTime=5525.78056 Throughput=129.24581 goodput=119.23464 badput=10.01117 completed=21343 timedout=1792 dropped=0 Util=0.99495
 --------------------------------------
 Running simulation with users=2585
-ResponseTime=15533.65289 Throughput=129.19553 goodput=129.18994 badput=0.00559 completed=23125 timedout=1 dropped=0 Util=0.99506
+ResponseTime=5539.84657 Throughput=130.60894 goodput=120.64804 badput=9.96089 completed=21596 timedout=1783 dropped=0 Util=0.99513
 --------------------------------------
 Running simulation with users=2595
-ResponseTime=15682.72592 Throughput=128.54749 goodput=128.54190 badput=0.00559 completed=23009 timedout=1 dropped=0 Util=0.99495
+ResponseTime=5317.57486 Throughput=128.50838 goodput=118.21788 badput=10.29050 completed=21161 timedout=1842 dropped=0 Util=0.99493
 --------------------------------------
 Running simulation with users=2605
-ResponseTime=15615.27279 Throughput=129.48045 goodput=129.46927 badput=0.01117 completed=23175 timedout=2 dropped=0 Util=0.99504
+ResponseTime=5603.79184 Throughput=129.67039 goodput=119.51397 badput=10.15642 completed=21393 timedout=1818 dropped=0 Util=0.99504
 --------------------------------------
 Running simulation with users=2615
-ResponseTime=15646.02387 Throughput=130.02793 goodput=130.01676 badput=0.01117 completed=23273 timedout=2 dropped=0 Util=0.99507
+ResponseTime=5539.72517 Throughput=128.68715 goodput=118.43575 badput=10.25140 completed=21200 timedout=1835 dropped=0 Util=0.99500
 --------------------------------------
 Running simulation with users=2625
-ResponseTime=15606.06749 Throughput=130.59218 goodput=130.59218 badput=0.00000 completed=23376 timedout=0 dropped=0 Util=0.99510
+ResponseTime=5515.28091 Throughput=129.34637 goodput=119.06145 badput=10.28492 completed=21312 timedout=1841 dropped=0 Util=0.99503
 --------------------------------------
 Running simulation with users=2635
-ResponseTime=15937.23474 Throughput=128.93296 goodput=128.92179 badput=0.01117 completed=23077 timedout=2 dropped=0 Util=0.99501
+ResponseTime=5595.23016 Throughput=129.16760 goodput=118.84358 badput=10.32402 completed=21273 timedout=1848 dropped=0 Util=0.99505
 --------------------------------------
 Running simulation with users=2645
-ResponseTime=15746.92772 Throughput=130.64804 goodput=130.63128 badput=0.01676 completed=23383 timedout=3 dropped=0 Util=0.99509
+ResponseTime=5721.96004 Throughput=131.12849 goodput=120.89385 badput=10.23464 completed=21640 timedout=1832 dropped=0 Util=0.99511
 --------------------------------------
 Running simulation with users=2655
-ResponseTime=15762.98613 Throughput=130.88268 goodput=130.87151 badput=0.01117 completed=23426 timedout=2 dropped=0 Util=0.99514
+ResponseTime=5591.67205 Throughput=130.97765 goodput=120.64804 badput=10.32961 completed=21596 timedout=1849 dropped=0 Util=0.99514
 --------------------------------------
 Running simulation with users=2665
-ResponseTime=15877.72668 Throughput=130.68715 goodput=130.68156 badput=0.00559 completed=23392 timedout=1 dropped=0 Util=0.99512
+ResponseTime=5678.70199 Throughput=130.14525 goodput=119.73184 badput=10.41341 completed=21432 timedout=1864 dropped=0 Util=0.99507
 --------------------------------------
 Running simulation with users=2675
-ResponseTime=16046.82807 Throughput=129.78771 goodput=129.76536 badput=0.02235 completed=23228 timedout=4 dropped=0 Util=0.99502
+ResponseTime=5626.63528 Throughput=128.41341 goodput=117.78771 badput=10.62570 completed=21084 timedout=1902 dropped=0 Util=0.99497
 --------------------------------------
 Running simulation with users=2685
-ResponseTime=16141.79239 Throughput=129.63128 goodput=129.62011 badput=0.01117 completed=23202 timedout=2 dropped=0 Util=0.99514
+ResponseTime=5381.47048 Throughput=129.29050 goodput=118.53073 badput=10.75978 completed=21217 timedout=1926 dropped=0 Util=0.99511
 --------------------------------------
 Running simulation with users=2695
-ResponseTime=16155.53158 Throughput=130.11173 goodput=130.08939 badput=0.02235 completed=23286 timedout=4 dropped=0 Util=0.99511
+ResponseTime=5725.89466 Throughput=129.81006 goodput=119.20112 badput=10.60894 completed=21337 timedout=1899 dropped=0 Util=0.99511
 --------------------------------------
 Running simulation with users=2705
-ResponseTime=16130.41300 Throughput=130.67598 goodput=130.67039 badput=0.00559 completed=23390 timedout=1 dropped=0 Util=0.99512
+ResponseTime=5639.42301 Throughput=128.30726 goodput=117.49162 badput=10.81564 completed=21031 timedout=1936 dropped=0 Util=0.99502
 --------------------------------------
 Running simulation with users=2715
-ResponseTime=16399.91163 Throughput=129.27374 goodput=129.26257 badput=0.01117 completed=23138 timedout=2 dropped=0 Util=0.99502
+ResponseTime=5636.09321 Throughput=128.72067 goodput=117.86034 badput=10.86034 completed=21097 timedout=1944 dropped=0 Util=0.99500
 --------------------------------------
 Running simulation with users=2725
-ResponseTime=16276.05123 Throughput=130.60894 goodput=130.58659 badput=0.02235 completed=23375 timedout=4 dropped=0 Util=0.99519
+ResponseTime=5659.26990 Throughput=129.55307 goodput=118.68156 badput=10.87151 completed=21244 timedout=1946 dropped=0 Util=0.99511
 --------------------------------------
 Running simulation with users=2735
-ResponseTime=16556.68386 Throughput=129.08380 goodput=129.07263 badput=0.01117 completed=23104 timedout=2 dropped=0 Util=0.99501
+ResponseTime=5642.77047 Throughput=129.44693 goodput=118.52514 badput=10.92179 completed=21216 timedout=1955 dropped=0 Util=0.99502
 --------------------------------------
 Running simulation with users=2745
-ResponseTime=16513.00591 Throughput=129.94413 goodput=129.92179 badput=0.02235 completed=23256 timedout=4 dropped=0 Util=0.99509
+ResponseTime=5706.85433 Throughput=129.32961 goodput=118.36872 badput=10.96089 completed=21188 timedout=1962 dropped=0 Util=0.99507
 --------------------------------------
 Running simulation with users=2755
-ResponseTime=16557.10628 Throughput=129.86034 goodput=129.84916 badput=0.01117 completed=23243 timedout=2 dropped=0 Util=0.99508
+ResponseTime=5500.75545 Throughput=129.92737 goodput=118.87151 badput=11.05587 completed=21278 timedout=1979 dropped=0 Util=0.99505
 --------------------------------------
 Running simulation with users=2765
-ResponseTime=16614.14863 Throughput=130.34637 goodput=130.31285 badput=0.03352 completed=23326 timedout=6 dropped=0 Util=0.99505
+ResponseTime=5709.75890 Throughput=129.26816 goodput=118.16760 badput=11.10056 completed=21152 timedout=1987 dropped=0 Util=0.99499
 --------------------------------------
 Running simulation with users=2775
-ResponseTime=16643.05065 Throughput=130.53631 goodput=130.52514 badput=0.01117 completed=23364 timedout=2 dropped=0 Util=0.99510
+ResponseTime=5603.63119 Throughput=130.47486 goodput=119.31285 badput=11.16201 completed=21357 timedout=1998 dropped=0 Util=0.99511
 --------------------------------------
 Running simulation with users=2785
-ResponseTime=16680.09909 Throughput=130.45810 goodput=130.44693 badput=0.01117 completed=23350 timedout=2 dropped=0 Util=0.99503
+ResponseTime=5549.14980 Throughput=129.69832 goodput=118.40223 badput=11.29609 completed=21194 timedout=2022 dropped=0 Util=0.99499
 --------------------------------------
 Running simulation with users=2795
-ResponseTime=17028.02005 Throughput=128.77095 goodput=128.74302 badput=0.02793 completed=23045 timedout=5 dropped=0 Util=0.99505
+ResponseTime=5567.40470 Throughput=129.69274 goodput=118.32961 badput=11.36313 completed=21181 timedout=2034 dropped=0 Util=0.99510
 --------------------------------------
 Running simulation with users=2805
-ResponseTime=16909.08089 Throughput=130.14525 goodput=130.12849 badput=0.01676 completed=23293 timedout=3 dropped=0 Util=0.99512
+ResponseTime=5583.78509 Throughput=129.59777 goodput=118.20112 badput=11.39665 completed=21158 timedout=2040 dropped=0 Util=0.99508
 --------------------------------------
 Running simulation with users=2815
-ResponseTime=16909.58850 Throughput=130.36872 goodput=130.31844 badput=0.05028 completed=23327 timedout=9 dropped=0 Util=0.99512
+ResponseTime=5548.95469 Throughput=131.21788 goodput=119.81006 badput=11.40782 completed=21446 timedout=2042 dropped=0 Util=0.99516
 --------------------------------------
 Running simulation with users=2825
-ResponseTime=16969.67721 Throughput=130.20112 goodput=130.15084 badput=0.05028 completed=23297 timedout=9 dropped=0 Util=0.99505
+ResponseTime=5543.35832 Throughput=129.45810 goodput=117.93855 badput=11.51955 completed=21111 timedout=2062 dropped=0 Util=0.99504
 --------------------------------------
 Running simulation with users=2835
-ResponseTime=17205.00429 Throughput=129.43017 goodput=129.39665 badput=0.03352 completed=23162 timedout=6 dropped=0 Util=0.99507
+ResponseTime=5638.64676 Throughput=129.52514 goodput=117.96089 badput=11.56425 completed=21115 timedout=2070 dropped=0 Util=0.99507
 --------------------------------------
 Running simulation with users=2845
-ResponseTime=17155.73307 Throughput=130.21788 goodput=130.16201 badput=0.05587 completed=23299 timedout=10 dropped=0 Util=0.99511
+ResponseTime=5566.82755 Throughput=128.83240 goodput=117.18994 badput=11.64246 completed=20977 timedout=2084 dropped=0 Util=0.99506
 --------------------------------------
 Running simulation with users=2855
-ResponseTime=17161.01654 Throughput=130.39665 goodput=130.37430 badput=0.02235 completed=23337 timedout=4 dropped=0 Util=0.99509
+ResponseTime=5815.35733 Throughput=129.97765 goodput=118.40223 badput=11.57542 completed=21194 timedout=2072 dropped=0 Util=0.99506
 --------------------------------------
 Running simulation with users=2865
-ResponseTime=17257.60804 Throughput=130.20670 goodput=130.17877 badput=0.02793 completed=23302 timedout=5 dropped=0 Util=0.99520
+ResponseTime=5345.73995 Throughput=129.10056 goodput=117.10056 badput=12.00000 completed=20961 timedout=2148 dropped=0 Util=0.99516
 --------------------------------------
 Running simulation with users=2875
-ResponseTime=17457.23411 Throughput=129.48045 goodput=129.45251 badput=0.02793 completed=23172 timedout=5 dropped=0 Util=0.99502
+ResponseTime=5515.93244 Throughput=127.97207 goodput=115.95531 badput=12.01676 completed=20756 timedout=2151 dropped=0 Util=0.99496
 --------------------------------------
 Running simulation with users=2885
-ResponseTime=17557.74600 Throughput=129.09497 goodput=129.04469 badput=0.05028 completed=23099 timedout=9 dropped=0 Util=0.99511
+ResponseTime=5350.36711 Throughput=129.45251 goodput=117.35196 badput=12.10056 completed=21006 timedout=2166 dropped=0 Util=0.99513
 --------------------------------------
 Running simulation with users=2895
-ResponseTime=17508.40021 Throughput=129.89385 goodput=129.84916 badput=0.04469 completed=23243 timedout=8 dropped=0 Util=0.99513
+ResponseTime=5552.23659 Throughput=130.58101 goodput=118.59777 badput=11.98324 completed=21229 timedout=2145 dropped=0 Util=0.99518
 --------------------------------------
 Running simulation with users=2905
-ResponseTime=17558.68727 Throughput=129.60335 goodput=129.55866 badput=0.04469 completed=23191 timedout=8 dropped=0 Util=0.99508
+ResponseTime=5796.46793 Throughput=130.27374 goodput=118.38547 badput=11.88827 completed=21191 timedout=2128 dropped=0 Util=0.99513
 --------------------------------------
 Running simulation with users=2915
-ResponseTime=17631.13818 Throughput=129.94413 goodput=129.86034 badput=0.08380 completed=23245 timedout=15 dropped=0 Util=0.99512
+ResponseTime=5870.56618 Throughput=129.59218 goodput=117.61453 badput=11.97765 completed=21053 timedout=2144 dropped=0 Util=0.99512
 --------------------------------------
 Running simulation with users=2925
-ResponseTime=17748.38006 Throughput=129.51955 goodput=129.48603 badput=0.03352 completed=23178 timedout=6 dropped=0 Util=0.99509
+ResponseTime=5571.39016 Throughput=130.44693 goodput=118.25140 badput=12.19553 completed=21167 timedout=2183 dropped=0 Util=0.99513
 --------------------------------------
 Running simulation with users=2935
-ResponseTime=17751.80884 Throughput=129.83240 goodput=129.78212 badput=0.05028 completed=23231 timedout=9 dropped=0 Util=0.99510
+ResponseTime=5443.40577 Throughput=129.81006 goodput=117.41899 badput=12.39106 completed=21018 timedout=2218 dropped=0 Util=0.99510
 --------------------------------------
 Running simulation with users=2945
-ResponseTime=18018.64348 Throughput=128.84916 goodput=128.77095 badput=0.07821 completed=23050 timedout=14 dropped=0 Util=0.99508
+ResponseTime=5667.09215 Throughput=130.00000 goodput=117.77654 badput=12.22346 completed=21082 timedout=2188 dropped=0 Util=0.99513
 --------------------------------------
 Running simulation with users=2955
-ResponseTime=18046.22479 Throughput=128.75978 goodput=128.65922 badput=0.10056 completed=23030 timedout=18 dropped=0 Util=0.99512
+ResponseTime=5527.18295 Throughput=129.29609 goodput=116.79330 badput=12.50279 completed=20906 timedout=2238 dropped=0 Util=0.99514
 --------------------------------------
 Running simulation with users=2965
-ResponseTime=18195.87002 Throughput=128.45810 goodput=128.32402 badput=0.13408 completed=22970 timedout=24 dropped=0 Util=0.99506
+ResponseTime=5662.50780 Throughput=129.78212 goodput=117.34637 badput=12.43575 completed=21005 timedout=2226 dropped=0 Util=0.99515
 --------------------------------------
 Running simulation with users=2975
-ResponseTime=17855.67482 Throughput=131.07263 goodput=131.02793 badput=0.04469 completed=23454 timedout=8 dropped=0 Util=0.99505
+ResponseTime=5690.04706 Throughput=130.22346 goodput=117.81006 badput=12.41341 completed=21088 timedout=2222 dropped=0 Util=0.99502
 --------------------------------------
 Running simulation with users=2985
-ResponseTime=18178.97621 Throughput=129.45251 goodput=129.35754 badput=0.09497 completed=23155 timedout=17 dropped=0 Util=0.99491
+ResponseTime=5780.04843 Throughput=130.36313 goodput=118.03352 badput=12.32961 completed=21128 timedout=2207 dropped=0 Util=0.99497
 --------------------------------------
 Running simulation with users=2995
-ResponseTime=18055.44519 Throughput=130.45810 goodput=130.37989 badput=0.07821 completed=23338 timedout=14 dropped=0 Util=0.99507
+ResponseTime=5733.47503 Throughput=129.81564 goodput=117.21788 badput=12.59777 completed=20982 timedout=2255 dropped=0 Util=0.99503
 --------------------------------------
 Running simulation with users=3005
-ResponseTime=18153.33013 Throughput=130.02793 goodput=129.93296 badput=0.09497 completed=23258 timedout=17 dropped=0 Util=0.99509
+ResponseTime=5737.36034 Throughput=129.64804 goodput=116.99441 badput=12.65363 completed=20942 timedout=2265 dropped=0 Util=0.99507
 --------------------------------------
 Running simulation with users=3015
-ResponseTime=18213.43098 Throughput=130.50279 goodput=130.41341 badput=0.08939 completed=23344 timedout=16 dropped=0 Util=0.99518
+ResponseTime=5754.93927 Throughput=129.99441 goodput=117.30726 badput=12.68715 completed=20998 timedout=2271 dropped=0 Util=0.99516
 --------------------------------------
 Running simulation with users=3025
-ResponseTime=18330.05448 Throughput=129.88827 goodput=129.78212 badput=0.10615 completed=23231 timedout=19 dropped=0 Util=0.99520
+ResponseTime=5346.79838 Throughput=129.52514 goodput=116.47486 badput=13.05028 completed=20849 timedout=2336 dropped=0 Util=0.99518
 --------------------------------------
 Running simulation with users=3035
-ResponseTime=18539.16341 Throughput=129.16760 goodput=129.06145 badput=0.10615 completed=23102 timedout=19 dropped=0 Util=0.99505
+ResponseTime=5477.69321 Throughput=130.20670 goodput=117.24581 badput=12.96089 completed=20987 timedout=2320 dropped=0 Util=0.99511
 --------------------------------------
 Running simulation with users=3045
-ResponseTime=18587.32388 Throughput=129.31844 goodput=129.20670 badput=0.11173 completed=23128 timedout=20 dropped=0 Util=0.99511
+ResponseTime=5429.38914 Throughput=129.28492 goodput=116.15642 badput=13.12849 completed=20792 timedout=2350 dropped=0 Util=0.99511
 --------------------------------------
 Running simulation with users=3055
-ResponseTime=18630.24460 Throughput=129.37430 goodput=129.26816 badput=0.10615 completed=23139 timedout=19 dropped=0 Util=0.99510
+ResponseTime=5682.15230 Throughput=130.33520 goodput=117.42458 badput=12.91061 completed=21019 timedout=2311 dropped=0 Util=0.99516
 --------------------------------------
 Running simulation with users=3065
-ResponseTime=18743.31134 Throughput=129.05028 goodput=128.90503 badput=0.14525 completed=23074 timedout=26 dropped=0 Util=0.99513
+ResponseTime=5729.53194 Throughput=129.51955 goodput=116.50279 badput=13.01676 completed=20854 timedout=2330 dropped=0 Util=0.99514
 --------------------------------------
 Running simulation with users=3075
-ResponseTime=18856.89403 Throughput=128.64804 goodput=128.51955 badput=0.12849 completed=23005 timedout=23 dropped=0 Util=0.99499
+ResponseTime=5491.42102 Throughput=129.73184 goodput=116.48045 badput=13.25140 completed=20850 timedout=2372 dropped=0 Util=0.99506
 --------------------------------------
 Running simulation with users=3085
-ResponseTime=18594.76636 Throughput=130.51955 goodput=130.42458 badput=0.09497 completed=23346 timedout=17 dropped=0 Util=0.99515
+ResponseTime=5649.14632 Throughput=129.94972 goodput=116.70391 badput=13.24581 completed=20890 timedout=2371 dropped=0 Util=0.99511
 --------------------------------------
 Running simulation with users=3095
-ResponseTime=18845.17727 Throughput=129.55307 goodput=129.39665 badput=0.15642 completed=23162 timedout=28 dropped=0 Util=0.99508
+ResponseTime=5723.82190 Throughput=129.82123 goodput=116.57542 badput=13.24581 completed=20867 timedout=2371 dropped=0 Util=0.99508
 --------------------------------------
 Running simulation with users=3105
-ResponseTime=18948.06472 Throughput=129.39106 goodput=129.22346 badput=0.16760 completed=23131 timedout=30 dropped=0 Util=0.99514
+ResponseTime=5698.20457 Throughput=129.00559 goodput=115.65363 badput=13.35196 completed=20702 timedout=2390 dropped=0 Util=0.99512
 --------------------------------------
 Running simulation with users=3115
-ResponseTime=18841.28585 Throughput=130.31285 goodput=130.17318 badput=0.13966 completed=23301 timedout=25 dropped=0 Util=0.99513
+ResponseTime=5605.11561 Throughput=129.70391 goodput=116.22905 badput=13.47486 completed=20805 timedout=2412 dropped=0 Util=0.99508
 --------------------------------------
 Running simulation with users=3125
-ResponseTime=18938.42873 Throughput=130.27933 goodput=130.12291 badput=0.15642 completed=23292 timedout=28 dropped=0 Util=0.99512
+ResponseTime=5404.13128 Throughput=129.51955 goodput=115.81564 badput=13.70391 completed=20731 timedout=2453 dropped=0 Util=0.99508
 --------------------------------------
 Running simulation with users=3135
-ResponseTime=18928.46197 Throughput=130.69832 goodput=130.52514 badput=0.17318 completed=23364 timedout=31 dropped=0 Util=0.99521
+ResponseTime=5780.41603 Throughput=128.67598 goodput=115.12849 badput=13.54749 completed=20608 timedout=2425 dropped=0 Util=0.99509
 --------------------------------------
 Running simulation with users=3145
-ResponseTime=19127.61102 Throughput=129.91061 goodput=129.77095 badput=0.13966 completed=23229 timedout=25 dropped=0 Util=0.99508
+ResponseTime=5741.94346 Throughput=130.17318 goodput=116.62570 badput=13.54749 completed=20876 timedout=2425 dropped=0 Util=0.99508
 --------------------------------------
 Running simulation with users=3155
-ResponseTime=19196.47757 Throughput=129.78212 goodput=129.62011 badput=0.16201 completed=23202 timedout=29 dropped=0 Util=0.99517
+ResponseTime=5894.85100 Throughput=129.29609 goodput=115.73743 badput=13.55866 completed=20717 timedout=2427 dropped=0 Util=0.99514
 --------------------------------------
 Running simulation with users=3165
-ResponseTime=19281.44566 Throughput=129.55866 goodput=129.33520 badput=0.22346 completed=23151 timedout=40 dropped=0 Util=0.99516
+ResponseTime=5534.58422 Throughput=129.46927 goodput=115.58101 badput=13.88827 completed=20689 timedout=2486 dropped=0 Util=0.99515
 --------------------------------------
 Running simulation with users=3175
-ResponseTime=19197.66547 Throughput=130.69832 goodput=130.50279 badput=0.19553 completed=23360 timedout=35 dropped=0 Util=0.99515
+ResponseTime=5670.70764 Throughput=129.92179 goodput=116.08939 badput=13.83240 completed=20780 timedout=2476 dropped=0 Util=0.99511
 --------------------------------------
 Running simulation with users=3185
-ResponseTime=19419.79637 Throughput=129.64246 goodput=129.39665 badput=0.24581 completed=23162 timedout=44 dropped=0 Util=0.99509
+ResponseTime=5663.98640 Throughput=129.63128 goodput=115.68156 badput=13.94972 completed=20707 timedout=2497 dropped=0 Util=0.99510
 --------------------------------------
 Running simulation with users=3195
-ResponseTime=19332.53358 Throughput=130.75419 goodput=130.56983 badput=0.18436 completed=23372 timedout=33 dropped=0 Util=0.99514
+ResponseTime=5745.67960 Throughput=130.72067 goodput=116.83240 badput=13.88827 completed=20913 timedout=2486 dropped=0 Util=0.99513
 --------------------------------------
 Running simulation with users=3205
-ResponseTime=19501.70452 Throughput=129.83240 goodput=129.61453 badput=0.21788 completed=23201 timedout=39 dropped=0 Util=0.99506
+ResponseTime=5487.67490 Throughput=128.37989 goodput=114.12291 badput=14.25698 completed=20428 timedout=2552 dropped=0 Util=0.99501
 --------------------------------------
 Running simulation with users=3215
-ResponseTime=19687.01326 Throughput=129.18994 goodput=128.97765 badput=0.21229 completed=23087 timedout=38 dropped=0 Util=0.99510
+ResponseTime=5671.48286 Throughput=130.56983 goodput=116.53073 badput=14.03911 completed=20859 timedout=2513 dropped=0 Util=0.99517
 --------------------------------------
 Running simulation with users=3225
-ResponseTime=19740.35164 Throughput=129.21229 goodput=128.93855 badput=0.27374 completed=23080 timedout=49 dropped=0 Util=0.99509
+ResponseTime=5552.09689 Throughput=129.98883 goodput=115.74302 badput=14.24581 completed=20718 timedout=2550 dropped=0 Util=0.99512
 --------------------------------------
 Running simulation with users=3235
-ResponseTime=19597.57235 Throughput=130.81006 goodput=130.68715 badput=0.12291 completed=23393 timedout=22 dropped=0 Util=0.99518
+ResponseTime=5653.36984 Throughput=130.27374 goodput=116.07263 badput=14.20112 completed=20777 timedout=2542 dropped=0 Util=0.99514
 --------------------------------------
 Running simulation with users=3245
-ResponseTime=19840.95213 Throughput=129.43017 goodput=129.17877 badput=0.25140 completed=23123 timedout=45 dropped=0 Util=0.99509
+ResponseTime=5550.85460 Throughput=128.99441 goodput=114.61453 badput=14.37989 completed=20516 timedout=2574 dropped=0 Util=0.99508
 --------------------------------------
 Running simulation with users=3255
-ResponseTime=19992.60018 Throughput=128.75419 goodput=128.43575 badput=0.31844 completed=22990 timedout=57 dropped=0 Util=0.99507
+ResponseTime=5722.12973 Throughput=130.01676 goodput=115.72626 badput=14.29050 completed=20715 timedout=2558 dropped=0 Util=0.99512
 --------------------------------------
 Running simulation with users=3265
-ResponseTime=19929.87235 Throughput=129.59777 goodput=129.37430 badput=0.22346 completed=23158 timedout=40 dropped=0 Util=0.99507
+ResponseTime=5473.71100 Throughput=130.11173 goodput=115.57542 badput=14.53631 completed=20688 timedout=2602 dropped=0 Util=0.99511
 --------------------------------------
 Running simulation with users=3275
-ResponseTime=19980.50895 Throughput=129.60894 goodput=129.30168 badput=0.30726 completed=23145 timedout=55 dropped=0 Util=0.99509
+ResponseTime=5404.83872 Throughput=130.47486 goodput=115.81006 badput=14.66480 completed=20730 timedout=2625 dropped=0 Util=0.99517
 --------------------------------------
 Running simulation with users=3285
-ResponseTime=19840.10480 Throughput=130.97765 goodput=130.70950 badput=0.26816 completed=23397 timedout=48 dropped=0 Util=0.99523
+ResponseTime=5713.72723 Throughput=129.41341 goodput=114.86034 badput=14.55307 completed=20560 timedout=2605 dropped=0 Util=0.99512
 --------------------------------------
 Running simulation with users=3295
-ResponseTime=19868.94075 Throughput=131.48045 goodput=131.26816 badput=0.21229 completed=23497 timedout=38 dropped=0 Util=0.99525
+ResponseTime=5853.82339 Throughput=130.37989 goodput=115.91620 badput=14.46369 completed=20749 timedout=2589 dropped=0 Util=0.99519
 --------------------------------------
 Running simulation with users=3305
-ResponseTime=20223.00722 Throughput=129.04469 goodput=128.67598 badput=0.36872 completed=23033 timedout=66 dropped=0 Util=0.99503
+ResponseTime=5594.34087 Throughput=129.13966 goodput=114.31285 badput=14.82682 completed=20462 timedout=2654 dropped=0 Util=0.99507
 --------------------------------------
 Running simulation with users=3315
-ResponseTime=20094.55312 Throughput=130.29050 goodput=129.92737 badput=0.36313 completed=23257 timedout=65 dropped=0 Util=0.99513
+ResponseTime=5625.07582 Throughput=129.64246 goodput=114.75978 badput=14.88268 completed=20542 timedout=2664 dropped=0 Util=0.99510
 --------------------------------------
 Running simulation with users=3325
-ResponseTime=20216.72625 Throughput=130.17318 goodput=129.86034 badput=0.31285 completed=23245 timedout=56 dropped=0 Util=0.99514
+ResponseTime=5773.29628 Throughput=129.49162 goodput=114.67598 badput=14.81564 completed=20527 timedout=2652 dropped=0 Util=0.99514
 --------------------------------------
 Running simulation with users=3335
-ResponseTime=20472.69319 Throughput=128.81564 goodput=128.36872 badput=0.44693 completed=22978 timedout=80 dropped=0 Util=0.99512
+ResponseTime=5284.22033 Throughput=129.62570 goodput=114.43575 badput=15.18994 completed=20484 timedout=2719 dropped=0 Util=0.99519
 --------------------------------------
 Running simulation with users=3345
-ResponseTime=20295.97947 Throughput=130.26816 goodput=129.96089 badput=0.30726 completed=23263 timedout=55 dropped=0 Util=0.99515
+ResponseTime=5803.48114 Throughput=129.64804 goodput=114.74860 badput=14.89944 completed=20540 timedout=2667 dropped=0 Util=0.99512
 --------------------------------------
 Running simulation with users=3355
-ResponseTime=20549.41162 Throughput=129.07821 goodput=128.64804 badput=0.43017 completed=23028 timedout=77 dropped=0 Util=0.99511
+ResponseTime=5630.43545 Throughput=130.40223 goodput=115.33520 badput=15.06704 completed=20645 timedout=2697 dropped=0 Util=0.99518
 --------------------------------------
 Running simulation with users=3365
-ResponseTime=20322.88547 Throughput=130.43575 goodput=130.14525 badput=0.29050 completed=23296 timedout=52 dropped=0 Util=0.99512
+ResponseTime=5781.68477 Throughput=129.58101 goodput=114.51955 badput=15.06145 completed=20499 timedout=2696 dropped=0 Util=0.99509
 --------------------------------------
 Running simulation with users=3375
-ResponseTime=20481.95582 Throughput=130.06145 goodput=129.68715 badput=0.37430 completed=23214 timedout=67 dropped=0 Util=0.99517
+ResponseTime=5753.64769 Throughput=130.42458 goodput=115.29609 badput=15.12849 completed=20638 timedout=2708 dropped=0 Util=0.99520
 --------------------------------------
 Running simulation with users=3385
-ResponseTime=20589.23470 Throughput=129.92179 goodput=129.58101 badput=0.34078 completed=23195 timedout=61 dropped=0 Util=0.99513
+ResponseTime=5663.01077 Throughput=128.50838 goodput=113.13966 badput=15.36872 completed=20252 timedout=2751 dropped=0 Util=0.99506
 --------------------------------------
 Running simulation with users=3395
-ResponseTime=20869.30186 Throughput=128.58101 goodput=128.07263 badput=0.50838 completed=22925 timedout=91 dropped=0 Util=0.99507
+ResponseTime=5609.63741 Throughput=129.85475 goodput=114.48603 badput=15.36872 completed=20493 timedout=2751 dropped=0 Util=0.99516
 --------------------------------------
 Running simulation with users=3405
-ResponseTime=20705.95234 Throughput=129.41341 goodput=128.90503 badput=0.50838 completed=23074 timedout=91 dropped=0 Util=0.99515
+ResponseTime=5447.45944 Throughput=128.63687 goodput=113.00000 badput=15.63687 completed=20227 timedout=2799 dropped=0 Util=0.99515
 --------------------------------------
 Running simulation with users=3415
-ResponseTime=20815.89472 Throughput=129.65363 goodput=129.12849 badput=0.52514 completed=23114 timedout=94 dropped=0 Util=0.99516
+ResponseTime=5777.61472 Throughput=129.43575 goodput=114.02235 badput=15.41341 completed=20410 timedout=2759 dropped=0 Util=0.99514
 --------------------------------------
 Running simulation with users=3425
-ResponseTime=20955.86038 Throughput=129.07821 goodput=128.56983 badput=0.50838 completed=23014 timedout=91 dropped=0 Util=0.99510
+ResponseTime=5683.89606 Throughput=129.65922 goodput=114.13966 badput=15.51955 completed=20431 timedout=2778 dropped=0 Util=0.99514
 --------------------------------------
 Running simulation with users=3435
-ResponseTime=20955.43120 Throughput=129.68156 goodput=129.21229 badput=0.46927 completed=23129 timedout=84 dropped=0 Util=0.99514
+ResponseTime=5690.05088 Throughput=129.68715 goodput=114.09497 badput=15.59218 completed=20423 timedout=2791 dropped=0 Util=0.99517
 --------------------------------------
 Running simulation with users=3445
-ResponseTime=20809.71917 Throughput=130.22346 goodput=129.72067 badput=0.50279 completed=23220 timedout=90 dropped=0 Util=0.99508
+ResponseTime=5544.05628 Throughput=129.57542 goodput=113.79330 badput=15.78212 completed=20369 timedout=2825 dropped=0 Util=0.99507
 --------------------------------------
 Running simulation with users=3455
-ResponseTime=21098.81533 Throughput=129.01676 goodput=128.41899 badput=0.59777 completed=22987 timedout=107 dropped=0 Util=0.99513
+ResponseTime=5495.06853 Throughput=129.74860 goodput=113.89385 badput=15.85475 completed=20387 timedout=2838 dropped=0 Util=0.99521
 --------------------------------------
 Running simulation with users=3465
-ResponseTime=20950.09556 Throughput=130.78212 goodput=130.22905 badput=0.55307 completed=23311 timedout=99 dropped=0 Util=0.99512
+ResponseTime=5540.75573 Throughput=128.98883 goodput=113.02235 badput=15.96648 completed=20231 timedout=2858 dropped=0 Util=0.99507
 --------------------------------------
 Running simulation with users=3475
-ResponseTime=21065.67142 Throughput=130.14525 goodput=129.53631 badput=0.60894 completed=23187 timedout=109 dropped=0 Util=0.99514
+ResponseTime=5593.94123 Throughput=130.60335 goodput=114.74302 badput=15.86034 completed=20539 timedout=2839 dropped=0 Util=0.99518
 --------------------------------------
 Running simulation with users=3485
-ResponseTime=21198.65173 Throughput=129.41341 goodput=128.75419 badput=0.65922 completed=23047 timedout=118 dropped=0 Util=0.99511
+ResponseTime=5511.67656 Throughput=130.00000 goodput=113.95531 badput=16.04469 completed=20398 timedout=2872 dropped=0 Util=0.99518
 --------------------------------------
 Running simulation with users=3495
-ResponseTime=21314.35614 Throughput=129.29609 goodput=128.56425 badput=0.73184 completed=23013 timedout=131 dropped=0 Util=0.99503
+ResponseTime=5755.24733 Throughput=129.10056 goodput=113.07263 badput=16.02793 completed=20240 timedout=2869 dropped=0 Util=0.99506
 --------------------------------------
 Running simulation with users=3505
-ResponseTime=21277.68983 Throughput=129.59218 goodput=128.91061 badput=0.68156 completed=23075 timedout=122 dropped=0 Util=0.99509
+ResponseTime=5612.01776 Throughput=131.20670 goodput=115.16760 badput=16.03911 completed=20615 timedout=2871 dropped=0 Util=0.99521
 --------------------------------------
 Running simulation with users=3515
-ResponseTime=21521.44757 Throughput=128.08380 goodput=127.20112 badput=0.88268 completed=22769 timedout=158 dropped=0 Util=0.99511
+ResponseTime=5666.16612 Throughput=129.65363 goodput=113.50279 badput=16.15084 completed=20317 timedout=2891 dropped=0 Util=0.99521
 --------------------------------------
 Running simulation with users=3525
-ResponseTime=21439.58842 Throughput=129.21229 goodput=128.41341 badput=0.79888 completed=22986 timedout=143 dropped=0 Util=0.99511
+ResponseTime=5755.48484 Throughput=129.10056 goodput=112.86592 badput=16.23464 completed=20203 timedout=2906 dropped=0 Util=0.99514
 --------------------------------------
 Running simulation with users=3535
-ResponseTime=21335.76973 Throughput=130.40223 goodput=129.59777 badput=0.80447 completed=23198 timedout=144 dropped=0 Util=0.99514
+ResponseTime=5509.84227 Throughput=129.20112 goodput=112.73184 badput=16.46927 completed=20179 timedout=2948 dropped=0 Util=0.99511
 --------------------------------------
 Running simulation with users=3545
-ResponseTime=21519.97187 Throughput=129.41899 goodput=128.58101 badput=0.83799 completed=23016 timedout=150 dropped=0 Util=0.99514
+ResponseTime=5453.06305 Throughput=129.10056 goodput=112.53631 badput=16.56425 completed=20144 timedout=2965 dropped=0 Util=0.99517
 --------------------------------------
 Running simulation with users=3555
-ResponseTime=21539.57760 Throughput=129.86034 goodput=128.98324 badput=0.87709 completed=23088 timedout=157 dropped=0 Util=0.99517
+ResponseTime=5669.02854 Throughput=130.34637 goodput=113.92737 badput=16.41899 completed=20393 timedout=2939 dropped=0 Util=0.99523
 --------------------------------------
 Running simulation with users=3565
-ResponseTime=21423.49000 Throughput=130.50279 goodput=129.64246 badput=0.86034 completed=23206 timedout=154 dropped=0 Util=0.99523
+ResponseTime=5719.68382 Throughput=131.13966 goodput=114.78212 badput=16.35754 completed=20546 timedout=2928 dropped=0 Util=0.99528
 --------------------------------------
 Running simulation with users=3575
-ResponseTime=21667.28889 Throughput=129.55307 goodput=128.63128 badput=0.92179 completed=23025 timedout=165 dropped=0 Util=0.99508
+ResponseTime=5439.14628 Throughput=128.74860 goodput=111.91061 badput=16.83799 completed=20032 timedout=3014 dropped=0 Util=0.99506
 --------------------------------------
 Running simulation with users=3585
-ResponseTime=21701.00464 Throughput=129.84358 goodput=128.96648 badput=0.87709 completed=23085 timedout=157 dropped=0 Util=0.99520
+ResponseTime=5697.94756 Throughput=131.00559 goodput=114.49162 badput=16.51397 completed=20494 timedout=2956 dropped=0 Util=0.99530
 --------------------------------------
 Running simulation with users=3595
-ResponseTime=21730.93452 Throughput=130.29050 goodput=129.53073 badput=0.75978 completed=23186 timedout=136 dropped=0 Util=0.99510
+ResponseTime=5448.07081 Throughput=130.28492 goodput=113.41899 badput=16.86592 completed=20302 timedout=3019 dropped=0 Util=0.99515
 --------------------------------------
 Running simulation with users=3605
-ResponseTime=22013.07764 Throughput=128.60894 goodput=127.32961 badput=1.27933 completed=22792 timedout=229 dropped=0 Util=0.99501
+ResponseTime=5556.96537 Throughput=129.71508 goodput=112.89385 badput=16.82123 completed=20208 timedout=3011 dropped=0 Util=0.99512
 --------------------------------------
 Running simulation with users=3615
-ResponseTime=21851.17572 Throughput=129.59218 goodput=128.42458 badput=1.16760 completed=22988 timedout=209 dropped=0 Util=0.99518
+ResponseTime=5516.88803 Throughput=129.43575 goodput=112.48603 badput=16.94972 completed=20135 timedout=3034 dropped=0 Util=0.99518
 --------------------------------------
 Running simulation with users=3625
-ResponseTime=21783.02669 Throughput=130.08380 goodput=129.05028 badput=1.03352 completed=23100 timedout=185 dropped=0 Util=0.99517
+ResponseTime=5669.73363 Throughput=128.81006 goodput=111.80447 badput=17.00559 completed=20013 timedout=3044 dropped=0 Util=0.99513
 --------------------------------------
 Running simulation with users=3635
-ResponseTime=22032.86273 Throughput=128.72626 goodput=127.50838 badput=1.21788 completed=22824 timedout=218 dropped=0 Util=0.99514
+ResponseTime=5548.62530 Throughput=128.91061 goodput=111.75419 badput=17.15642 completed=20004 timedout=3071 dropped=0 Util=0.99518
 --------------------------------------
 Running simulation with users=3645
-ResponseTime=21963.75278 Throughput=129.82123 goodput=128.74302 badput=1.07821 completed=23045 timedout=193 dropped=0 Util=0.99513
+ResponseTime=5603.18308 Throughput=128.75978 goodput=111.59777 badput=17.16201 completed=19976 timedout=3072 dropped=0 Util=0.99509
 --------------------------------------
 Running simulation with users=3655
-ResponseTime=21830.22351 Throughput=130.42458 goodput=129.24581 badput=1.17877 completed=23135 timedout=211 dropped=0 Util=0.99521
+ResponseTime=5376.88604 Throughput=129.66480 goodput=112.25140 badput=17.41341 completed=20093 timedout=3117 dropped=0 Util=0.99521
 --------------------------------------
 Running simulation with users=3665
-ResponseTime=22048.09901 Throughput=130.44693 goodput=129.37430 badput=1.07263 completed=23158 timedout=192 dropped=0 Util=0.99520
+ResponseTime=5687.42575 Throughput=129.94972 goodput=112.79330 badput=17.15642 completed=20190 timedout=3071 dropped=0 Util=0.99523
 --------------------------------------
 Running simulation with users=3675
-ResponseTime=22062.29864 Throughput=129.98324 goodput=128.77095 badput=1.21229 completed=23050 timedout=217 dropped=0 Util=0.99509
+ResponseTime=5526.04780 Throughput=129.88827 goodput=112.50838 badput=17.37989 completed=20139 timedout=3111 dropped=0 Util=0.99514
 --------------------------------------
 Running simulation with users=3685
-ResponseTime=22221.86629 Throughput=128.93296 goodput=127.49721 badput=1.43575 completed=22822 timedout=257 dropped=0 Util=0.99511
+ResponseTime=5374.92770 Throughput=129.40223 goodput=111.78212 badput=17.62011 completed=20009 timedout=3154 dropped=0 Util=0.99515
 --------------------------------------
 Running simulation with users=3695
-ResponseTime=22203.72006 Throughput=129.37989 goodput=127.97207 badput=1.40782 completed=22907 timedout=252 dropped=0 Util=0.99510
+ResponseTime=5517.26455 Throughput=129.16760 goodput=111.55307 badput=17.61453 completed=19968 timedout=3153 dropped=0 Util=0.99515
 --------------------------------------
 Running simulation with users=3705
-ResponseTime=22284.77347 Throughput=129.45810 goodput=128.07263 badput=1.38547 completed=22925 timedout=248 dropped=0 Util=0.99506
+ResponseTime=5441.78636 Throughput=129.17877 goodput=111.45810 badput=17.72067 completed=19951 timedout=3172 dropped=0 Util=0.99508
 --------------------------------------
 Running simulation with users=3715
-ResponseTime=22275.16851 Throughput=129.47486 goodput=127.98324 badput=1.49162 completed=22909 timedout=267 dropped=0 Util=0.99508
+ResponseTime=5549.95048 Throughput=129.41899 goodput=111.74302 badput=17.67598 completed=20002 timedout=3164 dropped=0 Util=0.99513
 --------------------------------------
 Running simulation with users=3725
-ResponseTime=22351.02096 Throughput=129.23464 goodput=127.77654 badput=1.45810 completed=22872 timedout=261 dropped=0 Util=0.99510
+ResponseTime=5614.46561 Throughput=129.86592 goodput=112.22346 badput=17.64246 completed=20088 timedout=3158 dropped=0 Util=0.99518
 --------------------------------------
 Running simulation with users=3735
-ResponseTime=22260.15024 Throughput=130.73743 goodput=129.36313 badput=1.37430 completed=23156 timedout=246 dropped=0 Util=0.99516
+ResponseTime=5299.01546 Throughput=129.20670 goodput=111.14525 badput=18.06145 completed=19895 timedout=3233 dropped=0 Util=0.99347
 --------------------------------------
 Running simulation with users=3745
-ResponseTime=22299.85635 Throughput=131.61453 goodput=130.41341 badput=1.20112 completed=23344 timedout=215 dropped=0 Util=0.99519
+ResponseTime=5661.07585 Throughput=129.72067 goodput=111.94972 badput=17.77095 completed=20039 timedout=3181 dropped=0 Util=0.99512
 --------------------------------------
 Running simulation with users=3755
-ResponseTime=22388.66413 Throughput=130.02793 goodput=128.64804 badput=1.37989 completed=23028 timedout=247 dropped=0 Util=0.99518
+ResponseTime=5295.08964 Throughput=129.10615 goodput=110.86034 badput=18.24581 completed=19844 timedout=3266 dropped=0 Util=0.99215
 --------------------------------------
 Running simulation with users=3765
-ResponseTime=22505.76375 Throughput=130.34078 goodput=128.83799 badput=1.50279 completed=23062 timedout=269 dropped=0 Util=0.99513
+ResponseTime=5576.17885 Throughput=130.22346 goodput=112.24581 badput=17.97765 completed=20092 timedout=3218 dropped=0 Util=0.99516
 --------------------------------------
 Running simulation with users=3775
-ResponseTime=22384.46685 Throughput=130.61453 goodput=129.08939 badput=1.52514 completed=23107 timedout=273 dropped=0 Util=0.99522
+ResponseTime=5428.90458 Throughput=129.18436 goodput=110.95531 badput=18.22905 completed=19861 timedout=3263 dropped=0 Util=0.99431
 --------------------------------------
 Running simulation with users=3785
-ResponseTime=22635.69026 Throughput=129.70950 goodput=128.02235 badput=1.68715 completed=22916 timedout=302 dropped=0 Util=0.99509
+ResponseTime=5507.54398 Throughput=129.69274 goodput=111.49162 badput=18.20112 completed=19957 timedout=3258 dropped=0 Util=0.99502
 --------------------------------------
 Running simulation with users=3795
-ResponseTime=22549.44959 Throughput=129.52514 goodput=127.69832 badput=1.82682 completed=22858 timedout=327 dropped=0 Util=0.99511
+ResponseTime=5450.30629 Throughput=129.76536 goodput=111.41899 badput=18.34637 completed=19944 timedout=3284 dropped=0 Util=0.99381
 --------------------------------------
 Running simulation with users=3805
-ResponseTime=22398.51349 Throughput=129.81564 goodput=127.88268 badput=1.93296 completed=22891 timedout=346 dropped=0 Util=0.99514
+ResponseTime=5474.32712 Throughput=128.51397 goodput=110.03911 badput=18.47486 completed=19697 timedout=3307 dropped=0 Util=0.99270
 --------------------------------------
 Running simulation with users=3815
-ResponseTime=22685.46832 Throughput=130.29050 goodput=128.45251 badput=1.83799 completed=22993 timedout=329 dropped=0 Util=0.99517
+ResponseTime=5650.08482 Throughput=130.14525 goodput=111.91061 badput=18.23464 completed=20032 timedout=3264 dropped=0 Util=0.99518
 --------------------------------------
 Running simulation with users=3825
-ResponseTime=22874.67720 Throughput=128.85475 goodput=126.76536 badput=2.08939 completed=22691 timedout=374 dropped=0 Util=0.99503
+ResponseTime=5491.42400 Throughput=129.39106 goodput=110.81564 badput=18.57542 completed=19836 timedout=3325 dropped=0 Util=0.99334
 --------------------------------------
 Running simulation with users=3835
-ResponseTime=22514.78701 Throughput=130.99441 goodput=129.17877 badput=1.81564 completed=23123 timedout=325 dropped=0 Util=0.99522
+ResponseTime=5399.49332 Throughput=128.41341 goodput=109.64804 badput=18.76536 completed=19627 timedout=3359 dropped=0 Util=0.98836
 --------------------------------------
 Running simulation with users=3845
-ResponseTime=22684.31184 Throughput=130.32402 goodput=128.26816 badput=2.05587 completed=22960 timedout=368 dropped=0 Util=0.99520
+ResponseTime=5477.13184 Throughput=130.27933 goodput=111.67598 badput=18.60335 completed=19990 timedout=3330 dropped=0 Util=0.99482
 --------------------------------------
 Running simulation with users=3855
-ResponseTime=22663.36650 Throughput=128.69832 goodput=126.21788 badput=2.48045 completed=22593 timedout=444 dropped=0 Util=0.99504
+ResponseTime=5415.75096 Throughput=127.10056 goodput=108.09497 badput=19.00559 completed=19349 timedout=3402 dropped=0 Util=0.97353
 --------------------------------------
 Running simulation with users=3865
-ResponseTime=22936.67961 Throughput=129.46369 goodput=127.29609 badput=2.16760 completed=22786 timedout=388 dropped=0 Util=0.99513
+ResponseTime=5443.04582 Throughput=129.62570 goodput=110.72067 badput=18.90503 completed=19819 timedout=3384 dropped=0 Util=0.98841
 --------------------------------------
 Running simulation with users=3875
-ResponseTime=22607.02314 Throughput=130.88268 goodput=128.72626 badput=2.15642 completed=23042 timedout=386 dropped=0 Util=0.99521
+ResponseTime=5499.82412 Throughput=126.56425 goodput=107.45251 badput=19.11173 completed=19234 timedout=3421 dropped=0 Util=0.97634
 --------------------------------------
 Running simulation with users=3885
-ResponseTime=22707.81110 Throughput=130.31285 goodput=127.93855 badput=2.37430 completed=22901 timedout=425 dropped=0 Util=0.99515
+ResponseTime=5533.72520 Throughput=126.92737 goodput=107.80447 badput=19.12291 completed=19297 timedout=3423 dropped=0 Util=0.98156
 --------------------------------------
 Running simulation with users=3895
-ResponseTime=22459.08152 Throughput=130.34637 goodput=127.66480 badput=2.68156 completed=22852 timedout=480 dropped=0 Util=0.99516
+ResponseTime=5574.80351 Throughput=128.62011 goodput=109.59218 badput=19.02793 completed=19617 timedout=3406 dropped=0 Util=0.99405
 --------------------------------------
 Running simulation with users=3905
-ResponseTime=22805.26839 Throughput=131.35196 goodput=129.14525 badput=2.20670 completed=23117 timedout=395 dropped=0 Util=0.99523
+ResponseTime=5603.57382 Throughput=130.12849 goodput=111.17318 badput=18.95531 completed=19900 timedout=3393 dropped=0 Util=0.99426
 --------------------------------------
 Running simulation with users=3915
-ResponseTime=22817.90311 Throughput=130.05028 goodput=127.49721 badput=2.55307 completed=22822 timedout=457 dropped=0 Util=0.99514
+ResponseTime=5530.78252 Throughput=129.76536 goodput=110.64804 badput=19.11732 completed=19806 timedout=3422 dropped=0 Util=0.99262
 --------------------------------------
 Running simulation with users=3925
-ResponseTime=22880.81972 Throughput=130.63687 goodput=128.24022 badput=2.39665 completed=22955 timedout=429 dropped=0 Util=0.99517
+ResponseTime=5578.69228 Throughput=129.96648 goodput=110.87151 badput=19.09497 completed=19846 timedout=3418 dropped=0 Util=0.99500
 --------------------------------------
 Running simulation with users=3935
-ResponseTime=22658.59202 Throughput=130.74860 goodput=128.08939 badput=2.65922 completed=22928 timedout=476 dropped=0 Util=0.99515
+ResponseTime=5493.98709 Throughput=128.73184 goodput=109.38547 badput=19.34637 completed=19580 timedout=3463 dropped=0 Util=0.98414
 --------------------------------------
 Running simulation with users=3945
-ResponseTime=22694.04869 Throughput=129.94413 goodput=127.10056 badput=2.84358 completed=22751 timedout=509 dropped=0 Util=0.99519
+ResponseTime=5584.84789 Throughput=130.67039 goodput=111.45251 badput=19.21788 completed=19950 timedout=3440 dropped=0 Util=0.99368
 --------------------------------------
 Running simulation with users=3955
-ResponseTime=23022.27416 Throughput=129.15084 goodput=126.26257 badput=2.88827 completed=22601 timedout=517 dropped=0 Util=0.99515
+ResponseTime=5464.56665 Throughput=130.84358 goodput=111.47486 badput=19.36872 completed=19954 timedout=3467 dropped=0 Util=0.98987
 --------------------------------------
 Running simulation with users=3965
-ResponseTime=23071.09193 Throughput=130.17877 goodput=127.63687 badput=2.54190 completed=22847 timedout=455 dropped=0 Util=0.99519
+ResponseTime=5590.40137 Throughput=126.15642 goodput=106.48603 badput=19.67039 completed=19061 timedout=3521 dropped=0 Util=0.96718
 --------------------------------------
 Running simulation with users=3975
-ResponseTime=22727.37038 Throughput=129.25698 goodput=126.00000 badput=3.25698 completed=22554 timedout=583 dropped=0 Util=0.99504
+ResponseTime=5753.49956 Throughput=120.57542 goodput=100.60894 badput=19.96648 completed=18009 timedout=3574 dropped=0 Util=0.92334
 --------------------------------------
 Running simulation with users=3985
-ResponseTime=23024.23926 Throughput=128.94413 goodput=125.77654 badput=3.16760 completed=22514 timedout=567 dropped=0 Util=0.99503
+ResponseTime=5563.76592 Throughput=127.33520 goodput=107.60335 badput=19.73184 completed=19261 timedout=3532 dropped=0 Util=0.97615
 --------------------------------------
 Running simulation with users=3995
-ResponseTime=22917.53785 Throughput=129.86034 goodput=126.78771 badput=3.07263 completed=22695 timedout=550 dropped=0 Util=0.99518
---------------------------------------
-Running simulation with users=4005
-ResponseTime=23060.81965 Throughput=130.15084 goodput=127.21788 badput=2.93296 completed=22772 timedout=525 dropped=0 Util=0.99512
---------------------------------------
-Running simulation with users=4015
-ResponseTime=22938.53606 Throughput=130.21788 goodput=127.10056 badput=3.11732 completed=22751 timedout=558 dropped=0 Util=0.99515
---------------------------------------
-Running simulation with users=4025
-ResponseTime=22689.77792 Throughput=129.82682 goodput=126.00559 badput=3.82123 completed=22555 timedout=684 dropped=0 Util=0.99513
---------------------------------------
-Running simulation with users=4035
-ResponseTime=22103.77364 Throughput=129.10615 goodput=124.62011 badput=4.48603 completed=22307 timedout=803 dropped=0 Util=0.99516
---------------------------------------
-Running simulation with users=4045
-ResponseTime=22722.26641 Throughput=130.92179 goodput=127.43575 badput=3.48603 completed=22811 timedout=624 dropped=0 Util=0.99522
---------------------------------------
-Running simulation with users=4055
-ResponseTime=22742.09160 Throughput=131.73743 goodput=128.55307 badput=3.18436 completed=23011 timedout=570 dropped=0 Util=0.99524
---------------------------------------
-Running simulation with users=4065
-ResponseTime=22785.85243 Throughput=130.37430 goodput=126.67039 badput=3.70391 completed=22674 timedout=663 dropped=0 Util=0.99517
---------------------------------------
-Running simulation with users=4075
-ResponseTime=23081.71438 Throughput=130.65922 goodput=127.20112 badput=3.45810 completed=22769 timedout=619 dropped=0 Util=0.99518
---------------------------------------
-Running simulation with users=4085
-ResponseTime=22675.16701 Throughput=129.85475 goodput=125.73184 badput=4.12291 completed=22506 timedout=738 dropped=0 Util=0.99517
---------------------------------------
-Running simulation with users=4095
-ResponseTime=22663.75880 Throughput=129.27933 goodput=125.08380 badput=4.19553 completed=22390 timedout=751 dropped=0 Util=0.99516
---------------------------------------
-Running simulation with users=4105
-ResponseTime=22769.97619 Throughput=129.83799 goodput=125.61453 badput=4.22346 completed=22485 timedout=756 dropped=0 Util=0.99513
---------------------------------------
-Running simulation with users=4115
-ResponseTime=22069.23878 Throughput=129.12849 goodput=124.03352 badput=5.09497 completed=22202 timedout=912 dropped=0 Util=0.99510
---------------------------------------
-Running simulation with users=4125
-ResponseTime=22591.22229 Throughput=129.58101 goodput=125.06704 badput=4.51397 completed=22387 timedout=808 dropped=0 Util=0.99516
---------------------------------------
-Running simulation with users=4135
-ResponseTime=22223.00124 Throughput=129.96089 goodput=124.98324 badput=4.97765 completed=22372 timedout=891 dropped=0 Util=0.99507
---------------------------------------
-Running simulation with users=4145
-ResponseTime=22493.77973 Throughput=130.82682 goodput=126.35754 badput=4.46927 completed=22618 timedout=800 dropped=0 Util=0.99513
---------------------------------------
-Running simulation with users=4155
-ResponseTime=22259.01019 Throughput=130.21229 goodput=125.11173 badput=5.10056 completed=22395 timedout=913 dropped=0 Util=0.99514
---------------------------------------
-Running simulation with users=4165
-ResponseTime=21965.66074 Throughput=130.67039 goodput=124.96648 badput=5.70391 completed=22369 timedout=1021 dropped=0 Util=0.99522
---------------------------------------
-Running simulation with users=4175
-ResponseTime=21106.62840 Throughput=129.51955 goodput=122.81006 badput=6.70950 completed=21983 timedout=1201 dropped=0 Util=0.99509
---------------------------------------
-Running simulation with users=4185
-ResponseTime=21575.96767 Throughput=130.40223 goodput=124.54190 badput=5.86034 completed=22293 timedout=1049 dropped=0 Util=0.99519
---------------------------------------
-Running simulation with users=4195
-ResponseTime=20915.75632 Throughput=129.06704 goodput=121.96648 badput=7.10056 completed=21832 timedout=1271 dropped=0 Util=0.99512
---------------------------------------
-Running simulation with users=4205
-ResponseTime=22150.73599 Throughput=129.75978 goodput=124.19553 badput=5.56425 completed=22231 timedout=996 dropped=0 Util=0.99513
---------------------------------------
-Running simulation with users=4215
-ResponseTime=21876.01024 Throughput=131.20112 goodput=125.53631 badput=5.66480 completed=22471 timedout=1014 dropped=0 Util=0.99526
---------------------------------------
-Running simulation with users=4225
-ResponseTime=20322.96861 Throughput=129.10615 goodput=120.73184 badput=8.37430 completed=21611 timedout=1499 dropped=0 Util=0.99511
---------------------------------------
-Running simulation with users=4235
-ResponseTime=21671.72361 Throughput=130.37989 goodput=123.94972 badput=6.43017 completed=22187 timedout=1151 dropped=0 Util=0.99512
---------------------------------------
-Running simulation with users=4245
-ResponseTime=22279.13281 Throughput=130.45251 goodput=124.97765 badput=5.47486 completed=22371 timedout=980 dropped=0 Util=0.99518
---------------------------------------
-Running simulation with users=4255
-ResponseTime=21268.96328 Throughput=130.16201 goodput=123.02235 badput=7.13966 completed=22021 timedout=1278 dropped=0 Util=0.99524
---------------------------------------
-Running simulation with users=4265
-ResponseTime=21222.17988 Throughput=129.82123 goodput=122.35754 badput=7.46369 completed=21902 timedout=1336 dropped=0 Util=0.99510
---------------------------------------
-Running simulation with users=4275
-ResponseTime=20560.04038 Throughput=131.70950 goodput=123.79330 badput=7.91620 completed=22159 timedout=1417 dropped=0 Util=0.99528
---------------------------------------
-Running simulation with users=4285
-ResponseTime=19288.09885 Throughput=130.30168 goodput=120.71508 badput=9.58659 completed=21608 timedout=1716 dropped=0 Util=0.99515
---------------------------------------
-Running simulation with users=4295
-ResponseTime=21269.98962 Throughput=130.13408 goodput=122.83799 badput=7.29609 completed=21988 timedout=1306 dropped=0 Util=0.99514
---------------------------------------
-Running simulation with users=4305
-ResponseTime=20363.67379 Throughput=129.73743 goodput=120.98883 badput=8.74860 completed=21657 timedout=1566 dropped=0 Util=0.99505
---------------------------------------
-Running simulation with users=4315
-ResponseTime=19890.48683 Throughput=129.16201 goodput=119.83799 badput=9.32402 completed=21451 timedout=1669 dropped=0 Util=0.99502
---------------------------------------
-Running simulation with users=4325
-ResponseTime=19298.10702 Throughput=129.63687 goodput=119.60894 badput=10.02793 completed=21410 timedout=1795 dropped=0 Util=0.99514
---------------------------------------
-Running simulation with users=4335
-ResponseTime=21640.01880 Throughput=130.96089 goodput=123.91061 badput=7.05028 completed=22180 timedout=1262 dropped=0 Util=0.99512
---------------------------------------
-Running simulation with users=4345
-ResponseTime=17506.08646 Throughput=129.17877 goodput=116.67039 badput=12.50838 completed=20884 timedout=2239 dropped=0 Util=0.99508
---------------------------------------
-Running simulation with users=4355
-ResponseTime=17198.66545 Throughput=130.19553 goodput=117.05028 badput=13.14525 completed=20952 timedout=2353 dropped=0 Util=0.99520
---------------------------------------
-Running simulation with users=4365
-ResponseTime=19828.91992 Throughput=131.10615 goodput=121.62570 badput=9.48045 completed=21771 timedout=1697 dropped=0 Util=0.99524
---------------------------------------
-Running simulation with users=4375
-ResponseTime=15473.63942 Throughput=128.94413 goodput=114.07263 badput=14.87151 completed=20419 timedout=2662 dropped=0 Util=0.99507
---------------------------------------
-Running simulation with users=4385
-ResponseTime=15679.00043 Throughput=129.54749 goodput=114.58659 badput=14.96089 completed=20511 timedout=2678 dropped=0 Util=0.99511
---------------------------------------
-Running simulation with users=4395
-ResponseTime=16765.00751 Throughput=130.13408 goodput=116.35754 badput=13.77654 completed=20828 timedout=2466 dropped=0 Util=0.99515
---------------------------------------
-Running simulation with users=4405
-ResponseTime=10784.13288 Throughput=112.54190 goodput=89.87151 badput=22.67039 completed=16087 timedout=4058 dropped=0 Util=0.87862
---------------------------------------
-Running simulation with users=4415
-ResponseTime=19458.66691 Throughput=131.29050 goodput=120.86592 badput=10.42458 completed=21635 timedout=1866 dropped=0 Util=0.99518
---------------------------------------
-Running simulation with users=4425
-ResponseTime=13486.64583 Throughput=129.29609 goodput=111.20112 badput=18.09497 completed=19905 timedout=3239 dropped=0 Util=0.99510
---------------------------------------
-Running simulation with users=4435
-ResponseTime=13918.54369 Throughput=130.11732 goodput=112.74860 badput=17.36872 completed=20182 timedout=3109 dropped=0 Util=0.99516
---------------------------------------
-Running simulation with users=4445
-ResponseTime=15665.95595 Throughput=129.98883 goodput=114.68156 badput=15.30726 completed=20528 timedout=2740 dropped=0 Util=0.99519
---------------------------------------
-Running simulation with users=4455
-ResponseTime=11595.43537 Throughput=129.20112 goodput=108.88268 badput=20.31844 completed=19490 timedout=3637 dropped=0 Util=0.99508
---------------------------------------
-Running simulation with users=4465
-ResponseTime=13166.64343 Throughput=131.15084 goodput=113.09497 badput=18.05587 completed=20244 timedout=3232 dropped=0 Util=0.99521
---------------------------------------
-Running simulation with users=4475
-ResponseTime=13911.49205 Throughput=131.39665 goodput=113.94413 badput=17.45251 completed=20396 timedout=3124 dropped=0 Util=0.99526
---------------------------------------
-Running simulation with users=4485
-ResponseTime=12374.81747 Throughput=130.36313 goodput=110.63128 badput=19.73184 completed=19803 timedout=3532 dropped=0 Util=0.99513
---------------------------------------
-Running simulation with users=4495
-ResponseTime=13750.26981 Throughput=131.44134 goodput=113.56983 badput=17.87151 completed=20329 timedout=3199 dropped=0 Util=0.99522
---------------------------------------
-Running simulation with users=4505
-ResponseTime=12204.92657 Throughput=128.74302 goodput=108.56983 badput=20.17318 completed=19434 timedout=3611 dropped=0 Util=0.99505
---------------------------------------
-Running simulation with users=4515
-ResponseTime=15339.64721 Throughput=131.03352 goodput=114.94413 badput=16.08939 completed=20575 timedout=2880 dropped=0 Util=0.99519
---------------------------------------
-Running simulation with users=4525
-ResponseTime=11861.88537 Throughput=129.93296 goodput=109.86592 badput=20.06704 completed=19666 timedout=3592 dropped=0 Util=0.99510
---------------------------------------
-Running simulation with users=4535
-ResponseTime=20791.89138 Throughput=57.95531 goodput=32.82123 badput=25.13408 completed=5875 timedout=4499 dropped=0 Util=0.44565
---------------------------------------
-Running simulation with users=4545
-ResponseTime=23278.48478 Throughput=50.97765 goodput=25.59218 badput=25.38547 completed=4581 timedout=4544 dropped=0 Util=0.39393
---------------------------------------
-Running simulation with users=4555
-ResponseTime=10128.99025 Throughput=130.71508 goodput=108.70950 badput=22.00559 completed=19459 timedout=3939 dropped=0 Util=0.99527
---------------------------------------
-Running simulation with users=4565
-ResponseTime=13359.85141 Throughput=93.69274 goodput=69.45810 badput=24.23464 completed=12433 timedout=4338 dropped=0 Util=0.71475
---------------------------------------
-Running simulation with users=4575
-ResponseTime=23562.84676 Throughput=50.76536 goodput=25.21229 badput=25.55307 completed=4513 timedout=4574 dropped=0 Util=0.39458
---------------------------------------
-Running simulation with users=4585
-ResponseTime=23498.39412 Throughput=51.06704 goodput=25.45251 badput=25.61453 completed=4556 timedout=4585 dropped=0 Util=0.39283
---------------------------------------
-Running simulation with users=4595
-ResponseTime=23488.44748 Throughput=51.39106 goodput=25.72067 badput=25.67039 completed=4604 timedout=4595 dropped=0 Util=0.39810
---------------------------------------
-Running simulation with users=4605
-ResponseTime=23661.36485 Throughput=50.43575 goodput=24.70950 badput=25.72626 completed=4423 timedout=4605 dropped=0 Util=0.39183
---------------------------------------
-Running simulation with users=4615
-ResponseTime=23578.66443 Throughput=51.60335 goodput=25.82123 badput=25.78212 completed=4622 timedout=4615 dropped=0 Util=0.39823
---------------------------------------
-Running simulation with users=4625
-ResponseTime=23555.19988 Throughput=51.51397 goodput=25.67598 badput=25.83799 completed=4596 timedout=4625 dropped=0 Util=0.39715
---------------------------------------
-Running simulation with users=4635
-ResponseTime=23903.38958 Throughput=51.01117 goodput=25.11732 badput=25.89385 completed=4496 timedout=4635 dropped=0 Util=0.39545
---------------------------------------
-Running simulation with users=4645
-ResponseTime=13259.24147 Throughput=94.40223 goodput=69.73184 badput=24.67039 completed=12482 timedout=4416 dropped=0 Util=0.71909
---------------------------------------
-Running simulation with users=4655
-ResponseTime=24010.68132 Throughput=51.04469 goodput=25.03911 badput=26.00559 completed=4482 timedout=4655 dropped=0 Util=0.39807
---------------------------------------
-Running simulation with users=4665
-ResponseTime=23806.29367 Throughput=51.89944 goodput=25.83799 badput=26.06145 completed=4625 timedout=4665 dropped=0 Util=0.39931
---------------------------------------
-Running simulation with users=4675
-ResponseTime=23734.81882 Throughput=51.65922 goodput=25.54190 badput=26.11732 completed=4572 timedout=4675 dropped=0 Util=0.39886
---------------------------------------
-Running simulation with users=4685
-ResponseTime=24218.96518 Throughput=50.97765 goodput=24.80447 badput=26.17318 completed=4440 timedout=4685 dropped=0 Util=0.39755
---------------------------------------
-Running simulation with users=4695
-ResponseTime=24157.53112 Throughput=51.47486 goodput=25.24581 badput=26.22905 completed=4519 timedout=4695 dropped=0 Util=0.39966
---------------------------------------
-Running simulation with users=4705
-ResponseTime=23950.32984 Throughput=51.49721 goodput=25.21229 badput=26.28492 completed=4513 timedout=4705 dropped=0 Util=0.39755
---------------------------------------
-Running simulation with users=4715
-ResponseTime=23782.93365 Throughput=52.12291 goodput=25.78212 badput=26.34078 completed=4615 timedout=4715 dropped=0 Util=0.39868
---------------------------------------
-Running simulation with users=4725
-ResponseTime=23986.14852 Throughput=51.72626 goodput=25.32961 badput=26.39665 completed=4534 timedout=4725 dropped=0 Util=0.39807
---------------------------------------
-Running simulation with users=4735
-ResponseTime=24358.88715 Throughput=51.86034 goodput=25.40782 badput=26.45251 completed=4548 timedout=4735 dropped=0 Util=0.40343
---------------------------------------
-Running simulation with users=4745
-ResponseTime=24287.50545 Throughput=51.87151 goodput=25.36313 badput=26.50838 completed=4540 timedout=4745 dropped=0 Util=0.40202
---------------------------------------
-Running simulation with users=4755
-ResponseTime=24324.32476 Throughput=51.82682 goodput=25.26257 badput=26.56425 completed=4522 timedout=4755 dropped=0 Util=0.40084
---------------------------------------
-Running simulation with users=4765
-ResponseTime=24198.82558 Throughput=52.07821 goodput=25.45810 badput=26.62011 completed=4557 timedout=4765 dropped=0 Util=0.40016
---------------------------------------
-Running simulation with users=4775
-ResponseTime=24185.39577 Throughput=52.49162 goodput=25.81564 badput=26.67598 completed=4621 timedout=4775 dropped=0 Util=0.40293
---------------------------------------
-Running simulation with users=4785
-ResponseTime=24476.40603 Throughput=52.31285 goodput=25.58101 badput=26.73184 completed=4579 timedout=4785 dropped=0 Util=0.40465
---------------------------------------
-Running simulation with users=4795
-ResponseTime=24150.41479 Throughput=52.83799 goodput=26.05028 badput=26.78771 completed=4663 timedout=4795 dropped=0 Util=0.40388
---------------------------------------
-Running simulation with users=4805
-ResponseTime=24327.03685 Throughput=52.33520 goodput=25.49162 badput=26.84358 completed=4563 timedout=4805 dropped=0 Util=0.40167
---------------------------------------
-Running simulation with users=4815
-ResponseTime=24432.93673 Throughput=52.13408 goodput=25.23464 badput=26.89944 completed=4517 timedout=4815 dropped=0 Util=0.40094
---------------------------------------
-Running simulation with users=4825
-ResponseTime=24572.27281 Throughput=52.14525 goodput=25.18994 badput=26.95531 completed=4509 timedout=4825 dropped=0 Util=0.40169
---------------------------------------
-Running simulation with users=4835
-ResponseTime=24965.75857 Throughput=51.81006 goodput=24.79888 badput=27.01117 completed=4439 timedout=4835 dropped=0 Util=0.40416
---------------------------------------
-Running simulation with users=4845
-ResponseTime=24784.05671 Throughput=52.15084 goodput=25.08380 badput=27.06704 completed=4490 timedout=4845 dropped=0 Util=0.40496
---------------------------------------
-Running simulation with users=4855
-ResponseTime=24820.50500 Throughput=52.55307 goodput=25.43017 badput=27.12291 completed=4552 timedout=4855 dropped=0 Util=0.40678
---------------------------------------
-Running simulation with users=4865
-ResponseTime=24855.58876 Throughput=52.43575 goodput=25.25698 badput=27.17877 completed=4521 timedout=4865 dropped=0 Util=0.40570
---------------------------------------
-Running simulation with users=4875
-ResponseTime=24708.03171 Throughput=52.66480 goodput=25.43017 badput=27.23464 completed=4552 timedout=4875 dropped=0 Util=0.40557
---------------------------------------
-Running simulation with users=4885
-ResponseTime=24768.50273 Throughput=52.40782 goodput=25.11732 badput=27.29050 completed=4496 timedout=4885 dropped=0 Util=0.40391
---------------------------------------
-Running simulation with users=4895
-ResponseTime=24791.15533 Throughput=52.78771 goodput=25.44134 badput=27.34637 completed=4554 timedout=4895 dropped=0 Util=0.40496
---------------------------------------
-Running simulation with users=4905
-ResponseTime=24837.76698 Throughput=52.45810 goodput=25.05587 badput=27.40223 completed=4485 timedout=4905 dropped=0 Util=0.40191
---------------------------------------
-Running simulation with users=4915
-ResponseTime=25003.71378 Throughput=52.77095 goodput=25.31285 badput=27.45810 completed=4531 timedout=4915 dropped=0 Util=0.40756
---------------------------------------
-Running simulation with users=4925
-ResponseTime=25118.69833 Throughput=52.50838 goodput=24.99441 badput=27.51397 completed=4474 timedout=4925 dropped=0 Util=0.40901
---------------------------------------
-Running simulation with users=4935
-ResponseTime=24892.57541 Throughput=52.87709 goodput=25.30726 badput=27.56983 completed=4530 timedout=4935 dropped=0 Util=0.40610
---------------------------------------
-Running simulation with users=4945
-ResponseTime=25075.09848 Throughput=52.62011 goodput=24.99441 badput=27.62570 completed=4474 timedout=4945 dropped=0 Util=0.40663
---------------------------------------
-Running simulation with users=4955
-ResponseTime=25158.55973 Throughput=52.97207 goodput=25.29050 badput=27.68156 completed=4527 timedout=4955 dropped=0 Util=0.40891
---------------------------------------
-Running simulation with users=4965
-ResponseTime=25299.44847 Throughput=52.63687 goodput=24.89944 badput=27.73743 completed=4457 timedout=4965 dropped=0 Util=0.40648
---------------------------------------
-Running simulation with users=4975
-ResponseTime=25393.29179 Throughput=52.97765 goodput=25.18436 badput=27.79330 completed=4508 timedout=4975 dropped=0 Util=0.40922
---------------------------------------
-Running simulation with users=4985
-ResponseTime=25436.24535 Throughput=52.56425 goodput=24.71508 badput=27.84916 completed=4424 timedout=4985 dropped=0 Util=0.40613
---------------------------------------
-Running simulation with users=4995
-ResponseTime=25487.53178 Throughput=52.94413 goodput=25.03911 badput=27.90503 completed=4482 timedout=4995 dropped=0 Util=0.40925
+ResponseTime=6003.69631 Throughput=115.84916 goodput=95.62570 badput=20.22346 completed=17117 timedout=3620 dropped=0 Util=0.89651
 --------------------------------------

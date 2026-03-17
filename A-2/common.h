@@ -76,7 +76,7 @@ using namespace std;
 namespace common{
     inline int NUM_CORES=1;
     inline int MAX_THREADS=346;
-    inline int THREAD_QUEUE_LIMIT=100000;
+    inline int THREAD_QUEUE_LIMIT=10;
     inline double QUANTUM=10.0;
     inline double CONTEXT_SWITCH_OVERHEAD=0.2;
     inline int NUM_USERS=50;//baadme set hoga
@@ -84,7 +84,7 @@ namespace common{
     inline double THINK_MEAN_EXP=10.0;
     inline int RETRY_LIMIT=0;
     inline bool CLOSED_LOOP=true;
-    inline double WARMUP_TIME=1000.0;//baadme set hoga
+    inline double WARMUP_TIME=100000.0;//baadme set hoga
     inline unsigned RNG_SEED=6190;
     inline bool TRACE_ON=true;//baadme set hoga
     inline std::string TRACE_PREFIX="runs/run";

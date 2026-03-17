@@ -68,6 +68,11 @@ void Simulator::handle_user_arrival(int user_id) {
     bool admitted = qsys.admit_request(req, nowt);
     if (!admitted) {
         ++dropped_requests;
+        exponential_distribution<double> expdist(1.0 / common::THINK_MEAN_EXP);
+        double think = common::THINK_BASE + expdist(rng);
+        double next_t = now + think;
+        auto ev = make_unique<Event>(next_t, event_type::USER_ARRIVAL, req->user_id);
+        push_event(std::move(ev));
         if (common::TRACE_ON) {
             ostringstream ss;
             ss << "DROP," << fixed << setprecision(3) << nowt << "," << req->id << "," << user_id;
@@ -108,12 +113,12 @@ void Simulator::handle_request_complete(Request* req, double time) {
             ss << "TIMEOUT," << fixed << setprecision(3) << time << "," << req->id << "," << req->user_id;
             trace_lines.push_back(ss.str());
         }
-        if (req->retry_left > 0) {
-            req->retry_left -= 1;
-            double backoff = 10.0;
-            auto ev = make_unique<Event>(time + backoff, event_type::USER_ARRIVAL, req->user_id);
-            push_event(std::move(ev));
-        }
+        // if (req->retry_left > 0) {
+        //     req->retry_left -= 1;
+        //     double backoff = 10.0;
+        //     auto ev = make_unique<Event>(time + backoff, event_type::USER_ARRIVAL, req->user_id);
+        //     push_event(std::move(ev));
+        // }
     }
     else{
         completed_requests.push_back(req);
@@ -122,13 +127,13 @@ void Simulator::handle_request_complete(Request* req, double time) {
             ss << "COMPLETE," << fixed << setprecision(3) << time << "," << req->id << "," << req->user_id << "," << req->response_time();
             trace_lines.push_back(ss.str());
         }
-        if (common::CLOSED_LOOP) {
-            exponential_distribution<double> expdist(1.0 / common::THINK_MEAN_EXP);
-            double think = common::THINK_BASE + expdist(rng);
-            double next_t = time + think;
-            auto ev = make_unique<Event>(next_t, event_type::USER_ARRIVAL, req->user_id);
-            push_event(std::move(ev));
-        }
+    }
+    if (common::CLOSED_LOOP) {
+        exponential_distribution<double> expdist(1.0 / common::THINK_MEAN_EXP);
+        double think = common::THINK_BASE + expdist(rng);
+        double next_t = time + think;
+        auto ev = make_unique<Event>(next_t, event_type::USER_ARRIVAL, req->user_id);
+        push_event(std::move(ev));
     }
     // completed_requests.push_back(req);
     // if (common::TRACE_ON) {

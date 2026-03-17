@@ -35,9 +35,9 @@ void usage() {
 int main(int argc, char** argv) {
     // int replications = 1;
     double simtime = 800.0;
-    double warmup = common::WARMUP_TIME;
-    int users = common::NUM_USERS;
-    bool trace_on = common::TRACE_ON;
+    // double warmup = common::WARMUP_TIME;
+    // int users = common::NUM_USERS;
+    // bool trace_on = common::TRACE_ON;
 
     static struct option long_options[] = {
         {"users", required_argument, 0, 1000},
@@ -103,8 +103,8 @@ int main(int argc, char** argv) {
 
     std::vector<Result> results;
     // for (int r=0; r<replications; ++r) {
-    unsigned seed = common::RNG_SEED + 9 + 100;
-    auto res = sim.run(simtime, warmup, seed, 0, trace_on);
+    unsigned seed = common::RNG_SEED + 907 + 100;
+    auto res = sim.run(simtime, common::WARMUP_TIME, seed, 0, common::TRACE_ON);
     results.push_back(res);
     std::cout <<fixed<<setprecision(5)<< "ResponseTime=" << res.avg_response_time
                 << " Throughput=" << res.throughput*1000 << " goodput=" << res.goodput*1000

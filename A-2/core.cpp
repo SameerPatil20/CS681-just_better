@@ -30,7 +30,7 @@ void Core::handle_slice_start(double now, ThreadWorker* th) {
     // std::cout<<"thread id: "<<th->tid<<" is now being RUN, time = "<<now<<" being push back into cor id: "<< core_id<<" with time left = "<<r->service_remaining<<std::endl;
     r->mark_started(now);
     double slice_len = std::min(quantum, r->service_remaining);
-    busy_time += slice_len+common::CONTEXT_SWITCH_OVERHEAD;
+    // busy_time += slice_len;
     auto ev = std::make_unique<Event>(now + slice_len, event_type::THREAD_SLICE_END, th, this, slice_len);
 
     sim->push_event(std::move(ev));
@@ -40,7 +40,8 @@ void Core::handle_slice_end(double now, ThreadWorker* th, double slice_len) {
     Request* r = th->req;
     if (!r) { schedule_next_slice(now); return; }
     r->service_remaining -= slice_len;
-    if (r->service_remaining <= 1e-12) {
+    // busy_time += slice_len + common::CONTEXT_SWITCH_OVERHEAD;
+    if (r->service_remaining <= 1e-7) {
         // cout <<"thread: "<<th->tid<<" complete"<<endl;
         r->mark_completed(now);
         auto ev = std::make_unique<Event>(now, event_type::REQUEST_COMPLETE, r);

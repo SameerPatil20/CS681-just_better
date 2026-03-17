@@ -93,6 +93,9 @@ void Simulator::handle_thread_slice_start(ThreadWorker* th, Core* core, double t
 }
 
 void Simulator::handle_thread_slice_end(ThreadWorker* th, Core* core, double slice_len, double time) {
+    if(time >= common::WARMUP_TIME){
+        core->busy_time += slice_len;
+    }
     core->handle_slice_end(time, th, slice_len);
 }
 
@@ -240,7 +243,7 @@ Result Simulator::run(double simtime, double warmup_time, unsigned seed, int run
     for(auto core: cores){
         utilization+= core->busy_time;
     }
-    utilization /= max(1,(int)cores.size());
+    utilization /= max(1,(int)common::NUM_CORES);
     utilization/= max(1.0, (simtime-warmup_time));
     double interval = max(1.0, simtime - warmup_time);
     double throughput = (double) (good + bad) / interval;

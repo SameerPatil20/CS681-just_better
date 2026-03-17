@@ -75,3 +75,18 @@ plt.ylabel("Timeouts")
 plt.title("Timeouts vs Users")
 plt.grid(True)
 plt.savefig("plots/timeouts.png")
+
+# Combined plot: Throughput, Goodput, Badput
+# Combined plot: Throughput, Goodput, Badput (styled)
+plt.figure()
+
+plt.plot(users, throughput, color='blue', linestyle='-', linewidth=2, label="Throughput")
+plt.plot(users, goodput, color='green', linestyle='--', linewidth=2, label="Goodput")
+plt.plot(users, badput, color='red', linestyle=':', linewidth=2, label="Badput")
+
+plt.xlabel("Number of Users")
+plt.ylabel("Requests / sec")
+plt.title("Throughput, Goodput and Badput vs Users")
+plt.grid(True)
+plt.legend()
+plt.savefig("plots/throughput_goodput_badput.png")

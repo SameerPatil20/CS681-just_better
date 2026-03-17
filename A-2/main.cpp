@@ -9,7 +9,27 @@
 int Event::seq_counter=0;
 
 void usage() {
-    std::cout << "Usage: websim [--users U] [--simtime T] [--warmup W] [--trace_on 0/1]\n";
+    std::cout <<
+    "Usage: websim [OPTIONS]\n"
+    "  --users N\n"
+    "  --simtime T\n"
+    "  --warmup W\n"
+    "  --trace_on 0/1\n"
+    "  --num_cores N\n"
+    "  --max_threads N\n"
+    "  --thread_queue_limit N\n"
+    "  --quantum Q\n"
+    "  --context_switch_overhead X\n"
+    "  --think_base X\n"
+    "  --think_mean_exp X\n"
+    "  --closed_loop 0/1\n"
+    "  --retry_limit N\n"
+    "  --service_time_avg X\n"
+    "  --timeout_lower X\n"
+    "  --timeout_upper X\n"
+    "  --rng_seed N\n"
+    "  --trace_prefix STR\n"
+    << std::endl;
 }
 
 int main(int argc, char** argv) {
@@ -20,27 +40,61 @@ int main(int argc, char** argv) {
     bool trace_on = common::TRACE_ON;
 
     static struct option long_options[] = {
-        {"users", required_argument, 0, 'u'},
-        {"simtime", required_argument, 0, 's'},
-        {"warmup", required_argument, 0, 'w'},
-        {"trace_on", required_argument, 0, 't'},
-        {0,0,0,0}
+        {"users", required_argument, 0, 1000},
+        {"simtime", required_argument, 0, 1001},
+        {"warmup", required_argument, 0, 1002},
+        {"trace_on", required_argument, 0, 1003},
+
+        {"num_cores", required_argument, 0, 1004},
+        {"max_threads", required_argument, 0, 1005},
+        {"thread_queue_limit", required_argument, 0, 1006},
+        {"quantum", required_argument, 0, 1007},
+        {"context_switch_overhead", required_argument, 0, 1008},
+        {"think_base", required_argument, 0, 1009},
+        {"think_mean_exp", required_argument, 0, 1010},
+        {"retry_limit", required_argument, 0, 1011},
+        {"closed_loop", required_argument, 0, 1012},
+        {"rng_seed", required_argument, 0, 1013},
+        {"trace_prefix", required_argument, 0, 1014},
+        {"service_time_avg", required_argument, 0, 1015},
+        {"timeout_lower", required_argument, 0, 1016},
+        {"timeout_upper", required_argument, 0, 1017},
+
+        {0, 0, 0, 0}
     };
 
     int opt;
-    while ((opt = getopt_long(argc, argv, "u:s:w:t:", long_options, nullptr)) != -1) {
+    while ((opt = getopt_long(argc, argv, "", long_options, nullptr)) != -1) {
         switch (opt) {
-            case 'u': users = std::atoi(optarg); break;
-            case 's': simtime = std::atof(optarg); break;
-            case 'w': warmup = std::atof(optarg); break;
-            case 't': trace_on = std::atoi(optarg) != 0; break;
-            default: usage(); return 1;
+            case 1000: common::NUM_USERS = std::atoi(optarg); break;
+            case 1001: simtime = std::atof(optarg); break;
+            case 1002: common::WARMUP_TIME = std::atof(optarg); break;
+            case 1003: common::TRACE_ON = std::atoi(optarg) != 0; break;
+
+            case 1004: common::NUM_CORES = std::atoi(optarg); break;
+            case 1005: common::MAX_THREADS = std::atoi(optarg); break;
+            case 1006: common::THREAD_QUEUE_LIMIT = std::atoi(optarg); break;
+            case 1007: common::QUANTUM = std::atof(optarg); break;
+            case 1008: common::CONTEXT_SWITCH_OVERHEAD = std::atof(optarg); break;
+            case 1009: common::THINK_BASE = std::atof(optarg); break;
+            case 1010: common::THINK_MEAN_EXP = std::atof(optarg); break;
+            case 1011: common::RETRY_LIMIT = std::atoi(optarg); break;
+            case 1012: common::CLOSED_LOOP = std::atoi(optarg) != 0; break;
+            case 1013: common::RNG_SEED = static_cast<unsigned>(std::stoul(optarg)); break;
+            case 1014: common::TRACE_PREFIX = std::string(optarg); break;
+            case 1015: common::SERVICE_TIME_AVG = std::atof(optarg); break;
+            case 1016: common::TIMEOUT_LOWER = std::atof(optarg); break;
+            case 1017: common::TIMEOUT_UPPER = std::atof(optarg); break;
+
+            default:
+                usage();
+                return 1;
         }
     }
 
-    common::NUM_USERS = users;
-    common::WARMUP_TIME = warmup;
-    common::TRACE_ON = trace_on;
+    // common::NUM_USERS = users;
+    // common::WARMUP_TIME = warmup;
+    // common::TRACE_ON = trace_on;
 
     Simulator sim;
     sim.make_cores(common::NUM_CORES);

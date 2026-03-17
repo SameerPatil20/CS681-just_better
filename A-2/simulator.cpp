@@ -6,6 +6,8 @@
 #include <iomanip>
 #include <filesystem>
 
+using namespace std;
+
 Simulator::Simulator() : qsys(this), rng(common::RNG_SEED) {}
 
 Simulator::~Simulator() {
@@ -14,13 +16,13 @@ Simulator::~Simulator() {
     for (auto c : cores) delete c;
 }
 
-void Simulator::push_event(std::unique_ptr<Event> e) {
+void Simulator::push_event(unique_ptr<Event> e) {
     evq.push(std::move(e));
 }
 
-std::unique_ptr<Event> Simulator::pop_event() {
+unique_ptr<Event> Simulator::pop_event() {
     if (evq.empty()) return nullptr;
-    auto e = std::move(const_cast<std::unique_ptr<Event>&>(evq.top()));
+    auto e = std::move(const_cast<unique_ptr<Event>&>(evq.top()));
     evq.pop();
     return e;
 }
@@ -47,10 +49,11 @@ void Simulator::reset_for_run(unsigned seed) {
 }
 
 void Simulator::schedule_initial_users(int num_users) {
-    std::exponential_distribution<double> expdist(1.0 / common::THINK_MEAN_EXP);
+    exponential_distribution<double> expdist(1.0 / common::THINK_MEAN_EXP);
+    uniform_real_distribution<double> stagger(0.1, 5000);
     for (int uid=0; uid<num_users; ++uid) {
-        double think = common::THINK_BASE + expdist(rng);
-        auto ev = std::make_unique<Event>(think, event_type::USER_ARRIVAL, uid);
+        double start = common::THINK_BASE + expdist(rng) + stagger(rng);
+        auto ev = make_unique<Event>(start, event_type::USER_ARRIVAL, uid);
         push_event(std::move(ev));
     }
 }
@@ -66,14 +69,15 @@ void Simulator::handle_user_arrival(int user_id) {
     if (!admitted) {
         ++dropped_requests;
         if (common::TRACE_ON) {
-            std::ostringstream ss;
-            ss << "DROP," << std::fixed << std::setprecision(3) << nowt << "," << req->id << "," << user_id;
+            ostringstream ss;
+            ss << "DROP," << fixed << setprecision(3) << nowt << "," << req->id << "," << user_id;
             trace_lines.push_back(ss.str());
         }
-    } else {
+    } 
+    else {
         if (common::TRACE_ON) {
-            std::ostringstream ss;
-            ss << "ARRIVAL," << std::fixed << std::setprecision(3) << nowt << "," << req->id << "," << user_id << "," << service << "," << timeout;
+            ostringstream ss;
+            ss << "ARRIVAL," << fixed << setprecision(3) << nowt << "," << req->id << "," << user_id << "," << service << "," << timeout;
             trace_lines.push_back(ss.str());
         }
     }
@@ -100,36 +104,36 @@ void Simulator::handle_request_complete(Request* req, double time) {
         req->timed_out=true;
         timedout_requests.push_back(req);
         if(common::TRACE_ON){
-            std::ostringstream ss;
-            ss << "TIMEOUT," << std::fixed << std::setprecision(3) << time << "," << req->id << "," << req->user_id;
+            ostringstream ss;
+            ss << "TIMEOUT," << fixed << setprecision(3) << time << "," << req->id << "," << req->user_id;
             trace_lines.push_back(ss.str());
         }
         if (req->retry_left > 0) {
             req->retry_left -= 1;
             double backoff = 10.0;
-            auto ev = std::make_unique<Event>(time + backoff, event_type::USER_ARRIVAL, req->user_id);
+            auto ev = make_unique<Event>(time + backoff, event_type::USER_ARRIVAL, req->user_id);
             push_event(std::move(ev));
         }
     }
     else{
         completed_requests.push_back(req);
         if (common::TRACE_ON) {
-            std::ostringstream ss;
-            ss << "COMPLETE," << std::fixed << std::setprecision(3) << time << "," << req->id << "," << req->user_id << "," << req->response_time();
+            ostringstream ss;
+            ss << "COMPLETE," << fixed << setprecision(3) << time << "," << req->id << "," << req->user_id << "," << req->response_time();
             trace_lines.push_back(ss.str());
         }
         if (common::CLOSED_LOOP) {
-            std::exponential_distribution<double> expdist(1.0 / common::THINK_MEAN_EXP);
+            exponential_distribution<double> expdist(1.0 / common::THINK_MEAN_EXP);
             double think = common::THINK_BASE + expdist(rng);
             double next_t = time + think;
-            auto ev = std::make_unique<Event>(next_t, event_type::USER_ARRIVAL, req->user_id);
+            auto ev = make_unique<Event>(next_t, event_type::USER_ARRIVAL, req->user_id);
             push_event(std::move(ev));
         }
     }
     // completed_requests.push_back(req);
     // if (common::TRACE_ON) {
-    //     std::ostringstream ss;
-    //     ss << "COMPLETE," << std::fixed << std::setprecision(3) << time << "," << req->id << "," << req->user_id << "," << req->response_time();
+    //     ostringstream ss;
+    //     ss << "COMPLETE," << fixed << setprecision(3) << time << "," << req->id << "," << req->user_id << "," << req->response_time();
     //     trace_lines.push_back(ss.str());
     // }
     // schedule closed-loop next arrival for this user
@@ -140,8 +144,8 @@ void Simulator::handle_request_complete(Request* req, double time) {
 //         req->timed_out = true;
 //         timedout_requests.push_back(req);
 //         if (common::TRACE_ON) {
-            // std::ostringstream ss;
-            // ss << "TIMEOUT," << std::fixed << std::setprecision(3) << time << "," << req->id << "," << req->user_id;
+            // ostringstream ss;
+            // ss << "TIMEOUT," << fixed << setprecision(3) << time << "," << req->id << "," << req->user_id;
             // trace_lines.push_back(ss.str());
 //         }
 //         // if assigned thread exists, release it
@@ -156,7 +160,7 @@ void Simulator::handle_request_complete(Request* req, double time) {
         // if (req->retry_left > 0) {
         //     req->retry_left -= 1;
         //     double backoff = 10.0;
-        //     auto ev = std::make_unique<Event>(time + backoff, event_type::USER_ARRIVAL, req->user_id);
+        //     auto ev = make_unique<Event>(time + backoff, event_type::USER_ARRIVAL, req->user_id);
         //     push_event(std::move(ev));
         // }
 //     }
@@ -205,7 +209,7 @@ Result Simulator::run(double simtime, double warmup_time, unsigned seed, int run
         }
     }
 
-    std::vector<double> resp_times;
+    vector<double> resp_times;
     int good = 0, bad = 0;
     for (auto r : completed_requests) {
         if (r->completion_time >= warmup_time) {
@@ -227,7 +231,7 @@ Result Simulator::run(double simtime, double warmup_time, unsigned seed, int run
         for (double x: resp_times) sum += x;
         avg_rt = sum / resp_times.size();
     }
-    double interval = std::max(1.0, simtime - warmup_time);
+    double interval = max(1.0, simtime - warmup_time);
     double throughput = (double) (good + bad) / interval;
     double goodput = (double) good / interval;
     double badput = (double) bad / interval;
@@ -247,10 +251,10 @@ Result Simulator::run(double simtime, double warmup_time, unsigned seed, int run
 }
 
 void Simulator::write_trace(int runid) {
-    std::filesystem::create_directories("runs");
-    std::ostringstream fname;
+    filesystem::create_directories("runs");
+    ostringstream fname;
     fname << common::TRACE_PREFIX << "_" << runid << ".csv";
-    std::ofstream ofs(fname.str());
+    ofstream ofs(fname.str());
     ofs << "event,time,req_id,user_id,val1,val2\n";
     for (auto &line : trace_lines) {
         ofs << line << "\n";

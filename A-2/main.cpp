@@ -9,18 +9,17 @@
 int Event::seq_counter=0;
 
 void usage() {
-    std::cout << "Usage: websim [--replications N] [--users U] [--simtime T] [--warmup W] [--trace_on 0/1]\n";
+    std::cout << "Usage: websim [--users U] [--simtime T] [--warmup W] [--trace_on 0/1]\n";
 }
 
 int main(int argc, char** argv) {
-    int replications = 11;
+    // int replications = 1;
     double simtime = 800.0;
     double warmup = common::WARMUP_TIME;
     int users = common::NUM_USERS;
     bool trace_on = common::TRACE_ON;
 
     static struct option long_options[] = {
-        {"replications", required_argument, 0, 'r'},
         {"users", required_argument, 0, 'u'},
         {"simtime", required_argument, 0, 's'},
         {"warmup", required_argument, 0, 'w'},
@@ -29,9 +28,8 @@ int main(int argc, char** argv) {
     };
 
     int opt;
-    while ((opt = getopt_long(argc, argv, "r:u:s:w:t:", long_options, nullptr)) != -1) {
+    while ((opt = getopt_long(argc, argv, "u:s:w:t:", long_options, nullptr)) != -1) {
         switch (opt) {
-            case 'r': replications = std::atoi(optarg); break;
             case 'u': users = std::atoi(optarg); break;
             case 's': simtime = std::atof(optarg); break;
             case 'w': warmup = std::atof(optarg); break;
@@ -48,15 +46,15 @@ int main(int argc, char** argv) {
     sim.make_cores(common::NUM_CORES);
 
     std::vector<Result> results;
-    for (int r=0; r<replications; ++r) {
-        unsigned seed = common::RNG_SEED + r + 100;
-        auto res = sim.run(simtime, warmup, seed, r, trace_on);
-        results.push_back(res);
-        std::cout << "Run " << r << ": avg_rt=" << res.avg_response_time
-                  << " throughput=" << res.throughput << " goodput=" << res.goodput
-                  << " badput=" << res.badput << " completed=" << res.completed
-                  << " timedout=" << res.timedout << " dropped=" << res.dropped << "\n";
-    }
+    // for (int r=0; r<replications; ++r) {
+    unsigned seed = common::RNG_SEED + 9 + 100;
+    auto res = sim.run(simtime, warmup, seed, 0, trace_on);
+    results.push_back(res);
+    std::cout <<fixed<<setprecision(5)<< "RUN: avg_rt=" << res.avg_response_time
+                << " throughput=" << res.throughput << " goodput=" << res.goodput
+                << " badput=" << res.badput << " completed=" << res.completed
+                << " timedout=" << res.timedout << " dropped=" << res.dropped << "\n";
+    // }
 
     // simple aggregate: avg of avg_response_time samples (ignoring nulls)
     std::vector<double> avgs;

@@ -218,8 +218,17 @@ Result Simulator::run(double simtime, double warmup_time, unsigned seed, int run
     for (auto r : completed_requests) {
         if (r->completion_time >= warmup_time) {
             double rt = r->response_time();
-            if (rt >= 0) resp_times.push_back(rt);
-            if (r->timed_out) bad++; else good++;
+            // if (rt >= 0) resp_times.push_back(rt);
+            // if (r->timed_out) bad++; else good++;
+            resp_times.push_back(rt);
+            good++;
+        }
+    }
+    for(auto r: timedout_requests){
+        if(r->completion_time >= warmup_time){
+            double rt = r->response_time();
+            resp_times.push_back(rt);
+            bad++;
         }
     }
     double avg_rt = -1.0;
@@ -232,6 +241,7 @@ Result Simulator::run(double simtime, double warmup_time, unsigned seed, int run
     double throughput = (double) (good + bad) / interval;
     double goodput = (double) good / interval;
     double badput = (double) bad / interval;
+    cerr<< bad<<" "<<interval<<endl;
 
     // write trace
     if (trace_on) write_trace(runid);

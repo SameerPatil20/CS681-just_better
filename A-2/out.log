@@ -1,0 +1,1000 @@
+Running simulation with users=5
+0 19000
+RUN: avg_rt=29.89640 throughput=0.01495 goodput=0.01495 badput=0.00000 completed=298 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 29.89640
+--------------------------------------
+Running simulation with users=10
+0 19000
+RUN: avg_rt=31.12004 throughput=0.02953 goodput=0.02953 badput=0.00000 completed=589 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 31.12004
+--------------------------------------
+Running simulation with users=15
+0 19000
+RUN: avg_rt=33.81276 throughput=0.04368 goodput=0.04368 badput=0.00000 completed=876 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 33.81276
+--------------------------------------
+Running simulation with users=20
+0 19000
+RUN: avg_rt=34.12683 throughput=0.06047 goodput=0.06047 badput=0.00000 completed=1200 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 34.12683
+--------------------------------------
+Running simulation with users=25
+0 19000
+RUN: avg_rt=35.87902 throughput=0.07484 goodput=0.07484 badput=0.00000 completed=1489 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 35.87902
+--------------------------------------
+Running simulation with users=30
+0 19000
+RUN: avg_rt=35.55972 throughput=0.08816 goodput=0.08816 badput=0.00000 completed=1759 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 35.55972
+--------------------------------------
+Running simulation with users=35
+0 19000
+RUN: avg_rt=36.22109 throughput=0.10274 goodput=0.10274 badput=0.00000 completed=2044 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 36.22109
+--------------------------------------
+Running simulation with users=40
+0 19000
+RUN: avg_rt=39.62957 throughput=0.11647 goodput=0.11647 badput=0.00000 completed=2319 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 39.62957
+--------------------------------------
+Running simulation with users=45
+0 19000
+RUN: avg_rt=39.94255 throughput=0.13253 goodput=0.13253 badput=0.00000 completed=2635 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 39.94255
+--------------------------------------
+Running simulation with users=50
+0 19000
+RUN: avg_rt=42.33891 throughput=0.14437 goodput=0.14437 badput=0.00000 completed=2877 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 42.33891
+--------------------------------------
+Running simulation with users=55
+0 19000
+RUN: avg_rt=43.41072 throughput=0.16100 goodput=0.16100 badput=0.00000 completed=3208 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 43.41072
+--------------------------------------
+Running simulation with users=60
+0 19000
+RUN: avg_rt=42.91878 throughput=0.17489 goodput=0.17489 badput=0.00000 completed=3475 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 42.91878
+--------------------------------------
+Running simulation with users=65
+0 19000
+RUN: avg_rt=45.72423 throughput=0.18684 goodput=0.18684 badput=0.00000 completed=3725 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 45.72423
+--------------------------------------
+Running simulation with users=70
+0 19000
+RUN: avg_rt=47.37710 throughput=0.20084 goodput=0.20084 badput=0.00000 completed=4003 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 47.37710
+--------------------------------------
+Running simulation with users=75
+0 19000
+RUN: avg_rt=50.60130 throughput=0.21453 goodput=0.21453 badput=0.00000 completed=4271 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 50.60130
+--------------------------------------
+Running simulation with users=80
+0 19000
+RUN: avg_rt=50.92248 throughput=0.22758 goodput=0.22758 badput=0.00000 completed=4526 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 50.92248
+--------------------------------------
+Running simulation with users=85
+0 19000
+RUN: avg_rt=56.37939 throughput=0.23995 goodput=0.23995 badput=0.00000 completed=4775 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 56.37939
+--------------------------------------
+Running simulation with users=90
+1 19000
+RUN: avg_rt=53.91936 throughput=0.25447 goodput=0.25442 badput=0.00005 completed=5074 timedout=1 dropped=0
+Aggregate avg_response_time (mean over runs): 53.91936
+--------------------------------------
+Running simulation with users=95
+1 19000
+RUN: avg_rt=62.65342 throughput=0.26700 goodput=0.26695 badput=0.00005 completed=5318 timedout=1 dropped=0
+Aggregate avg_response_time (mean over runs): 62.65342
+--------------------------------------
+Running simulation with users=100
+1 19000
+RUN: avg_rt=57.85653 throughput=0.27753 goodput=0.27747 badput=0.00005 completed=5526 timedout=1 dropped=0
+Aggregate avg_response_time (mean over runs): 57.85653
+--------------------------------------
+Running simulation with users=105
+0 19000
+RUN: avg_rt=61.65206 throughput=0.29147 goodput=0.29147 badput=0.00000 completed=5800 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 61.65206
+--------------------------------------
+Running simulation with users=110
+0 19000
+RUN: avg_rt=61.42291 throughput=0.30463 goodput=0.30463 badput=0.00000 completed=6074 timedout=0 dropped=0
+Aggregate avg_response_time (mean over runs): 61.42291
+--------------------------------------
+Running simulation with users=115
+2 19000
+RUN: avg_rt=67.28701 throughput=0.31368 goodput=0.31358 badput=0.00011 completed=6235 timedout=2 dropped=0
+Aggregate avg_response_time (mean over runs): 67.28701
+--------------------------------------
+Running simulation with users=120
+2 19000
+RUN: avg_rt=67.48162 throughput=0.32737 goodput=0.32726 badput=0.00011 completed=6518 timedout=2 dropped=0
+Aggregate avg_response_time (mean over runs): 67.48162
+--------------------------------------
+Running simulation with users=125
+1 19000
+RUN: avg_rt=67.21144 throughput=0.33953 goodput=0.33947 badput=0.00005 completed=6751 timedout=1 dropped=0
+Aggregate avg_response_time (mean over runs): 67.21144
+--------------------------------------
+Running simulation with users=130
+2 19000
+RUN: avg_rt=70.84571 throughput=0.35205 goodput=0.35195 badput=0.00011 completed=7001 timedout=2 dropped=0
+Aggregate avg_response_time (mean over runs): 70.84571
+--------------------------------------
+Running simulation with users=135
+4 19000
+RUN: avg_rt=74.71873 throughput=0.36174 goodput=0.36153 badput=0.00021 completed=7195 timedout=4 dropped=0
+Aggregate avg_response_time (mean over runs): 74.71873
+--------------------------------------
+Running simulation with users=140
+8 19000
+RUN: avg_rt=77.88678 throughput=0.37300 goodput=0.37258 badput=0.00042 completed=7401 timedout=8 dropped=0
+Aggregate avg_response_time (mean over runs): 77.88678
+--------------------------------------
+Running simulation with users=145
+4 19000
+RUN: avg_rt=85.33436 throughput=0.38011 goodput=0.37989 badput=0.00021 completed=7553 timedout=4 dropped=0
+Aggregate avg_response_time (mean over runs): 85.33436
+--------------------------------------
+Running simulation with users=150
+10 19000
+RUN: avg_rt=84.98571 throughput=0.39284 goodput=0.39232 badput=0.00053 completed=7793 timedout=10 dropped=0
+Aggregate avg_response_time (mean over runs): 84.98571
+--------------------------------------
+Running simulation with users=155
+5 19000
+RUN: avg_rt=85.75852 throughput=0.40205 goodput=0.40179 badput=0.00026 completed=7994 timedout=5 dropped=0
+Aggregate avg_response_time (mean over runs): 85.75852
+--------------------------------------
+Running simulation with users=160
+8 19000
+RUN: avg_rt=92.21747 throughput=0.41084 goodput=0.41042 badput=0.00042 completed=8154 timedout=8 dropped=0
+Aggregate avg_response_time (mean over runs): 92.21747
+--------------------------------------
+Running simulation with users=165
+12 19000
+RUN: avg_rt=87.90648 throughput=0.42037 goodput=0.41974 badput=0.00063 completed=8350 timedout=12 dropped=0
+Aggregate avg_response_time (mean over runs): 87.90648
+--------------------------------------
+Running simulation with users=170
+14 19000
+RUN: avg_rt=98.66496 throughput=0.42774 goodput=0.42700 badput=0.00074 completed=8491 timedout=14 dropped=0
+Aggregate avg_response_time (mean over runs): 98.66496
+--------------------------------------
+Running simulation with users=175
+19 19000
+RUN: avg_rt=101.49538 throughput=0.43479 goodput=0.43379 badput=0.00100 completed=8605 timedout=19 dropped=0
+Aggregate avg_response_time (mean over runs): 101.49538
+--------------------------------------
+Running simulation with users=180
+35 19000
+RUN: avg_rt=108.19033 throughput=0.44442 goodput=0.44258 badput=0.00184 completed=8791 timedout=35 dropped=0
+Aggregate avg_response_time (mean over runs): 108.19033
+--------------------------------------
+Running simulation with users=185
+30 19000
+RUN: avg_rt=116.05739 throughput=0.44658 goodput=0.44500 badput=0.00158 completed=8844 timedout=30 dropped=0
+Aggregate avg_response_time (mean over runs): 116.05739
+--------------------------------------
+Running simulation with users=190
+31 19000
+RUN: avg_rt=119.34577 throughput=0.45695 goodput=0.45532 badput=0.00163 completed=9050 timedout=32 dropped=0
+Aggregate avg_response_time (mean over runs): 119.34577
+--------------------------------------
+Running simulation with users=195
+43 19000
+RUN: avg_rt=123.62404 throughput=0.46421 goodput=0.46195 badput=0.00226 completed=9168 timedout=43 dropped=0
+Aggregate avg_response_time (mean over runs): 123.62404
+--------------------------------------
+Running simulation with users=200
+46 19000
+RUN: avg_rt=125.48573 throughput=0.47032 goodput=0.46789 badput=0.00242 completed=9299 timedout=48 dropped=0
+Aggregate avg_response_time (mean over runs): 125.48573
+--------------------------------------
+Running simulation with users=205
+64 19000
+RUN: avg_rt=139.38564 throughput=0.47074 goodput=0.46737 badput=0.00337 completed=9281 timedout=64 dropped=0
+Aggregate avg_response_time (mean over runs): 139.38564
+--------------------------------------
+Running simulation with users=210
+85 19000
+RUN: avg_rt=143.71411 throughput=0.47363 goodput=0.46916 badput=0.00447 completed=9329 timedout=85 dropped=0
+Aggregate avg_response_time (mean over runs): 143.71411
+--------------------------------------
+Running simulation with users=215
+85 19000
+RUN: avg_rt=148.91943 throughput=0.48274 goodput=0.47826 badput=0.00447 completed=9517 timedout=85 dropped=0
+Aggregate avg_response_time (mean over runs): 148.91943
+--------------------------------------
+Running simulation with users=220
+117 19000
+RUN: avg_rt=157.26857 throughput=0.48600 goodput=0.47984 badput=0.00616 completed=9539 timedout=119 dropped=0
+Aggregate avg_response_time (mean over runs): 157.26857
+--------------------------------------
+Running simulation with users=225
+111 19000
+RUN: avg_rt=163.85172 throughput=0.48868 goodput=0.48284 badput=0.00584 completed=9580 timedout=112 dropped=0
+Aggregate avg_response_time (mean over runs): 163.85172
+--------------------------------------
+Running simulation with users=230
+166 19000
+RUN: avg_rt=178.05933 throughput=0.48495 goodput=0.47621 badput=0.00874 completed=9466 timedout=167 dropped=0
+Aggregate avg_response_time (mean over runs): 178.05933
+--------------------------------------
+Running simulation with users=235
+197 19000
+RUN: avg_rt=184.51774 throughput=0.49200 goodput=0.48163 badput=0.01037 completed=9577 timedout=199 dropped=0
+Aggregate avg_response_time (mean over runs): 184.51774
+--------------------------------------
+Running simulation with users=240
+231 19000
+RUN: avg_rt=196.35141 throughput=0.49158 goodput=0.47942 badput=0.01216 completed=9556 timedout=232 dropped=0
+Aggregate avg_response_time (mean over runs): 196.35141
+--------------------------------------
+Running simulation with users=245
+265 19000
+RUN: avg_rt=207.69888 throughput=0.49079 goodput=0.47684 badput=0.01395 completed=9485 timedout=267 dropped=0
+Aggregate avg_response_time (mean over runs): 207.69888
+--------------------------------------
+Running simulation with users=250
+304 19000
+RUN: avg_rt=217.41119 throughput=0.49279 goodput=0.47679 badput=0.01600 completed=9497 timedout=307 dropped=0
+Aggregate avg_response_time (mean over runs): 217.41119
+--------------------------------------
+Running simulation with users=255
+329 19000
+RUN: avg_rt=225.13649 throughput=0.49347 goodput=0.47616 badput=0.01732 completed=9483 timedout=333 dropped=0
+Aggregate avg_response_time (mean over runs): 225.13649
+--------------------------------------
+Running simulation with users=260
+413 19000
+RUN: avg_rt=242.79315 throughput=0.49126 goodput=0.46953 badput=0.02174 completed=9372 timedout=416 dropped=0
+Aggregate avg_response_time (mean over runs): 242.79315
+--------------------------------------
+Running simulation with users=265
+403 19000
+RUN: avg_rt=241.47505 throughput=0.50100 goodput=0.47979 badput=0.02121 completed=9499 timedout=412 dropped=0
+Aggregate avg_response_time (mean over runs): 241.47505
+--------------------------------------
+Running simulation with users=270
+458 19000
+RUN: avg_rt=253.22455 throughput=0.49721 goodput=0.47311 badput=0.02411 completed=9393 timedout=467 dropped=0
+Aggregate avg_response_time (mean over runs): 253.22455
+--------------------------------------
+Running simulation with users=275
+501 19000
+RUN: avg_rt=271.10037 throughput=0.49547 goodput=0.46911 badput=0.02637 completed=9346 timedout=506 dropped=0
+Aggregate avg_response_time (mean over runs): 271.10037
+--------------------------------------
+Running simulation with users=280
+523 19000
+RUN: avg_rt=279.38268 throughput=0.49584 goodput=0.46832 badput=0.02753 completed=9303 timedout=529 dropped=0
+Aggregate avg_response_time (mean over runs): 279.38268
+--------------------------------------
+Running simulation with users=285
+581 19000
+RUN: avg_rt=296.19704 throughput=0.49300 goodput=0.46242 badput=0.03058 completed=9200 timedout=593 dropped=0
+Aggregate avg_response_time (mean over runs): 296.19704
+--------------------------------------
+Running simulation with users=290
+635 19000
+RUN: avg_rt=318.07320 throughput=0.48484 goodput=0.45142 badput=0.03342 completed=8991 timedout=642 dropped=0
+Aggregate avg_response_time (mean over runs): 318.07320
+--------------------------------------
+Running simulation with users=295
+639 19000
+RUN: avg_rt=317.68680 throughput=0.49353 goodput=0.45989 badput=0.03363 completed=9144 timedout=647 dropped=0
+Aggregate avg_response_time (mean over runs): 317.68680
+--------------------------------------
+Running simulation with users=300
+663 19000
+RUN: avg_rt=326.30187 throughput=0.49463 goodput=0.45974 badput=0.03489 completed=9176 timedout=669 dropped=0
+Aggregate avg_response_time (mean over runs): 326.30187
+--------------------------------------
+Running simulation with users=305
+662 19000
+RUN: avg_rt=336.09238 throughput=0.49484 goodput=0.46000 badput=0.03484 completed=9181 timedout=665 dropped=0
+Aggregate avg_response_time (mean over runs): 336.09238
+--------------------------------------
+Running simulation with users=310
+692 19000
+RUN: avg_rt=341.49426 throughput=0.49668 goodput=0.46026 badput=0.03642 completed=9200 timedout=696 dropped=0
+Aggregate avg_response_time (mean over runs): 341.49426
+--------------------------------------
+Running simulation with users=315
+758 19000
+RUN: avg_rt=365.37050 throughput=0.49100 goodput=0.45111 badput=0.03989 completed=8989 timedout=767 dropped=0
+Aggregate avg_response_time (mean over runs): 365.37050
+--------------------------------------
+Running simulation with users=320
+750 19000
+RUN: avg_rt=359.37076 throughput=0.50079 goodput=0.46132 badput=0.03947 completed=9199 timedout=762 dropped=0
+Aggregate avg_response_time (mean over runs): 359.37076
+--------------------------------------
+Running simulation with users=325
+897 19000
+RUN: avg_rt=391.57970 throughput=0.48937 goodput=0.44216 badput=0.04721 completed=8840 timedout=904 dropped=0
+Aggregate avg_response_time (mean over runs): 391.57970
+--------------------------------------
+Running simulation with users=330
+823 19000
+RUN: avg_rt=391.70965 throughput=0.49353 goodput=0.45021 badput=0.04332 completed=9012 timedout=829 dropped=0
+Aggregate avg_response_time (mean over runs): 391.70965
+--------------------------------------
+Running simulation with users=335
+898 19000
+RUN: avg_rt=403.03689 throughput=0.49489 goodput=0.44763 badput=0.04726 completed=8958 timedout=905 dropped=0
+Aggregate avg_response_time (mean over runs): 403.03689
+--------------------------------------
+Running simulation with users=340
+935 19000
+RUN: avg_rt=413.33793 throughput=0.49779 goodput=0.44858 badput=0.04921 completed=8923 timedout=943 dropped=0
+Aggregate avg_response_time (mean over runs): 413.33793
+--------------------------------------
+Running simulation with users=345
+998 19000
+RUN: avg_rt=430.54875 throughput=0.49326 goodput=0.44074 badput=0.05253 completed=8795 timedout=1009 dropped=0
+Aggregate avg_response_time (mean over runs): 430.54875
+--------------------------------------
+Running simulation with users=350
+1099 19000
+RUN: avg_rt=447.10961 throughput=0.49105 goodput=0.43321 badput=0.05784 completed=8679 timedout=1107 dropped=0
+Aggregate avg_response_time (mean over runs): 447.10961
+--------------------------------------
+Running simulation with users=355
+1159 19000
+RUN: avg_rt=453.64078 throughput=0.49389 goodput=0.43289 badput=0.06100 completed=8651 timedout=1169 dropped=0
+Aggregate avg_response_time (mean over runs): 453.64078
+--------------------------------------
+Running simulation with users=360
+1102 19000
+RUN: avg_rt=452.25683 throughput=0.49863 goodput=0.44063 badput=0.05800 completed=8819 timedout=1108 dropped=0
+Aggregate avg_response_time (mean over runs): 452.25683
+--------------------------------------
+Running simulation with users=365
+1300 19000
+RUN: avg_rt=483.48316 throughput=0.49037 goodput=0.42195 badput=0.06842 completed=8464 timedout=1306 dropped=0
+Aggregate avg_response_time (mean over runs): 483.48316
+--------------------------------------
+Running simulation with users=370
+1338 19000
+RUN: avg_rt=490.23732 throughput=0.49532 goodput=0.42489 badput=0.07042 completed=8483 timedout=1345 dropped=0
+Aggregate avg_response_time (mean over runs): 490.23732
+--------------------------------------
+Running simulation with users=375
+1558 19000
+RUN: avg_rt=518.55826 throughput=0.48647 goodput=0.40447 badput=0.08200 completed=8128 timedout=1561 dropped=0
+Aggregate avg_response_time (mean over runs): 518.55826
+--------------------------------------
+Running simulation with users=380
+1558 19000
+RUN: avg_rt=519.40047 throughput=0.49232 goodput=0.41032 badput=0.08200 completed=8220 timedout=1566 dropped=0
+Aggregate avg_response_time (mean over runs): 519.40047
+--------------------------------------
+Running simulation with users=385
+1522 19000
+RUN: avg_rt=517.08247 throughput=0.49821 goodput=0.41811 badput=0.08011 completed=8365 timedout=1531 dropped=0
+Aggregate avg_response_time (mean over runs): 517.08247
+--------------------------------------
+Running simulation with users=390
+1656 19000
+RUN: avg_rt=538.12834 throughput=0.49605 goodput=0.40889 badput=0.08716 completed=8165 timedout=1668 dropped=0
+Aggregate avg_response_time (mean over runs): 538.12834
+--------------------------------------
+Running simulation with users=395
+1927 19000
+RUN: avg_rt=570.31259 throughput=0.48653 goodput=0.38511 badput=0.10142 completed=7773 timedout=1934 dropped=0
+Aggregate avg_response_time (mean over runs): 570.31259
+--------------------------------------
+Running simulation with users=400
+1813 19000
+RUN: avg_rt=562.20161 throughput=0.49532 goodput=0.39989 badput=0.09542 completed=8045 timedout=1821 dropped=0
+Aggregate avg_response_time (mean over runs): 562.20161
+--------------------------------------
+Running simulation with users=405
+1985 19000
+RUN: avg_rt=581.80558 throughput=0.49137 goodput=0.38689 badput=0.10447 completed=7769 timedout=1996 dropped=0
+Aggregate avg_response_time (mean over runs): 581.80558
+--------------------------------------
+Running simulation with users=410
+1997 19000
+RUN: avg_rt=580.72654 throughput=0.50037 goodput=0.39526 badput=0.10511 completed=7936 timedout=2004 dropped=0
+Aggregate avg_response_time (mean over runs): 580.72654
+--------------------------------------
+Running simulation with users=415
+2276 19000
+RUN: avg_rt=611.40419 throughput=0.49258 goodput=0.37279 badput=0.11979 completed=7507 timedout=2287 dropped=0
+Aggregate avg_response_time (mean over runs): 611.40419
+--------------------------------------
+Running simulation with users=420
+2476 19000
+RUN: avg_rt=628.64355 throughput=0.49100 goodput=0.36068 badput=0.13032 completed=7268 timedout=2489 dropped=0
+Aggregate avg_response_time (mean over runs): 628.64355
+--------------------------------------
+Running simulation with users=425
+2521 19000
+RUN: avg_rt=631.19400 throughput=0.49447 goodput=0.36179 badput=0.13268 completed=7306 timedout=2528 dropped=0
+Aggregate avg_response_time (mean over runs): 631.19400
+--------------------------------------
+Running simulation with users=430
+2736 19000
+RUN: avg_rt=652.01786 throughput=0.49305 goodput=0.34905 badput=0.14400 completed=7057 timedout=2750 dropped=0
+Aggregate avg_response_time (mean over runs): 652.01786
+--------------------------------------
+Running simulation with users=435
+3042 19000
+RUN: avg_rt=673.73730 throughput=0.49147 goodput=0.33137 badput=0.16011 completed=6719 timedout=3053 dropped=0
+Aggregate avg_response_time (mean over runs): 673.73730
+--------------------------------------
+Running simulation with users=440
+3162 19000
+RUN: avg_rt=680.72552 throughput=0.49284 goodput=0.32642 badput=0.16642 completed=6642 timedout=3174 dropped=0
+Aggregate avg_response_time (mean over runs): 680.72552
+--------------------------------------
+Running simulation with users=445
+3559 19000
+RUN: avg_rt=711.50487 throughput=0.49211 goodput=0.30479 badput=0.18732 completed=6201 timedout=3572 dropped=0
+Aggregate avg_response_time (mean over runs): 711.50487
+--------------------------------------
+Running simulation with users=450
+4110 19000
+RUN: avg_rt=745.53191 throughput=0.48816 goodput=0.27184 badput=0.21632 completed=5588 timedout=4119 dropped=0
+Aggregate avg_response_time (mean over runs): 745.53191
+--------------------------------------
+Running simulation with users=455
+4293 19000
+RUN: avg_rt=756.46073 throughput=0.49126 goodput=0.26532 badput=0.22595 completed=5411 timedout=4311 dropped=0
+Aggregate avg_response_time (mean over runs): 756.46073
+--------------------------------------
+Running simulation with users=460
+4348 19000
+RUN: avg_rt=763.57057 throughput=0.49111 goodput=0.26226 badput=0.22884 completed=5434 timedout=4356 dropped=0
+Aggregate avg_response_time (mean over runs): 763.57057
+--------------------------------------
+Running simulation with users=465
+4816 19000
+RUN: avg_rt=791.02222 throughput=0.49079 goodput=0.23732 badput=0.25347 completed=4939 timedout=4825 dropped=0
+Aggregate avg_response_time (mean over runs): 791.02222
+--------------------------------------
+Running simulation with users=470
+4803 19000
+RUN: avg_rt=789.62763 throughput=0.49374 goodput=0.24095 badput=0.25279 completed=4989 timedout=4822 dropped=0
+Aggregate avg_response_time (mean over runs): 789.62763
+--------------------------------------
+Running simulation with users=475
+5365 19000
+RUN: avg_rt=824.03677 throughput=0.49079 goodput=0.20842 badput=0.28237 completed=4351 timedout=5382 dropped=0
+Aggregate avg_response_time (mean over runs): 824.03677
+--------------------------------------
+Running simulation with users=480
+5026 19000
+RUN: avg_rt=801.10750 throughput=0.49926 goodput=0.23474 badput=0.26453 completed=4871 timedout=5040 dropped=0
+Aggregate avg_response_time (mean over runs): 801.10750
+--------------------------------------
+Running simulation with users=485
+5915 19000
+RUN: avg_rt=863.58944 throughput=0.48900 goodput=0.17768 badput=0.31132 completed=3796 timedout=5935 dropped=0
+Aggregate avg_response_time (mean over runs): 863.58944
+--------------------------------------
+Running simulation with users=490
+6090 19000
+RUN: avg_rt=877.08049 throughput=0.49042 goodput=0.16989 badput=0.32053 completed=3639 timedout=6102 dropped=0
+Aggregate avg_response_time (mean over runs): 877.08049
+--------------------------------------
+Running simulation with users=495
+6349 19000
+RUN: avg_rt=888.08680 throughput=0.49516 goodput=0.16100 badput=0.33416 completed=3450 timedout=6362 dropped=0
+Aggregate avg_response_time (mean over runs): 888.08680
+--------------------------------------
+Running simulation with users=500
+6637 19000
+RUN: avg_rt=911.59115 throughput=0.49058 goodput=0.14126 badput=0.34932 completed=3108 timedout=6649 dropped=0
+Aggregate avg_response_time (mean over runs): 911.59115
+--------------------------------------
+Running simulation with users=505
+6646 19000
+RUN: avg_rt=913.51609 throughput=0.49316 goodput=0.14337 badput=0.34979 completed=3156 timedout=6659 dropped=0
+Aggregate avg_response_time (mean over runs): 913.51609
+--------------------------------------
+Running simulation with users=510
+6900 19000
+RUN: avg_rt=921.23652 throughput=0.49816 goodput=0.13500 badput=0.36316 completed=2971 timedout=6919 dropped=0
+Aggregate avg_response_time (mean over runs): 921.23652
+--------------------------------------
+Running simulation with users=515
+7248 19000
+RUN: avg_rt=957.81219 throughput=0.49126 goodput=0.10979 badput=0.38147 completed=2505 timedout=7260 dropped=0
+Aggregate avg_response_time (mean over runs): 957.81219
+--------------------------------------
+Running simulation with users=520
+7324 19000
+RUN: avg_rt=952.77357 throughput=0.49700 goodput=0.11153 badput=0.38547 completed=2559 timedout=7337 dropped=0
+Aggregate avg_response_time (mean over runs): 952.77357
+--------------------------------------
+Running simulation with users=525
+7451 19000
+RUN: avg_rt=967.97038 throughput=0.49632 goodput=0.10416 badput=0.39216 completed=2401 timedout=7469 dropped=0
+Aggregate avg_response_time (mean over runs): 967.97038
+--------------------------------------
+Running simulation with users=530
+7868 19000
+RUN: avg_rt=1005.76575 throughput=0.49258 goodput=0.07847 badput=0.41411 completed=1918 timedout=7888 dropped=0
+Aggregate avg_response_time (mean over runs): 1005.76575
+--------------------------------------
+Running simulation with users=535
+7934 19000
+RUN: avg_rt=1015.20325 throughput=0.49147 goodput=0.07389 badput=0.41758 completed=1836 timedout=7949 dropped=0
+Aggregate avg_response_time (mean over runs): 1015.20325
+--------------------------------------
+Running simulation with users=540
+8009 19000
+RUN: avg_rt=1022.78508 throughput=0.49247 goodput=0.07095 badput=0.42153 completed=1760 timedout=8032 dropped=0
+Aggregate avg_response_time (mean over runs): 1022.78508
+--------------------------------------
+Running simulation with users=545
+8230 19000
+RUN: avg_rt=1036.82256 throughput=0.49626 goodput=0.06311 badput=0.43316 completed=1613 timedout=8247 dropped=0
+Aggregate avg_response_time (mean over runs): 1036.82256
+--------------------------------------
+Running simulation with users=550
+8475 19000
+RUN: avg_rt=1085.27180 throughput=0.48453 goodput=0.03847 badput=0.44605 completed=1148 timedout=8494 dropped=0
+Aggregate avg_response_time (mean over runs): 1085.27180
+--------------------------------------
+Running simulation with users=555
+8554 19000
+RUN: avg_rt=1070.86852 throughput=0.49411 goodput=0.04389 badput=0.45021 completed=1228 timedout=8572 dropped=0
+Aggregate avg_response_time (mean over runs): 1070.86852
+--------------------------------------
+Running simulation with users=560
+8524 19000
+RUN: avg_rt=1094.95409 throughput=0.48742 goodput=0.03879 badput=0.44863 completed=1157 timedout=8546 dropped=0
+Aggregate avg_response_time (mean over runs): 1094.95409
+--------------------------------------
+Running simulation with users=565
+8637 19000
+RUN: avg_rt=1090.39993 throughput=0.49379 goodput=0.03921 badput=0.45458 completed=1198 timedout=8647 dropped=0
+Aggregate avg_response_time (mean over runs): 1090.39993
+--------------------------------------
+Running simulation with users=570
+8776 19000
+RUN: avg_rt=1103.72617 throughput=0.49405 goodput=0.03216 badput=0.46189 completed=984 timedout=8809 dropped=0
+Aggregate avg_response_time (mean over runs): 1103.72617
+--------------------------------------
+Running simulation with users=575
+8812 19000
+RUN: avg_rt=1135.89482 throughput=0.48632 goodput=0.02253 badput=0.46379 completed=872 timedout=8832 dropped=0
+Aggregate avg_response_time (mean over runs): 1135.89482
+--------------------------------------
+Running simulation with users=580
+8928 19000
+RUN: avg_rt=1131.88132 throughput=0.49374 goodput=0.02384 badput=0.46989 completed=859 timedout=8954 dropped=0
+Aggregate avg_response_time (mean over runs): 1131.88132
+--------------------------------------
+Running simulation with users=585
+8946 19000
+RUN: avg_rt=1142.58613 throughput=0.49295 goodput=0.02211 badput=0.47084 completed=824 timedout=8970 dropped=0
+Aggregate avg_response_time (mean over runs): 1142.58613
+--------------------------------------
+Running simulation with users=590
+8971 19000
+RUN: avg_rt=1163.20846 throughput=0.48974 goodput=0.01758 badput=0.47216 completed=714 timedout=8997 dropped=0
+Aggregate avg_response_time (mean over runs): 1163.20846
+--------------------------------------
+Running simulation with users=595
+8949 19000
+RUN: avg_rt=1185.11217 throughput=0.48479 goodput=0.01379 badput=0.47100 completed=660 timedout=8974 dropped=0
+Aggregate avg_response_time (mean over runs): 1185.11217
+--------------------------------------
+Running simulation with users=600
+9307 19000
+RUN: avg_rt=1146.32177 throughput=0.50600 goodput=0.01616 badput=0.48984 completed=671 timedout=9345 dropped=0
+Aggregate avg_response_time (mean over runs): 1146.32177
+--------------------------------------
+Running simulation with users=605
+9087 19000
+RUN: avg_rt=1191.54753 throughput=0.49079 goodput=0.01253 badput=0.47826 completed=676 timedout=9108 dropped=0
+Aggregate avg_response_time (mean over runs): 1191.54753
+--------------------------------------
+Running simulation with users=610
+9261 19000
+RUN: avg_rt=1179.52924 throughput=0.49974 goodput=0.01232 badput=0.48742 completed=630 timedout=9286 dropped=0
+Aggregate avg_response_time (mean over runs): 1179.52924
+--------------------------------------
+Running simulation with users=615
+9116 19000
+RUN: avg_rt=1210.54375 throughput=0.49026 goodput=0.01047 badput=0.47979 completed=613 timedout=9149 dropped=0
+Aggregate avg_response_time (mean over runs): 1210.54375
+--------------------------------------
+Running simulation with users=620
+9135 19000
+RUN: avg_rt=1221.65727 throughput=0.49100 goodput=0.01021 badput=0.48079 completed=568 timedout=9170 dropped=0
+Aggregate avg_response_time (mean over runs): 1221.65727
+--------------------------------------
+Running simulation with users=625
+9064 19000
+RUN: avg_rt=1236.13263 throughput=0.48874 goodput=0.01168 badput=0.47705 completed=622 timedout=9093 dropped=0
+Aggregate avg_response_time (mean over runs): 1236.13263
+--------------------------------------
+Running simulation with users=630
+9259 19000
+RUN: avg_rt=1232.04713 throughput=0.49511 goodput=0.00779 badput=0.48732 completed=576 timedout=9279 dropped=0
+Aggregate avg_response_time (mean over runs): 1232.04713
+--------------------------------------
+Running simulation with users=635
+9197 19000
+RUN: avg_rt=1246.12732 throughput=0.49321 goodput=0.00916 badput=0.48405 completed=596 timedout=9220 dropped=0
+Aggregate avg_response_time (mean over runs): 1246.12732
+--------------------------------------
+Running simulation with users=640
+9234 19000
+RUN: avg_rt=1254.73138 throughput=0.49389 goodput=0.00789 badput=0.48600 completed=573 timedout=9257 dropped=0
+Aggregate avg_response_time (mean over runs): 1254.73138
+--------------------------------------
+Running simulation with users=645
+9160 19000
+RUN: avg_rt=1277.52636 throughput=0.48900 goodput=0.00689 badput=0.48211 completed=532 timedout=9191 dropped=0
+Aggregate avg_response_time (mean over runs): 1277.52636
+--------------------------------------
+Running simulation with users=650
+9325 19000
+RUN: avg_rt=1257.84206 throughput=0.49947 goodput=0.00868 badput=0.49079 completed=593 timedout=9345 dropped=0
+Aggregate avg_response_time (mean over runs): 1257.84206
+--------------------------------------
+Running simulation with users=655
+9374 19000
+RUN: avg_rt=1265.16438 throughput=0.50105 goodput=0.00768 badput=0.49337 completed=536 timedout=9407 dropped=0
+Aggregate avg_response_time (mean over runs): 1265.16438
+--------------------------------------
+Running simulation with users=660
+9270 19000
+RUN: avg_rt=1296.72759 throughput=0.49332 goodput=0.00542 badput=0.48789 completed=503 timedout=9298 dropped=0
+Aggregate avg_response_time (mean over runs): 1296.72759
+--------------------------------------
+Running simulation with users=665
+9203 19000
+RUN: avg_rt=1308.73257 throughput=0.49174 goodput=0.00737 badput=0.48437 completed=550 timedout=9239 dropped=0
+Aggregate avg_response_time (mean over runs): 1308.73257
+--------------------------------------
+Running simulation with users=670
+9273 19000
+RUN: avg_rt=1324.94405 throughput=0.49142 goodput=0.00337 badput=0.48805 completed=445 timedout=9307 dropped=0
+Aggregate avg_response_time (mean over runs): 1324.94405
+--------------------------------------
+Running simulation with users=675
+9216 19000
+RUN: avg_rt=1329.69011 throughput=0.49179 goodput=0.00674 badput=0.48505 completed=544 timedout=9243 dropped=0
+Aggregate avg_response_time (mean over runs): 1329.69011
+--------------------------------------
+Running simulation with users=680
+9392 19000
+RUN: avg_rt=1326.64086 throughput=0.49758 goodput=0.00326 badput=0.49432 completed=438 timedout=9431 dropped=0
+Aggregate avg_response_time (mean over runs): 1326.64086
+--------------------------------------
+Running simulation with users=685
+9256 19000
+RUN: avg_rt=1350.62251 throughput=0.49195 goodput=0.00479 badput=0.48716 completed=492 timedout=9283 dropped=0
+Aggregate avg_response_time (mean over runs): 1350.62251
+--------------------------------------
+Running simulation with users=690
+9370 19000
+RUN: avg_rt=1349.08286 throughput=0.49632 goodput=0.00316 badput=0.49316 completed=448 timedout=9402 dropped=0
+Aggregate avg_response_time (mean over runs): 1349.08286
+--------------------------------------
+Running simulation with users=695
+9408 19000
+RUN: avg_rt=1347.28925 throughput=0.50032 goodput=0.00516 badput=0.49516 completed=485 timedout=9446 dropped=0
+Aggregate avg_response_time (mean over runs): 1347.28925
+--------------------------------------
+Running simulation with users=700
+9402 19000
+RUN: avg_rt=1359.15449 throughput=0.49926 goodput=0.00442 badput=0.49484 completed=502 timedout=9434 dropped=0
+Aggregate avg_response_time (mean over runs): 1359.15449
+--------------------------------------
+Running simulation with users=705
+9369 19000
+RUN: avg_rt=1374.15878 throughput=0.49768 goodput=0.00458 badput=0.49311 completed=493 timedout=9407 dropped=0
+Aggregate avg_response_time (mean over runs): 1374.15878
+--------------------------------------
+Running simulation with users=710
+9263 19000
+RUN: avg_rt=1398.49416 throughput=0.49195 goodput=0.00442 badput=0.48753 completed=479 timedout=9296 dropped=0
+Aggregate avg_response_time (mean over runs): 1398.49416
+--------------------------------------
+Running simulation with users=715
+9415 19000
+RUN: avg_rt=1393.78012 throughput=0.49805 goodput=0.00253 badput=0.49553 completed=447 timedout=9445 dropped=0
+Aggregate avg_response_time (mean over runs): 1393.78012
+--------------------------------------
+Running simulation with users=720
+9245 19000
+RUN: avg_rt=1426.93513 throughput=0.48932 goodput=0.00274 badput=0.48658 completed=455 timedout=9277 dropped=0
+Aggregate avg_response_time (mean over runs): 1426.93513
+--------------------------------------
+Running simulation with users=725
+9382 19000
+RUN: avg_rt=1411.97257 throughput=0.49784 goodput=0.00405 badput=0.49379 completed=493 timedout=9410 dropped=0
+Aggregate avg_response_time (mean over runs): 1411.97257
+--------------------------------------
+Running simulation with users=730
+9419 19000
+RUN: avg_rt=1421.06497 throughput=0.49868 goodput=0.00295 badput=0.49574 completed=460 timedout=9453 dropped=0
+Aggregate avg_response_time (mean over runs): 1421.06497
+--------------------------------------
+Running simulation with users=735
+9387 19000
+RUN: avg_rt=1433.22668 throughput=0.49737 goodput=0.00332 badput=0.49405 completed=437 timedout=9428 dropped=0
+Aggregate avg_response_time (mean over runs): 1433.22668
+--------------------------------------
+Running simulation with users=740
+9366 19000
+RUN: avg_rt=1444.55047 throughput=0.49658 goodput=0.00363 badput=0.49295 completed=476 timedout=9406 dropped=0
+Aggregate avg_response_time (mean over runs): 1444.55047
+--------------------------------------
+Running simulation with users=745
+9286 19000
+RUN: avg_rt=1470.69999 throughput=0.49147 goodput=0.00274 badput=0.48874 completed=442 timedout=9322 dropped=0
+Aggregate avg_response_time (mean over runs): 1470.69999
+--------------------------------------
+Running simulation with users=750
+9324 19000
+RUN: avg_rt=1476.13202 throughput=0.49284 goodput=0.00211 badput=0.49074 completed=425 timedout=9360 dropped=0
+Aggregate avg_response_time (mean over runs): 1476.13202
+--------------------------------------
+Running simulation with users=755
+9401 19000
+RUN: avg_rt=1470.03821 throughput=0.49800 goodput=0.00321 badput=0.49479 completed=445 timedout=9444 dropped=0
+Aggregate avg_response_time (mean over runs): 1470.03821
+--------------------------------------
+Running simulation with users=760
+9428 19000
+RUN: avg_rt=1479.29193 throughput=0.49884 goodput=0.00263 badput=0.49621 completed=428 timedout=9470 dropped=0
+Aggregate avg_response_time (mean over runs): 1479.29193
+--------------------------------------
+Running simulation with users=765
+9343 19000
+RUN: avg_rt=1500.29004 throughput=0.49474 goodput=0.00300 badput=0.49174 completed=452 timedout=9379 dropped=0
+Aggregate avg_response_time (mean over runs): 1500.29004
+--------------------------------------
+Running simulation with users=770
+9422 19000
+RUN: avg_rt=1500.41580 throughput=0.49795 goodput=0.00205 badput=0.49589 completed=426 timedout=9454 dropped=0
+Aggregate avg_response_time (mean over runs): 1500.41580
+--------------------------------------
+Running simulation with users=775
+9261 19000
+RUN: avg_rt=1531.09231 throughput=0.49032 goodput=0.00289 badput=0.48742 completed=464 timedout=9300 dropped=0
+Aggregate avg_response_time (mean over runs): 1531.09231
+--------------------------------------
+Running simulation with users=780
+9315 19000
+RUN: avg_rt=1530.59807 throughput=0.49374 goodput=0.00347 badput=0.49026 completed=465 timedout=9363 dropped=0
+Aggregate avg_response_time (mean over runs): 1530.59807
+--------------------------------------
+Running simulation with users=785
+9357 19000
+RUN: avg_rt=1537.95449 throughput=0.49511 goodput=0.00263 badput=0.49247 completed=426 timedout=9405 dropped=0
+Aggregate avg_response_time (mean over runs): 1537.95449
+--------------------------------------
+Running simulation with users=790
+9391 19000
+RUN: avg_rt=1543.68897 throughput=0.49600 goodput=0.00174 badput=0.49426 completed=420 timedout=9432 dropped=0
+Aggregate avg_response_time (mean over runs): 1543.68897
+--------------------------------------
+Running simulation with users=795
+9418 19000
+RUN: avg_rt=1550.14688 throughput=0.49737 goodput=0.00168 badput=0.49568 completed=401 timedout=9460 dropped=0
+Aggregate avg_response_time (mean over runs): 1550.14688
+--------------------------------------
+Running simulation with users=800
+9276 19000
+RUN: avg_rt=1580.67245 throughput=0.49032 goodput=0.00211 badput=0.48821 completed=419 timedout=9315 dropped=0
+Aggregate avg_response_time (mean over runs): 1580.67245
+--------------------------------------
+Running simulation with users=805
+9439 19000
+RUN: avg_rt=1566.16858 throughput=0.49847 goodput=0.00168 badput=0.49679 completed=421 timedout=9489 dropped=0
+Aggregate avg_response_time (mean over runs): 1566.16858
+--------------------------------------
+Running simulation with users=810
+9293 19000
+RUN: avg_rt=1599.58638 throughput=0.49058 goodput=0.00147 badput=0.48911 completed=377 timedout=9344 dropped=0
+Aggregate avg_response_time (mean over runs): 1599.58638
+--------------------------------------
+Running simulation with users=815
+9424 19000
+RUN: avg_rt=1586.45056 throughput=0.49753 goodput=0.00153 badput=0.49600 completed=429 timedout=9473 dropped=0
+Aggregate avg_response_time (mean over runs): 1586.45056
+--------------------------------------
+Running simulation with users=820
+9410 19000
+RUN: avg_rt=1602.07526 throughput=0.49689 goodput=0.00163 badput=0.49526 completed=412 timedout=9450 dropped=0
+Aggregate avg_response_time (mean over runs): 1602.07526
+--------------------------------------
+Running simulation with users=825
+9339 19000
+RUN: avg_rt=1621.56531 throughput=0.49305 goodput=0.00153 badput=0.49153 completed=422 timedout=9375 dropped=0
+Aggregate avg_response_time (mean over runs): 1621.56531
+--------------------------------------
+Running simulation with users=830
+9281 19000
+RUN: avg_rt=1640.45303 throughput=0.48979 goodput=0.00132 badput=0.48847 completed=399 timedout=9327 dropped=0
+Aggregate avg_response_time (mean over runs): 1640.45303
+--------------------------------------
+Running simulation with users=835
+9405 19000
+RUN: avg_rt=1627.25443 throughput=0.49674 goodput=0.00174 badput=0.49500 completed=427 timedout=9449 dropped=0
+Aggregate avg_response_time (mean over runs): 1627.25443
+--------------------------------------
+Running simulation with users=840
+9470 19000
+RUN: avg_rt=1625.77227 throughput=0.50032 goodput=0.00189 badput=0.49842 completed=440 timedout=9511 dropped=0
+Aggregate avg_response_time (mean over runs): 1625.77227
+--------------------------------------
+Running simulation with users=845
+9339 19000
+RUN: avg_rt=1658.10137 throughput=0.49342 goodput=0.00189 badput=0.49153 completed=420 timedout=9385 dropped=0
+Aggregate avg_response_time (mean over runs): 1658.10137
+--------------------------------------
+Running simulation with users=850
+9305 19000
+RUN: avg_rt=1672.52620 throughput=0.49153 goodput=0.00179 badput=0.48974 completed=403 timedout=9354 dropped=0
+Aggregate avg_response_time (mean over runs): 1672.52620
+--------------------------------------
+Running simulation with users=855
+9462 19000
+RUN: avg_rt=1656.60146 throughput=0.49968 goodput=0.00168 badput=0.49800 completed=413 timedout=9507 dropped=0
+Aggregate avg_response_time (mean over runs): 1656.60146
+--------------------------------------
+Running simulation with users=860
+9449 19000
+RUN: avg_rt=1673.39189 throughput=0.49858 goodput=0.00126 badput=0.49732 completed=380 timedout=9496 dropped=0
+Aggregate avg_response_time (mean over runs): 1673.39189
+--------------------------------------
+Running simulation with users=865
+9433 19000
+RUN: avg_rt=1683.77934 throughput=0.49779 goodput=0.00132 badput=0.49647 completed=399 timedout=9482 dropped=0
+Aggregate avg_response_time (mean over runs): 1683.77934
+--------------------------------------
+Running simulation with users=870
+9269 19000
+RUN: avg_rt=1720.60862 throughput=0.48932 goodput=0.00147 badput=0.48784 completed=383 timedout=9317 dropped=0
+Aggregate avg_response_time (mean over runs): 1720.60862
+--------------------------------------
+Running simulation with users=875
+9445 19000
+RUN: avg_rt=1698.27052 throughput=0.49884 goodput=0.00174 badput=0.49711 completed=409 timedout=9493 dropped=0
+Aggregate avg_response_time (mean over runs): 1698.27052
+--------------------------------------
+Running simulation with users=880
+9303 19000
+RUN: avg_rt=1732.11634 throughput=0.49105 goodput=0.00142 badput=0.48963 completed=411 timedout=9348 dropped=0
+Aggregate avg_response_time (mean over runs): 1732.11634
+--------------------------------------
+Running simulation with users=885
+9357 19000
+RUN: avg_rt=1735.32038 throughput=0.49374 goodput=0.00126 badput=0.49247 completed=388 timedout=9413 dropped=0
+Aggregate avg_response_time (mean over runs): 1735.32038
+--------------------------------------
+Running simulation with users=890
+9425 19000
+RUN: avg_rt=1728.14135 throughput=0.49816 goodput=0.00211 badput=0.49605 completed=416 timedout=9478 dropped=0
+Aggregate avg_response_time (mean over runs): 1728.14135
+--------------------------------------
+Running simulation with users=895
+9426 19000
+RUN: avg_rt=1740.34274 throughput=0.49753 goodput=0.00142 badput=0.49611 completed=411 timedout=9474 dropped=0
+Aggregate avg_response_time (mean over runs): 1740.34274
+--------------------------------------
+Running simulation with users=900
+9416 19000
+RUN: avg_rt=1754.92886 throughput=0.49663 goodput=0.00105 badput=0.49558 completed=382 timedout=9467 dropped=0
+Aggregate avg_response_time (mean over runs): 1754.92886
+--------------------------------------
+Running simulation with users=905
+9426 19000
+RUN: avg_rt=1760.59346 throughput=0.49732 goodput=0.00121 badput=0.49611 completed=395 timedout=9480 dropped=0
+Aggregate avg_response_time (mean over runs): 1760.59346
+--------------------------------------
+Running simulation with users=910
+9288 19000
+RUN: avg_rt=1792.47351 throughput=0.49011 goodput=0.00126 badput=0.48884 completed=417 timedout=9325 dropped=0
+Aggregate avg_response_time (mean over runs): 1792.47351
+--------------------------------------
+Running simulation with users=915
+9317 19000
+RUN: avg_rt=1798.25947 throughput=0.49168 goodput=0.00132 badput=0.49037 completed=406 timedout=9364 dropped=0
+Aggregate avg_response_time (mean over runs): 1798.25947
+--------------------------------------
+Running simulation with users=920
+9294 19000
+RUN: avg_rt=1811.97038 throughput=0.49037 goodput=0.00121 badput=0.48916 completed=401 timedout=9343 dropped=0
+Aggregate avg_response_time (mean over runs): 1811.97038
+--------------------------------------
+Running simulation with users=925
+9463 19000
+RUN: avg_rt=1788.32467 throughput=0.49979 goodput=0.00174 badput=0.49805 completed=447 timedout=9497 dropped=0
+Aggregate avg_response_time (mean over runs): 1788.32467
+--------------------------------------
+Running simulation with users=930
+9413 19000
+RUN: avg_rt=1810.32918 throughput=0.49668 goodput=0.00126 badput=0.49542 completed=398 timedout=9462 dropped=0
+Aggregate avg_response_time (mean over runs): 1810.32918
+--------------------------------------
+Running simulation with users=935
+9451 19000
+RUN: avg_rt=1811.62430 throughput=0.49895 goodput=0.00153 badput=0.49742 completed=407 timedout=9499 dropped=0
+Aggregate avg_response_time (mean over runs): 1811.62430
+--------------------------------------
+Running simulation with users=940
+9473 19000
+RUN: avg_rt=1817.45904 throughput=0.50011 goodput=0.00153 badput=0.49858 completed=434 timedout=9505 dropped=0
+Aggregate avg_response_time (mean over runs): 1817.45904
+--------------------------------------
+Running simulation with users=945
+9435 19000
+RUN: avg_rt=1832.34054 throughput=0.49805 goodput=0.00147 badput=0.49658 completed=435 timedout=9473 dropped=0
+Aggregate avg_response_time (mean over runs): 1832.34054
+--------------------------------------
+Running simulation with users=950
+9456 19000
+RUN: avg_rt=1838.00704 throughput=0.49900 goodput=0.00132 badput=0.49768 completed=422 timedout=9506 dropped=0
+Aggregate avg_response_time (mean over runs): 1838.00704
+--------------------------------------
+Running simulation with users=955
+9366 19000
+RUN: avg_rt=1868.58533 throughput=0.49389 goodput=0.00095 badput=0.49295 completed=390 timedout=9410 dropped=0
+Aggregate avg_response_time (mean over runs): 1868.58533
+--------------------------------------
+Running simulation with users=960
+9440 19000
+RUN: avg_rt=1862.22949 throughput=0.49795 goodput=0.00111 badput=0.49684 completed=386 timedout=9487 dropped=0
+Aggregate avg_response_time (mean over runs): 1862.22949
+--------------------------------------
+Running simulation with users=965
+9428 19000
+RUN: avg_rt=1873.72798 throughput=0.49732 goodput=0.00111 badput=0.49621 completed=413 timedout=9464 dropped=0
+Aggregate avg_response_time (mean over runs): 1873.72798
+--------------------------------------
+Running simulation with users=970
+9322 19000
+RUN: avg_rt=1904.21722 throughput=0.49195 goodput=0.00132 badput=0.49063 completed=419 timedout=9360 dropped=0
+Aggregate avg_response_time (mean over runs): 1904.21722
+--------------------------------------
+Running simulation with users=975
+9443 19000
+RUN: avg_rt=1888.77624 throughput=0.49837 goodput=0.00137 badput=0.49700 completed=377 timedout=9499 dropped=0
+Aggregate avg_response_time (mean over runs): 1888.77624
+--------------------------------------
+Running simulation with users=980
+9461 19000
+RUN: avg_rt=1893.51322 throughput=0.49926 goodput=0.00132 badput=0.49795 completed=426 timedout=9504 dropped=0
+Aggregate avg_response_time (mean over runs): 1893.51322
+--------------------------------------
+Running simulation with users=985
+9259 19000
+RUN: avg_rt=1942.57881 throughput=0.48868 goodput=0.00137 badput=0.48732 completed=426 timedout=9305 dropped=0
+Aggregate avg_response_time (mean over runs): 1942.57881
+--------------------------------------
+Running simulation with users=990
+9432 19000
+RUN: avg_rt=1915.93749 throughput=0.49821 goodput=0.00179 badput=0.49642 completed=440 timedout=9479 dropped=0
+Aggregate avg_response_time (mean over runs): 1915.93749
+--------------------------------------
+Running simulation with users=995
+9351 19000
+RUN: avg_rt=1946.20747 throughput=0.49332 goodput=0.00116 badput=0.49216 completed=422 timedout=9388 dropped=0
+Aggregate avg_response_time (mean over runs): 1946.20747
+--------------------------------------
+Running simulation with users=1000
+9456 19000
+RUN: avg_rt=1933.25889 throughput=0.49911 goodput=0.00142 badput=0.49768 completed=428 timedout=9485 dropped=0
+Aggregate avg_response_time (mean over runs): 1933.25889
+--------------------------------------

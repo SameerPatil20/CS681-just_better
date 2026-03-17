@@ -39,7 +39,8 @@ def parse_file(filename):
             m_match = re.search(r'N=(\d+)', line)
             th_match = re.search(r'Throughput=([\d\.]+)', line)
             rt_match = re.search(r'AvgLatency=([\d\.]+)', line)
-
+            # if "Successes" in line :
+                # rt_match = float(rt_match) * 1000.0    
             if m_match and th_match and rt_match:
                 M.append(int(m_match.group(1)))
                 throughput.append(float(th_match.group(1)))
@@ -61,9 +62,16 @@ def main():
 
     # -------- Throughput Plot --------
     plt.subplot(1, 2, 1)
-    for file in files:
+    linestyles = ['-', '--', '-.', ':']
+    markers = ['o', 's', '^', 'd', 'x', '*']
+
+    for i, file in enumerate(files):
         M, th, _ = parse_file(file)
-        plt.plot(M, th, marker='o', label=file)
+        plt.plot(
+            M, th,
+            linestyle=linestyles[i % len(linestyles)],
+            label=file
+        )
 
     plt.xlabel("M (Users)")
     plt.ylabel("Throughput")
@@ -73,9 +81,13 @@ def main():
 
     # -------- Response Time Plot --------
     plt.subplot(1, 2, 2)
-    for file in files:
+    for i, file in enumerate(files):
         M, _, rt = parse_file(file)
-        plt.plot(M, rt, marker='o', label=file)
+        plt.plot(
+            M, rt,
+            linestyle=linestyles[i % len(linestyles)],
+            label=file
+        )
 
     plt.xlabel("M (Users)")
     plt.ylabel("Response Time / Latency")

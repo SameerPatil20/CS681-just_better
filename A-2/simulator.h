@@ -17,6 +17,7 @@ struct Result {
         double throughput=0.0;
         double goodput=0.0;
         double badput=0.0;
+        double util=0.0;
         int completed=0;
         int timedout=0;
         int dropped=0;

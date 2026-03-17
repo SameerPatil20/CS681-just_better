@@ -104,10 +104,10 @@ int main(int argc, char** argv) {
     unsigned seed = common::RNG_SEED + 9 + 100;
     auto res = sim.run(simtime, warmup, seed, 0, trace_on);
     results.push_back(res);
-    std::cout <<fixed<<setprecision(5)<< "RUN: avg_rt=" << res.avg_response_time
-                << " throughput=" << res.throughput << " goodput=" << res.goodput
-                << " badput=" << res.badput << " completed=" << res.completed
-                << " timedout=" << res.timedout << " dropped=" << res.dropped << "\n";
+    std::cout <<fixed<<setprecision(5)<< "ResponseTime=" << res.avg_response_time
+                << " Throughput=" << res.throughput*1000 << " goodput=" << res.goodput*1000
+                << " badput=" << res.badput*1000 << " completed=" << res.completed
+                << " timedout=" << res.timedout << " dropped=" << res.dropped << " Util="<<res.util<< "\n";
     // }
 
     std::vector<double> avgs;
@@ -117,6 +117,6 @@ int main(int argc, char** argv) {
         for (double v: avgs) mean += v;
         mean /= avgs.size();
     }
-    std::cout << "Aggregate avg_response_time (mean over runs): " << mean << "\n";
+    // std::cout << "Aggregate avg_response_time (mean over runs): " << mean << "\n";
     return 0;
 }

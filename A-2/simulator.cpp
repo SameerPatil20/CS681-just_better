@@ -231,11 +231,17 @@ Result Simulator::run(double simtime, double warmup_time, unsigned seed, int run
         for (double x: resp_times) sum += x;
         avg_rt = sum / resp_times.size();
     }
+    double utilization=0.0;
+    for(auto core: cores){
+        utilization+= core->busy_time;
+    }
+    utilization /= max(1,(int)cores.size());
+    utilization/= max(1.0, (simtime-warmup_time));
     double interval = max(1.0, simtime - warmup_time);
     double throughput = (double) (good + bad) / interval;
     double goodput = (double) good / interval;
     double badput = (double) bad / interval;
-    cerr<< bad<<" "<<interval<<endl;
+    // cerr<< bad<<" "<<interval<<endl;
 
     if (trace_on) write_trace(runid);
 
@@ -247,6 +253,7 @@ Result Simulator::run(double simtime, double warmup_time, unsigned seed, int run
     res.completed = (int)completed_requests.size();
     res.timedout = (int)timedout_requests.size();
     res.dropped = dropped_requests;
+    res.util = utilization;
     return res;
 }
 

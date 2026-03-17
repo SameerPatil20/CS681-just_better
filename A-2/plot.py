@@ -2,7 +2,6 @@ import re
 import os
 import matplotlib.pyplot as plt
 
-# create plots directory if it doesn't exist
 os.makedirs("plots", exist_ok=True)
 
 users = []
@@ -11,27 +10,28 @@ throughput = []
 goodput = []
 badput = []
 timeouts = []
+util = []
+
+current_users = None
 
 with open("out.log") as f:
     for line in f:
-        m = re.search(r'users=(\d+)', line)
+        m = re.search(r'users=(\d+)', line, re.IGNORECASE)
         if m:
             current_users = int(m.group(1))
-
         m = re.search(
-            r'avg_rt=([\d\.]+).*throughput=([\d\.]+).*goodput=([\d\.]+).*badput=([\d\.]+).*completed=\d+ timedout=(\d+)',
+            r'ResponseTime=([\d\.]+).*Throughput=([\d\.]+).*goodput=([\d\.]+).*badput=([\d\.]+).*timedout=(\d+).*Util=([\d\.]+)',
             line
         )
-        if m:
+        if m and current_users is not None:
             users.append(current_users)
             avg_rt.append(float(m.group(1)))
             throughput.append(float(m.group(2)))
             goodput.append(float(m.group(3)))
             badput.append(float(m.group(4)))
             timeouts.append(int(m.group(5)))
-            # print(float(m.group(4)))
+            util.append(float(m.group(6)))
 
-# Avg Response Time
 plt.figure()
 plt.plot(users, avg_rt)
 plt.xlabel("Number of Users")
@@ -40,7 +40,6 @@ plt.title("Average Response Time vs Users")
 plt.grid(True)
 plt.savefig("plots/avg_response_time.png")
 
-# Throughput
 plt.figure()
 plt.plot(users, throughput)
 plt.xlabel("Number of Users")
@@ -49,7 +48,6 @@ plt.title("Throughput vs Users")
 plt.grid(True)
 plt.savefig("plots/throughput.png")
 
-# Goodput
 plt.figure()
 plt.plot(users, goodput)
 plt.xlabel("Number of Users")
@@ -58,7 +56,6 @@ plt.title("Goodput vs Users")
 plt.grid(True)
 plt.savefig("plots/goodput.png")
 
-# Badput
 plt.figure()
 plt.plot(users, badput)
 plt.xlabel("Number of Users")
@@ -67,7 +64,6 @@ plt.title("Badput vs Users")
 plt.grid(True)
 plt.savefig("plots/badput.png")
 
-# Timeouts
 plt.figure()
 plt.plot(users, timeouts)
 plt.xlabel("Number of Users")
@@ -76,10 +72,15 @@ plt.title("Timeouts vs Users")
 plt.grid(True)
 plt.savefig("plots/timeouts.png")
 
-# Combined plot: Throughput, Goodput, Badput
-# Combined plot: Throughput, Goodput, Badput (styled)
 plt.figure()
+plt.plot(users, util)
+plt.xlabel("Number of Users")
+plt.ylabel("Utilization")
+plt.title("Utilization vs Users")
+plt.grid(True)
+plt.savefig("plots/utilization.png")
 
+plt.figure()
 plt.plot(users, throughput, color='blue', linestyle='-', linewidth=2, label="Throughput")
 plt.plot(users, goodput, color='green', linestyle='--', linewidth=2, label="Goodput")
 plt.plot(users, badput, color='red', linestyle=':', linewidth=2, label="Badput")

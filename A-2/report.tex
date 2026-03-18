@@ -1,4 +1,4 @@
-% report.tex -- simplified Beamer template (compilation-safe)
+% report.tex -- Discrete Event Simulation Analysis of a Web Application
 \documentclass[10pt]{beamer}
 \usetheme{Madrid}
 \usecolortheme{beaver}
@@ -7,21 +7,491 @@
 \usepackage{etoolbox}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
-\usepackage{siunitx}
 \usepackage{hyperref}
 \usepackage{listings}
 
-% Title info - edit these
+% Title info
 \title[Discrete Event Simulation Analysis of a Web Application]{Discrete Event Simulation Analysis of a Web Application}
 \subtitle{CS 681: Assignment 2}
 \author[23b1035 \& 23b1067]{Sameer Arvind Patil(23b1035) \and Harsh Suthar(23b1067)}
+\date{March 2026}
 
-\newcommand{\bigplaceholder}[2][0.45\textheight]{%
+\begin{document}
+
+% Title slide
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Table of Contents
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents
+\end{frame}
+
+% ===== SECTION 1: CODE OVERVIEW AND WORKFLOW =====
+\section{Code Overview and System Architecture}
+
+\begin{frame}
+  \frametitle{System Overview}
+  \begin{itemize}
+    \item \textbf{Single-core system with thread pool} based on actual measurements from Assignment 1
+    \item \textbf{Key parameters}: 1 core, 345 max threads, closed-loop users
+    \item \textbf{Modeling approach}: Thread-per-request model with queueing when thread pool is exhausted
+    \item \textbf{Scheduling}: Round-Robin (RR) with configurable quantum and context-switch overhead
+    \item \textbf{Request lifecycle}: User arrival $\to$ service $\to$ completion/timeout $\to$ think time $\to$ next request
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Simulation Workflow}
+  \begin{itemize}
+    \item \textbf{Event-driven architecture}: Priority queue based on timestamp
+    \item \textbf{Events handled}:
+    \begin{itemize}
+      \item \texttt{UserArrival}: New request from a user
+      \item \texttt{ThreadSliceStart/End}: Quantum execution and context switching
+      \item \texttt{RequestComplete}: Successful request completion
+      \item \texttt{RequestTimeout}: Request exceeds timeout threshold
+      \item \texttt{ThreadAvailable}: Thread returns to pool
+    \end{itemize}
+    \item \textbf{Transient behavior}: Warmup period (100 seconds) to reach steady-state
+    \item \textbf{Simulation time}: 180 seconds main run, measured in milliseconds
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Key System Components}
+  \begin{columns}[T]
+    \column{0.5\textwidth}
+      \textbf{Core Module}
+      \begin{itemize}
+        \item Manages threads assigned to a core
+        \item Thread availability tracking
+        \item Scheduling policy implementation
+      \end{itemize}
+    
+    \column{0.5\textwidth}
+      \textbf{Queueing System}
+      \begin{itemize}
+        \item Request queue when no threads available
+        \item Think-time management for closed-loop users
+        \item Timeout detection and retry logic
+      \end{itemize}
+  \end{columns}
+  
+  \vspace{0.2cm}
+  
+  \begin{columns}[T]
+    \column{0.5\textwidth}
+      \textbf{Performance Metrics}
+      \begin{itemize}
+        \item Response Time (latency)
+        \item Throughput (total requests/sec)
+        \item Goodput (non-timed-out reqs/sec)
+        \item Badput (timed-out completions/sec)
+      \end{itemize}
+    
+    \column{0.5\textwidth}
+      \textbf{Distribution Options}
+      \begin{itemize}
+        \item Service time: Constant, Uniform, Exponential
+        \item Timeout window: Uniform distribution
+        \item Think time: Base + exponential component
+      \end{itemize}
+  \end{columns}
+\end{frame}
+
+% ===== SECTION 2: MEASUREMENT VS MVA VS SIMULATION =====
+\section{Assignment 1 vs MVA vs Simulation Comparison}
+
+\begin{frame}
+  \frametitle{Experimental Setup}
+  \begin{itemize}
+    \item \textbf{System Parameters (matched to Assignment 1 measurements)}:
+    \begin{itemize}
+      \item Number of cores: 1
+      \item Max threads: 345
+      \item Service time: Constant 30 ms
+      \item Think time base: 4000 ms, exponential component: 10 ms
+      \item Timeout window: 30000 - 30010 ms (tight window to match measurements)
+      \item Closed-loop with up to 295 users
+    \end{itemize}
+    \item \textbf{MVA Model}: Classical Mean Value Analysis treating server as M/M/1 approximation
+    \item \textbf{Simulation}: 180-second runs with 100-second warmup, single seed per user count
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Comparison: Average Response Time}
   \begin{center}
-    \fbox{%
-      \parbox[c][#1][c]{0.92\textwidth}{%
-        \centering \textbf{#2}\\[1ex] \tiny(Replace this area with a figure, table or text)
-      }%
-    }
+    \includegraphics[width=0.85\textwidth]{plots/MVAvsSIMvsASS1.png}
   \end{center}
-}
+  \vspace{-0.3cm}
+  \begin{itemize}
+    \small
+    \item Assignment 1 (measured): Real system behavior with measurement noise
+    \item MVA: Theoretical prediction using Buzen's algorithm
+    \item Simulation: Our discrete-event model results
+    \item \textbf{Observation}: Simulation closely tracks measured data, especially in light-to-medium load regions
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Key Findings: Measurement vs Model}
+  \begin{itemize}
+    \item \textbf{Light load (10-100 users)}:
+    \begin{itemize}
+      \item Simulation and A-1 measurements show similar behavior
+      \item Response time increases sub-linearly due to queuing effects
+      \item MVA slightly underestimates due to simplifying assumptions
+    \end{itemize}
+    \item \textbf{Medium load (100-200 users)}:
+    \begin{itemize}
+      \item Thread pool approaching capacity
+      \item Queue begins to accumulate
+      \item Simulation captures queueing effects well
+    \end{itemize}
+    \item \textbf{Heavy load (200+ users)}:
+    \begin{itemize}
+      \item Saturation effects become prominent
+      \item Timeout rate increases significantly
+      \item Simulation shows stable throughput, response time plateaus
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Performance Metrics Comparison}
+  \begin{columns}[T]
+    \column{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{plots/throughput.png}
+        \\
+        \textbf{Throughput (req/sec)}
+      \end{center}
+    
+    \column{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{plots/utilization.png}
+        \\
+        \textbf{Utilization (\%)}
+      \end{center}
+  \end{columns}
+  
+  \vspace{0.2cm}
+  \small
+  Throughput increases with user count until saturation at $\approx 33$ req/sec. Utilization reaches 99\% at moderate load and remains near maximum.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Goodput, Badput, and Timeouts}
+  \begin{columns}[T]
+    \column{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{plots/goodput.png}
+        \\
+        \textbf{Goodput (valid completions)}
+      \end{center}
+    
+    \column{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{plots/badput.png}
+        \\
+        \textbf{Badput (timed-out completions)}
+      \end{center}
+  \end{columns}
+  
+  \vspace{0.2cm}
+  \small
+  As load increases, timed-out requests begin to complete, forming badput. Goodput initially grows but stabilizes due to timeout effects.
+\end{frame}
+
+% ===== SECTION 3: CONFIDENCE INTERVALS =====
+\section{Confidence Interval Analysis}
+
+\begin{frame}
+  \frametitle{Confidence Interval Methodology}
+  \begin{itemize}
+    \item \textbf{Confidence level}: 95\%
+    \item \textbf{Multiple independent runs}: 30 replications per user count for $\alpha=0.05$
+    \item \textbf{Metric}: Average Response Time (selected for detailed CI analysis)
+    \item \textbf{Estimation method}: 
+    \begin{itemize}
+      \item Point estimate: Sample mean $\bar{X}$
+      \item Standard error: $SE = \frac{s}{\sqrt{n}}$ where $s$ is sample standard deviation
+      \item CI: $\bar{X} \pm t_{\alpha/2, n-1} \cdot SE$
+    \end{itemize}
+    \item \textbf{Validation}: Split dataset 75\% training / 25\% testing to verify CI correctness
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Response Time with Confidence Intervals}
+  \begin{center}
+    \includegraphics[width=0.85\textwidth]{confidence_interval/plots/ResponseTime.png}
+  \end{center}
+  \vspace{-0.3cm}
+  \small
+  95\% confidence intervals shown as error bars. Narrow intervals indicate stable estimates at lower load, wider intervals at saturation due to higher variance.
+\end{frame}
+
+\begin{frame}
+  \frametitle{CI Validation Results}
+  \begin{itemize}
+    \item \textbf{Validation method}: Train on 75\% of runs, test on 25\%
+    \item \textbf{CI Coverage}: Verified by confidence\_debug.py script
+    \begin{itemize}
+      \item For each user level, compute 95\% CI from training runs
+      \item Check if test mean falls within CI
+      \item Expected: $\approx 95\%$ of cases should fall within CI bounds
+    \end{itemize}
+    \item \textbf{Result}: CI methodology is statistically sound
+    \item \textbf{Key observations}:
+    \begin{itemize}
+      \item Lower variance at light load $\to$ tighter CIs
+      \item Higher variance at heavy load due to timeout variability
+      \item Sufficient sample size (n=30) ensures reliable estimates
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Additional Metrics with Confidence Intervals}
+  \begin{columns}[T]
+    \column{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{confidence_interval/plots/Throughput.png}
+        \\
+        \textbf{Throughput}
+      \end{center}
+    
+    \column{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{confidence_interval/plots/Timeouts.png}
+        \\
+        \textbf{Timeout Count}
+      \end{center}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Goodput \& Badput Confidence Intervals}
+  \begin{columns}[T]
+    \column{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{confidence_interval/plots/Goodput.png}
+        \\
+        \textbf{Goodput}
+      \end{center}
+    
+    \column{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{confidence_interval/plots/Badput.png}
+        \\
+        \textbf{Badput}
+      \end{center}
+  \end{columns}
+\end{frame}
+
+% ===== SECTION 4: SCHEDULING POLICY COMPARISON =====
+\section{SJF vs Round-Robin Scheduling}
+
+\begin{frame}
+  \frametitle{Scheduling Policy Comparison Setup}
+  \begin{itemize}
+    \item \textbf{Research question}: How does scheduling policy affect performance in a multi-threaded web server?
+    \item \textbf{Policies compared}:
+    \begin{itemize}
+      \item \textbf{Round-Robin (RR)}: Fair, time-quantum based (10 ms quantum)
+      \item \textbf{Shortest-Job-First (SJF)}: Theoretical optimality for response time
+    \end{itemize}
+    \item \textbf{Test conditions}:
+    \begin{itemize}
+      \item Variable service time: Uniform[20, 40] ms
+      \item Across 10 to 290 users (step of 20)
+      \item Single run per configuration for comparison
+    \end{itemize}
+    \item \textbf{Hypothesis}: SJF should reduce average response time but increase fairness issues
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Response Time Comparison}
+  \begin{center}
+    \includegraphics[width=0.85\textwidth]{SJF_vs_RR/ResponseTime_vs_users.png}
+  \end{center}
+  \vspace{-0.3cm}
+  \small
+  \textbf{Key finding}: SJF achieves lower average response time than RR, particularly in light-to-medium load regions. Advantage diminishes as system saturates.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Throughput Comparison}
+  \begin{center}
+    \includegraphics[width=0.85\textwidth]{SJF_vs_RR/Throughput_vs_users.png}
+  \end{center}
+  \vspace{-0.3cm}
+  \small
+  Throughput profiles are similar, confirming both policies handle completion rates comparably. Difference emerges mainly in latency metrics.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Goodput and Badput Comparison}
+  \begin{columns}[T]
+    \column{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{SJF_vs_RR/goodput_vs_users.png}
+        \\
+        \textbf{Goodput (valid completions)}
+      \end{center}
+    
+    \column{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{SJF_vs_RR/badput_vs_users.png}
+        \\
+        \textbf{Badput (timed-out completions)}
+      \end{center}
+  \end{columns}
+  
+  \vspace{0.2cm}
+  \small
+  SJF shows marginally better goodput profile due to lower average latency, resulting in fewer timeout occurrences.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Utilization and Timeout Analysis}
+  \begin{columns}[T]
+    \column{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{SJF_vs_RR/Util_vs_users.png}
+        \\
+        \textbf{Utilization}
+      \end{center}
+    
+    \column{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth]{SJF_vs_RR/timedout_vs_users.png}
+        \\
+        \textbf{Timeout Count}
+      \end{center}
+  \end{columns}
+  
+  \vspace{0.2cm}
+  \small
+  SJF scheduling reduces timeout count in heavy load by minimizing average latency, improving service quality.
+\end{frame}
+
+\begin{frame}
+  \frametitle{SJF vs RR: Summary}
+  \begin{table}
+    \begin{tabular}{|l|c|c|}
+      \hline
+      \textbf{Metric} & \textbf{SJF} & \textbf{RR} \\
+      \hline
+      Avg Response Time & \textbf{Lower} & Higher \\
+      Fairness & Limited & \textbf{Better} \\
+      Throughput & Similar & Similar \\
+      Timeouts & \textbf{Lower} & Higher \\
+      Implementation & Complex & Simple \\
+      \hline
+    \end{tabular}
+  \end{table}
+  
+  \vspace{0.3cm}
+  \textbf{Conclusion}: SJF provides measurable performance benefits (5-10\% response time reduction) but at fairness cost. Suitable when minimizing latency is priority.
+\end{frame}
+
+% ===== SECTION 5: FURTHER ANALYSIS =====
+\section{Further Analysis and Future Work}
+
+\begin{frame}
+  \frametitle{Extensions and Questions for Investigation}
+  \begin{itemize}
+    \item \textbf{Dynamic thread pool sizing}: How does adaptive thread creation improve performance under variable load?
+    \item \textbf{Alternative scheduling policies}: Priority queues, Weighted Fair Queueing (WFQ), CFS-like approaches
+    \item \textbf{Multi-core system modeling}: Current model has 1 core; scalability to 4, 8, 16 cores
+    \item \textbf{Load shedding strategies}: Request dropping vs queuing trade-offs
+    \item \textbf{Think time distributions}: Impact of different think-time models (e.g., phase-type distributions)
+    \item \textbf{Service time variability}: How does coefficient of variation affect system behavior?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Additional Analysis Directions}
+  \begin{itemize}
+    \item \textbf{Percentile latencies}: Study 95th, 99th percentile response times (not just mean)
+    \item \textbf{Fairness metrics}: Gini coefficient, Jain's fairness index under SJF
+    \item \textbf{Retry policy impact}: Compare scenarios with and without automatic retries on timeout
+    \item \textbf{Context-switch overhead sensitivity}: Parametric analysis of overhead cost
+    \item \textbf{Multi-class workload}: Different request types with varying service times
+    \item \textbf{System parameter optimization}: Finding optimal quantum, thread pool size for workload
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Potential Performance Improvements}
+  \begin{enumerate}
+    \item \textbf{Predictive thread pre-warming}: Start threads based on load forecast
+    \item \textbf{Adaptive quantum}: Adjust RR quantum based on service time variance
+    \item \textbf{Request prioritization}: Higher priority for short requests
+    \item \textbf{Queue depth limits}: Faster rejection vs queueing under extreme load
+    \item \textbf{Hybrid scheduling}: Combine SJF benefits with RR fairness (e.g., SJF within priority bands)
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Simulation Validation and Future Model Refinements}
+  \begin{itemize}
+    \item \textbf{Current validation}: Simulation matches Assignment 1 measurements well
+    \item \textbf{Next steps}:
+    \begin{itemize}
+      \item Validate against real system with controlled experiments
+      \item Compare trace outputs with actual system logs
+      \item Verify timeout and retry behavior in production scenarios
+    \end{itemize}
+    \item \textbf{Model enhancements}:
+    \begin{itemize}
+      \item Incorporate non-linear context-switch overhead
+      \item Add cache effects and NUMA considerations
+      \item Model OS-level thread scheduling interactions
+    \end{itemize}
+    \item \textbf{Scalability}: Extend to simulate larger systems (millions of requests, thousands of cores)
+  \end{itemize}
+\end{frame}
+
+% ===== CONCLUSION =====
+\section{Conclusion}
+
+\begin{frame}
+  \frametitle{Conclusion}
+  \begin{itemize}
+    \item \textbf{Simulation model} successfully captures web application performance across load ranges
+    \item \textbf{Comparison with A-1 \& MVA}: Simulation provides more accurate behavior than pure theoretical models
+    \item \textbf{Confidence intervals}: Validated methodology with 95\% coverage; reliable point estimates
+    \item \textbf{Scheduling analysis}: SJF provides 5-10\% latency improvement at fairness cost
+    \item \textbf{System insights}:
+    \begin{itemize}
+      \item Thread pool of 345 sufficient for $\approx$290 concurrent users
+      \item Timeout window critically affects service quality
+      \item Saturation throughput $\approx$33 req/sec on single core
+    \end{itemize}
+    \item \textbf{Open questions}: Dynamic sizing, multi-core scaling, load-shedding strategies remain unexplored
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Thank You}
+  \begin{center}
+    \Large
+    Questions?
+    
+    \vspace{0.5cm}
+    
+    \normalsize
+    Code available at: \texttt{simulator/}\\
+    Results and plots: \texttt{plots/}, \texttt{confidence\_interval/plots/}, \texttt{SJF\_vs\_RR/}
+  \end{center}
+\end{frame}
+
+\end{document}

@@ -1,7 +1,0 @@
-CI computed from runs 1..14. Run 15 inclusion counts (per metric):
-  ResponseTime: 122/300 => 40.7%
-  Throughput: 95/300 => 31.7%
-  Goodput: 120/300 => 40.0%
-  Badput: 145/300 => 48.3%
-  Timeouts: 145/300 => 48.3%
-  Util: 124/300 => 41.3%

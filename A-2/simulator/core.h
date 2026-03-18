@@ -1,9 +1,9 @@
 #ifndef CORE_H
 #define CORE_H
-
+#include <queue>
 #include <deque>
 #include <vector>
-// #include <
+// #include <priority_queue>
 #include "event.h"
 #include "common.h"
 #include "threadworker.h"

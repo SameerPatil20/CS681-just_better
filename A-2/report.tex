@@ -1,0 +1,27 @@
+% report.tex -- simplified Beamer template (compilation-safe)
+\documentclass[10pt]{beamer}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+\usepackage{graphicx}
+\usepackage{etoolbox}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{listings}
+
+% Title info - edit these
+\title[Discrete Event Simulation Analysis of a Web Application]{Discrete Event Simulation Analysis of a Web Application}
+\subtitle{CS 681: Assignment 2}
+\author[23b1035 \& 23b1067]{Sameer Arvind Patil(23b1035) \and Harsh Suthar(23b1067)}
+
+\newcommand{\bigplaceholder}[2][0.45\textheight]{%
+  \begin{center}
+    \fbox{%
+      \parbox[c][#1][c]{0.92\textwidth}{%
+        \centering \textbf{#2}\\[1ex] \tiny(Replace this area with a figure, table or text)
+      }%
+    }
+  \end{center}
+}

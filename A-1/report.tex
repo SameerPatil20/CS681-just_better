@@ -1,0 +1,580 @@
+% report.tex -- simplified Beamer template (compilation-safe)
+\documentclass[10pt]{beamer}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+\usepackage{graphicx}
+\usepackage{etoolbox}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{listings}
+
+% Title info - edit these
+\title[Discrete Event Simulation Analysis of a Web Application]{Discrete Event Simulation Analysis of a Web Application}
+\subtitle{CS 681: Assignment 2}
+\author[23b1035 \& 23b1067]{Sameer Arvind Patil(23b1035) \and Harsh Suthar(23b1067)}
+
+\newcommand{\bigplaceholder}[2][0.45\textheight]{%
+  \begin{center}
+    \fbox{%
+      \parbox[c][#1][c]{0.92\textwidth}{%
+        \centering \textbf{#2}\\[1ex] \tiny(Replace this area with a figure, table or text)
+      }%
+    }
+  \end{center}
+}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{Problem Statement}
+\begin{frame}{Problem Statement}
+  \begin{itemize}
+    \item Measure and analyze the performance of a web server using open and closed load models.
+    \item Compare observations with queueing theory (Little's law, Utilization law) and plot relevant metrics with load on server.
+  \end{itemize}
+\end{frame}
+
+\section{Open load system}
+\begin{frame}{}
+    % \begin{}
+    \begin{center}
+        \Huge{Open Load System}
+    \end{center}
+\end{frame}
+
+\section{Hardware \& Software}
+\begin{frame}{Client, Server, and Network specifications}
+  \begin{itemize}
+    \item Server: HP Pavilion, Ubuntu 24.04.3, single core, 8GB RAM  
+    \item Client: Macbook Air M1, MacOS Sonoma, single core, 8GB RAM
+    \item Network: WiFi-100 Mbps
+    % \item Open load 
+    \item Web server: Apache
+    \item PHP
+    \item Tools: curl (C++) and mpstat
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{System Setup Diagram}
+  \begin{center}
+    \fbox{\parbox[c][0.28\textheight][c]{0.92\textwidth}{\centering
+      Simple network diagram: Client (curl)  ---  Network  ---  Web Server (Apache+PHP) 
+    }}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Theoretical Predictions}
+    \begin{itemize}
+        \item Single-server queuing system
+        \item Predictions of metrics
+        \begin{itemize}
+            \item Response Time - Constant then linear increase
+            \item Server Utilization - Linear increase and eventual saturation
+            \item Throughput - Linear increase and eventual saturation
+        \end{itemize}
+        \item Utilization Law Prediction - Constant service time across the runs
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Experiment Parameters}
+    The Open-load experiment has been simulated using a C++ script. 
+    \begin{itemize}
+        \item \textit{Arrival rates chosen}: From 10 to 200, at an interval of 10. 94 and 102 have also been added to get some extra datapoints in the \texttt{Response vs rate} plot.
+        \item \textit{Duration of each run}: 180 seconds(3 minutes)
+        \item \textit{Distribution of arrival rate}: Memoryless/exponential. Arrivals have been kept Memoryless/exponential to get better plot around the saturation point.
+        \item \textit{Request Timeout}: 20 seconds. Incase the request is dropped anywhere in the network, and not at the server
+        % \item \{Max Concurrency}:
+        \item \textit{VAL in test.php}: \texttt{\$val} is set to $6,000,000$ for this experiment.
+    \end{itemize}
+\end{frame}
+
+\section{Experimental Results}
+\begin{frame}{}
+    \begin{center}
+        \Huge{Experimental Results}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Data Points}
+The readings obtained from the simulation:
+\centering
+\scriptsize
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Rate} & \textbf{Completed} & \textbf{Failed} & \textbf{Throughput (req/s)} & \textbf{Avg Latency (s)} & \textbf{Server util. (\%)} \\
+\hline
+10  & 1694  & 0     & 9.41  & 0.179 & 25.21 \\
+20  & 3313  & 0     & 18.41 & 0.175 & 39.16 \\
+30  & 4656  & 0     & 25.87 & 0.098 & 49.28 \\
+40  & 5981  & 0     & 33.23 & 0.167 & 54.65 \\
+50  & 8025  & 0     & 44.58 & 0.227 & 63.83 \\
+60  & 8989  & 0     & 49.94 & 0.244 & 68.18 \\
+70  & 10156 & 0     & 56.42 & 0.243 & 73.03 \\
+80  & 11438 & 0     & 63.54 & 0.303 & 80.49 \\
+90  & 12608 & 0     & 70.04 & 0.385 & 87.74 \\
+94  & 14477 & 0     & 80.43 & 1.451 & 89.33 \\
+100 & 14004 & 193   & 77.80 & 2.629 & 94.40 \\
+102 & 14364 & 1228  & 79.80 & 3.630 & 94.64 \\
+110 & 14062 & 1045  & 78.12 & 3.849 & 95.03 \\
+120 & 14185 & 2152  & 78.81 & 4.022 & 94.88 \\
+130 & 14145 & 3981  & 78.58 & 4.177 & 94.74 \\
+140 & 14130 & 6531  & 78.50 & 4.247 & 96.16 \\
+150 & 14126 & 7135  & 78.48 & 4.256 & 95.69 \\
+160 & 14136 & 6955  & 78.53 & 4.229 & 95.60 \\
+170 & 14171 & 7981  & 78.73 & 4.258 & 96.58 \\
+180 & 14205 & 11742 & 78.92 & 4.259 & 96.21 \\
+190 & 14247 & 13404 & 79.15 & 4.271 & 96.37 \\
+200 & 14275 & 12036 & 79.31 & 4.270 & 95.82 \\
+\hline
+\end{tabular}
+\end{frame}
+
+
+
+\begin{frame}{Response Time vs Request Arrival Rate}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{open_response_time_vs_rate.png}
+        % \caption{Caption}
+        \label{fig:placeholder}
+    \end{figure}
+    \begin{itemize}
+        \item Intially the response rate is almost constant, with a slight increase(probably due to increased chance of 2 requests coming together, leading to a bit of queueing even when service rate is faster than arrival rate). It also incorporates the network delay part
+        \item Once the server starts saturating at around $\lambda\approx100$, $\lambda>\mu$, the response rate sees a sudden jump, and becomes constant at around 4.27s, which is theoretically equal to $(K+1)\cdot \tau$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Throughput vs Request Arrival Rate}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{open_throughput_vs_rate.png}
+        % \caption{Caption}
+        \label{fig:placeholder}
+    \end{figure}
+    \begin{itemize}
+        \item Initially, throughput increases linearly with the arrival rate $\lambda$, as the service rate $\mu$ is greater than the arrival rate, leading to zero failures.
+        \item Once the arrival rate exceeds the service rate at around $\lambda \approx 100$, we can visibly see the throughput flatten out to a constant value of $\Lambda = 79 req/sec = 1/\mu$. The failure rate keeps on increasing after this point.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Server Utilization vs Request Arrival Rate}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{open_usr_block_averages.png}
+        % \caption{Caption}
+        \label{fig:placeholder}
+    \end{figure}
+    \begin{itemize}
+        \item This curve is pretty much identical to the throughput curve, due to the utilization law, validating theoretical predictions.
+        \item This curve also flattens out(Server utilization = 100\%) at an arrival rate of around 100.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Unsuccessful Requests vs Request Arrival Rate}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{completed_failed_vs_rate.png}
+        % \caption{Caption}
+        \label{fig:placeholder}
+    \end{figure}
+    \begin{itemize}
+        \item This curve also matches theoretical predictions. When the server was able to handle the incoming requests, we can see that the failure rate was 0.
+        \item Once the server reaches saturation, we can see that the completed request in the 3 minute period constants out at 14000.
+        \item After this point, all extra requests are failing due to queue length being reached at the server.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Estimating Service Time - Utilization Law}
+    \small
+    \textbf{Core relation (Utilization law):}
+    \[
+    \rho = \Lambda \cdot \tau \quad\Rightarrow\quad \boxed{\;\tau = \dfrac{\rho}{\Lambda}\;}
+    \]
+    \vspace{1ex}
+   When server utilization reaches saturation, we can take $\rho = 1$, giving 
+   \[
+   \tau = 1/\Lambda = 1/79.15 = 12.61 ms
+   \]
+   \begin{figure}
+       \centering
+       \includegraphics[width=0.4\linewidth]{open_cpu_through.png}
+       % \caption{Caption}
+       \label{fig:placeholder}
+   \end{figure}
+\end{frame}
+
+\begin{frame}{Little's Law}
+    \textbf{Little's Law:}
+    \[
+        N = \Lambda \cdot R
+    \]
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{open_throughput_latency_vs_rate.png}
+        \label{fig:placeholder}
+    \end{figure}
+    When the server saturates, we can see that the effect on $N$ is visible, as it becomes almost constant at around 338, giving us a queue size of
+    \[
+        K\approx 337
+    \]
+    
+\end{frame}
+
+
+\section{BONUS}
+\begin{frame}{}
+    \begin{center}
+        \Huge{BONUS PART}
+    \end{center}
+\end{frame}
+
+\begin{frame}{BONUS PART: verifying number of people in the system}
+    To verify the queue size obtained from little's law in saturated condition, we monitored the number of threads in the system, which corresponds to the queue length.
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{open_maxqueue.png}
+        % \caption{Caption}
+        \label{fig:placeholder}
+    \end{figure}
+\begin{itemize}
+    \item The \texttt{`Busy workers'} corresponds to the workers currently in the Apache server, being either processed, or currently in the inner queue.
+    \item  As the Apache server has a limit of 256 concurrent threads, some of the remaining requests move to the system queue, which has another $\approx 100$ requests.
+\end{itemize}
+% \end{frame}
+% \begin{frame}{Frame Title}
+    This gives a total of $\approx 345$ requests in the system at any point. This number if close to the obtained queue length of $K=337$.
+    
+\end{frame}
+
+% \begin{frame}{BONUS PART- Checking the thread count for low utilization reading}
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=0.5\linewidth]{open_lowqueue.png}
+%         \caption{Thread-count at the server for $\lambda=10$}
+%         \label{fig:placeholder}
+%     \end{figure}
+% In this, we have kept $\lambda = 10$, and we can observe that the number of threads at the server are mostly 2, depicting that the server does have a bit of queueing still, as 2 requests can arrive simultaneously, but not enough probability of exceeding the queue length at this stage.
+% \end{frame}
+
+\section{Conclusion}
+\begin{frame}{Conclusion}
+  % \small
+  \vspace{1ex}
+  \begin{tabular}{l l l l}
+    \toprule
+    \textbf{Metric} & \textbf{Measured} & \textbf{Using Derived results} \\
+    \midrule
+    Throughput $\Lambda_{\text{exp}}$ & $79.15\;\mathrm{req/s}$ & ---  \\
+    Mean service time $\tau_{\text{exp}}$ & $12.61\;\mathrm{ms/req}\;(0.0126\ \mathrm{s})$ & --- \\
+    Queue Length ($K$) & 344 requests & 337 requests
+    \\
+    Max response time($R$) & 4.27sec & 4.24sec ($(K_{theoritical}+1)\cdot\tau$)
+  \end{tabular}
+\end{frame}
+
+
+\section{Closed Load System}
+\begin{frame}{} 
+    \begin{center}
+        \Huge Closed Load System
+    \end{center}    
+\end{frame}
+
+\section{Hardware \& Software}
+\begin{frame}{Client, Server, and Network specifications}
+  \begin{itemize}
+    \item Server: HP Pavilion, Ubuntu 24.04.3, single core, 8GB RAM  
+    \item Client: Macbook Air M1, MacOS Sonoma, single core, 8GB RAM
+    \item Network: WiFi-100 Mbps
+    % \item Open load 
+    \item Web server: Apache
+    \item PHP
+    \item Tools: C++ curl library, the client shall be sending requests via multithreading and a c++ script
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Theoretical Predictions}
+    \textbf{Metrics:}
+    \begin{itemize}
+        \item Response Time: Follows low load asymptote initially, then increases linearly
+        \item Server Utilization: Increases linearly until near saturation
+        \item Throughput: Increases linearly until saturation
+    \end{itemize}
+    \textbf{Utilization Law Prediction:}
+    
+    Constant service time across the runs
+    \\
+    \textbf{Little's law:} 
+    
+    Think Time = $M/\Lambda - R_{sys}$
+\end{frame}
+
+\begin{frame}{Experiment Parameters}
+    The Closed-load experiment has been simulated using a C++ script at client side.
+    \begin{itemize}
+        \item \textit{Arrival rates chosen}: From 10 to 300, at an interval of 20.
+        \item \textit{Think Time($\gamma$)}: 4 seconds.
+        \item \textit{Duration of each run}: 180 seconds(3 minutes)
+        \item \textit{Request Timeout}: 30 seconds. Incase the request is dropped anywhere in the network, and not at the server
+        % \item \{Max Concurrency}:
+        \item \textit{VAL in test.php}: \texttt{\$val} is set to $12,000,000$ for this experiment.
+        
+    \end{itemize}
+    \textit{The clients have been staggered at the beginning of the experiment to prevent bursts of requests at the start.}
+\end{frame}
+
+\section{Experimental results}
+\begin{frame}{}
+    \begin{center}
+        \Huge Experimental Results
+    \end{center} 
+\end{frame}
+
+\begin{frame}{Data Points}
+The readings obtained from the simulation:
+\centering
+\scriptsize
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{N} & \textbf{Throughput} & \textbf{Resp. Time} & \textbf{Failures} & \textbf{Successes} & \textbf{Util (\%)} \\
+\hline
+10  & 2.40  & 0.034 & 0   & 432  & 8.68  \\
+30  & 7.50  & 0.041 & 0   & 1350 & 20.99 \\
+50  & 12.24 & 0.051 & 0   & 2204 & 35.18 \\
+70  & 16.89 & 0.071 & 0   & 3040 & 60.04 \\
+90  & 22.12 & 0.103 & 0   & 3982 & 67.79 \\
+110 & 24.40 & 0.185 & 0   & 4391 & 75.07 \\
+130 & 28.88 & 0.407 & 0   & 5198 & 89.41 \\
+150 & 27.93 & 0.853 & 0   & 5027 & 97.36 \\
+170 & 31.25 & 1.427 & 0   & 5625 & 98.87 \\
+190 & 31.15 & 2.238 & 8   & 5607 & 99.68 \\
+210 & 31.25 & 2.292 & 34  & 5625 & 97.90 \\
+230 & 30.01 & 3.026 & 67  & 5402 & 95.03 \\
+250 & 31.25 & 3.482 & 79  & 5625 & 96.87 \\
+270 & 29.48 & 4.561 & 124 & 5306 & 96.33 \\
+290 & 31.24 & 5.666 & 195 & 5623 & 93.96 \\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Response Time vs Number of Users}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=0.5\linewidth]{plot_ResponseTime.png}
+        \caption{Response Time vs M}
+        \label{fig:placeholder}
+    \end{figure}
+  \begin{itemize}
+    \item For small \(M\) the response time stays near the mean service time \(S\), pretty flat. It is a bit more than the service time exactly, probably due to network latency in the system also being counted in the response time. 
+    \item When \(M\) approaches the experimental saturation \(M^* \approx 135\) (knee), queueing begins to appear.
+    \item Beyond \(M^*\) response time grows linearly as the queue builds.
+
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Experimental vs Theoretical Kleinrock saturation number}
+    \textbf{Theoretical:}
+  \[
+    \boxed{\,\hat M^* \;=\; 1+\frac{\gamma}{\tau} = 1+\frac{4000}{33} = 126}
+  \]
+
+  \textbf{Experimental(from the plot):}
+  \begin{figure}
+      \centering
+      \includegraphics[width=0.5\linewidth]{kleinrock.png}
+      \caption{M* from the plot $\approx 135$}
+      \label{fig:placeholder}
+  \end{figure}
+\end{frame}
+
+
+
+\begin{frame}{Throughput vs Number of Users}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=0.5\linewidth]{plot_Throughput.png}
+        % \caption{Throughput vs M}
+        \label{fig:placeholder}
+    \end{figure}
+    The throughput increases linearly up till around $150$ users, after which it becomes almost constant at around $32\; req/sec$, giving an experimental service time of 
+    \[
+    \tau \approx 33\;ms/req
+    \]
+    Some the non-smooth nature of this curve is probably due to various factors like other processes on the server machine, other IO processes etc.
+    
+\end{frame}
+
+\begin{frame}{Server Utilization vs Number of Users}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{plot_CPU.png}
+        \caption{Server utilization vs number of users}
+        \label{fig:placeholder}
+    \end{figure}
+    \begin{itemize}
+        \item The Server utilization follows an identical trend as the throughput plot (due to the utilization law)
+        \item There is some disparity between Server utilization and throughput plot, we believe its mostly due to other processes running on the server laptop, and some IO factor in the OS side of things.
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Failures vs Number of Users}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{plot_Failures.png}
+        \caption{Failures vs Number of users}
+        \label{fig:placeholder}
+    \end{figure}
+    Failure count starts increasing once the server saturates out, and increases linearly as N increases.
+\end{frame}
+
+
+\begin{frame}{Response Time vs Throughput}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{plot_ResponseTime_vs_Throughput.png}
+        \caption{Response Time vs Throughput}
+        \label{fig:placeholder}
+    \end{figure}
+    \begin{itemize}
+      \item At low offered load throughput rises while response time stays near the mean service time \(S\).
+      \item As throughput approaches the server capacity \(X_{\max}\!\approx\!1/S\) a “knee” appears: throughput growth slows and response time begins to increase.
+      \item In the saturated region throughput plateaus (service-limited) and further load mainly increases response time due to queueing.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Server Utilizationvs Throughput}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{plot_CPU_vs_Throughput.png}
+        \caption{Server Util. vs Throughput}
+        \label{fig:placeholder}
+    \end{figure}
+
+    This forms a straight line, with slope = $\tau = 30 ms/req$ till server doesn't saturate out, after which which both throughput and server util. is constantly equal to their maximum.
+\end{frame}
+
+
+\begin{frame}{Estimating Service Time - Utilization Law}
+  \small
+  \textbf{Core relation (Utilization law):}
+  \[
+    \rho = \Lambda \cdot \tau \quad\Rightarrow\quad \boxed{\;\tau = \dfrac{\rho}{\Lambda}\;}
+  \]
+  \vspace{1ex}
+  We can find the service time by 2 approaches, validating the experimental setup,
+  \begin{itemize}
+    \item slope of the \texttt{Server utilization vs Throughput} plot
+    \item $1/\Lambda$, when the throughput has flattened out in the graph
+  \end{itemize}
+
+  \vspace{1ex}
+  \textbf{Compute (brief):}
+  \begin{enumerate}
+    \item \textbf{Result from method 1:} $\tau = 30ms/req$
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.3\linewidth]{utilization_law.png}
+        % \caption{$$}
+        \label{fig:placeholder}
+    \end{figure}
+    \item \textbf{Result from method 2:} $\tau = 33 ms/req$
+  \end{enumerate}
+
+  % \vspace{1ex}
+  % \textbf{Placeholders — fill these:}
+  % \[
+  %   U=\fbox{\texttt{<U\_0to1>}},\; X=\fbox{\texttt{<X\_req/s>}},\; \hat S=\fbox{\texttt{<S\_s>}}
+  % \]
+
+  % \vspace{0.5ex}
+  % \raggedright\tiny Note: prefer runs where queueing is small; if CPU metrics are aggregated across cores, report the bottleneck/core-specific utilization or convert appropriately.
+\end{frame}
+
+\begin{frame}{Little's Law — Think Time}
+  % \small
+  % \textbf{Core relation (Little's law, closed system):}
+  \[
+    N = \Lambda\,(R + \gamma)
+  \]
+  where \(N\) is number of users, \(\Lambda\) throughput (req/s), \(R\) response time (s), and \(\gamma\) think time (s).
+  \textbf{Configured value of think time: 4 seconds}
+
+  \vspace{0.8ex}
+  \textbf{Infered think time:}
+  \[
+    \boxed{\,\hat \gamma \;=\; \frac{N}{\Lambda} - R =4.2 sec\;}
+  \]
+
+  \begin{figure}
+      \centering
+      \includegraphics[width=0.4\linewidth]{plot_InferredThinkTime_vs_N.png}
+      % \caption{Infered Think time (experimental)}
+      \label{fig:placeholder}
+  \end{figure}
+
+  % \vspace{0.8ex}
+  % \small
+  % \begin{itemize}
+  %   \item Use steady-state averages for \(N, X, R\) (avoid transient startup/shutdown samples).
+  %   \item If \(\hat Z\) is negative or very small, the run may be saturated or measurements inconsistent — re-check data and units.
+  %   \item Keep units consistent (seconds for \(R,Z,S\); requests/second for \(X\)).
+  % \end{itemize}
+
+  % \vspace{0.8ex}
+  % \textbf{Compute (short):}
+  % \begin{enumerate}
+  %   \item Measure steady \(N,\;X,\;R\).
+  %   \item Compute \(\hat Z = N/X - R\).
+  %   \item Use \(\hat Z\) to validate configured think time or as input to closed-system models.
+  % \end{enumerate}
+
+  % \vspace{0.6ex}
+  % \textbf{Placeholders — fill these:}
+  % \[
+  %   N=\fbox{\texttt{<N>}},\; X=\fbox{\texttt{<X\_req/s>}},\; R=\fbox{\texttt{<R\_s>}},\; \hat Z=\fbox{\texttt{<Z\_s>}}
+  % \]
+
+  % \vspace{0.5ex}
+  % \raggedright\tiny Tip: average measurements over the steady region (e.g. middle 60–80% of test) to reduce noise.
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}{Conclusion}
+  % \small
+  % \textbf{Quick summary of measured results (from your slides) and theoretical expectations.}
+
+  \vspace{1ex}
+  \begin{tabular}{l l l l}
+    \toprule
+    \textbf{Metric} & \textbf{Measured} & \textbf{Using derived results} \\
+    \midrule
+    Throughput $\Lambda_{\text{exp}}$ & $32\;\mathrm{req/s}$ & ---  \\
+    Kleinrock saturation $M^*$ & \fbox{\texttt{135}} & \fbox{$\;1+\dfrac{\gamma}{\tau_{\text{exp}}}\;=\;1+\dfrac{4}{0.033}\approx 126$} \\
+    Inferred think time $\hat\gamma$ & \fbox{\texttt{4.2 s}} & $4\ \mathrm{s}$(Configured) \\
+    Service time & \fbox{\texttt{30 ms (slope)}} & $\approx 33\ \mathrm{ms}$ (from $1/\Lambda_{\max}$)\\
+    \bottomrule
+  \end{tabular}
+\end{frame}
+\begin{frame}{Experiments scripts}
+    The scripts for this experiment can be found in the following github repo:
+    \begin{center}
+        \href{https://github.com/SameerPatil20/CS681-just_better}{https://github.com/SameerPatil20/CS681-just\_better}
+    \end{center}
+    
+\end{frame}
+
+% \textbf{}
+
+
+\end{document}

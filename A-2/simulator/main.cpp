@@ -118,7 +118,7 @@ int main(int argc, char** argv) {
         common::SERVICE_DIST=common::sampler(common::distribution_type::UNIFORM, 20, common::SERVICE_TIME_AVG);
     }
     else if(common::SERVICE_TIME_DIST=="constant"){
-        common::SERVICE_DIST=common::sampler(common::distribution_type::CONSTANT, common::SERVICE_TIME_AVG-10, common::SERVICE_TIME_AVG+10);
+        common::SERVICE_DIST=common::sampler(common::distribution_type::CONSTANT, common::SERVICE_TIME_AVG, common::SERVICE_TIME_AVG+10);
     }
     else{
         cout << "service time dist me bt"<<endl;

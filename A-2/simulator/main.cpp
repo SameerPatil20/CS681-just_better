@@ -146,13 +146,13 @@ int main(int argc, char** argv) {
                 << " timedout=" << res.timedout << " dropped=" << res.dropped << " Util="<<res.util<< "\n";
     // }
 
-    std::vector<double> avgs;
-    for (auto &x: results) if (x.avg_response_time > -0.5) avgs.push_back(x.avg_response_time);
-    double mean = 0.0;
-    if (!avgs.empty()) {
-        for (double v: avgs) mean += v;
-        mean /= avgs.size();
-    }
+    // std::vector<double> avgs;
+    // for (auto &x: results) if (x.avg_response_time > -0.5) avgs.push_back(x.avg_response_time);
+    // double mean = 0.0;
+    // if (!avgs.empty()) {
+    //     for (double v: avgs) mean += v;
+    //     mean /= avgs.size();
+    // }
     // std::cout << "Aggregate avg_response_time (mean over runs): " << mean << "\n";
     return 0;
 }

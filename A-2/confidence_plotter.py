@@ -151,8 +151,8 @@ def plot_all(users, results, outdir):
         hi = np.array(results[m]["hi"])
         mean = np.array(results[m]["mean"])
         mask = ~np.isnan(lo)
-
-        plt.vlines(xs[mask], lo[mask], hi[mask], color=ci_colors[m], alpha=0.6, label=f"{m} CI")
+        if m=='Throughput':
+            plt.vlines(xs[mask], lo[mask], hi[mask], color=ci_colors[m], alpha=0.6, label=f"{m} CI")
         plt.plot(xs[mask], mean[mask], linestyle='-', color=mean_colors[m], label=f"{m} Mean", linewidth=0.8)
 
     plt.xlabel("Users")

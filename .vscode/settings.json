@@ -2,5 +2,5 @@
     "github.copilot.enable": {
         "cpp": true,
         "c": true
-    }
+    },
 }

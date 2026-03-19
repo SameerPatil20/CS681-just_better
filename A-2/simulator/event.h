@@ -15,7 +15,8 @@ enum class event_type{
     THREAD_SLICE_END,
     REQUEST_COMPLETE,
     REQUEST_TIMEOUT,
-    THREAD_AVAILABLE
+    THREAD_AVAILABLE,
+    CHECK_TIMEOUT,
 };
 
 struct Event {
@@ -26,6 +27,7 @@ struct Event {
     Core* core = nullptr;
     double slice_len = 0.0;
     int user_id = -1;
+    int req_id=-1;
 
     uint64_t seq;
 
@@ -42,6 +44,9 @@ struct Event {
     }
     Event(double t, event_type ty, int uid) : Event(t,ty) { user_id = uid; }
     static int seq_counter;
+    // Event(double t, event_type ty, ThreadWorker* th, Core* c, int req_id) : Event(t,ty,th,c){
+    //     req_id = req_id;
+    // }
 };
 struct EventCompare {
     bool operator()(const std::unique_ptr<Event>& a, const std::unique_ptr<Event>& b) const {

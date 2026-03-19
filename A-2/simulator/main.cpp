@@ -49,6 +49,8 @@ inline common::scheduling_policy sched_policy_type(string s){
 
 int main(int argc, char** argv) {
     // int replications = 1;
+    // std::cout << "hejgjfgjgjkgjkggggre"<<std::endl;
+    // std::cout.flush();
     double simtime = 800.0;
     // double warmup = common::WARMUP_TIME;
     // int users = common::NUM_USERS;
@@ -115,15 +117,16 @@ int main(int argc, char** argv) {
         common::SERVICE_DIST=common::sampler(common::distribution_type::EXPONENTIAL, common::SERVICE_TIME_AVG);
     }
     else if(common::SERVICE_TIME_DIST=="uniform"){
-        common::SERVICE_DIST=common::sampler(common::distribution_type::UNIFORM, 20, common::SERVICE_TIME_AVG);
+        common::SERVICE_DIST=common::sampler(common::distribution_type::UNIFORM, 10, common::SERVICE_TIME_AVG);
     }
     else if(common::SERVICE_TIME_DIST=="constant"){
-        common::SERVICE_DIST=common::sampler(common::distribution_type::CONSTANT, common::SERVICE_TIME_AVG, common::SERVICE_TIME_AVG+10);
+        common::SERVICE_DIST=common::sampler(common::distribution_type::CONSTANT, common::SERVICE_TIME_AVG, common::SERVICE_TIME_AVG);
     }
     else{
         cout << "service time dist me bt"<<endl;
         exit(1);
     }
+    // cout << "here"<<endl;
 
     // common::NUM_USERS = users;
     // common::WARMUP_TIME = warmup;

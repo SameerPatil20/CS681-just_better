@@ -50,6 +50,7 @@ struct Simulator {
     void handle_request_timeout(Request* req, double time);
     void handle_thread_available(ThreadWorker* th, Core* core, double time);
     void release_thread_to_pool(ThreadWorker* th, double now);
+    void handle_request_timeout(ThreadWorker* th, Core* core, double time);
     
     Result run(double simtime, double warmup_time, unsigned seed, int runid, bool trace_on);
     void write_trace(int runid);

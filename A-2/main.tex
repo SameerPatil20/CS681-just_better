@@ -28,10 +28,7 @@
     \tableofcontents
 }
 
-% ========================================
-% Section 1: System Overview
-% ========================================
-\section{System Overview and Architecture}
+\section{System Overview and Code overview}
 
 \frame{
     \frametitle{System Overview}
@@ -41,46 +38,89 @@
         \item Closed-loop user model: request $\to$ wait $\to$ think $\to$ repeat
         \item Thread-per-task model with configurable thread pool
         \item Supports multiple scheduling policies: Round-Robin (RR) and Shortest Job First (SJF)
-        \item Discrete event simulation with proper warmup and transient removal
+        \item Discrete event simulation with warmup and transient removal
         \item Statistical analysis with confidence intervals
     \end{itemize}
 }
 
 \frame{
-    \frametitle{Simulation Workflow}
-    \begin{enumerate}
-        \item \textbf{Initialization}: Create cores, thread pool, initialize RNG
-        \item \textbf{User Arrivals}: Users generate requests in closed loop
-        \item \textbf{Admission Control}: Requests admitted to waiting queue if thread available
-        \item \textbf{Thread Execution}: Threads execute requests with time slicing (quantum)
-        \item \textbf{Timeouts}: Long-running requests timeout after specified duration
-        \item \textbf{Completion}: Requests complete, thread returns to pool, user thinks
-        \item \textbf{Collection}: Metrics collected after warmup period
-    \end{enumerate}
+    \frametitle{Code Overview: Key Files}
+    \begin{itemize}
+        \item simulator.h -- main event loop, simulation lifecycle, RNG seed handling, warmup/steady-state management
+        \item event.h -- event data structure, event types, priority ordering for the event queue
+        \item core.h -- per-core scheduling, run-queue, dispatching to cores, scheduling policy implementation
+        \item threadworker.h -- thread abstraction, context-switch handling, quantum accounting, thread pool bookkeeping
+        \item queueing\_system.h -- admission control, waiting queues, request enqueue/dequeue logic and drop policies
+        \item request.h -- request metadata (ids, service requirement, timeout, retries), completion and timeout flags
+        \item common.h, main.cpp -- shared types, configuration parsing, logging and metrics 
+    \end{itemize}
+    \textbf{For detailed documentation, refer the README.md in the simulator folder in the github repo}
 }
 
-\frame{
-    \frametitle{Key Components}
-    \begin{columns}[T]
-        \column{0.5\textwidth}
-        \textbf{Request Model:}
-        \begin{itemize}
-            \item Service time (configurable distribution)
-            \item Timeout (uniform range)
-            \item User ID and request ID
-            \item Retry tracking
-        \end{itemize}
+% \frame{
+%     \frametitle{Simulator and Event Responsibilities}
+%     \begin{itemize}
+%         \item Simulator: drives the discrete-event loop, schedules/dispatches events, collects metrics (response time, throughput, util)
+%         \item Event: timestamped actions (arrival, start, end, timeout, preempt), stored in a min-priority event queue
+%         \item Event handling: each event delegates to appropriate subsystem (queueing system, core, threadworker)
+%     \end{itemize}
+% }
+
+% \frame{
+%     \frametitle{Core, ThreadWorker and Queueing System}
+%     \begin{itemize}
+%         \item Core: holds per-core run queue, implements scheduling policy (RR, SJF), accounts busy/idle time
+%         \item ThreadWorker: represents a runnable thread, executes requests for a time-slice, applies context-switch overhead and quantum logic
+%         \item QueueingSystem: decides admission, maps requests to cores or global queue, handles drops when pool is full
+%     \end{itemize}
+% }
+
+% \frame{
+%     \frametitle{Request, Enums and Metrics}
+%     \begin{itemize}
+%         \item Request: encapsulates service-time sampling, timeout window, user id and lifecycle timestamps (arrival, start, complete)
+%         \item Enums: EventType (ARRIVAL/START/COMPLETE/TIMEOUT/PREEMPT), SchedulingPolicy (RR, SJF), RequestState
+%         \item Metrics: accumulated statistics (response time distributions, goodput/badput, timeouts, core utilizations, drop rates) updated on request completion or timeout
+%     \end{itemize}
+% }
+    % \begin{itemize}
+    %     \item \textbf{Simulation class} \\
+    %     \begin{enumerate}
+    %         \item Handles all the events, invocating the required methods from other objects to process the events
+    %     \end{enumerate}
+
         
-        \column{0.5\textwidth}
-        \textbf{Core and Threading:}
-        \begin{itemize}
-            \item Multiple cores (configurable)
-            \item Thread pool with max limit
-            \item Per-core run queue
-            \item Context-switching overhead
-        \end{itemize}
-    \end{columns}
-}
+    %     % \item \textbf{Cores}: Users generate requests in closed loop
+    %     % \item \textbf{Admission Control}: Requests admitted to waiting queue if thread available
+    %     % \item \textbf{Thread Execution}: Threads execute requests with time slicing (quantum)
+    %     % \item \textbf{Timeouts}: Long-running requests timeout after specified duration
+    %     % \item \textbf{Completion}: Requests complete, thread returns to pool, user thinks
+    %     % \item \textbf{Collection}: Metrics collected after warmup period
+       
+    % \end{itemize}
+
+% \frame{
+%     \frametitle{Key Components}
+%     \begin{columns}[T]
+%         \column{0.5\textwidth}
+%         \textbf{Request Model:}
+%         \begin{itemize}
+%             \item Service time (configurable distribution)
+%             \item Timeout (uniform range)
+%             \item User ID and request ID
+%             \item Retry tracking
+%         \end{itemize}
+        
+%         \column{0.5\textwidth}
+%         \textbf{Core and Threading:}
+%         \begin{itemize}
+%             \item Multiple cores (configurable)
+%             \item Thread pool with max limit
+%             \item Per-core run queue
+%             \item Context-switching overhead
+%         \end{itemize}
+%     \end{columns}
+% }
 
 \frame{
     \frametitle{Key Performance Metrics}
@@ -98,14 +138,13 @@
 % ========================================
 % Section 2: Setup 1 - MVA vs Simulation vs Assignment 1
 % ========================================
-\section{Setup 1: MVA Comparison with Assignment 1 Baseline}
+\section{Setup 1: Simulated vs MVA vs Assignment-1}
 
 \frame{
     \frametitle{Setup 1: Objective}
     \textbf{Question}: How well does the simulation match the Mean Value Analysis (MVA) theoretical model and Assignment 1 measurements?
-    
+
     \vspace{0.3cm}
-    
     This setup validates the simulator by comparing against:
     \begin{itemize}
         \item MVA theoretical predictions
@@ -138,17 +177,17 @@
     \end{table}
 }
 
-\frame{
-    \frametitle{Setup 1: Rationale}
-    \begin{itemize}
-        \item \textbf{Single Core}: Matches Assignment 1 empirical measurements
-        \item \textbf{Constant Service Time}: Simplifies validation; removes variability
-        \item \textbf{Large Thread Pool}: Ensures thread availability across user ranges
-        \item \textbf{High Timeout}: With small service times, timeouts rarely occur
-        \item \textbf{Think Time Model}: Think time has mode (4000 ms) + exponential component (10 ms)
-        \item \textbf{Long Simulation}: Ensures steady-state metrics are accurate
-    \end{itemize}
-}
+% \frame{
+%     \frametitle{Setup 1: Rationale}
+%     \begin{itemize}
+%         \item \textbf{Single Core}: Matches Assignment 1 empirical measurements
+%         \item \textbf{Constant Service Time}: Simplifies validation; removes variability
+%         \item \textbf{Large Thread Pool}: Ensures thread availability across user ranges
+%         \item \textbf{High Timeout}: With small service times, timeouts rarely occur
+%         \item \textbf{Think Time Model}: Think time has mode (4000 ms) + exponential component (10 ms)
+%         \item \textbf{Long Simulation}: Ensures steady-state metrics are accurate
+%     \end{itemize}
+% }
 
 \frame{
     \frametitle{Setup 1: Comparison Results}

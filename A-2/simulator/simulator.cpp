@@ -59,6 +59,7 @@ void Simulator::schedule_initial_users(int num_users) {
 }
 
 void Simulator::handle_user_arrival(int user_id) {
+    // cout << "here"<<endl;
     double nowt = now;
     double service = common::sample_dist(rng,common::SERVICE_DIST);
     double timeout = common::sample_dist(rng,common::TIMEOUT_DIST);
@@ -85,6 +86,9 @@ void Simulator::handle_user_arrival(int user_id) {
             ss << "ARRIVAL," << fixed << setprecision(3) << nowt << "," << req->id << "," << user_id << "," << service << "," << timeout;
             trace_lines.push_back(ss.str());
         }
+        auto ev = make_unique<Event>(req->timeout_deadline,event_type::CHECK_TIMEOUT,req);
+        push_event(std::move(ev));
+
     }
 }
 
@@ -110,6 +114,7 @@ void Simulator::handle_request_complete(Request* req,double time) {
         //timeout hua hai,badput
         // cout <<req->timeout_deadline
         req->timed_out=true;
+        // req->mark_completed
         timedout_requests.push_back(req);
         if(common::TRACE_ON){
             ostringstream ss;
@@ -130,13 +135,13 @@ void Simulator::handle_request_complete(Request* req,double time) {
             ss << "COMPLETE," << fixed << setprecision(3) << time << "," << req->id << "," << req->user_id << "," << req->response_time();
             trace_lines.push_back(ss.str());
         }
-    }
-    if (common::CLOSED_LOOP) {
-        exponential_distribution<double> expdist(1.0 / common::THINK_MEAN_EXP);
-        double think = common::THINK_BASE + expdist(rng);
-        double next_t = time + think;
-        auto ev = make_unique<Event>(next_t,event_type::USER_ARRIVAL,req->user_id);
-        push_event(std::move(ev));
+        if (common::CLOSED_LOOP) {
+            exponential_distribution<double> expdist(1.0 / common::THINK_MEAN_EXP);
+            double think = common::THINK_BASE + expdist(rng);
+            double next_t = time + think;
+            auto ev = make_unique<Event>(next_t,event_type::USER_ARRIVAL,req->user_id);
+            push_event(std::move(ev));
+        }
     }
     // completed_requests.push_back(req);
     // if (common::TRACE_ON) {
@@ -178,6 +183,22 @@ void Simulator::release_thread_to_pool(ThreadWorker* th,double now) {
     qsys.release_thread_to_pool(th,now);
 }
 
+void Simulator::handle_request_timeout(Request* req, double time){
+    // cout << "here"<<endl;
+    if(!req || req->service_remaining <= 0.000001){
+        return;
+    }
+    else{
+        int user_id = req->user_id;
+        // handle_user_arrival()
+        exponential_distribution<double> expdist(1.0 / common::THINK_MEAN_EXP);
+        double think = common::THINK_BASE + expdist(rng);
+        double next_t = time + think;
+        auto ev = make_unique<Event>(next_t,event_type::USER_ARRIVAL,user_id);
+        push_event(std::move(ev));
+    }
+}
+
 Result Simulator::run(double simtime,double warmup_time,unsigned seed,int runid,bool trace_on) {
     run_id = runid;
     reset_for_run(seed);
@@ -211,6 +232,11 @@ Result Simulator::run(double simtime,double warmup_time,unsigned seed,int runid,
             //     break;
             case event_type::THREAD_AVAILABLE:
                 handle_thread_available(ev->thread,ev->core,now);
+                break;
+            case event_type::CHECK_TIMEOUT:
+                // cout <<"here"<<endl;
+                if(! ev->req){break;}
+                handle_request_timeout(ev->req,now);
                 break;
             default:
                 break;

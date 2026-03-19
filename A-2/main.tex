@@ -57,6 +57,65 @@
     \textbf{For detailed documentation, refer the README.md in the simulator folder in the github repo}
 }
 
+\frame{
+\frametitle{Running Instructions}
+
+\small
+
+\begin{enumerate}
+    \item Run \texttt{make} in \texttt{./simulator}
+    \item Execute \texttt{./websim} with flags:
+\end{enumerate}
+
+\vspace{-0.3cm}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+\textbf{Workload \& Timing}
+\begin{itemize}
+    \item \texttt{--users N}
+    \item \texttt{--simtime T}
+    \item \texttt{--warmup W}
+    \item \texttt{--think\_base X}
+    \item \texttt{--think\_mean\_exp X}
+    \item \texttt{--closed\_loop 0/1}
+\end{itemize}
+
+\textbf{System Resources}
+\begin{itemize}
+    \item \texttt{--num\_cores N}
+    \item \texttt{--max\_threads N}
+    \item \texttt{--thread\_queue\_limit}
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{Scheduling}
+\begin{itemize}
+    \item \texttt{--sched\_policy RR/SJF}
+    \item \texttt{--quantum Q}
+    \item \texttt{--context\_switch\_overhead}
+\end{itemize}
+
+\textbf{Service \& Failures}
+\begin{itemize}
+    \item \texttt{--service\_time\_avg X}
+    \item \texttt{--service\_time\_dist S}
+    \item \texttt{--timeout\_lower X}
+    \item \texttt{--timeout\_upper X}
+    \item \texttt{--retry\_limit N}
+\end{itemize}
+
+\textbf{Misc}
+\begin{itemize}
+    \item \texttt{--trace\_on 0/1}
+    \item \texttt{--trace\_prefix STR}
+    \item \texttt{--rng\_seed N}
+\end{itemize}
+
+\end{columns}
+}
+
 % \frame{
 %     \frametitle{Simulator and Event Responsibilities}
 %     \begin{itemize}
@@ -141,6 +200,13 @@
 \section{Setup 1: Simulated vs MVA vs Assignment-1}
 
 \frame{
+    % \frametitle{}
+    \begin{center}
+        \Huge{Setup 1}
+    \end{center}
+}
+
+\frame{
     \frametitle{Setup 1: Objective}
     \textbf{Question}: How well does the simulation match the Mean Value Analysis (MVA) theoretical model and Assignment 1 measurements?
 
@@ -216,6 +282,7 @@
                     \item Response time remains low initially, but rises sharply as the load increases.
                     \item The simulation output (\texttt{out.log}) is very close to the theoretical MVA prediction (\texttt{mva.out.log}).
                     \item The real measurement data (\texttt{take-1.log}) follows the same trend, but shows slightly more variation due to real-system effects.
+                    \item The response time of assignment-1 follows the other 2 plots under low load, but then drops below the theoretical value from the MVA plot at moderate load, before rising back to the same level at high load. It could be due to some internal nuance of apache under moderate load, but it is difficult to pinpoint the exact issue without going through the whole apache webserver.
                 \end{itemize}
     
                 \vspace{0.5em}
@@ -245,6 +312,12 @@
 % Section 3: Setup 2 - Confidence Intervals
 % ========================================
 \section{Setup 2: Confidence Intervals on General Webserver}
+\frame{
+    % \frametitle{}
+    \begin{center}
+        \Huge{Setup 2}
+    \end{center}
+}
 
 \frame{
     \frametitle{Setup 2: Objective}
@@ -316,9 +389,10 @@
     \end{center}
     \small
     \begin{itemize}
-        \item Response time increases sub-linearly up to ~500 users
+        \item Response time increases sub-linearly up to $\sim$220 users
         \item Increase in response time and confidence interval at high loads
         \item Saturation point near 220 users
+        % \item The change in slope of the response time is related to the 
     \end{itemize}
 }
 
@@ -338,13 +412,14 @@
 \frame{
     \frametitle{Setup 2: Goodput vs Badput}
     \begin{center}
-        \includegraphics[width=0.9\textwidth]{confidence_interval/plots/throughput_goodput_badput.png}
+        \includegraphics[width=0.7\textwidth]{confidence_interval/plots/throughput_goodput_badput.png}
     \end{center}
     \small
     \begin{itemize}
-        \item Goodput:  left to be done
-        \item Badput: Timed-out requests that still completed
-        \item Badput grows significantly with load (requests queue too long)
+        \item \textbf{Goodput:} The goodput plot follows the throughput plot as initially none of the requests time out. But at high load, because of the queue length being very long, the waiting time of a request joining at the end of the queue exceeds the timeout of the request, leading to a lot of timeouts. 
+        
+        Currently the server has Round Robin policy, hence atleast some requests with low service time still finish, but with First-Come-First-Serve policy, it can be expected to decrease even more
+        \item \textbf{Badput:} At high load, Badput contributes to much of the throughput due to the processing of timedout requests at the end of the queue
     \end{itemize}
 }
 
@@ -355,7 +430,7 @@
     \end{center}
     \small
     \begin{itemize}
-        \item Core utilization increases with user load untill saturation
+        \item Core utilization increases with user load until saturation
         \item Reaches $\approx 95\%$ at saturation (Did not achieve 100\% utilization because of resources used in context-switches)
     \end{itemize}
 }
@@ -363,13 +438,13 @@
 \frame{
     \frametitle{Setup 2: Timeout Analysis}
     \begin{center}
-        \includegraphics[width=0.9\textwidth]{confidence_interval/plots/Timeouts.png}
+        \includegraphics[width=0.7\textwidth]{confidence_interval/plots/Timeouts.png}
     \end{center}
     \small
     \begin{itemize}
-        \item Few timeouts at low load  left to be done
-        \item Exponential growth in timeouts above 1000 users
-        \item System SLA violation indicates saturation
+        \item \textbf{Low load: }Few to none timeouts at low load
+        \item \textbf{Moderate load: }Exponential growth in timeouts above 1000 users. As the queue length increases, the timeout counts also increase.
+        \item \textbf{High load: }
     \end{itemize}
 }
 
@@ -388,6 +463,13 @@
 % Section 4: Setup 3 - Scheduling Policy Comparison
 % ========================================
 \section{Setup 3: Scheduling Policy Comparison (RR vs SJF)}
+
+\frame{
+    % \frametitle{}
+    \begin{center}
+        \Huge{Setup 3}
+    \end{center}
+}
 
 \frame{
     \frametitle{Setup 3: Objective}

@@ -20,8 +20,8 @@ NUM_RUNS=40
 OUTDIR="confidence_interval"
 mkdir -p "${OUTDIR}"
 
-START=40
-STEP=40
+START=10
+STEP=10
 END=3000
 
 echo "Building project..."
@@ -69,3 +69,4 @@ for runidx in $(seq 1 ${NUM_RUNS}); do
 done
 echo "All ${NUM_RUNS} run files generated in ${OUTDIR}/ (each contains all users values)."
 cd ./simulator;make clean;cd ..;
+python3 confidence_plotter.py ./confidence_interval -n 40

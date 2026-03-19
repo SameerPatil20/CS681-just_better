@@ -299,8 +299,8 @@ Result Simulator::run(double simtime,double warmup_time,unsigned seed,int runid,
     }
     for(auto r: timedout_requests){
         if(r->completion_time >= warmup_time){
-            double rt = r->response_time();
-            resp_times.push_back(rt);
+            // double rt = r->response_time();
+            // resp_times.push_back(rt);
             bad++;
         }
     }

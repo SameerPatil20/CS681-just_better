@@ -497,11 +497,12 @@
             \toprule
             \textbf{Parameter} & \textbf{RR} & \textbf{SJF} \\
             \midrule
-            Number of Users & 5--3000 (step 10) & 5--3000 (step 10) \\
+            Simulation Time & 180sec & 180sec \\
+            Number of Users & 10--1000 (step 10) & 10--1000 (step 10) \\
             Service Time & Exp(60) ms & Exp(60) ms \\
-            Number of Cores & 4 & 4 \\
+            Number of Cores & 1 & 1 \\
             Max Threads & 256 & 256 \\
-            Quantum &  10 ms & 100 ms \\
+            Quantum &  100 ms & 1000 ms \\
             Context Switch Overhead & 0.2 ms & 1.0 ms \\
             Think Time (base) & 3000 ms & 3000 ms \\
             Mean Think Time (exponential) & 200 ms & 200 ms \\
@@ -519,28 +520,69 @@
         \item \textbf{Multiple Cores}: Real-world scenario with parallelism
         \item \textbf{Wide User Range}: Captures behavior from light to extreme load
     \end{itemize}
-    We expect SJF to outperform RR in terms of response time. leftt
+    We expect SJF to outperform RR in terms of response time and throughput, while compromising "fairness" (nto covered in our analysis)
 }
 
 \frame{
     \frametitle{Setup 3: RR vs SJF Response Time}
     \begin{center}
-        \includegraphics[width=0.9\textwidth]{SJF_vs_RR/ResponseTime_vs_users.png}
+        \includegraphics[width=0.5\textwidth]{SJF_vs_RR/ResponseTime_vs_users.png}
     \end{center}
     \small
     \begin{itemize}
-        \item SJF generally shows lower response time
+        \item SJF shows significantly lower response time
+        \item Because we measure the response time only for the completed requests, Shortest Job First hunts for low Service time jobs, hence allowing them to be processed faster, leading to lower response time.
+        \item Round Robin on the other hand goes through the whole queue, hence gives service time to requests that are going to time out later on
     \end{itemize}
 }
 
 \frame{
     \frametitle{Setup 3: RR vs SJF Throughput}
     \begin{center}
-        \includegraphics[width=0.9\textwidth]{SJF_vs_RR/Throughput_vs_users.png}
+        \includegraphics[width=0.5\textwidth]{SJF_vs_RR/Throughput_vs_users.png}
     \end{center}
     \small
     \begin{itemize}
         \item Higher throughput for SJF
+        \item Similar to the response time, processing smaller requests first leads to more request per second output, though the fairness index is degraded
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Setup 3: RR vs SJF Timeout}
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{SJF_vs_RR/timedout_vs_users.png}
+    \end{center}
+    \small
+    \begin{itemize}
+        \item Round Robin leads to significantly more timeouts compared to SHortest Job First
+        \item Shortest Job First has timeouts from the requests that have larger service time
+        \item Rund Robin on the other hand doesn't distinguish, hence leads to more timeouts
+    \end{itemize}
+}
+\frame{
+    \frametitle{Setup 3: RR vs SJF Badput}
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{SJF_vs_RR/badput_vs_users.png}
+    \end{center}
+    \small
+    \begin{itemize}
+        \item It can be clearly observed how SJF improves the resource utilization over RR
+        \item With a significantly lower badput, SJF focuses the resources on Goodput
+    \end{itemize}
+}
+
+\frame{
+    \frametitle{Setup 3: RR vs SJF Goodput}
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{SJF_vs_RR/goodput_vs_users.png}
+    \end{center}
+    \small
+    \begin{itemize}
+        \item The basic structure of the plots has been explained fromt he previous few slides
+        \item an interesting observation in this is that the goodput for SJF stagnates after a point, whereas that for RR actually decreases before becoming constant.
+        \item This is because with increasing queue length, once the queue length hits the mark after which the waiting time becomes more that the timeout, the goodput decreases as jobs timeout while remaining in the waiting queue
+        \item On the other hand, the waiting time is dependent on the Job's service time rather than the queue length, this makes the Goodput independent of the queue length, hence it doent decrease
     \end{itemize}
 }
 
@@ -548,7 +590,6 @@
     \frametitle{Setup 3: Analysis}
     \begin{itemize}
         \item \textbf{SJF Advantage}: Better response time for short jobs
-        \item \textbf{Saturation Behavior}: Both policies degrade similarly at extreme load
         \item \textbf{Recommendation}: 
             \begin{itemize}
                 \item Use SJF for systems with highly variable service times
@@ -561,7 +602,7 @@
 % ========================================
 % Section 5: Additional Analysis
 % ========================================
-\section{Additional Analysis and Future Work}
+% \section{Additional Analysis and Future Work}
 
 % \frame{
 %     \frametitle{Potential Analysis Directions}

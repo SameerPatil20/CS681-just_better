@@ -58,10 +58,10 @@ for run in $(seq 1 5); do
             --trace_on 0 \
             --num_cores 1 \
             --max_threads 256 \
-            --thread_queue_limit 15000 \
-            --quantum 100 \
+            --thread_queue_limit 300 \
+            --quantum 10 \
             --think_base 3000 \
-            --context_switch_overhead 0.2 \
+            --context_switch_overhead 1 \
             --think_mean_exp 200 \
             --retry_limit 0 \
             --service_time_avg 60 \

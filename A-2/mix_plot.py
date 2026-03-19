@@ -84,7 +84,7 @@ def main():
     plt.grid()
 
     plt.tight_layout()
-    plt.savefig("plots/comp.png")
+    plt.savefig("plots/comp2.png")
 
 if __name__ == "__main__":
     main()

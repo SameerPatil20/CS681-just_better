@@ -49,7 +49,7 @@
         \item simulator.h -- main event loop, simulation lifecycle, RNG seed handling, warmup/steady-state management
         \item event.h -- event data structure, event types, priority ordering for the event queue
         \item core.h -- per-core scheduling, run-queue, dispatching to cores, scheduling policy implementation
-        \item threadworker.h -- thread abstraction, context-switch handling, quantum accounting, thread pool bookkeeping
+        \item threadworker.h -- thread abstraction, context-switch handling, thread pool bookkeeping
         \item queueing\_system.h -- admission control, waiting queues, request enqueue/dequeue logic and drop policies
         \item request.h -- request metadata (ids, service requirement, timeout, retries), completion and timeout flags
         \item common.h, main.cpp -- shared types, configuration parsing, logging and metrics 
@@ -125,7 +125,7 @@
 \frame{
     \frametitle{Key Performance Metrics}
     \begin{itemize}
-        \item \textbf{Average Response Time}: Mean time from request arrival to completion
+        \item \textbf{Average Response Time}: Mean time from request arrival to completion (Timed out requests not considered)
         \item \textbf{Throughput}: Total requests completed per second (goodput + badput)
         \item \textbf{Goodput}: Requests completed before timeout per second
         \item \textbf{Badput}: Timed-out requests completed per second
@@ -189,6 +189,7 @@
 %     \end{itemize}
 % }
 
+
 \frame{
     \frametitle{Setup 1: Comparison Results}
     \begin{center}
@@ -197,27 +198,48 @@
     \small
     The plot compares:
     \begin{itemize}
-        \item \textbf{MVA}: Theoretical prediction line
-        \item \textbf{Assignment 1}: Measured data from real system
-        \item \textbf{Simulation}: Discrete event simulation results
+        \item \textbf{MVA}: Theoretical prediction line : mva\_out.log
+        \item \textbf{Assignment 1}: Measured data from real system : take-1.log
+        \item \textbf{Simulation}: Discrete event simulation results : out.log
     \end{itemize}
-}
-
-\frame{
-    \frametitle{Setup 1: Analysis}
-    \begin{itemize}
-        \item Simulation closely matches MVA theoretical predictions
-        \item Both show linear increase in response time with user load
-        \item Simulation validates the core algorithm and event handling
-        \item Small deviations from MVA due to:
-            \begin{itemize}
-                \item Discrete time-slicing effects
-                \item Warmup transient removal
-                \item Stochastic variations
-            \end{itemize}
-        \item Assignment 1 data may differ due to measurement methodology
-    \end{itemize}
-}
+    }
+    
+    \frame{
+    \frametitle{Analysis}
+        \small
+    
+                \textbf{What the plot shows}
+                \vspace{0.3em}
+                \begin{itemize}
+                    \item Throughput increases nearly linearly for small values of $M$.
+                    \item After about 150 users, throughput starts to saturate, indicating system capacity limits.
+                    \item Response time remains low initially, but rises sharply as the load increases.
+                    \item The simulation output (\texttt{out.log}) is very close to the theoretical MVA prediction (\texttt{mva.out.log}).
+                    \item The real measurement data (\texttt{take-1.log}) follows the same trend, but shows slightly more variation due to real-system effects.
+                \end{itemize}
+    
+                \vspace{0.5em}
+                \textbf{Conclusion}
+    
+                The three curves validate the model: the simulator and MVA match closely, and the measured system exhibits the expected performance trend.
+        
+    }
+    
+    % \frame{
+    %     \frametitle{Setup 1: Analysis}
+    %     \begin{itemize}
+    %         \item Simulation closely matches MVA theoretical predictions
+    %         \item Both show linear increase in response time with user load
+    %         \item Simulation validates the core algorithm and event handling
+    %         \item Small deviations from MVA due to:
+    %         \begin{itemize}
+    %             \item Discrete time-slicing effects
+    %             \item Warmup transient removal
+    %             \item Stochastic variations
+    %         \end{itemize}
+    %     \item Assignment 1 data may differ due to measurement methodology
+    % \end{itemize}
+% }
 
 % ========================================
 % Section 3: Setup 2 - Confidence Intervals

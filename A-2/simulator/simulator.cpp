@@ -16,10 +16,16 @@ Simulator::~Simulator() {
     for (auto c : cores) delete c;
 }
 
+/*
+Adds a given event to the event queue
+*/
 void Simulator::push_event(unique_ptr<Event> e) {
     evq.push(std::move(e));
 }
 
+/*
+Returns the event with the highest priority
+*/
 unique_ptr<Event> Simulator::pop_event() {
     if (evq.empty()) return nullptr;
     auto e = std::move(const_cast<unique_ptr<Event>&>(evq.top()));
@@ -27,6 +33,9 @@ unique_ptr<Event> Simulator::pop_event() {
     return e;
 }
 
+/*
+Initializes the cores
+*/
 void Simulator::make_cores(int ncores) {
     for (auto c : cores) delete c;
     cores.clear();
@@ -36,6 +45,9 @@ void Simulator::make_cores(int ncores) {
     }
 }
 
+/*
+Currently not used, it resets the server for muliple runs
+*/
 void Simulator::reset_for_run(unsigned seed) {
     now = 0.0;
     while (!evq.empty()) evq.pop();
@@ -48,6 +60,9 @@ void Simulator::reset_for_run(unsigned seed) {
     rng.seed(seed);
 }
 
+/*
+Sets uo the initial user requests
+*/
 void Simulator::schedule_initial_users(int num_users) {
     exponential_distribution<double> expdist(1.0 / common::THINK_MEAN_EXP);
     uniform_real_distribution<double> stagger(0.1,5000);
@@ -58,6 +73,11 @@ void Simulator::schedule_initial_users(int num_users) {
     }
 }
 
+/*
+Handles the event of a user rearrivingnafter waiting his think time,
+incase it is not admitted due to dropping, it reschedules its arrival 
+to curr+think time
+*/
 void Simulator::handle_user_arrival(int user_id) {
     // cout << "here"<<endl;
     double nowt = now;
@@ -92,10 +112,15 @@ void Simulator::handle_user_arrival(int user_id) {
     }
 }
 
+/*
+sends the thread slice event start alert to the respective core 
+*/
 void Simulator::handle_thread_slice_start(ThreadWorker* th,Core* core,double time) {
     core->handle_slice_start(time,th);
 }
-
+/*
+sends the thread slice event end alert to the respective core 
+*/
 void Simulator::handle_thread_slice_end(ThreadWorker* th,Core* core,double slice_len,double time) {
     if(time >= common::WARMUP_TIME){
         core->busy_time += slice_len;
@@ -103,12 +128,19 @@ void Simulator::handle_thread_slice_end(ThreadWorker* th,Core* core,double slice
     core->handle_slice_end(time,th,slice_len);
 }
 
+/*
+Sends thread available event to the corresponding core
+*/
 void Simulator::handle_thread_available(ThreadWorker* th,Core* core,double time) {
     // cout<<"thread id: "<<th->tid<<" is now available,at time "<<time<<",being push back into cor id: "<< core->core_id<<endl;
     core->add_runnable(th);
     if (core->idle) core->schedule_next_slice(time);
 }
 
+/*
+For completed requests, it checks if the request was timed out or not, marking 
+it as completed/timed-out accordingly
+*/
 void Simulator::handle_request_complete(Request* req,double time) {
     if(req->timeout_deadline<= req->completion_time){
         //timeout hua hai,badput
@@ -183,6 +215,11 @@ void Simulator::release_thread_to_pool(ThreadWorker* th,double now) {
     qsys.release_thread_to_pool(th,now);
 }
 
+/*
+Checks whether the corresponding request timed out or not. In case 
+the user detects a time-out, this schedules another request for that user
+at the time current+think time
+*/
 void Simulator::handle_request_timeout(Request* req, double time){
     // cout << "here"<<endl;
     if(!req || req->service_remaining <= 0.000001){
@@ -199,6 +236,14 @@ void Simulator::handle_request_timeout(Request* req, double time){
     }
 }
 
+/*
+Works in three parts:
+1. sets up the cores, threads etc. to start the simulation run, adds initial users.
+2. Handles events by time sorted manner, simulated the real time line of a webserver
+3. Logs all the parameters obtained from the run like throughput, response time etc. 
+   In case trace has been set to true, it also prints the output from each request too,
+   like whter it was dropped/completed/timed-out.
+*/
 Result Simulator::run(double simtime,double warmup_time,unsigned seed,int runid,bool trace_on) {
     run_id = runid;
     reset_for_run(seed);

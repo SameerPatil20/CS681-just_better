@@ -6,17 +6,18 @@
 #include<iostream>
 
 
-
+/*
+Adds the thread to both the queue(RR and SJF)
+*/
 void Core::add_runnable(ThreadWorker* th) {
     runqueue.push_back(th);
     runpriorityqueue.push(th);
     if (idle) schedule_next_slice(sim->now);
 }
 
-void Core::add_thread(ThreadWorker* th){
-    runqueue.push_back(th);
-    runpriorityqueue.push(th);
-}
+/* 
+Check if the queue corresponding to the policy used is empty or not
+*/
 bool Core::is_empty(){
     if(sched_policy == common::scheduling_policy::RR){
         return runqueue.empty();
@@ -27,6 +28,9 @@ bool Core::is_empty(){
     else return true;
 }
 
+/*
+Get the highest priority job
+*/
 ThreadWorker* Core::pop_one(){
     if(is_empty()){
         cout<<"POP ON EMPTY CORE ID: "<< core_id<<endl;
@@ -51,6 +55,9 @@ ThreadWorker* Core::pop_one(){
     }
 }
 
+/* 
+schedules the top priority job
+*/
 void Core::schedule_next_slice(double now) {
     if (is_empty()) { idle = true; current_thread = nullptr; return; }
     ThreadWorker* th = pop_one();
@@ -60,6 +67,9 @@ void Core::schedule_next_slice(double now) {
     sim->push_event(std::move(ev));
 }
 
+/*
+Handles event of a job starting, adds it to event queue
+*/
 void Core::handle_slice_start(double now, ThreadWorker* th) {
     Request* r = th->req;
     if (!r) {
@@ -75,6 +85,9 @@ void Core::handle_slice_start(double now, ThreadWorker* th) {
     sim->push_event(std::move(ev));
 }
 
+/*
+Handles event of a job ending, adds the service done to the job
+*/
 void Core::handle_slice_end(double now, ThreadWorker* th, double slice_len) {
     Request* r = th->req;
     if (!r) { schedule_next_slice(now); return; }

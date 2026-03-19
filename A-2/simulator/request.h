@@ -7,6 +7,9 @@
 
 struct ThreadWorker;
 
+/*
+Class to store info about the received job, with methods to get response time
+*/
 struct Request {
     int id;
     int user_id;

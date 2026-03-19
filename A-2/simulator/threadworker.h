@@ -5,6 +5,10 @@
 struct Core;
 struct Request;
 
+/*
+Class corresponding to each thread. These hold a job, and get scheduled on their 
+corresponding core
+*/
 struct ThreadWorker {
     int tid;
     Core* core;

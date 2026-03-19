@@ -9,6 +9,9 @@
 #include "threadworker.h"
 struct Simulator;
 
+/*
+This is used for the priority queue of SJF, sorts based on least service remaining
+*/
 struct SJF_comparator{
     bool operator()(const ThreadWorker* a, const ThreadWorker* b) const {
         if(!a->req || !b->req){

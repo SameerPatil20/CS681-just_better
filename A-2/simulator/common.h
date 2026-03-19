@@ -73,6 +73,9 @@
 #include <tuple>
 using namespace std;
 
+/*
+Namespace to store common variables, enums, and functions used across all files
+*/
 namespace common{
     enum class scheduling_policy{
         RR,

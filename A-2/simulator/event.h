@@ -9,6 +9,9 @@ struct Request;
 struct ThreadWorker;
 struct Core;
 
+/*
+defines the various types of events
+*/
 enum class event_type{
     USER_ARRIVAL,
     THREAD_SLICE_START,
@@ -48,6 +51,10 @@ struct Event {
     //     req_id = req_id;
     // }
 };
+
+/*
+this is to sort the events by start time
+*/
 struct EventCompare {
     bool operator()(const std::unique_ptr<Event>& a, const std::unique_ptr<Event>& b) const {
         if (a->time != b->time) return a->time > b->time;

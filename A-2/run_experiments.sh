@@ -5,7 +5,7 @@ WARMUP=20000
 TRACE_ON=0
 NUM_CORES=4
 MAX_THREADS=256
-THREAD_QUEUE_LIMIT=15000
+THREAD_QUEUE_LIMIT=1500
 QUANTUM=10
 THINK_BASE=3000
 CONTEXT_SWITCH_OVERHEAD=0.2
@@ -16,7 +16,7 @@ SERVICE_TIME_DIST="exponential"
 TIMEOUT_LOWER=20000
 TIMEOUT_UPPER=30000
 
-NUM_RUNS=40
+NUM_RUNS=20
 OUTDIR="confidence_interval"
 mkdir -p "${OUTDIR}"
 
@@ -69,4 +69,4 @@ for runidx in $(seq 1 ${NUM_RUNS}); do
 done
 echo "All ${NUM_RUNS} run files generated in ${OUTDIR}/ (each contains all users values)."
 cd ./simulator;make clean;cd ..;
-python3 confidence_plotter.py ./confidence_interval -n 40
+python3 confidence_plotter.py ./confidence_interval

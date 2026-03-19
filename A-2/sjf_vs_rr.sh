@@ -13,7 +13,7 @@ for run in $(seq 1 5); do
     rr_log="$RR_DIR/RR_run${run}.log"
     : > "$rr_log"
 
-    for users in $(seq 5 10 1500); do
+    for users in $(seq 5 10 1000); do
         echo "Running simulation with users=$users run=$run" >> "$rr_log"
 
         seed=$((users * 1000 + run))
@@ -25,7 +25,7 @@ for run in $(seq 1 5); do
             --trace_on 0 \
             --num_cores 1 \
             --max_threads 256 \
-            --thread_queue_limit 15000 \
+            --thread_queue_limit 300 \
             --quantum 10 \
             --think_base 3000 \
             --context_switch_overhead 0.2 \
@@ -46,7 +46,7 @@ for run in $(seq 1 5); do
     sjf_log="$SJF_DIR/SJF_run${run}.log"
     : > "$sjf_log"
 
-    for users in $(seq 5 10 1500); do
+    for users in $(seq 5 10 1000); do
         echo "Running simulation with users=$users run=$run" >> "$sjf_log"
 
         seed=$((users * 1000 + run))

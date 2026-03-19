@@ -142,7 +142,7 @@ For completed requests, it checks if the request was timed out or not, marking
 it as completed/timed-out accordingly
 */
 void Simulator::handle_request_complete(Request* req,double time) {
-    if(req->timeout_deadline<= req->completion_time){
+    if(req->timed_out || time >= req->timeout_deadline){
         //timeout hua hai,badput
         // cout <<req->timeout_deadline
         req->timed_out=true;
@@ -161,6 +161,7 @@ void Simulator::handle_request_complete(Request* req,double time) {
         // }
     }
     else{
+        req->completion_time = time;
         completed_requests.push_back(req);
         if (common::TRACE_ON) {
             ostringstream ss;
@@ -227,11 +228,13 @@ void Simulator::handle_request_timeout(Request* req, double time){
     }
     else{
         int user_id = req->user_id;
+        req->timed_out=true;
         // handle_user_arrival()
         exponential_distribution<double> expdist(1.0 / common::THINK_MEAN_EXP);
         double think = common::THINK_BASE + expdist(rng);
         double next_t = time + think;
         auto ev = make_unique<Event>(next_t,event_type::USER_ARRIVAL,user_id);
+        // timedout_requests.push_back(req);
         push_event(std::move(ev));
     }
 }
@@ -290,15 +293,19 @@ Result Simulator::run(double simtime,double warmup_time,unsigned seed,int runid,
 
     vector<double> resp_times;
     int good = 0,bad = 0;
+    int tmp = 0;
     for (auto r : completed_requests) {
-        if (r->completion_time >= warmup_time) {
+        if (r->arrival_time >= warmup_time) {
             double rt = r->response_time();
             resp_times.push_back(rt);
-            good++;
+            if(rt > 25){
+                tmp++;
+            }
         }
+        good++;
     }
     for(auto r: timedout_requests){
-        if(r->completion_time >= warmup_time){
+        if(1){
             // double rt = r->response_time();
             // resp_times.push_back(rt);
             bad++;
@@ -320,6 +327,7 @@ Result Simulator::run(double simtime,double warmup_time,unsigned seed,int runid,
     double throughput = (double) (good + bad) / interval;
     double goodput = (double) good / interval;
     double badput = (double) bad / interval;
+    // std::cerr<<common::NUM_USERS<<" " <<tmp << " "<<good<<" "<<goodput<<" "<<bad<<std::endl;
     // cerr<< bad<<" "<<interval<<endl;
 
     if (trace_on) write_trace(runid);

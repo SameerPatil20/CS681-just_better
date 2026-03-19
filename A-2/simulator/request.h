@@ -4,6 +4,7 @@
 #include <string>
 #include <iomanip>
 #include <sstream>
+#include <iostream>
 
 struct ThreadWorker;
 
@@ -23,7 +24,11 @@ struct Request {
     int retry_left;
     ThreadWorker* assigned_thread = nullptr;
     Request(int id_,int uid,double arr,double service,double timeout,int retry)
-        : id(id_),user_id(uid),arrival_time(arr),service_total(service),service_remaining(service),timeout_deadline(arr + timeout),retry_left(retry) {}
+        : id(id_),user_id(uid),arrival_time(arr),service_total(service),service_remaining(service),timeout_deadline(arr + timeout),retry_left(retry) {
+            // if(timeout > 27.0){
+            //     std::cerr << "hehe"<<std::endl;
+            // }
+        }
     void mark_started(double t){
         if(start_time<0)start_time = t;
     }

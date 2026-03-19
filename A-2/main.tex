@@ -285,19 +285,29 @@
         \end{tabular}
     \end{table}
 }
+\begin{frame}{Setup 2: Statistical Methodology}
+\small
 
-\frame{
-    \frametitle{Setup 2: Statistical Methodology}
-    \begin{itemize}
-        \item \textbf{Independent Replications}: 40 runs with different RNG seeds
-        \item \textbf{Point Estimate}: Mean of metric across all 40 runs for each user count
-        \item \textbf{95\% Confidence Interval}: 
-            $$\text{CI} = \bar{X} \pm t_{0.025,39} \cdot \frac{s}{\sqrt{40}}$$
-            where $t_{0.025,39} \approx 2.02$ (Student's t-distribution)
-        \item \textbf{Warmup Removal}: First 20 seconds discarded (Welch's procedure informal)
-        \item \textbf{Transient Analysis}: Statistics only from steady-state period
-    \end{itemize}
-}
+\begin{itemize}
+    \item \textbf{Independent Replications:} 40 runs with different RNG seeds
+
+    \item \textbf{Point Estimate:} Mean of the metric across all 40 runs for each user count
+
+    \item \textbf{95\% Confidence Interval:}
+    \[
+    CI = \bar{X} \pm t_{0.025,39} \cdot \frac{S}{\sqrt{40}}
+    \]
+    where $S$ is the sample standard deviation across runs, and 
+    $t_{0.025,39} \approx 2.02$ (Student’s t-distribution)
+
+    \item \textbf{Warmup Removal:} First 20 seconds discarded (empirically chosen)
+
+    \item \textbf{Transient Analysis:} Statistics collected only after warmup (steady-state period)
+\end{itemize}
+
+\end{frame}
+
+
 
 \frame{
     \frametitle{Setup 2: Response Time Results}
@@ -307,8 +317,8 @@
     \small
     \begin{itemize}
         \item Response time increases sub-linearly up to ~500 users
-        \item Sharp increase in response time and confidence interval at high loads
-        \item Saturation point near 1500-2000 users
+        \item Increase in response time and confidence interval at high loads
+        \item Saturation point near 220 users
     \end{itemize}
 }
 
@@ -320,8 +330,8 @@
     \small
     \begin{itemize}
         \item Throughput increases with users up to saturation point
-        \item Peak throughput $\approx$ 16-17 requests/sec at moderate load
-        \item Plateaus after saturation due to thread pool limits
+        \item Peak throughput $\approx$ 66 requests/sec at moderate load
+        \item Plateaus after saturation due to server saturation
     \end{itemize}
 }
 
@@ -332,7 +342,7 @@
     \end{center}
     \small
     \begin{itemize}
-        \item Goodput: Requests completed before timeout
+        \item Goodput:  left to be done
         \item Badput: Timed-out requests that still completed
         \item Badput grows significantly with load (requests queue too long)
     \end{itemize}
@@ -345,9 +355,8 @@
     \end{center}
     \small
     \begin{itemize}
-        \item Core utilization increases with user load
-        \item Reaches $\approx 95\%$ at saturation
-        \item 4-core system efficiently utilized
+        \item Core utilization increases with user load untill saturation
+        \item Reaches $\approx 95\%$ at saturation (Did not achieve 100\% utilization because of resources used in context-switches)
     \end{itemize}
 }
 
@@ -358,7 +367,7 @@
     \end{center}
     \small
     \begin{itemize}
-        \item Few timeouts at low load
+        \item Few timeouts at low load  left to be done
         \item Exponential growth in timeouts above 1000 users
         \item System SLA violation indicates saturation
     \end{itemize}
@@ -367,11 +376,11 @@
 \frame{
     \frametitle{Setup 2: Key Insights}
     \begin{itemize}
-        \item \textbf{Saturation Point}: System becomes resource-constrained around 1500-2000 users
+        \item \textbf{Saturation Point}: System becomes resource-constrained around 250 users
         \item \textbf{Queueing Effects}: Visible degradation in response time and goodput
         \item \textbf{Thread Pool Limit}: 256 threads insufficient for extreme loads
         \item \textbf{Variability}: Confidence intervals widen significantly at high loads
-        \item \textbf{Confidence}: 95\% CI indicates statistical soundness
+        \item \textbf{Confidence}: 95\% CI indicates statistical soundness lefttt
     \end{itemize}
 }
 
@@ -385,8 +394,7 @@
     \textbf{Questions}:
     \begin{itemize}
         \item How much does scheduling policy impact performance?
-        \item Is SJF better than RR for web server workloads?
-        \item What is the trade-off between fairness and latency?
+        \item Is SJF better than RR for web server workloads (in terms of response time)?
     \end{itemize}
     
     \vspace{0.3cm}
@@ -408,28 +416,28 @@
             \textbf{Parameter} & \textbf{RR} & \textbf{SJF} \\
             \midrule
             Number of Users & 5--3000 (step 10) & 5--3000 (step 10) \\
-            Service Time & Uniform [20, 100] ms & Uniform [20, 100] ms \\
+            Service Time & Exp(60) ms & Exp(60) ms \\
             Number of Cores & 4 & 4 \\
             Max Threads & 256 & 256 \\
-            Quantum & 100 ms & 100 ms \\
+            Quantum &  10 ms & 100 ms \\
             Context Switch Overhead & 0.2 ms & 1.0 ms \\
             Think Time (base) & 3000 ms & 3000 ms \\
-            Think Time (exponential) & 200 ms & 200 ms \\
+            Mean Think Time (exponential) & 200 ms & 200 ms \\
             Timeout Range & 20000--30000 ms & 20000--30000 ms \\
             \bottomrule
         \end{tabular}
     \end{table}
+    Real think time is sum of base + exponential component.
 }
 
 \frame{
     \frametitle{Setup 3: Rationale}
     \begin{itemize}
-        \item \textbf{Uniform Service Time}: Creates variability for SJF to optimize
+        \item \textbf{Different Service Time}: Creates variability for SJF to optimize
         \item \textbf{Multiple Cores}: Real-world scenario with parallelism
-        \item \textbf{Larger Quantum}: Reduces context-switching overhead impact
-        \item \textbf{Higher CS Overhead for SJF}: Penalty for more frequent preemptions
         \item \textbf{Wide User Range}: Captures behavior from light to extreme load
     \end{itemize}
+    We expect SJF to outperform RR in terms of response time. leftt
 }
 
 \frame{
@@ -439,9 +447,7 @@
     \end{center}
     \small
     \begin{itemize}
-        \item SJF generally shows lower response time at moderate loads
-        \item Both policies degrade similarly at high load (resource saturation dominates)
-        \item Trade-off: SJF fairness vs. average latency
+        \item SJF generally shows lower response time
     \end{itemize}
 }
 
@@ -452,9 +458,7 @@
     \end{center}
     \small
     \begin{itemize}
-        \item Throughput curves nearly identical for RR and SJF
-        \item Scheduling policy has minimal impact on aggregate throughput
-        \item Bottleneck is thread pool and core resources, not scheduling
+        \item Higher throughput for SJF
     \end{itemize}
 }
 
@@ -462,7 +466,6 @@
     \frametitle{Setup 3: Analysis}
     \begin{itemize}
         \item \textbf{SJF Advantage}: Better response time for short jobs
-        \item \textbf{Trade-off}: Higher context-switching overhead for SJF
         \item \textbf{Saturation Behavior}: Both policies degrade similarly at extreme load
         \item \textbf{Recommendation}: 
             \begin{itemize}
@@ -478,54 +481,51 @@
 % ========================================
 \section{Additional Analysis and Future Work}
 
-\frame{
-    \frametitle{Potential Analysis Directions}
-    \begin{itemize}
-        \item \textbf{Timeout Parameter Sensitivity}: How do different timeout ranges affect goodput?
-        \item \textbf{Thread Pool Sizing}: Optimal thread pool size vs. memory cost
-        \item \textbf{Quantum Effects}: Impact of time slice size on overhead vs. fairness
-        \item \textbf{Service Time Distribution}: Compare constant, uniform, and exponential
-        \item \textbf{Think Time Impact}: Effects of think time distribution on load cycles
-        \item \textbf{Multiple Cores}: Scalability analysis with varying core counts
-    \end{itemize}
-}
+% \frame{
+%     \frametitle{Potential Analysis Directions}
+%     \begin{itemize}
+%         \item \textbf{Timeout Parameter Sensitivity}: How do different timeout ranges affect goodput?
+%         \item \textbf{Thread Pool Sizing}: Optimal thread pool size vs. memory cost
+%         \item \textbf{Quantum Effects}: Impact of time slice size on overhead vs. fairness
+%         \item \textbf{Service Time Distribution}: Compare constant, uniform, and exponential
+%         \item \textbf{Think Time Impact}: Effects of think time distribution on load cycles
+%         \item \textbf{Multiple Cores}: Scalability analysis with varying core counts
+%     \end{itemize}
+% }
 
-\frame{
-    \frametitle{Queue Dynamics Analysis}
-    \begin{itemize}
-        \item \textbf{Queue Length Distribution}: Measure average queue depth over time
-        \item \textbf{Wait Time Components}: Break down response time into:
-            \begin{itemize}
-                \item Queueing delay (waiting for thread)
-                \item Service delay (on core)
-                \item Context-switching overhead
-            \end{itemize}
-        \item \textbf{Starvation Detection}: Identify which requests timeout most frequently
-        \item \textbf{Load Balancing}: Core utilization balance across all cores
-    \end{itemize}
-}
+% \frame{
+%     \frametitle{Queue Dynamics Analysis}
+%     \begin{itemize}
+%         \item \textbf{Queue Length Distribution}: Measure average queue depth over time
+%         \item \textbf{Wait Time Components}: Break down response time into:
+%             \begin{itemize}
+%                 \item Queueing delay (waiting for thread)
+%                 \item Service delay (on core)
+%                 \item Context-switching overhead
+%             \end{itemize}
+%         \item \textbf{Starvation Detection}: Identify which requests timeout most frequently
+%         \item \textbf{Load Balancing}: Core utilization balance across all cores
+%     \end{itemize}
+% }
 
-\frame{
-    \frametitle{System Tuning Recommendations}
-    \begin{itemize}
-        \item \textbf{Thread Pool}: Size based on 95th-percentile concurrent requests
-        \item \textbf{Quantum Selection}: Tune for balance between fairness and overhead
-        \item \textbf{Timeout Strategy}: Set timeout based on 99th-percentile response time
-        \item \textbf{Request Admission}: Reject requests early if queue too deep
-        \item \textbf{Priority Queuing}: VIP users or critical requests get preference
-        \item \textbf{Load Shedding}: Graceful degradation at extreme load
-    \end{itemize}
-}
+% \frame{
+%     \frametitle{System Tuning Recommendations}
+%     \begin{itemize}
+%         \item \textbf{Thread Pool}: Size based on 95th-percentile concurrent requests
+%         \item \textbf{Quantum Selection}: Tune for balance between fairness and overhead
+%         \item \textbf{Timeout Strategy}: Set timeout based on 99th-percentile response time
+%         \item \textbf{Request Admission}: Reject requests early if queue too deep
+%         \item \textbf{Priority Queuing}: VIP users or critical requests get preference
+%         \item \textbf{Load Shedding}: Graceful degradation at extreme load
+%     \end{itemize}
+% }
 
 \frame{
     \frametitle{Conclusion}
     \begin{itemize}
-        \item \textbf{Simulator Validation}: Discrete event simulation closely matches MVA theory
+        \item \textbf{Simulator Validation}: Discrete event simulation closely matches MVA theory and experimental data
         \item \textbf{Performance Characterization}: Comprehensive metrics with confidence intervals
-        \item \textbf{Scheduling Impact}: Limited impact on aggregate throughput at saturation
-        \item \textbf{Saturation Point}: System saturates around 1500-2000 users for given config
-        \item \textbf{Statistical Rigor}: Proper use of confidence intervals and warmup removal
-        \item \textbf{Extensibility}: Framework supports multiple scheduling policies, distributions, and workloads
+        \item \textbf{Scheduling Impact}: SJF outperforms RR for variable workloads (in term of response time and throughput)
     \end{itemize}
 }
 
@@ -535,7 +535,7 @@
         \column{0.5\textwidth}
         \textbf{Core Components:}
         \begin{itemize}
-            \item \texttt{simulator.h/cpp}: Main event loop
+            \item \texttt{simulator.h/cpp}: Main event loop lefttt
             \item \texttt{request.h}: Request tracking
             \item \texttt{core.h/cpp}: Per-core scheduling
             \item \texttt{threadworker.h}: Thread abstraction
@@ -546,7 +546,7 @@
         \begin{itemize}
             \item \texttt{plot.py}: Basic metrics plotting
             \item \texttt{confidence\_plotter.py}: CI calculations
-            \item \texttt{mix\_plot.py}: Multi-source comparison
+            \item \texttt{mix\_plot.py}: Multi-file plotter
             \item Scripts: Runner shells for all setups
         \end{itemize}
     \end{columns}

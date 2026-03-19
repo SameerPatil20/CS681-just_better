@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.6)  19 MAR 2026 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.2.6)  19 MAR 2026 16:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -804,10 +804,10 @@ Overfull \hbox (4.95728pt too wide) has occurred while \output is active
 <confidence_interval/plots/ResponseTime.png, id=391, 722.7pt x 433.62pt>
 File: confidence_interval/plots/ResponseTime.png Graphic file (type png)
 <use confidence_interval/plots/ResponseTime.png>
-Package pdftex.def Info: confidence_interval/plots/ResponseTime.png  used on input line 313.
+Package pdftex.def Info: confidence_interval/plots/ResponseTime.png  used on input line 323.
 (pdftex.def)             Requested size: 309.77368pt x 185.86409pt.
 
-Overfull \vbox (5.86156pt too high) detected at line 313
+Overfull \vbox (5.86156pt too high) detected at line 323
  []
 
 
@@ -821,10 +821,10 @@ Overfull \hbox (4.95728pt too wide) has occurred while \output is active
 <confidence_interval/plots/Throughput.png, id=420, 722.7pt x 433.62pt>
 File: confidence_interval/plots/Throughput.png Graphic file (type png)
 <use confidence_interval/plots/Throughput.png>
-Package pdftex.def Info: confidence_interval/plots/Throughput.png  used on input line 326.
+Package pdftex.def Info: confidence_interval/plots/Throughput.png  used on input line 336.
 (pdftex.def)             Requested size: 309.77368pt x 185.86409pt.
 
-Overfull \vbox (5.86156pt too high) detected at line 326
+Overfull \vbox (4.11156pt too high) detected at line 336
  []
 
 
@@ -835,13 +835,13 @@ Overfull \hbox (4.95728pt too wide) has occurred while \output is active
 [14
 
  <./confidence_interval/plots/Throughput.png>]
-<confidence_interval/plots/throughput_goodput_badput.png, id=449, 722.7pt x 433.62pt>
+<confidence_interval/plots/throughput_goodput_badput.png, id=448, 722.7pt x 433.62pt>
 File: confidence_interval/plots/throughput_goodput_badput.png Graphic file (type png)
 <use confidence_interval/plots/throughput_goodput_badput.png>
-Package pdftex.def Info: confidence_interval/plots/throughput_goodput_badput.png  used on input line 339.
+Package pdftex.def Info: confidence_interval/plots/throughput_goodput_badput.png  used on input line 349.
 (pdftex.def)             Requested size: 309.77368pt x 185.86409pt.
 
-Overfull \vbox (6.36156pt too high) detected at line 339
+Overfull \vbox (6.36156pt too high) detected at line 349
  []
 
 
@@ -852,13 +852,13 @@ Overfull \hbox (4.95728pt too wide) has occurred while \output is active
 [15
 
  <./confidence_interval/plots/throughput_goodput_badput.png>]
-<confidence_interval/plots/Util.png, id=478, 722.7pt x 433.62pt>
+<confidence_interval/plots/Util.png, id=477, 722.7pt x 433.62pt>
 File: confidence_interval/plots/Util.png Graphic file (type png)
 <use confidence_interval/plots/Util.png>
-Package pdftex.def Info: confidence_interval/plots/Util.png  used on input line 352.
+Package pdftex.def Info: confidence_interval/plots/Util.png  used on input line 361.
 (pdftex.def)             Requested size: 309.77368pt x 185.86409pt.
 
-Overfull \vbox (5.86156pt too high) detected at line 352
+Overfull \vbox (4.36156pt too high) detected at line 361
  []
 
 
@@ -869,13 +869,13 @@ Overfull \hbox (4.95728pt too wide) has occurred while \output is active
 [16
 
  <./confidence_interval/plots/Util.png>]
-<confidence_interval/plots/Timeouts.png, id=506, 722.7pt x 433.62pt>
+<confidence_interval/plots/Timeouts.png, id=505, 722.7pt x 433.62pt>
 File: confidence_interval/plots/Timeouts.png Graphic file (type png)
 <use confidence_interval/plots/Timeouts.png>
-Package pdftex.def Info: confidence_interval/plots/Timeouts.png  used on input line 365.
+Package pdftex.def Info: confidence_interval/plots/Timeouts.png  used on input line 374.
 (pdftex.def)             Requested size: 309.77368pt x 185.86409pt.
 
-Overfull \vbox (5.86156pt too high) detected at line 365
+Overfull \vbox (5.86156pt too high) detected at line 374
  []
 
 
@@ -914,15 +914,11 @@ Overfull \hbox (4.95728pt too wide) has occurred while \output is active
 [21
 
 ]
-<SJF_vs_RR/ResponseTime_vs_users.png, id=639, 608.2725pt x 394.5942pt>
+<SJF_vs_RR/ResponseTime_vs_users.png, id=638, 608.2725pt x 394.5942pt>
 File: SJF_vs_RR/ResponseTime_vs_users.png Graphic file (type png)
 <use SJF_vs_RR/ResponseTime_vs_users.png>
-Package pdftex.def Info: SJF_vs_RR/ResponseTime_vs_users.png  used on input line 446.
+Package pdftex.def Info: SJF_vs_RR/ResponseTime_vs_users.png  used on input line 452.
 (pdftex.def)             Requested size: 309.77368pt x 200.95738pt.
-
-Overfull \vbox (20.95485pt too high) detected at line 446
- []
-
 
 Overfull \hbox (4.95728pt too wide) has occurred while \output is active
  [][][][]  
@@ -931,15 +927,11 @@ Overfull \hbox (4.95728pt too wide) has occurred while \output is active
 [22
 
  <./SJF_vs_RR/ResponseTime_vs_users.png>]
-<SJF_vs_RR/Throughput_vs_users.png, id=667, 608.2725pt x 394.5942pt>
+<SJF_vs_RR/Throughput_vs_users.png, id=666, 608.2725pt x 394.5942pt>
 File: SJF_vs_RR/Throughput_vs_users.png Graphic file (type png)
 <use SJF_vs_RR/Throughput_vs_users.png>
-Package pdftex.def Info: SJF_vs_RR/Throughput_vs_users.png  used on input line 459.
+Package pdftex.def Info: SJF_vs_RR/Throughput_vs_users.png  used on input line 463.
 (pdftex.def)             Requested size: 309.77368pt x 200.95738pt.
-
-Overfull \vbox (20.95485pt too high) detected at line 459
- []
-
 
 Overfull \hbox (4.95728pt too wide) has occurred while \output is active
  [][][][]  
@@ -969,27 +961,6 @@ Overfull \hbox (4.95728pt too wide) has occurred while \output is active
 [26
 
 ]
-Overfull \hbox (4.95728pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[27
-
-]
-Overfull \hbox (4.95728pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[28
-
-]
-Overfull \hbox (4.95728pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[29
-
-]
 \tf@nav=\write6
 \openout6 = `main.nav'.
 
@@ -1004,18 +975,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: BEC2817A8F24119AFB4B38EFD4E8A426;1342.
  ) 
 Here is how much of TeX's memory you used:
- 23259 strings out of 480247
- 447923 string characters out of 5896152
+ 23243 strings out of 480247
+ 447663 string characters out of 5896152
  692445 words of memory out of 5000000
- 40662 multiletter control sequences out of 15000+600000
+ 40652 multiletter control sequences out of 15000+600000
  480456 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,15n,104p,447b,628s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on main.pdf (29 pages, 800512 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on main.pdf (26 pages, 735073 bytes).
 PDF statistics:
- 925 PDF objects out of 1000 (max. 8388607)
- 827 compressed objects within 9 object streams
- 64 named destinations out of 1000 (max. 500000)
+ 840 PDF objects out of 1000 (max. 8388607)
+ 748 compressed objects within 8 object streams
+ 58 named destinations out of 1000 (max. 500000)
  177 words of extra memory for PDF output out of 10000 (max. 10000000)
 

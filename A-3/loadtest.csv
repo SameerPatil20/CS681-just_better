@@ -1,0 +1,2 @@
+ArrivalRate,device_write,cpus,memory,cpuLoad,Throughput,ResponseTimeMs,P90ResponseTimeMs,Completed
+10,10mb,0.5,500m,1000,0.3517,69045.8822,117588.2109,50

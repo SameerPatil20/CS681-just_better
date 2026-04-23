@@ -418,7 +418,10 @@ int main(int argc, char* argv[]) {
         << p.device_write << ","
         << p.cpus << ","
         << p.memory << ","
+        << p.size << ","
         << p.cpuLoad << ","
+        << p.num_requests << ","
+        << p.workers << ","
         << fixed << setprecision(4)
         << stats.throughput_rps << ","
         << stats.avg_response_ms << ","

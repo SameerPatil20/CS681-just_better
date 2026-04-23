@@ -29,12 +29,41 @@ set -euo pipefail
 
 g++ -std=c++17 -O2 -pthread loader.cpp -o loadgenerator
 
-echo "ArrivalRate,device_write,cpus,memory,cpuLoad,Throughput,ResponseTimeMs,P90ResponseTimeMs,Completed" > loadtest.csv
+echo "ArrivalRate,device_write,cpus,memory,size,cpuLoad,num-request,workers,Throughput,ResponseTimeMs,P90ResponseTimeMs,Completed" > loadtest.csv
 
-SERVER_IP="10.130.152.75"
+SERVER_IP="10.61.152.224"
 
 for device_write in "10mb" "20mb"; do
   for cpu in 0.5 1 2; do
+    for mem in "500m" "600m" "800m"; do
+      for arr in $(seq 10 20 400); do
+        for size in $(seq 100 100 800); do
+          for cpuLoad in $(seq 100 100 1000); do
+            echo "${device_write} ${cpu} ${mem} ${arr} ${size} ${cpuLoad}"> out.log
+            curl -X GET "http://${SERVER_IP}:8080/dockerStart.php?memory=${mem}&cpus=${cpu}&device-write=${device_write}"
+            ./loadgenerator \
+              --device-write "${device_write}" \
+              --cpus "${cpu}" \
+              --memory "${mem}" \
+              --arrival-rate "${arr}" \
+              --size "${size}" \
+              --cpuLoad "${cpuLoad}" \
+              --num-requests 50 \
+              --workers 20 \
+              --csv loadtest.csv \
+              --server-host "${SERVER_IP}" \
+              --admin-host "${SERVER_IP}" \
+              --server-port 80 \
+              --admin-port 8080
+
+            echo "closing container"
+            curl -X GET "http://${SERVER_IP}:8080/dockerStop.php"
+          done
+        done
+      done
+    done
+  done
+done  for cpu in 0.5 1 2; do
     for mem in "500m" "600m" "800m"; do
       for arr in $(seq 10 20 400); do
         for size in $(seq 100 100 800); do

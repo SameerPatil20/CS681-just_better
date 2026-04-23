@@ -31,7 +31,7 @@ g++ -std=c++17 -O2 -pthread loader.cpp -o loadgenerator
 
 echo "ArrivalRate,device_write,cpus,memory,cpuLoad,Throughput,ResponseTimeMs,P90ResponseTimeMs,Completed" > loadtest.csv
 
-SERVER_IP="10.61.152.224"
+SERVER_IP="10.130.152.75"
 
 for device_write in "10mb" "20mb"; do
   for cpu in 0.5 1 2; do
@@ -39,7 +39,10 @@ for device_write in "10mb" "20mb"; do
       for arr in $(seq 10 20 400); do
         for size in $(seq 100 100 800); do
           for cpuLoad in $(seq 100 100 1000); do
+            echo "${device_write} ${cpu} ${mem} ${arr} ${size} ${cpuLoad}"> out.log
+            echo "sending curl"
             curl -X GET "http://${SERVER_IP}:8080/dockerStart.php?memory=${mem}&cpus=${cpu}&device-write=${device_write}"
+            echo "done curl"
             ./loadgenerator \
               --device-write "${device_write}" \
               --cpus "${cpu}" \

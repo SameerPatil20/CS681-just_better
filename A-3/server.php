@@ -12,7 +12,7 @@
 
     parse_str($url_components['query'], $params);
 
-    $buffer=file_get_contents('../data/data.txt', FALSE, NULL, 0, 99999996);
+    $buffer=file_get_contents('../data/data.txt', FALSE, NULL, 0, 99999);
     $myfile = fopen("../data/writeData.txt", "a") or die("Unable to open file!");
     $loopCount = $params['size']/100; 
     for($i=1;$i<=$loopCount;$i++)
@@ -22,8 +22,7 @@
 	rand();
     $time2 = microtime(true);
     $time=$time2-$time1;
-    echo "Time taken = $time sec";
-    echo $loopCount
+    echo "Time = $time";
 ?>
 </body>
 </html>

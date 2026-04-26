@@ -12,7 +12,7 @@ $memory = escapeshellarg($params['memory']);
 $cpus = escapeshellarg($params['cpus']);
 $deviceWrite = escapeshellarg($params['device-write']);
 
-$command = "sudo docker run --privileged -m {$memory} --memory-swap 1024m --cpus {$cpus} --device-write-bps /dev/nvme0n1:{$deviceWrite} --name myserver -d -p 80:80 server_image:1.0 2>&1";
+$command = "docker run --privileged -m {$memory} --memory-swap 1024m --cpus {$cpus} --device-write-bps /dev/sda:{$deviceWrite} --name myserver -d -p 8090:80 server_image:1.0 2>&1";
 
 $output = [];
 $ret = 1;

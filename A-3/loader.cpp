@@ -57,18 +57,39 @@ struct Params {
     string csv_file = "loadtest.csv";
 };
 
+double parse_buf(const char* buf, ssize_t n) {
+    // cout << "here"<<endl;
+    string s(buf, n);
+    // cout << "Parsing response for service time..." << endl;
+    // cout << "Response content:\n" << s << endl;
+    size_t pos = s.find("Time = ");
+    if (pos == string::npos) return -1.0;
+    pos += 7;
+    size_t end_pos = s.find_first_of("\r\n<", pos);
+    if (end_pos == string::npos) end_pos = s.size();
+    string num_str = s.substr(pos, end_pos - pos);
+    try {
+        // cout << "Parsed service time: " << num_str << " seconds" << endl;
+        return stod(num_str);
+    } catch (...) {
+        // cout << "Failed to parse service time from response: " << num_str << endl;
+        return -1.0;    
+    }
+}
+
 struct Result {
     double throughput_rps = 0.0;
     double avg_response_ms = 0.0;
     double p90_response_ms = 0.0;
     int completed = 0;
+    double service_time_ms=0.0;
 };
 
 struct Task {
     Clock::time_point scheduled_time;
 };
 
-static bool http_get(const string& host, int port, const string& path, string* response = nullptr) {
+static bool http_get(const string& host, int port, const string& path, double& service_time, string* response = nullptr) {
     addrinfo hints{};
     hints.ai_family = AF_UNSPEC;
     hints.ai_socktype = SOCK_STREAM;
@@ -98,12 +119,12 @@ static bool http_get(const string& host, int port, const string& path, string* r
         close(sockfd);
         sockfd = -1;
     }
-    cout << "CONNECTED TO " << host << ":" << port << endl;
-    cout << COUNTER++ << endl;
     freeaddrinfo(res);
-
+    
     if (sockfd < 0) return false;
-    cout << "HERE"<<endl;
+    // cout << COUNTER++ << endl;
+    // cout << "CONNECTED TO " << host << ":" << port << endl;
+    // cout << "HERE"<<endl;
     ostringstream req;
     req << "GET " << path << " HTTP/1.1\r\n"
         << "Host: " << host << "\r\n"
@@ -117,9 +138,11 @@ static bool http_get(const string& host, int port, const string& path, string* r
     size_t left = req_str.size();
 
     while (left > 0) {
+        // cout << "Sending request chunk of size " << left << " bytes." << endl;
         ssize_t n = send(sockfd, data, left, 0);
         if (n <= 0) {
             close(sockfd);
+            // cout << "Failed to send request to " << host << ":" << port << ": " << strerror(errno) << endl;
             return false;
         }
         data += n;
@@ -134,12 +157,16 @@ static bool http_get(const string& host, int port, const string& path, string* r
         ssize_t n = recv(sockfd, buf, sizeof(buf), 0);
         if (n > 0) {
             if (response) resp.append(buf, buf + n);
+            // cout << "Received response chunk of size " << n << " bytes." << endl;
+            double t = parse_buf(buf, n);
+            service_time=t*1000.0;
             // cout.write(buf, n);
         } else {
+            // cout << "wtf"<<endl;
             break;
         }
     }
-
+    // cout << "CLOSING CONNECTION TO " << host << ":" << port << endl;
     close(sockfd);
     if (response) *response = move(resp);
     return true;
@@ -204,7 +231,9 @@ static Result run_test(const string& server_host,
     WorkQueue queue;
     mutex lat_m;
     vector<double> latencies_ms;
+    vector<double> service_times_ms;
     latencies_ms.reserve(num_requests);
+
 
     atomic<int> completed{0};
 
@@ -213,13 +242,15 @@ static Result run_test(const string& server_host,
         while (queue.pop(task)) {
             auto t0 = task.scheduled_time;
             string resp;
-            bool ok = http_get(server_host, server_port, workload_path, &resp);
+            double service_time=0.0;
+            bool ok = http_get(server_host, server_port, workload_path, service_time, &resp);
             (void)ok;
             auto t1 = Clock::now();
             double rt_ms = chrono::duration<double, milli>(t1 - t0).count();
             {
                 lock_guard<mutex> lk(lat_m);
                 latencies_ms.push_back(rt_ms);
+                service_times_ms.push_back(service_time);
             }
             completed.fetch_add(1, memory_order_relaxed);
         }
@@ -258,6 +289,11 @@ static Result run_test(const string& server_host,
         size_t idx90 = static_cast<size_t>(0.90 * (latencies_ms.size() - 1));
         stats.p90_response_ms = latencies_ms[idx90];
     }
+    if (!service_times_ms.empty()) {
+        double sum = accumulate(service_times_ms.begin(), service_times_ms.end(), 0.0);
+        stats.service_time_ms = sum / service_times_ms.size();
+    }
+
 
     return stats;
 }
@@ -408,8 +444,15 @@ int main(int argc, char* argv[]) {
 
     this_thread::sleep_for(chrono::seconds(p.warmup_seconds));
 
+    // time the below function
+    auto start_time = Clock::now();
+
     Result stats = run_test(p.server_host, p.server_port, workload_path,
                             p.arrival_rate, p.num_requests, p.workers);
+
+    auto end_time = Clock::now();
+    double total_time_s = chrono::duration<double>(end_time - start_time).count();
+    cout << "Test completed in " << total_time_s << " seconds."<<endl;
 
     // if (!http_get(p.admin_host, p.admin_port, stop_path)) {
     //     cerr << "Warning: failed to stop container cleanly.\n";
@@ -424,6 +467,7 @@ int main(int argc, char* argv[]) {
         << p.workers << ","
         << fixed << setprecision(4)
         << stats.throughput_rps << ","
+        << stats.service_time_ms << ","
         << stats.avg_response_ms << ","
         << stats.p90_response_ms << ","
         << stats.completed << "\n";
@@ -432,6 +476,7 @@ int main(int argc, char* argv[]) {
 
     cout << "Done: throughput=" << stats.throughput_rps
          << " rps, avgRT=" << stats.avg_response_ms
+         << " ms, serviceTime=" << stats.service_time_ms
          << " ms, p90RT=" << stats.p90_response_ms
          << " ms, completed=" << stats.completed
          << endl;

@@ -16,6 +16,7 @@
 #include <netdb.h>
 #include <sys/socket.h>
 #include <unistd.h>
+#include <pthread.h>
 
 #include <algorithm>
 #include <atomic>
@@ -70,6 +71,7 @@ double parse_buf(const char* buf, ssize_t n) {
     string num_str = s.substr(pos, end_pos - pos);
     try {
         // cout << "Parsed service time: " << num_str << " seconds" << endl;
+        // cout << COUNTER++ << endl;
         return stod(num_str);
     } catch (...) {
         // cout << "Failed to parse service time from response: " << num_str << endl;
@@ -107,7 +109,7 @@ static bool http_get(const string& host, int port, const string& path, double& s
         if (sockfd < 0) continue;
 
         timeval tv{};
-        tv.tv_sec = 20;
+        tv.tv_sec = 300;
         tv.tv_usec = 0;
         setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
         setsockopt(sockfd, SOL_SOCKET, SO_SNDTIMEO, &tv, sizeof(tv));
@@ -120,8 +122,8 @@ static bool http_get(const string& host, int port, const string& path, double& s
         sockfd = -1;
     }
     freeaddrinfo(res);
-    
-    if (sockfd < 0) return false;
+
+    if (sockfd < 0) {return false;}
     // cout << COUNTER++ << endl;
     // cout << "CONNECTED TO " << host << ":" << port << endl;
     // cout << "HERE"<<endl;
@@ -130,7 +132,7 @@ static bool http_get(const string& host, int port, const string& path, double& s
         << "Host: " << host << "\r\n"
         << "Connection: close\r\n"
         << "\r\n";
-    
+
     // print on console for debugging
     // cout << "Request:\n" << req.str() << endl;
     string req_str = req.str();
@@ -142,7 +144,7 @@ static bool http_get(const string& host, int port, const string& path, double& s
         ssize_t n = send(sockfd, data, left, 0);
         if (n <= 0) {
             close(sockfd);
-            // cout << "Failed to send request to " << host << ":" << port << ": " << strerror(errno) << endl;
+            cout << "Failed to send request to " << host << ":" << port << ": " << strerror(errno) << endl;
             return false;
         }
         data += n;
@@ -153,22 +155,51 @@ static bool http_get(const string& host, int port, const string& path, double& s
 
     char buf[4096];
     string resp;
+    bool received_any = false;
+    bool timed_out = false;
     while (true) {
         ssize_t n = recv(sockfd, buf, sizeof(buf), 0);
         if (n > 0) {
+            received_any = true;
             if (response) resp.append(buf, buf + n);
             // cout << "Received response chunk of size " << n << " bytes." << endl;
-            double t = parse_buf(buf, n);
-            service_time=t*1000.0;
             // cout.write(buf, n);
-        } else {
-            // cout << "wtf"<<endl;
+            continue;
+        }
+
+        if (n == 0) {
+            // Server closed the connection; response is complete.
             break;
         }
+
+        if (errno == EINTR) {
+            continue;
+        }
+
+        if (errno == EAGAIN || errno == EWOULDBLOCK) {
+            timed_out = true;
+        } else {
+            // cout << "wtf"<<endl;
+        }
+        break;
     }
     // cout << "CLOSING CONNECTION TO " << host << ":" << port << endl;
     close(sockfd);
     if (response) *response = move(resp);
+
+    if (!received_any || timed_out) {
+        cout << "Failed to receive response from " << host << ":" << port
+             << (timed_out ? " (timed out)" : " (no data received)") << endl;
+        return false;
+    }
+
+    const string& parse_target = response ? *response : resp;
+    double t = parse_buf(parse_target.data(), static_cast<ssize_t>(parse_target.size()));
+    if (t < 0.0) {
+        return false;
+    }
+    service_time = t * 1000.0;
+    // cout << COUNTER++ << endl;
     return true;
 }
 
@@ -222,61 +253,281 @@ static string make_stop_path() {
     return "/dockerStop.php";
 }
 
+// static Result run_test(const string& server_host,
+//                        int server_port,
+//                        const string& workload_path,
+//                        int arrival_rate,
+//                        int num_requests,
+//                        int workers) {
+//     WorkQueue queue;
+//     mutex lat_m;
+//     vector<double> latencies_ms;
+//     vector<double> service_times_ms;
+//     latencies_ms.reserve(num_requests);
+
+
+//     atomic<int> completed{0};
+
+//     auto worker_fn = [&]() {
+//         Task task;
+//         while (queue.pop(task)) {
+//             auto t0 = task.scheduled_time;
+//             string resp;
+//             double service_time=0.0;
+//             bool ok = http_get(server_host, server_port, workload_path, service_time, &resp);
+//             (void)ok;
+//             auto t1 = Clock::now();
+//             double rt_ms = chrono::duration<double, milli>(t1 - t0).count();
+//             {
+//                 lock_guard<mutex> lk(lat_m);
+//                 latencies_ms.push_back(rt_ms);
+//                 service_times_ms.push_back(service_time);
+//             }
+//             completed.fetch_add(1, memory_order_relaxed);
+//         }
+//     };
+
+//     vector<thread> pool;
+//     for (int i = 0; i < workers; ++i) {
+//         pool.emplace_back(worker_fn);
+//     }
+
+//     auto start = Clock::now();
+//     double interval_sec = 1.0 / max(1, arrival_rate);
+
+//     for (int i = 0; i < num_requests; ++i) {
+//         auto scheduled = start + chrono::duration_cast<Clock::duration>(
+//             chrono::duration<double>(i * interval_sec));
+//         this_thread::sleep_until(scheduled);
+//         queue.push(Task{scheduled});
+//     }
+
+//     queue.set_done();
+//     for (auto& th : pool) th.join();
+//     auto end = Clock::now();
+
+//     Result stats;
+//     stats.completed = completed.load(memory_order_relaxed);
+
+//     double elapsed_s = chrono::duration<double>(end - start).count();
+//     stats.throughput_rps = (elapsed_s > 0.0) ? (stats.completed / elapsed_s) : 0.0;
+
+//     if (!latencies_ms.empty()) {
+//         double sum = accumulate(latencies_ms.begin(), latencies_ms.end(), 0.0);
+//         stats.avg_response_ms = sum / latencies_ms.size();
+
+//         sort(latencies_ms.begin(), latencies_ms.end());
+//         size_t idx90 = static_cast<size_t>(0.90 * (latencies_ms.size() - 1));
+//         stats.p90_response_ms = latencies_ms[idx90];
+//     }
+//     if (!service_times_ms.empty()) {
+//         double sum = accumulate(service_times_ms.begin(), service_times_ms.end(), 0.0);
+//         stats.service_time_ms = sum / service_times_ms.size();
+//     }
+
+
+//     return stats;
+// }
+
+// static Result run_test(const string& server_host,
+//                        int server_port,
+//                        const string& workload_path,
+//                        int arrival_rate,
+//                        int num_requests,
+//                        int workers) {
+//     WorkQueue queue;
+//     mutex lat_m;
+//     vector<double> latencies_ms;
+//     vector<double> service_times_ms;
+//     latencies_ms.reserve(num_requests);
+
+//     atomic<int> successful{0};
+
+//     auto worker_fn = [&]() {
+//         Task task;
+//         while (queue.pop(task)) {
+//             auto t0 = task.scheduled_time;
+//             string resp;
+//             double service_time = 0.0;
+//             bool ok = http_get(server_host, server_port, workload_path, service_time, &resp);
+//             auto t1 = Clock::now();
+
+//             if (!ok) {
+//                 continue;
+//             }
+
+//             int cur = successful.load(memory_order_relaxed);
+//             while (cur < num_requests &&
+//                    !successful.compare_exchange_weak(cur, cur + 1, memory_order_relaxed)) {
+//                 // cur is updated with the latest value on failure
+//             }
+
+//             if (cur >= num_requests) {
+//                 continue;
+//             }
+
+//             double rt_ms = chrono::duration<double, milli>(t1 - t0).count();
+//             {
+//                 lock_guard<mutex> lk(lat_m);
+//                 latencies_ms.push_back(rt_ms);
+//                 service_times_ms.push_back(service_time);
+//             }
+//         }
+//     };
+
+//     vector<thread> pool;
+//     for (int i = 0; i < workers; ++i) {
+//         pool.emplace_back(worker_fn);
+//     }
+
+//     auto start = Clock::now();
+//     double interval_sec = 1.0 / max(1, arrival_rate);
+
+//     int attempts = 0;
+//     while (successful.load(memory_order_relaxed) < num_requests) {
+//         auto scheduled = start + chrono::duration_cast<Clock::duration>(
+//             chrono::duration<double>(attempts * interval_sec));
+//         this_thread::sleep_until(scheduled);
+//         queue.push(Task{scheduled});
+//         ++attempts;
+//     }
+
+//     queue.set_done();
+//     for (auto& th : pool) th.join();
+//     auto end = Clock::now();
+
+//     Result stats;
+//     stats.completed = min(successful.load(memory_order_relaxed), num_requests);
+
+//     double elapsed_s = chrono::duration<double>(end - start).count();
+//     stats.throughput_rps = (elapsed_s > 0.0) ? (stats.completed / elapsed_s) : 0.0;
+
+//     if (!latencies_ms.empty()) {
+//         double sum = accumulate(latencies_ms.begin(), latencies_ms.end(), 0.0);
+//         stats.avg_response_ms = sum / latencies_ms.size();
+
+//         sort(latencies_ms.begin(), latencies_ms.end());
+//         size_t idx90 = static_cast<size_t>(0.90 * (latencies_ms.size() - 1));
+//         stats.p90_response_ms = latencies_ms[idx90];
+//     }
+//     if (!service_times_ms.empty()) {
+//         double sum = accumulate(service_times_ms.begin(), service_times_ms.end(), 0.0);
+//         stats.service_time_ms = sum / service_times_ms.size();
+//     }
+
+//     return stats;
+// }
+
 static Result run_test(const string& server_host,
                        int server_port,
                        const string& workload_path,
                        int arrival_rate,
                        int num_requests,
                        int workers) {
+    const int target_successes = min(num_requests, 400);
+
     WorkQueue queue;
     mutex lat_m;
     vector<double> latencies_ms;
     vector<double> service_times_ms;
-    latencies_ms.reserve(num_requests);
+    latencies_ms.reserve(target_successes);
+    service_times_ms.reserve(target_successes);
 
-
-    atomic<int> completed{0};
+    atomic<int> successful{0};
+    atomic<bool> stop{false};
 
     auto worker_fn = [&]() {
+        pthread_setcancelstate(PTHREAD_CANCEL_ENABLE, nullptr);
+        pthread_setcanceltype(PTHREAD_CANCEL_DEFERRED, nullptr);
+
         Task task;
-        while (queue.pop(task)) {
+        while (!stop.load(memory_order_relaxed) && queue.pop(task)) {
+            if (stop.load(memory_order_relaxed)) break;
+
             auto t0 = task.scheduled_time;
             string resp;
-            double service_time=0.0;
+            double service_time = 0.0;
             bool ok = http_get(server_host, server_port, workload_path, service_time, &resp);
-            (void)ok;
             auto t1 = Clock::now();
+
+            if (!ok) {
+                continue;
+            }
+
+            int prev = successful.fetch_add(1, memory_order_relaxed);
+            if (prev >= target_successes) {
+                stop.store(true, memory_order_relaxed);
+                break;
+            }
+
             double rt_ms = chrono::duration<double, milli>(t1 - t0).count();
+
+            int oldstate = 0;
+            pthread_setcancelstate(PTHREAD_CANCEL_DISABLE, &oldstate);
             {
                 lock_guard<mutex> lk(lat_m);
-                latencies_ms.push_back(rt_ms);
-                service_times_ms.push_back(service_time);
+                if (static_cast<int>(latencies_ms.size()) < target_successes) {
+                    latencies_ms.push_back(rt_ms);
+                    service_times_ms.push_back(service_time);
+                }
             }
-            completed.fetch_add(1, memory_order_relaxed);
+            pthread_setcancelstate(oldstate, nullptr);
+
+            if (prev + 1 >= target_successes) {
+                stop.store(true, memory_order_relaxed);
+                break;
+            }
         }
     };
 
     vector<thread> pool;
+    pool.reserve(workers);
     for (int i = 0; i < workers; ++i) {
         pool.emplace_back(worker_fn);
     }
 
+    thread killer([&]() {
+        while (!stop.load(memory_order_relaxed)) {
+            if (successful.load(memory_order_relaxed) >= target_successes) {
+                stop.store(true, memory_order_relaxed);
+                queue.set_done();
+                for (auto& th : pool) {
+                    if (th.joinable()) {
+                        pthread_cancel(th.native_handle());
+                    }
+                }
+                return;
+            }
+            this_thread::sleep_for(chrono::milliseconds(1));
+        }
+    });
+
     auto start = Clock::now();
     double interval_sec = 1.0 / max(1, arrival_rate);
 
-    for (int i = 0; i < num_requests; ++i) {
+    int attempts = 0;
+    while (!stop.load(memory_order_relaxed)) {
         auto scheduled = start + chrono::duration_cast<Clock::duration>(
-            chrono::duration<double>(i * interval_sec));
+            chrono::duration<double>(attempts * interval_sec));
         this_thread::sleep_until(scheduled);
+
+        if (stop.load(memory_order_relaxed)) break;
+
         queue.push(Task{scheduled});
+        ++attempts;
     }
 
     queue.set_done();
-    for (auto& th : pool) th.join();
+
+    if (killer.joinable()) killer.join();
+    for (auto& th : pool) {
+        if (th.joinable()) th.join();
+    }
+
     auto end = Clock::now();
 
     Result stats;
-    stats.completed = completed.load(memory_order_relaxed);
+    stats.completed = static_cast<int>(latencies_ms.size());
 
     double elapsed_s = chrono::duration<double>(end - start).count();
     stats.throughput_rps = (elapsed_s > 0.0) ? (stats.completed / elapsed_s) : 0.0;
@@ -289,11 +540,11 @@ static Result run_test(const string& server_host,
         size_t idx90 = static_cast<size_t>(0.90 * (latencies_ms.size() - 1));
         stats.p90_response_ms = latencies_ms[idx90];
     }
+
     if (!service_times_ms.empty()) {
         double sum = accumulate(service_times_ms.begin(), service_times_ms.end(), 0.0);
         stats.service_time_ms = sum / service_times_ms.size();
     }
-
 
     return stats;
 }

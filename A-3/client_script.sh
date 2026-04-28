@@ -38,7 +38,7 @@ for device_write in "15mb" "20mb" "30mb"; do
     for mem in "500m"; do
       for arr in $(seq 12 2 20); do
         for size in $(seq 2000 2000 8000); do
-          for cpuLoad in $(seq 200000 500000 1700000); do # 20ms to 170 ms
+          for cpuLoad in $(seq 400000 400000 1600000); do # 40ms to 160 ms
           echo "Testing with device_write=${device_write}, cpu=${cpu}, mem=${mem}, arrival_rate=${arr}, size=${size}, cpuLoad=${cpuLoad}"
             curl -X GET "http://${SERVER_IP}:8080/dockerStop.php"
             echo "${device_write} ${cpu} ${mem} ${arr} ${size} ${cpuLoad}"> out.log

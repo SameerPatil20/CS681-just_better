@@ -109,7 +109,7 @@ static bool http_get(const string& host, int port, const string& path, double& s
         if (sockfd < 0) continue;
 
         timeval tv{};
-        tv.tv_sec = 300;
+        tv.tv_sec = 500;
         tv.tv_usec = 0;
         setsockopt(sockfd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
         setsockopt(sockfd, SOL_SOCKET, SO_SNDTIMEO, &tv, sizeof(tv));

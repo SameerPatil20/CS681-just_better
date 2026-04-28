@@ -36,9 +36,9 @@ SERVER_IP="10.130.152.31"
 for device_write in "10mb" "20mb" "30mb"; do
   for cpu in 0.5 1 2; do
     for mem in "500m"; do
-      for arr in $(seq 10 10 100); do
+      for arr in $(seq 60 1000 200); do
         for size in $(seq 2000 2000 8000); do
-          for cpuLoad in $(seq 100000 100000 400000); do # 10ms to 40 ms
+          for cpuLoad in $(seq 200000 200000 800000); do # 10ms to 40 ms
           echo "Testing with device_write=${device_write}, cpu=${cpu}, mem=${mem}, arrival_rate=${arr}, size=${size}, cpuLoad=${cpuLoad}"
             curl -X GET "http://${SERVER_IP}:8080/dockerStop.php"
             echo "${device_write} ${cpu} ${mem} ${arr} ${size} ${cpuLoad}"> out.log
@@ -51,7 +51,7 @@ for device_write in "10mb" "20mb" "30mb"; do
               --size "${size}" \
               --cpuLoad "${cpuLoad}" \
               --num-requests 400 \
-              --workers 20 \
+              --workers 100 \
               --csv loadtest.csv \
               --server-host "${SERVER_IP}" \
               --admin-host "${SERVER_IP}" \
@@ -59,6 +59,7 @@ for device_write in "10mb" "20mb" "30mb"; do
               --admin-port 8080
 
             echo "closing container"
+            # exit
             curl -X GET "http://${SERVER_IP}:8080/dockerStop.php"
           done
         done
